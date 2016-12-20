@@ -44,12 +44,12 @@ def crf_extractor(train_set, test_set):
 
     print evaluate_chunk(test_Y=test_Y, pred_Y=pred_Y)
 
-def svm_extractor(train_set, test_set, embeddings):
+def svm_extractor(train_set, test_set, embeddings=None):
     """
     window-based support vector machine for aspect extraction
     :param train_set: training set
     :param test_set: testing set
-    :param embeddings: pretrained word_embeddings
+    :param embeddings: pretrained word_embeddings, NONE means does not use word embeddings
     """
     train_words = [sent2tokens(sent) for sent in train_set]
     train_tags = [sent2tags(sent) for sent in train_set]
@@ -59,10 +59,14 @@ def svm_extractor(train_set, test_set, embeddings):
     test_words = to_lower(word_seqs=test_words)
     test_tags = [sent2tags(sent) for sent in test_set]
 
-    vocab, df = get_corpus_info(trainset=train_set, testset=test_set)
+    vocab, df = get_corpus_info(trainset=train_words, testset=test_words)
 
     train_words_norm = [normalize(seq, df) for seq in train_words]
     test_words_norm = [normalize(seq, df) for seq in test_words]
+
+    dim_w = len(embeddings['the'])
+    embeddings['DIGIT'] = np.random.uniform(-0.25, 0.25, dim_w)
+    embeddings['UNKNOWN'] = np.random.uniform(-0.25, 0.25, dim_w)
 
     train_X, train_Y = words2windowFeat(word_seqs=train_words_norm, tag_seqs=train_tags, embeddings=embeddings)
 
@@ -101,7 +105,7 @@ def run(ds_name, model_name='crf', feat='word'):
 
     glove_embeddings, embeddings = {}, {}
     print "load word embeddings..."
-    with open('glove_6B_300d.txt', 'r') as fp:
+    with open('./embeddings/glove_twitter_25d.txt', 'r') as fp:
         for line in fp:
             values = line.strip().split()
             word, vec = values[0], values[1:]

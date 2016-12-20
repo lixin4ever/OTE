@@ -141,13 +141,13 @@ def words2windowFeat(word_seqs, tag_seqs, embeddings):
             if j == 0:
                 features = [ele for ele in np.random.uniform(-0.25, 0.25, dim_w)]
             else:
-                prev_w = word_seq[j - 1].lower()
+                prev_w = word_seq[j - 1]
                 features = [ele for ele in embeddings[prev_w]]
-            cur_w = word_seq[j].lower()
+            cur_w = word_seq[j]
             for ele in embeddings[cur_w]:
                 features.append(ele)
             if j < n_w - 1:
-                next_w = word_seq[j+1].lower()
+                next_w = word_seq[j+1]
                 for ele in embeddings[next_w]:
                     features.append(ele)
             else:
@@ -340,7 +340,7 @@ def get_corpus_info(trainset, testset):
     df, vocab = {}, {}
     wid = 1 # word id starts from 1
     for sent in trainset + testset:
-        for w in sent['words']:
+        for w in sent:
             if not w in vocab:
                 wid += 1
                 vocab[w] = wid
