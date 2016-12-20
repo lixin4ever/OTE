@@ -130,7 +130,7 @@ def run(ds_name, model_name='crf', feat='word'):
 
     glove_embeddings, embeddings = {}, {}
     print "load word embeddings..."
-    with open('./embeddings/glove_twitter_25d.txt', 'r') as fp:
+    with open('./embeddings/glove_6B_300d.txt', 'r') as fp:
         for line in fp:
             values = line.strip().split()
             word, vec = values[0], values[1:]

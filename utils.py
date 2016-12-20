@@ -296,7 +296,7 @@ def evaluate_chunk(test_Y, pred_Y):
         TP += n_hit
         FP += (len(pred_aspects) - n_hit)
         FN += (len(gold_aspects) - n_hit)
-    print tabulate([['singleton', '%s / %s' % (n_s, n_s_gold), '%s / %s' % (n_s, n_s_pred)], ['multi-words', '%s / %s' % (n_mult, n_mult_gold), '%s / %s' % (n_mult, n_mult_pred)], ['total', '%s / %s' % (TP, TP + FN), '%s / %s' % (TP, TP + FP)]], headers={'##', 'recall', 'recision'})
+    print tabulate([['singleton', '%s / %s' % (n_s, n_s_gold), '%s / %s' % (n_s, n_s_pred)], ['multi-words', '%s / %s' % (n_mult, n_mult_gold), '%s / %s' % (n_mult, n_mult_pred)], ['total', '%s / %s' % (TP, TP + FN), '%s / %s' % (TP, TP + FP)]], headers={'##', 'recall', 'precision'})
     #print "n_mult:", n_mult
     #print "n_singletor:", n_s
     precision = float(TP) / float(TP + FP)
