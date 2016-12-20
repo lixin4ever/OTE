@@ -129,7 +129,7 @@ def run(ds_name, model_name='crf', feat='word'):
 
 
 if __name__ == '__main__':
-    dataset, model_name, feat = sys.argv[1:]
+    dataset, model_name = sys.argv[1:]
     run(ds_name=dataset, model_name=model_name, feat='word')
 
 
