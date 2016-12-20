@@ -319,14 +319,18 @@ def match_aspect(pred, gold):
     return true_count, n_s, n_mult
 
 
-def to_lower(word_seq):
+def to_lower(word_seqs):
     """
     transform all of the word in the lowercase
     """
-    norm_seq = []
-    for w in word_seq:
-        norm_seq.append(w.lower())
-    return norm_seq
+    res = []
+    for word_seq in word_seqs:
+        lc_seq = []
+        for w in word_seq:
+            lc_seq.append(w.lower())
+        res.append(lc_seq)
+    assert len(res) == len(word_seqs)
+    return res
 
 def get_corpus_info(trainset, testset):
     """
@@ -344,3 +348,20 @@ def get_corpus_info(trainset, testset):
             else:
                 df[w] += 1
     return vocab, df
+
+def normalize(word_seq, df):
+    """
+    normalize the text, mainly for embedding-based extractor
+    :param word_seq:
+    :param df:
+    :return:
+    """
+    norm_seq = []
+    for w in word_seq:
+        if w.isdigit():
+            norm_seq.append('DIGIT')
+        elif df[w] == 1:
+            norm_seq.append('UNKNOWN')
+        else:
+            norm_seq.append(w)
+    return norm_seq

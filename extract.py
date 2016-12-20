@@ -53,10 +53,21 @@ def svm_extractor(train_set, test_set, embeddings):
     """
     train_words = [sent2tokens(sent) for sent in train_set]
     train_tags = [sent2tags(sent) for sent in train_set]
-    train_X, train_Y = words2windowFeat(word_seqs=train_words, tag_seqs=train_tags, embeddings=embeddings)
+    train_words = to_lower(word_seqs=train_words)
+
     test_words = [sent2tokens(sent) for sent in test_set]
+    test_words = to_lower(word_seqs=test_words)
     test_tags = [sent2tags(sent) for sent in test_set]
-    test_X, test_Y = words2windowFeat(word_seqs=test_words, tag_seqs=test_tags, embeddings=embeddings)
+
+    vocab, df = get_corpus_info(trainset=train_set, testset=test_set)
+
+    train_words_norm = [normalize(seq, df) for seq in train_words]
+    test_words_norm = [normalize(seq, df) for seq in test_words]
+
+    train_X, train_Y = words2windowFeat(word_seqs=train_words_norm, tag_seqs=train_tags, embeddings=embeddings)
+
+    test_X, test_Y = words2windowFeat(word_seqs=test_words_norm, tag_seqs=test_tags, embeddings=embeddings)
+
     clf = SVC(kernel='linear')
     print "begin svm training..."
     clf.fit(train_X, train_Y)
@@ -87,28 +98,6 @@ def run(ds_name, model_name='crf', feat='word'):
     print "load dataset from disk..."
     train_set = cPickle.load(open('./pkl/%s_train.pkl' % ds_name, 'rb'))
     test_set = cPickle.load(open('./pkl/%s_test.pkl' % ds_name, 'rb'))
-
-
-    for i in xrange(len(train_set)):
-        if len(train_set[i]['words']) != len(train_set[i]['postags']):
-            temp_words, temp_tags = [], []
-            for j in xrange(len(train_set[i]['words'])):
-                if train_set[i]['words'][j] != '':
-                    temp_words.append(train_set[i]['words'][j])
-                    temp_tags.append(train_set[i]['tags'][j])
-            train_set[i]['words'] = temp_words
-            train_set[i]['tags'] = temp_tags
-            assert len(train_set[i]['words']) == len(train_set[i]['postags'])
-    for i in xrange(len(test_set)):
-        if len(test_set[i]['words']) != len(test_set[i]['postags']):
-            temp_words, temp_tags = [], []
-            for j in xrange(len(test_set[i]['words'])):
-                if test_set[i]['words'][j] != '':
-                    temp_words.append(test_set[i]['words'][j])
-                    temp_tags.append(test_set[i]['tags'][j])
-            test_set[i]['words'] = temp_words
-            test_set[i]['tags'] = temp_tags
-            assert len(test_set[i]['words']) == len(test_set[i]['postags'])
 
     glove_embeddings, embeddings = {}, {}
     print "load word embeddings..."
