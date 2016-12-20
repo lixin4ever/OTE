@@ -8,25 +8,50 @@ from utils import *
 import numpy as np
 
 #embeddings = {}
-def crf_extractor(train_set, test_set):
+def crf_extractor(train_set, test_set, embeddings=None):
     """
     linear-chain crf extractor with basic feature template
     :param train_set: training dataset
     :param test_set: testing dataset
     """
-    print "feature transformation..."
-    train_X = [sent2features(sent) for sent in train_set]
-    test_X = [sent2features(sent) for sent in test_set]
-
     train_Y = [sent2tags(sent) for sent in train_set]
     test_Y = [sent2tags(sent) for sent in test_set]
 
+    if not embeddings:
+        print "crf with word-level features..."
+        train_X = [sent2features(sent) for sent in train_set]
+        test_X = [sent2features(sent) for sent in test_set]
+
+
+    else:
+        print "crf with word embeddings..."
+        train_words = [sent2tokens(sent) for sent in train_set]
+        #train_Y = [sent2tags(sent) for sent in train_set]
+        train_words = to_lower(word_seqs=train_words)
+
+        test_words = [sent2tokens(sent) for sent in test_set]
+        test_words = to_lower(word_seqs=test_words)
+        #test_Y = [sent2tags(sent) for sent in test_set]
+
+        vocab, df = get_corpus_info(trainset=train_words, testset=test_words)
+
+        train_words_norm = [normalize(seq, df) for seq in train_words]
+        test_words_norm = [normalize(seq, df) for seq in test_words]
+
+        dim_w = len(embeddings['the'])
+        embeddings['DIGIT'] = np.random.uniform(-0.25, 0.25, dim_w)
+        embeddings['UNKNOWN'] = np.random.uniform(-0.25, 0.25, dim_w)
+
+        train_X = [sent2embeddings(sent, embeddings) for sent in train_words]
+        test_X = [sent2embeddings(sent, embeddings) for sent in test_words]
+
+
     crf = sklearn_crfsuite.CRF(
-        algorithm='lbfgs',
-        c1=0.1,
-        c2=0.1,
-        max_iterations=100,
-        all_possible_transitions=True)
+            algorithm='lbfgs',
+            c1=0.1,
+            c2=0.1,
+            max_iterations=100,
+            all_possible_transitions=True)
 
     print "begin crf training..."
     crf.fit(train_X, train_Y)
@@ -124,8 +149,6 @@ def run(ds_name, model_name='crf', feat='word'):
                 else:
                     word_emb = np.random.uniform(-0.25, 0.25, dim_w)
                 embeddings[w_norm] = word_emb
-
-
     if model_name == 'crf':
         crf_extractor(train_set=train_set, test_set=test_set)
     elif model_name == 'svm':
