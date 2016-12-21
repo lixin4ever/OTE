@@ -157,7 +157,7 @@ def lstm_extractor(train_set, test_set, embeddings):
 
     print "Build the Bi-LSTM model..."
     LSTM_extractor = Sequential()
-    LSTM_extractor.add(Embedding(output_dim=dim_w, input_dim=n_w + 1, weights=[embeddings_weights])
+    LSTM_extractor.add(Embedding(output_dim=dim_w, input_dim=n_w + 1, weights=[embeddings_weights]))
     LSTM_extractor.add(Bidirectional(LSTM(100, return_sequences=True), merge_mode='concat', input_shape=(71, 300)))
     LSTM_extractor.add(TimeDistributed(Dense(output_dim=1, activation='sigmoid')))
     #LSTM_extractor.add(Flatten())

@@ -3,6 +3,7 @@ __author__ = 'lixin77'
 import numpy as np
 from tabulate import tabulate
 from keras.preprocessing.sequence import pad_sequences
+from keras.utils.np_utils import to_categorical
 
 def contain_upper(word):
     for ch in word:
@@ -398,7 +399,9 @@ def padding(X, Y, max_len):
     :param max_len: maximum length of the sequence
     :return:
     """
-    return pad_sequences(X, maxlen=max_len), pad_sequences(Y, maxlen=max_len)
+    padded_X, padded_Y = pad_sequences(X, maxlen=max_len), pad_sequences(Y, maxlen=max_len)
+    padded_Y_one_hot = [to_categorical(y, nb_classes=2) for y in padded_Y]
+    return padded_X, padded_Y_one_hot
 
 def get_valid_seq(padded_seq, raw_len):
     """
