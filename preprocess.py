@@ -21,8 +21,10 @@ def build_pkl(ds, schema="OT"):
     ctx = 0
     records = []
     tagger = StanfordPOSTagger("english-bidirectional-distsim.tagger")
+    n_sen = 0
     with open(path) as fp:
         for line in fp:
+            n_sen += 1
             r = {}
             text, labelings = line.strip().split('####')
             word_seq = []
@@ -49,8 +51,9 @@ def build_pkl(ds, schema="OT"):
             ctx += 1
             if ctx % 100 == 0:
                 print "process %s sentences" % ctx
+    print "n_sentence:", n_sen
     print "write back to the disk..."
-    cPickle.dump(records, open('./pkl/%s.pkl' % ds, 'w+'))
+    #cPickle.dump(records, open('./pkl/%s.pkl' % ds, 'w+'))
 
 
 def extract_text(dataset_name):
@@ -73,7 +76,6 @@ def extract_text(dataset_name):
     n_singleton = 0
     n_mult_word = 0
     lines = []
-
     for sen in sentences:
         prev = ''
         n_sen += 1
@@ -86,54 +88,53 @@ def extract_text(dataset_name):
             aspects = sen.xpath('.//aspectterms/aspectterm')
         else:
             aspects = sen.xpath('.//opinions/opinion')
-        if not aspects:
-            n_sen_with_no_aspect += 1
-            continue
         from_to_pairs = []
-        counter = 0
-        id2aspect = {}
-        for t in aspects:
-            _from = int(t.xpath('.//@from').extract()[0])
-            _to = int(t.xpath('.//@to').extract()[0])
-            if _from == 0 and _to == 0:
-                # NULL target
-                continue
+        if not aspects:
+            # sentences with no aspect
+            n_sen_with_no_aspect += 1
+        else:
+            counter = 0
+            id2aspect = {}
+            for t in aspects:
+                _from = int(t.xpath('.//@from').extract()[0])
+                _to = int(t.xpath('.//@to').extract()[0])
+                if _from == 0 and _to == 0:
+                    # NULL target
+                    continue
 
-            if not dataset_name.startswith('14'):
-                target = t.xpath('.//@target').extract()[0].replace(u'\xa0', ' ')
-            else:
-                target = t.xpath('.//@term').extract()[0].replace(u'\xa0', ' ')
-            if target == 'NULL':
-                # there is no aspect in the text
-                continue
-            flag = False
-            if text[_from:_to] == target:
-                flag = True
-            elif (_from - 1 >= 0) and text[(_from - 1):(_to - 1)] == target:
-                _from -= 1
-                _to -= 1
-                flag = True
-            elif (_to + 1 < len(text)) and text[(_from + 1):(_to + 1)] == target:
-                _from += 1
-                _to += 1
-                flag = True
-            # we can find the aspect in the raw text
-            assert flag
+                if not dataset_name.startswith('14'):
+                    target = t.xpath('.//@target').extract()[0].replace(u'\xa0', ' ')
+                else:
+                    target = t.xpath('.//@term').extract()[0].replace(u'\xa0', ' ')
+                if target == 'NULL':
+                    # there is no aspect in the text
+                    continue
+                flag = False
+                if text[_from:_to] == target:
+                    flag = True
+                elif (_from - 1 >= 0) and text[(_from - 1):(_to - 1)] == target:
+                    _from -= 1
+                    _to -= 1
+                    flag = True
+                elif (_to + 1 < len(text)) and text[(_from + 1):(_to + 1)] == target:
+                    _from += 1
+                    _to += 1
+                    flag = True
+                # we can find the aspect in the raw text
+                assert flag
 
-            if (_from, _to) in from_to_pairs:
-                continue
-            aspect_temp_value = 'ASPECT%s' % counter
-            counter += 1
-            id2aspect[aspect_temp_value] = target
-            cur_text = cur_text.replace(target, aspect_temp_value)
-            from_to_pairs.append((_from, _to))
-            n_aspect += 1
-            if len(target.split()) > 1:
-                #print target
-                n_mult_word += 1
-            else:
-                n_singleton += 1
-                #print target
+                if (_from, _to) in from_to_pairs:
+                    continue
+                aspect_temp_value = 'ASPECT%s' % counter
+                counter += 1
+                id2aspect[aspect_temp_value] = target
+                cur_text = cur_text.replace(target, aspect_temp_value)
+                from_to_pairs.append((_from, _to))
+                n_aspect += 1
+                if len(target.split()) > 1:
+                    n_mult_word += 1
+                else:
+                    n_singleton += 1
         y = []
         x = []
         cur_text = cur_text.replace('.', ' .')
@@ -145,8 +146,7 @@ def extract_text(dataset_name):
         cur_text = cur_text.replace(')', '')
         cur_text = cur_text.replace('...', ' ')
         tokens = cur_text.split()
-        #n_word += len(tokens)
-        #print text
+
         for t in tokens:
             if t.startswith('ASPECT'):
                 # in this case, t is actually the identifier of aspect
@@ -164,7 +164,6 @@ def extract_text(dataset_name):
                     y.append('O')
                     n_word += 1
         assert len(x) == len(y)
-        #print zip(x, y)
         tag_sequence = ''
         for i in xrange(len(x)):
             if i == (len(x) - 1):
@@ -174,9 +173,6 @@ def extract_text(dataset_name):
         data_line = '%s####%s\n' % (text, tag_sequence)
         data_line = data_line.encode('utf-8')
         lines.append(data_line)
-        #for ele in lines:
-        #if not isinstance(ele, str):
-        #    print type(ele)
     with open('./dataset/%s.txt' % dataset_name, 'w+') as fp:
         fp.writelines(lines)
 
