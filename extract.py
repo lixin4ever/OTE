@@ -6,6 +6,9 @@ from sklearn.svm import SVC
 import sys
 from utils import *
 import numpy as np
+from keras.models import Sequential
+from keras.layers import LSTM, Bidirectional, Embedding, TimeDistributedDense
+from keras.callbacks import EarlyStopping
 
 #embeddings = {}
 def crf_extractor(train_set, test_set, embeddings=None):
@@ -33,7 +36,7 @@ def crf_extractor(train_set, test_set, embeddings=None):
         test_words = to_lower(word_seqs=test_words)
         #test_Y = [sent2tags(sent) for sent in test_set]
 
-        vocab, df = get_corpus_info(trainset=train_words, testset=test_words)
+        vocab, df, max_len = get_corpus_info(trainset=train_words, testset=test_words)
 
         train_words_norm = [normalize(seq, df) for seq in train_words]
         test_words_norm = [normalize(seq, df) for seq in test_words]
@@ -84,7 +87,7 @@ def svm_extractor(train_set, test_set, embeddings=None):
     test_words = to_lower(word_seqs=test_words)
     test_tags = [sent2tags(sent) for sent in test_set]
 
-    vocab, df = get_corpus_info(trainset=train_words, testset=test_words)
+    vocab, df, max_len = get_corpus_info(trainset=train_words, testset=test_words)
 
     train_words_norm = [normalize(seq, df) for seq in train_words]
     test_words_norm = [normalize(seq, df) for seq in test_words]
@@ -92,6 +95,7 @@ def svm_extractor(train_set, test_set, embeddings=None):
     dim_w = len(embeddings['the'])
     embeddings['DIGIT'] = np.random.uniform(-0.25, 0.25, dim_w)
     embeddings['UNKNOWN'] = np.random.uniform(-0.25, 0.25, dim_w)
+    embeddings['PADDING'] = np.random.uniform(-0.25, 0.25, dim_w)
 
     train_X, train_Y = words2windowFeat(word_seqs=train_words_norm, tag_seqs=train_tags, embeddings=embeddings)
 
@@ -113,9 +117,58 @@ def lstm_extractor(train_set, test_set, embeddings):
     :param test_set:
     :param embeddings:
     """
-    pass
+    print "Bi-directional LSTM with word embeddings..."
+    train_words = [sent2tokens(sent) for sent in train_set]
+    train_tags = [sent2tags(sent) for sent in train_set]
+    train_words = to_lower(word_seqs=train_words)
 
+    test_words = [sent2tokens(sent) for sent in test_set]
+    test_words = to_lower(word_seqs=test_words)
+    test_tags = [sent2tags(sent) for sent in test_set]
 
+    vocab, df, max_len = get_corpus_info(trainset=train_words, testset=test_words)
+
+    train_words_norm = [normalize(seq, df) for seq in train_words]
+    test_words_norm = [normalize(seq, df) for seq in test_words]
+
+    dim_w = len(embeddings['the'])
+    embeddings['DIGIT'] = np.random.uniform(-0.25, 0.25, dim_w)
+    embeddings['UNKNOWN'] = np.random.uniform(-0.25, 0.25, dim_w)
+    embeddings['PADDING'] = np.random.uniform(-0.25, 0.25, dim_w)
+    n_w = len(vocab)
+    vocab['PADDING'] = 0
+    if not 'DIGIT' in vocab:
+        vocab['DIGIT'] = n_w + 1
+        n_w += 1
+    if not 'UNKNOWN' in vocab:
+        vocab['UNKNOWN'] = n_w + 1
+        n_w += 1
+
+    embeddings_weights = np.zeros((n_w + 1, dim_w))
+    for (w, idx) in vocab.items():
+        embeddings_weights[idx, :] = embeddings[w]
+    train_X, train_Y = padding(token2identifier(X=train_words_norm, Y=train_tags, vocab=vocab), max_len=max_len)
+    test_X, test_Y = padding(token2identifier(X=test_words_norm, Y=test_tags, vocab=vocab), max_len=max_len)
+
+    print "Build the Bi-LSTM model..."
+    LSTM_extractor = Sequential()
+    LSTM_extractor.add(Embedding(output_dim=dim_w, input_dim=n_w + 1, weights=[embeddings_weights]))
+    LSTM_extractor.add(Bidirectional(LSTM(100, return_sequences=True)))
+    LSTM_extractor.add(TimeDistributedDense(output_dim=1, activation='sigmoid'))
+    LSTM_extractor.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+    print "Begin to training the model..."
+    early_stopping = EarlyStopping(monitor='val_loss', patience=2)
+    LSTM_extractor.fit(train_X, train_Y, batch_size=32, np_epoch=15,
+                       validation_data=(test_X, test_Y), callbacks=[early_stopping])
+    res = LSTM_extractor.predict_classes(test_X)
+    assert res.shape == test_X.shape
+    assert res.shape[0] == len(test_X)
+    pred_tags = []
+    for (i, raw_seq) in enumerate(test_tags):
+        pred_tags.append(get_valid_seq(padded_seq=res[i], raw_len=len(raw_seq)))
+
+    print evaluate_chunk(test_Y=test_tags, pred_Y=pred_tags)
 
 def run(ds_name, model_name='crf', feat='word'):
     """
@@ -153,6 +206,8 @@ def run(ds_name, model_name='crf', feat='word'):
         crf_extractor(train_set=train_set, test_set=test_set)
     elif model_name == 'svm':
         svm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
+    elif model_name == 'lstm':
+        lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
 
 
 if __name__ == '__main__':

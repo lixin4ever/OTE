@@ -2,6 +2,7 @@ __author__ = 'lixin77'
 
 import numpy as np
 from tabulate import tabulate
+from keras.preprocessing.sequence import pad_sequences
 
 def contain_upper(word):
     for ch in word:
@@ -161,8 +162,8 @@ def words2windowFeat(word_seqs, tag_seqs, embeddings):
 def label2tag(label_seq, word_seqs):
     """
     transform label sequence to tag sequences for each document
-    :param label_seq:
-    :param word_seqs:
+    :param label_seq: 1-d array, containing the output label of model
+    :param word_seqs: word sequences
     """
     tag_seqs = []
     # current position of the pointer
@@ -339,7 +340,10 @@ def get_corpus_info(trainset, testset):
     """
     df, vocab = {}, {}
     wid = 1 # word id starts from 1
+    max_len = -1
     for sent in trainset + testset:
+        if max_len < len(sent):
+            max_len = len(sent)
         for w in sent:
             if not w in vocab:
                 wid += 1
@@ -347,7 +351,7 @@ def get_corpus_info(trainset, testset):
                 df[w] = 1
             else:
                 df[w] += 1
-    return vocab, df
+    return vocab, df, max_len
 
 def normalize(word_seq, df):
     """
@@ -365,3 +369,46 @@ def normalize(word_seq, df):
         else:
             norm_seq.append(w)
     return norm_seq
+
+def token2identifier(X, Y, vocab):
+    """
+    transform words in the dataset to the word ids
+    :param dataset:
+    :param vocab:
+    :return:
+    """
+    wid_seqs, label_seqs = []
+    for word_seq in X:
+        wids = []
+        for w in word_seq:
+            wids.append(vocab[w])
+        wid_seqs.append(wids)
+    for tag_seq in Y:
+        labels = []
+        for t in tag_seq:
+            labels.append(int(t == 'T'))
+        label_seqs.append(labels)
+    return wid_seqs, label_seqs
+
+def padding(X, Y, max_len):
+    """
+    padding the word sequences and tag (label) sequences
+    :param X: input word sequences
+    :param Y: label sequences of the corresponding words
+    :param max_len: maximum length of the sequence
+    :return:
+    """
+    return pad_sequences(X, maxlen=max_len), pad_sequences(Y, maxlen=max_len)
+
+def get_valid_seq(padded_seq, raw_len):
+    """
+    get valid tag sequence from the predicted padded sequence
+    :param raw_len: original length of the corresponding sequence
+    :param padded_seq: padded sequence predicted from raw length
+    :return:
+    """
+    raw_seq = []
+    identifier2tag = {0: 'O', 1: 'T'}
+    for i in xrange(raw_len):
+        raw_seq.append(identifier2tag[padded_seq[i]])
+    return raw_seq
