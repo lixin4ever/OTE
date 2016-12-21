@@ -391,7 +391,7 @@ def token2identifier(X, Y, vocab):
         label_seqs.append(labels)
     return wid_seqs, label_seqs
 
-def padding(X, Y, max_len):
+def padding_seq(X, Y, max_len):
     """
     padding the word sequences and tag (label) sequences
     :param X: input word sequences
@@ -399,9 +399,9 @@ def padding(X, Y, max_len):
     :param max_len: maximum length of the sequence
     :return:
     """
-    padded_X, padded_Y = pad_sequences(X, maxlen=max_len), pad_sequences(Y, maxlen=max_len)
-    padded_Y_one_hot = [to_categorical(y, nb_classes=2) for y in padded_Y]
-    return padded_X, padded_Y_one_hot
+    padded_X, padded_Y = pad_sequences(X, maxlen=max_len, padding='post'), pad_sequences(Y, maxlen=max_len, padding='post')
+    padded_Y = np.reshape(padded_Y, (padded_Y.shape[0], padded_Y.shape[1], 1))
+    return padded_X, padded_Y
 
 def get_valid_seq(padded_seq, raw_len):
     """
@@ -414,4 +414,6 @@ def get_valid_seq(padded_seq, raw_len):
     identifier2tag = {0: 'O', 1: 'T'}
     for i in xrange(raw_len):
         raw_seq.append(identifier2tag[padded_seq[i]])
+    #print "labels:", padded_seq[:raw_len]
+    #print "tags:", raw_seq
     return raw_seq
