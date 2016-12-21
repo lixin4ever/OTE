@@ -377,7 +377,7 @@ def token2identifier(X, Y, vocab):
     :param vocab:
     :return:
     """
-    wid_seqs, label_seqs = []
+    wid_seqs, label_seqs = [], []
     for word_seq in X:
         wids = []
         for w in word_seq:

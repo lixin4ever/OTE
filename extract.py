@@ -7,7 +7,7 @@ import sys
 from utils import *
 import numpy as np
 from keras.models import Sequential
-from keras.layers import LSTM, Bidirectional, Embedding, TimeDistributedDense
+from keras.layers import LSTM, Bidirectional, Embedding, TimeDistributed, Dense, Flatten
 from keras.callbacks import EarlyStopping
 
 #embeddings = {}
@@ -147,19 +147,26 @@ def lstm_extractor(train_set, test_set, embeddings):
     embeddings_weights = np.zeros((n_w + 1, dim_w))
     for (w, idx) in vocab.items():
         embeddings_weights[idx, :] = embeddings[w]
-    train_X, train_Y = padding(token2identifier(X=train_words_norm, Y=train_tags, vocab=vocab), max_len=max_len)
-    test_X, test_Y = padding(token2identifier(X=test_words_norm, Y=test_tags, vocab=vocab), max_len=max_len)
+    train_X, train_Y = token2identifier(X=train_words_norm, Y=train_tags, vocab=vocab)
+    train_X, train_Y = padding(train_X, train_Y, max_len=max_len)
+    print "train shape:", train_X.shape
+
+    test_X, test_Y = token2identifier(X=test_words_norm, Y=test_tags, vocab=vocab)
+    test_X, test_Y = padding(test_X, test_Y, max_len=max_len)
+    print "test shape:", test_X.shape
 
     print "Build the Bi-LSTM model..."
     LSTM_extractor = Sequential()
-    LSTM_extractor.add(Embedding(output_dim=dim_w, input_dim=n_w + 1, weights=[embeddings_weights]))
-    LSTM_extractor.add(Bidirectional(LSTM(100, return_sequences=True)))
-    LSTM_extractor.add(TimeDistributedDense(output_dim=1, activation='sigmoid'))
+    LSTM_extractor.add(Embedding(output_dim=dim_w, input_dim=n_w + 1, weights=[embeddings_weights])
+    LSTM_extractor.add(Bidirectional(LSTM(100, return_sequences=True), merge_mode='concat', input_shape=(71, 300)))
+    LSTM_extractor.add(TimeDistributed(Dense(output_dim=1, activation='sigmoid')))
+    #LSTM_extractor.add(Flatten())
     LSTM_extractor.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
+    print LSTM_extractor.summary()
     print "Begin to training the model..."
     early_stopping = EarlyStopping(monitor='val_loss', patience=2)
-    LSTM_extractor.fit(train_X, train_Y, batch_size=32, np_epoch=15,
+    LSTM_extractor.fit(train_X, train_Y, batch_size=32, nb_epoch=15,
                        validation_data=(test_X, test_Y), callbacks=[early_stopping])
     res = LSTM_extractor.predict_classes(test_X)
     assert res.shape == test_X.shape
