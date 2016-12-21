@@ -21,10 +21,8 @@ def build_pkl(ds, schema="OT"):
     ctx = 0
     records = []
     tagger = StanfordPOSTagger("english-bidirectional-distsim.tagger")
-    n_sen = 0
     with open(path) as fp:
         for line in fp:
-            n_sen += 1
             r = {}
             text, labelings = line.strip().split('####')
             word_seq = []
@@ -51,9 +49,8 @@ def build_pkl(ds, schema="OT"):
             ctx += 1
             if ctx % 100 == 0:
                 print "process %s sentences" % ctx
-    print "n_sentence:", n_sen
     print "write back to the disk..."
-    #cPickle.dump(records, open('./pkl/%s.pkl' % ds, 'w+'))
+    cPickle.dump(records, open('./pkl/%s.pkl' % ds, 'w+'))
 
 
 def extract_text(dataset_name):
