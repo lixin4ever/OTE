@@ -215,7 +215,10 @@ def run(ds_name, model_name='crf', feat='word'):
                     word_emb = np.random.uniform(-0.25, 0.25, dim_w)
                 embeddings[w_norm] = word_emb
     if model_name == 'crf':
-        crf_extractor(train_set=train_set, test_set=test_set)
+        if feat_name == 'embedding':
+            crf_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
+        else:
+            crf_extractor(train_set=train_set, test_set=test_set)
     elif model_name == 'svm':
         svm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
     elif model_name == 'lstm':
@@ -223,8 +226,8 @@ def run(ds_name, model_name='crf', feat='word'):
 
 
 if __name__ == '__main__':
-    dataset, model_name = sys.argv[1:]
-    run(ds_name=dataset, model_name=model_name, feat='word')
+    dataset, model_name, feat_name = sys.argv[1:]
+    run(ds_name=dataset, model_name=model_name, feat=feat_name)
 
 
 
