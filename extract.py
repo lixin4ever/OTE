@@ -156,17 +156,21 @@ def lstm_extractor(train_set, test_set, embeddings, win_size=1):
         for (w, idx) in vocab.items():
             embeddings_unigram[idx, :] = embeddings[w]
         embeddings_weights = embeddings_unigram
+        n_symbol = n_w
+        dim_symbol = dim_w
     else:
         train_ngrams, test_ngrams, vocab_ngram = generate_ngram(train=train_words_norm, test=test_words_norm, n=win_size)
         train_X, train_Y = symbol2identifier(X=train_ngrams, Y=train_tags, vocab=vocab_ngram)
         test_X, train_Y = symbol2identifier(X=test_ngrams, Y=train_tags, vocab=vocab_ngram)
-        embeddings_ngram = np.zeros((len(vocab_ngram + 1), win_size * dim_w))
+        embeddings_ngram = np.zeros((len(vocab_ngram) + 1, win_size * dim_w))
         for (ngram, idx) in vocab_ngram.items():
             ngram_emb = []
             for w in ngram.split('_'):
                 ngram_emb += embeddings[w]
             embeddings_ngram[idx, :] = ngram_emb
         embeddings_weights = embeddings_ngram
+        n_symbol = len(vocab_ngram)
+        dim_symbol = win_size * dim_w
     # padding the symbol sequence
     train_X, train_Y = padding_seq(train_X, train_Y, max_len=max_len)
     test_X, test_Y = padding_seq(test_X, test_Y, max_len=max_len)
@@ -175,8 +179,8 @@ def lstm_extractor(train_set, test_set, embeddings, win_size=1):
 
     print "Build the Bi-LSTM model..."
     LSTM_extractor = Sequential()
-    LSTM_extractor.add(Embedding(output_dim=dim_w, input_dim=n_w + 1, weights=[embeddings_weights], mask_zero=True))
-    LSTM_extractor.add(Bidirectional(LSTM(100, return_sequences=True), merge_mode='concat', input_shape=(max_len, 300)))
+    LSTM_extractor.add(Embedding(output_dim=dim_symbol, input_dim=n_symbol + 1, weights=[embeddings_weights], mask_zero=True))
+    LSTM_extractor.add(Bidirectional(LSTM(100, return_sequences=True), merge_mode='concat', input_shape=(max_len, dim_symbol)))
     #LSTM_extractor.add(LSTM(100, return_sequences=True))
     LSTM_extractor.add(TimeDistributed(Dense(output_dim=1, activation='sigmoid')))
     #LSTM_extractor.add(Flatten())
@@ -240,7 +244,7 @@ def run(ds_name, model_name='crf', feat='word'):
     elif model_name == 'svm':
         svm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
     elif model_name == 'lstm':
-        lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
+        lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings, win_size=3)
 
 
 if __name__ == '__main__':
