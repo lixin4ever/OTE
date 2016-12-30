@@ -109,13 +109,14 @@ def svm_extractor(train_set, test_set, embeddings=None):
     pred_tags = label2tag(label_seq=pred_Y, word_seqs=test_words)
     print evaluate_chunk(test_Y=test_tags, pred_Y=pred_tags)
 
-def lstm_extractor(train_set, test_set, embeddings):
+def lstm_extractor(train_set, test_set, embeddings, win_size=1):
     """
     LSTM extractor for aspect term extraction, text pre-processing step follows the
     paper: http://www.aclweb.org/anthology/D/D15/D15-1168.pdf
     :param train_set:
     :param test_set:
     :param embeddings:
+    :param win_size: window size, should be an odd number
     """
     print "Bi-directional LSTM with word embeddings..."
     train_words = [sent2tokens(sent) for sent in train_set]
@@ -147,15 +148,29 @@ def lstm_extractor(train_set, test_set, embeddings):
         vocab['PADDING'] = n_w + 1
         n_w += 1
 
-    embeddings_weights = np.zeros((n_w + 1, dim_w))
-    for (w, idx) in vocab.items():
-        embeddings_weights[idx, :] = embeddings[w]
-    train_X, train_Y = token2identifier(X=train_words_norm, Y=train_tags, vocab=vocab)
-    train_X, train_Y = padding_seq(train_X, train_Y, max_len=max_len)
-    print "train shape:", train_X.shape
 
-    test_X, test_Y = token2identifier(X=test_words_norm, Y=test_tags, vocab=vocab)
+    if win_size == 1:
+        train_X, train_Y = symbol2identifier(X=train_words_norm, Y=train_tags, vocab=vocab)
+        test_X, test_Y = symbol2identifier(X=test_words_norm, Y=test_tags, vocab=vocab)
+        embeddings_unigram = np.zeros((n_w + 1, dim_w))
+        for (w, idx) in vocab.items():
+            embeddings_unigram[idx, :] = embeddings[w]
+        embeddings_weights = embeddings_unigram
+    else:
+        train_ngrams, test_ngrams, vocab_ngram = generate_ngram(train=train_words_norm, test=test_words_norm, n=win_size)
+        train_X, train_Y = symbol2identifier(X=train_ngrams, Y=train_tags, vocab=vocab_ngram)
+        test_X, train_Y = symbol2identifier(X=test_ngrams, Y=train_tags, vocab=vocab_ngram)
+        embeddings_ngram = np.zeros((len(vocab_ngram + 1), win_size * dim_w))
+        for (ngram, idx) in vocab_ngram.items():
+            ngram_emb = []
+            for w in ngram.split('_'):
+                ngram_emb += embeddings[w]
+            embeddings_ngram[idx, :] = ngram_emb
+        embeddings_weights = embeddings_ngram
+    # padding the symbol sequence
+    train_X, train_Y = padding_seq(train_X, train_Y, max_len=max_len)
     test_X, test_Y = padding_seq(test_X, test_Y, max_len=max_len)
+    print "train shape:", train_X.shape
     print "test shape:", test_X.shape
 
     print "Build the Bi-LSTM model..."

@@ -3,6 +3,7 @@ __author__ = 'lixin77'
 import numpy as np
 from tabulate import tabulate
 from keras.preprocessing.sequence import pad_sequences
+from nltk import ngrams
 from keras.utils.np_utils import to_categorical
 
 def contain_upper(word):
@@ -141,7 +142,7 @@ def words2windowFeat(word_seqs, tag_seqs, embeddings):
             label = int(tag_seq[j] == 'T')
             assert label == 0 or label == 1
             if j == 0:
-                features = [ele for ele in np.random.uniform(-0.25, 0.25, dim_w)]
+                features = [ele for ele in embeddings['PADDING']]
             else:
                 prev_w = word_seq[j - 1]
                 features = [ele for ele in embeddings[prev_w]]
@@ -153,7 +154,7 @@ def words2windowFeat(word_seqs, tag_seqs, embeddings):
                 for ele in embeddings[next_w]:
                     features.append(ele)
             else:
-                for ele in np.random.uniform(-0.25, 0.25, dim_w):
+                for ele in embeddings['PADDING']:
                     features.append(ele)
             assert len(features) == 3 * dim_w
             X.append(features)
@@ -371,25 +372,72 @@ def normalize(word_seq, df):
             norm_seq.append(w)
     return norm_seq
 
-def token2identifier(X, Y, vocab):
+def symbol2identifier(X, Y, vocab):
     """
-    transform words in the dataset to the word ids
-    :param dataset:
+    transform symbol (single word or ngrams) in the dataset to the corresponding ids
+    :param X:
+    :param Y:
     :param vocab:
     :return:
     """
-    wid_seqs, label_seqs = [], []
-    for word_seq in X:
-        wids = []
-        for w in word_seq:
-            wids.append(vocab[w])
-        wid_seqs.append(wids)
+    id_seqs, label_seqs = [], []
+    for symbol_seq in X:
+        ids = []
+        for s in symbol_seq:
+            ids.append(vocab[s])
+        id_seqs.append(ids)
     for tag_seq in Y:
         labels = []
         for t in tag_seq:
             labels.append(int(t == 'T'))
         label_seqs.append(labels)
-    return wid_seqs, label_seqs
+    return id_seqs, label_seqs
+
+def generate_ngram(train, test, n):
+    """
+
+    :param train:
+    :param test:
+    :param n: Note: n should be an odd number
+    :return:
+    """
+    pad_seq = []
+    i = 0
+    pad_num = n / 2
+    vocab_ngram = {}
+    idx = 1
+    while i < pad_num:
+        i += 1
+        pad_seq.append('PADDING')
+    train_ngrams, test_ngrams = [], []
+    for word_seq in train:
+        full_seq = pad_seq + word_seq + pad_seq
+        n_grams = list(ngrams(full_seq, n))
+        assert len(n_grams) == len(word_seq)
+        ngram_seq = []
+        for t in n_grams:
+            ngram = '_'.join(list(t))
+            if ngram not in vocab_ngram:
+                vocab_ngram[ngram] = idx
+                idx += 1
+            ngram_seq.append(ngram)
+        train_ngrams.append(ngram_seq)
+    assert len(train_ngrams) == len(train)
+    for word_seq in test:
+        full_seq = pad_seq + word_seq + pad_seq
+        n_grams = list(ngrams(full_seq, n))
+        assert len(n_grams) == len(word_seq)
+        ngram_seq = []
+        for t in n_grams:
+            ngram = '_'.join(list(t))
+            if ngram not in vocab_ngram:
+                vocab_ngram[ngram] = idx
+                idx += 1
+            ngram_seq.append(ngram)
+        test_ngrams.append(ngram_seq)
+    assert len(test_ngrams) == len(test)
+    return train_ngrams, test_ngrams, vocab_ngram
+
 
 def padding_seq(X, Y, max_len):
     """
