@@ -161,7 +161,7 @@ def lstm_extractor(train_set, test_set, embeddings, win_size=1):
     else:
         train_ngrams, test_ngrams, vocab_ngram = generate_ngram(train=train_words_norm, test=test_words_norm, n=win_size)
         train_X, train_Y = symbol2identifier(X=train_ngrams, Y=train_tags, vocab=vocab_ngram)
-        test_X, test_Y = symbol2identifier(X=test_ngrams, Y=train_tags, vocab=vocab_ngram)
+        test_X, test_Y = symbol2identifier(X=test_ngrams, Y=test_tags, vocab=vocab_ngram)
         embeddings_ngram = np.zeros((len(vocab_ngram) + 1, win_size * dim_w))
         for (ngram, idx) in vocab_ngram.items():
             ngram_emb = []
