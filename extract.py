@@ -136,12 +136,15 @@ def lstm_extractor(train_set, test_set, embeddings):
     embeddings['UNKNOWN'] = np.random.uniform(-0.25, 0.25, dim_w)
     embeddings['PADDING'] = np.random.uniform(-0.25, 0.25, dim_w)
     n_w = len(vocab)
-    vocab['PADDING'] = 0
+    #vocab['PADDING'] = 0
     if not 'DIGIT' in vocab:
         vocab['DIGIT'] = n_w + 1
         n_w += 1
     if not 'UNKNOWN' in vocab:
         vocab['UNKNOWN'] = n_w + 1
+        n_w += 1
+    if not 'PADDING' in vocab:
+        vocab['PADDING'] = n_w + 1
         n_w += 1
 
     embeddings_weights = np.zeros((n_w + 1, dim_w))
@@ -157,7 +160,7 @@ def lstm_extractor(train_set, test_set, embeddings):
 
     print "Build the Bi-LSTM model..."
     LSTM_extractor = Sequential()
-    LSTM_extractor.add(Embedding(output_dim=dim_w, input_dim=n_w + 1, weights=[embeddings_weights]))
+    LSTM_extractor.add(Embedding(output_dim=dim_w, input_dim=n_w + 1, weights=[embeddings_weights], mask_zero=True))
     LSTM_extractor.add(Bidirectional(LSTM(100, return_sequences=True), merge_mode='concat', input_shape=(max_len, 300)))
     #LSTM_extractor.add(LSTM(100, return_sequences=True))
     LSTM_extractor.add(TimeDistributed(Dense(output_dim=1, activation='sigmoid')))
