@@ -166,7 +166,7 @@ def lstm_extractor(train_set, test_set, embeddings, win_size=1):
         for (ngram, idx) in vocab_ngram.items():
             ngram_emb = []
             for w in ngram.split('_'):
-                ngram_emb += embeddings[w]
+                ngram_emb = np.append(ngram_emb, embeddings[w])
             embeddings_ngram[idx, :] = ngram_emb
         embeddings_weights = embeddings_ngram
         n_symbol = len(vocab_ngram)
