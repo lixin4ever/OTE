@@ -89,7 +89,7 @@ class MyEmbedding(Layer):
             out = K.gather(W, x)
         else:
             # window based representation
-            out = K.gather(W, x).reshape((self.input_length / self.winsize, self.output_dim * self.winsize))
-
+            out = K.gather(W, x)
+            out = out.reshape((out.shape[0] / self.winsize, self.winsize * out.shape[1]))
         return out
 
