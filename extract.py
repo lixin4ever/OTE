@@ -178,8 +178,8 @@ def lstm_extractor(train_set, test_set, embeddings, win_size=1):
     LSTM_extractor = Sequential()
     LSTM_extractor.add(Embedding(output_dim=dim_symbol,
                                    input_dim=n_symbol + 1, weights=[embeddings_weights],
-                                   mask_zero=True))
-    LSTM_extractor.add(Reshape((max_len, win_size * dim_symbol), input_shape=(max_len * win_size, dim_symbol)))
+                                   mask_zero=False, input_length=max_len*win_size))
+    LSTM_extractor.add(Reshape((max_len, win_size * dim_symbol)))
     LSTM_extractor.add(Bidirectional(LSTM(100, return_sequences=True), merge_mode='concat', input_shape=(max_len, dim_symbol)))
     #LSTM_extractor.add(LSTM(100, return_sequences=True))
     LSTM_extractor.add(TimeDistributed(Dense(output_dim=1, activation='sigmoid')))
@@ -196,7 +196,7 @@ def lstm_extractor(train_set, test_set, embeddings, win_size=1):
     res = res.reshape((res.shape[0], res.shape[1] * res.shape[2]))
 
     print "output dim:", res.shape
-    assert res.shape == test_X.shape
+    #assert res.shape == test_X.shape
     assert res.shape[0] == len(test_X)
     pred_tags = []
     for (i, raw_seq) in enumerate(test_tags):
