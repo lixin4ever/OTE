@@ -19,7 +19,7 @@ class MyEmbedding(Layer):
         :param input_dim:
         :param output_dim:
         :param init:
-        :param input_length: length of padded sequence
+        :param input_length: length of padded sequence,
         :param W_regularizer:
         :param activity_regularizer:
         :param W_constraint:
@@ -89,7 +89,7 @@ class MyEmbedding(Layer):
             out = K.gather(W, x)
         else:
             # window based representation
-            out = K.gather(W, x).reshape(self.input_length / self.winsize, self.output_dim * self.winsize)
+            out = K.gather(W, x).reshape((self.input_length / self.winsize, self.output_dim * self.winsize))
 
         return out
 
