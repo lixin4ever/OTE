@@ -395,7 +395,7 @@ def symbol2identifier(X, Y, vocab):
 
 def generate_ngram(train, test, n):
     """
-
+    generate ngram sequence
     :param train:
     :param test:
     :param n: Note: n should be an odd number
@@ -404,8 +404,6 @@ def generate_ngram(train, test, n):
     pad_seq = []
     i = 0
     pad_num = n / 2
-    vocab_ngram = {}
-    idx = 1
     while i < pad_num:
         i += 1
         pad_seq.append('PADDING')
@@ -416,11 +414,9 @@ def generate_ngram(train, test, n):
         assert len(n_grams) == len(word_seq)
         ngram_seq = []
         for t in n_grams:
-            ngram = '_'.join(list(t))
-            if ngram not in vocab_ngram:
-                vocab_ngram[ngram] = idx
-                idx += 1
-            ngram_seq.append(ngram)
+            for w in list(t):
+                ngram_seq.append(w)
+        assert len(ngram_seq) == n * len(word_seq)
         train_ngrams.append(ngram_seq)
     assert len(train_ngrams) == len(train)
     for word_seq in test:
@@ -429,25 +425,24 @@ def generate_ngram(train, test, n):
         assert len(n_grams) == len(word_seq)
         ngram_seq = []
         for t in n_grams:
-            ngram = '_'.join(list(t))
-            if ngram not in vocab_ngram:
-                vocab_ngram[ngram] = idx
-                idx += 1
-            ngram_seq.append(ngram)
+            for w in list(t):
+                ngram_seq.append(w)
+        assert len(ngram_seq) == n * len(word_seq)
         test_ngrams.append(ngram_seq)
     assert len(test_ngrams) == len(test)
-    return train_ngrams, test_ngrams, vocab_ngram
+    return train_ngrams, test_ngrams
 
 
-def padding_seq(X, Y, max_len):
+def padding_seq(X, Y, max_len, winsize=1):
     """
     padding the word sequences and tag (label) sequences
     :param X: input word sequences
     :param Y: label sequences of the corresponding words
     :param max_len: maximum length of the sequence
+    :param winsize: window size of the window-based word representation
     :return:
     """
-    padded_X, padded_Y = pad_sequences(X, maxlen=max_len, padding='post'), pad_sequences(Y, maxlen=max_len, padding='post')
+    padded_X, padded_Y = pad_sequences(X, maxlen=max_len * winsize, padding='post'), pad_sequences(Y, maxlen=max_len, padding='post')
     padded_Y = np.reshape(padded_Y, (padded_Y.shape[0], padded_Y.shape[1], 1))
     return padded_X, padded_Y
 
