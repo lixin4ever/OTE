@@ -178,7 +178,7 @@ def lstm_extractor(train_set, test_set, embeddings, win_size=1):
     LSTM_extractor = Sequential()
     LSTM_extractor.add(Embedding(output_dim=dim_symbol,
                                    input_dim=n_symbol + 1, weights=[embeddings_weights],
-                                   mask_zero=True, input_length=max_len*win_size))
+                                   mask_zero=False, input_length=max_len*win_size))
     LSTM_extractor.add(Reshape((max_len, win_size * dim_symbol)))
     LSTM_extractor.add(Bidirectional(LSTM(100, return_sequences=True), merge_mode='concat'))
     #LSTM_extractor.add(LSTM(100, return_sequences=True))
