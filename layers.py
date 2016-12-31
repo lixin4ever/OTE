@@ -53,7 +53,7 @@ class MyEmbedding(Layer):
         self.winsize = winsize
 
     def build(self, input_shape):
-        self.W = self.add_weight((self.input_dim, self.output_dim),
+        self.W = self.add_weight((self.input_dim, self.output_dim / self.winsize),
                                  initializer=self.init,
                                  name='{}_W'.format(self.name),
                                  regularizer=self.W_regularizer,
