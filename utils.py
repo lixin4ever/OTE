@@ -4,6 +4,7 @@ import numpy as np
 from tabulate import tabulate
 from keras.preprocessing.sequence import pad_sequences
 from nltk import ngrams
+import os
 from keras.utils.np_utils import to_categorical
 
 def contain_upper(word):
@@ -460,3 +461,31 @@ def get_valid_seq(padded_seq, raw_len):
     #print "labels:", padded_seq[:raw_len]
     #print "tags:", raw_seq
     return raw_seq
+
+def output(test_set, pred_Y, model_name):
+    """
+    write the output back to the disk
+    :param test_set:
+    :param pred_Y:
+    :param model_name:
+    :return:
+    """
+    assert len(test_set) == len(pred_Y)
+    n_sen = len(test_set)
+    lines = []
+    for i in xrange(n_sen):
+        tokens = sent2tokens(test_set[i])
+        pred = pred_Y[i]
+        assert len(tokens) == len(pred)
+        aspects, _, _ = tag2aspect(tag_sequence=ot2bieos(tag_sequence=pred))
+        sent = ' '.join(tokens)
+        aspect_terms = []
+        for (b, e) in aspects:
+            at = '_'.join(tokens[b: (e+1)])
+            aspect_terms.append(at)
+        lines.append('%s\n' % ('##'.join([sent] + aspect_terms)))
+    if not os.path.exists('./res'):
+        os.mkdir('./res')
+    with open('./res/%s.txt' % model_name, 'w+') as fp:
+        fp.writelines(lines)
+

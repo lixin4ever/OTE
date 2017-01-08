@@ -73,6 +73,8 @@ def crf_extractor(train_set, test_set, embeddings=None):
 
     print evaluate_chunk(test_Y=test_Y, pred_Y=pred_Y)
 
+    output(test_set=test_set, pred_Y=pred_Y, model_name='crf')
+
 def svm_extractor(train_set, test_set, embeddings=None):
     """
     window-based support vector machine for aspect extraction
