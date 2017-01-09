@@ -275,12 +275,12 @@ def conv_lstm_extractor(train_set, test_set, embeddings, win_size):
 
     ConvLSTM_extractor = Sequential()
 
-    ConvLSTM_extractor.append(Embedding(output_dim=dim_symbol,
+    ConvLSTM_extractor.add(Embedding(output_dim=dim_symbol,
                                    input_dim=n_symbol + 1, weights=[embeddings_weights],
                                    mask_zero=True, input_length=max_len+win_size-1))
-    ConvLSTM_extractor.append(Convolution1D(nb_filter=1, filter_length=win_size,
+    ConvLSTM_extractor.add(Convolution1D(nb_filter=1, filter_length=win_size,
                                             input_shape=(max_len+win_size-1, dim_symbol)))
-    ConvLSTM_extractor.append(Bidirectional(LSTM(100, return_sequences=True), merge_mode='concat'))
+    ConvLSTM_extractor.add(Bidirectional(LSTM(100, return_sequences=True), merge_mode='concat'))
     ConvLSTM_extractor.add(TimeDistributed(Dense(output_dim=1, activation='sigmoid')))
     ConvLSTM_extractor.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
