@@ -7,7 +7,7 @@ import sys
 from utils import *
 import numpy as np
 from keras.models import Sequential
-from keras.layers import LSTM, Bidirectional, Embedding, TimeDistributed, Dense, Reshape
+from keras.layers import LSTM, Bidirectional, Embedding, TimeDistributed, Dense, Reshape, Convolution1D
 from keras.callbacks import EarlyStopping
 from layers import MyEmbedding
 
@@ -161,15 +161,15 @@ def lstm_extractor(train_set, test_set, embeddings, win_size=1):
         train_X, train_Y = symbol2identifier(X=train_words_norm, Y=train_tags, vocab=vocab)
         test_X, test_Y = symbol2identifier(X=test_words_norm, Y=test_tags, vocab=vocab)
         # padding the symbol sequence
-        train_X, train_Y = padding_seq(train_X, train_Y, max_len=max_len)
-        test_X, test_Y = padding_seq(test_X, test_Y, max_len=max_len)
+        train_X, train_Y = padding_zero(train_X, train_Y, max_len=max_len)
+        test_X, test_Y = padding_zero(test_X, test_Y, max_len=max_len)
     else:
         train_ngrams, test_ngrams = generate_ngram(train=train_words_norm, test=test_words_norm, n=win_size)
         train_X, train_Y = symbol2identifier(X=train_ngrams, Y=train_tags, vocab=vocab)
         test_X, test_Y = symbol2identifier(X=test_ngrams, Y=test_tags, vocab=vocab)
         # padding the symbol sequence
-        train_X, train_Y = padding_seq(train_X, train_Y, max_len=max_len, winsize=win_size)
-        test_X, test_Y = padding_seq(test_X, test_Y, max_len=max_len, winsize=win_size)
+        train_X, train_Y = padding_zero(train_X, train_Y, max_len=max_len, winsize=win_size)
+        test_X, test_Y = padding_zero(test_X, test_Y, max_len=max_len, winsize=win_size)
     n_symbol = n_w
     dim_symbol = dim_w
 
@@ -205,6 +205,105 @@ def lstm_extractor(train_set, test_set, embeddings, win_size=1):
         pred_tags.append(get_valid_seq(padded_seq=res[i], raw_len=len(raw_seq)))
 
     print evaluate_chunk(test_Y=test_tags, pred_Y=pred_tags)
+
+def conv_lstm_extractor(train_set, test_set, embeddings, win_size):
+    """
+
+    :param train_set:
+    :param test_set:
+    :param embeddings:
+    :param win_size: height of convolutional filter
+    :return:
+    """
+    print "Convolutional Bi-direction LSTM with word embeddings..."
+    train_words = [sent2tokens(sent) for sent in train_set]
+    train_tags = [sent2tags(sent) for sent in train_set]
+    train_words = to_lower(word_seqs=train_words)
+
+    test_words = [sent2tokens(sent) for sent in test_set]
+    test_words = to_lower(word_seqs=test_words)
+    test_tags = [sent2tags(sent) for sent in test_set]
+
+    vocab, df, max_len = get_corpus_info(trainset=train_words, testset=test_words)
+
+    train_words_norm = [normalize(seq, df) for seq in train_words]
+    test_words_norm = [normalize(seq, df) for seq in test_words]
+
+    dim_w = len(embeddings['the'])
+    embeddings['DIGIT'] = np.random.uniform(-0.25, 0.25, dim_w)
+    embeddings['UNKNOWN'] = np.random.uniform(-0.25, 0.25, dim_w)
+    embeddings['PADDING'] = np.random.uniform(-0.25, 0.25, dim_w)
+    n_w = len(vocab)
+    #vocab['PADDING'] = 0
+    if not 'DIGIT' in vocab:
+        vocab['DIGIT'] = n_w + 1
+        n_w += 1
+    if not 'UNKNOWN' in vocab:
+        vocab['UNKNOWN'] = n_w + 1
+        n_w += 1
+    if not 'PADDING' in vocab:
+        vocab['PADDING'] = n_w + 1
+        n_w += 1
+    n_w = len(vocab)
+    #vocab['PADDING'] = 0
+    if not 'DIGIT' in vocab:
+        vocab['DIGIT'] = n_w + 1
+        n_w += 1
+    if not 'UNKNOWN' in vocab:
+        vocab['UNKNOWN'] = n_w + 1
+        n_w += 1
+    if not 'PADDING' in vocab:
+        vocab['PADDING'] = n_w + 1
+        n_w += 1
+
+    train_X, train_Y = symbol2identifier(X=train_words_norm, Y=train_tags, vocab=vocab)
+    test_X, test_Y = symbol2identifier(X=test_words_norm, Y=test_tags, vocab=vocab)
+
+    train_X, train_Y = padding_special(X=train_words_norm, Y=train_tags, max_len=max_len, winsize=win_size, value=vocab['PADDING'])
+    test_X, test_Y = padding_special(X=test_words_norm, Y=test_tags, max_len=max_len, winsize=win_size, value=vocab['PADDING'])
+
+    print "train_X: %s, train_Y:%s" % (train_X.shape, train_Y.shape)
+    print "test_X: %s, test_Y:%s" % (test_X.shape, test_Y.shape)
+
+    n_symbol = n_w
+    dim_symbol = dim_w
+
+    embeddings_unigram = np.zeros((n_w + 1, dim_w))
+    for (w, idx) in vocab.items():
+        embeddings_unigram[idx, :] = embeddings[w]
+    embeddings_weights = embeddings_unigram
+
+    ConvLSTM_extractor = Sequential()
+
+    ConvLSTM_extractor.append(Embedding(output_dim=dim_symbol,
+                                   input_dim=n_symbol + 1, weights=[embeddings_weights],
+                                   mask_zero=True, input_length=max_len+win_size-1))
+    ConvLSTM_extractor.append(Convolution1D(nb_filter=1, filter_length=win_size,
+                                            input_shape=(max_len+win_size-1, dim_symbol)))
+    ConvLSTM_extractor.append(Bidirectional(LSTM(100, return_sequences=True), merge_mode='concat'))
+    ConvLSTM_extractor.add(TimeDistributed(Dense(output_dim=1, activation='sigmoid')))
+    ConvLSTM_extractor.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+    print ConvLSTM_extractor.summary()
+
+    print "Begin to train the model..."
+    early_stopping = EarlyStopping(monitor='val_loss', patience=10)
+    ConvLSTM_extractor.fit(train_X, train_Y, batch_size=32, nb_epoch=30,
+                       validation_data=(test_X, test_Y), callbacks=[early_stopping])
+
+    res = ConvLSTM_extractor.predict_classes(test_X)
+    res = res.reshape((res.shape[0], res.shape[1] * res.shape[2]))
+
+    assert res.shape[0] == len(test_X)
+    print "output dim:", res.shape
+    pred_tags = []
+    for (i, raw_seq) in enumerate(test_tags):
+        pred_tags.append(get_valid_seq(padded_seq=res[i], raw_len=len(raw_seq)))
+
+    print evaluate_chunk(test_Y=test_tags, pred_Y=pred_tags)
+
+    output(test_set=test_set, pred_Y=pred_tags, model_name='ConvLSTM')
+
 
 def run(ds_name, model_name='crf', feat='word'):
     """

@@ -434,7 +434,7 @@ def generate_ngram(train, test, n):
     return train_ngrams, test_ngrams
 
 
-def padding_seq(X, Y, max_len, winsize=1):
+def padding_zero(X, Y, max_len, winsize=1):
     """
     padding the word sequences and tag (label) sequences
     :param X: input word sequences
@@ -444,6 +444,29 @@ def padding_seq(X, Y, max_len, winsize=1):
     :return:
     """
     padded_X, padded_Y = pad_sequences(X, maxlen=max_len * winsize, padding='post'), pad_sequences(Y, maxlen=max_len, padding='post')
+    padded_Y = np.reshape(padded_Y, (padded_Y.shape[0], padded_Y.shape[1], 1))
+    return padded_X, padded_Y
+
+def padding_special(X, Y, max_len, winsize, special_value):
+    """
+    add (winsize - 1) special token for each sequence and then perform padding
+    :param X:
+    :param Y:
+    :param max_len:
+    :param winsize: window size
+    :param special_value: added value before padding, which is a required argument
+    :return:
+    """
+    padded_seq = []
+    n_pad, i = winsize / 2, 0
+    while i < n_pad:
+        i += 1
+        padded_seq.append(special_value)
+    new_X, new_test = [], []
+    for seq in X:
+        new_seq = padded_seq + seq + padded_seq
+        new_X.append(new_seq)
+    padded_X, padded_Y = pad_sequences(X, maxlen=max_len + winsize - 1, padding='post'), pad_sequences(Y, maxlen=max_len, padding='post')
     padded_Y = np.reshape(padded_Y, (padded_Y.shape[0], padded_Y.shape[1], 1))
     return padded_X, padded_Y
 
