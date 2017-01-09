@@ -259,8 +259,8 @@ def conv_lstm_extractor(train_set, test_set, embeddings, win_size):
     train_X, train_Y = symbol2identifier(X=train_words_norm, Y=train_tags, vocab=vocab)
     test_X, test_Y = symbol2identifier(X=test_words_norm, Y=test_tags, vocab=vocab)
 
-    train_X, train_Y = padding_special(X=train_words_norm, Y=train_tags, max_len=max_len, winsize=win_size, value=vocab['PADDING'])
-    test_X, test_Y = padding_special(X=test_words_norm, Y=test_tags, max_len=max_len, winsize=win_size, value=vocab['PADDING'])
+    train_X, train_Y = padding_special(X=train_X, Y=train_Y, max_len=max_len, winsize=win_size, special_value=vocab['PADDING'])
+    test_X, test_Y = padding_special(X=test_X, Y=test_Y, max_len=max_len, winsize=win_size, special_value=vocab['PADDING'])
 
     print "train_X: %s, train_Y:%s" % (train_X.shape, train_Y.shape)
     print "test_X: %s, test_Y:%s" % (test_X.shape, test_Y.shape)
