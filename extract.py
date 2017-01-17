@@ -23,10 +23,10 @@ def crf_extractor(train_set, test_set, embeddings=None):
 
     if not embeddings:
         print "crf with word-level features..."
-        #train_X = [sent2features(sent) for sent in train_set]
-        #test_X = [sent2features(sent) for sent in test_set]
-        train_X = feature_extractor(data=train_set, _type='map', feat='word', embeddings=embeddings)
-        test_X = feature_extractor(data=test_set, _type='map', feat='word', embeddings=embeddings)
+        #train_X = feature_extractor(data=train_set, _type='map', feat='word', embeddings=embeddings)
+        #test_X = feature_extractor(data=test_set, _type='map', feat='word', embeddings=embeddings)
+        train_X = [sent2features(sent) for sent in train_set]
+        test_X = [sent2features(sent) for sent in test_set]
     else:
         print "crf with word embeddings..."
         train_words = [sent2tokens(sent) for sent in train_set]
