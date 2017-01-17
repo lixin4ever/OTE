@@ -9,7 +9,7 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import LSTM, Bidirectional, Embedding, TimeDistributed, Dense, Reshape, Convolution1D
 from keras.callbacks import EarlyStopping
-from layers import MyEmbedding
+#from layers import MyEmbedding
 
 #embeddings = {}
 def crf_extractor(train_set, test_set, embeddings=None):
@@ -23,10 +23,10 @@ def crf_extractor(train_set, test_set, embeddings=None):
 
     if not embeddings:
         print "crf with word-level features..."
-        train_X = [sent2features(sent) for sent in train_set]
-        test_X = [sent2features(sent) for sent in test_set]
-
-
+        #train_X = [sent2features(sent) for sent in train_set]
+        #test_X = [sent2features(sent) for sent in test_set]
+        train_X = feature_extractor(data=train_set, _type='map', feat='word', embeddings=embeddings)
+        test_X = feature_extractor(data=test_set, _type='map', feat='word', embeddings=embeddings)
     else:
         print "crf with word embeddings..."
         train_words = [sent2tokens(sent) for sent in train_set]
@@ -39,6 +39,7 @@ def crf_extractor(train_set, test_set, embeddings=None):
 
         vocab, df, max_len = get_corpus_info(trainset=train_words, testset=test_words)
 
+        # replace words appearing infrequently with "UNKNOWN"
         train_words_norm = [normalize(seq, df) for seq in train_words]
         test_words_norm = [normalize(seq, df) for seq in test_words]
 

@@ -5,11 +5,23 @@ class Token(object):
     """
     single word
     """
-    def __init__(self, surface):
+    def __init__(self, surface, pos=None, chunk=None, dep=None, embedding=None):
+        """
+
+        :param surface: surface name (i.e., identity) of token
+        :param pos: part-of-speech tags
+        :param chunk: chunk tags (phrase-level features)
+        :param dep: dependency parsing features
+        :param embedding: embedding features
+        """
         # observation features, e.g., word identity, prefix of word, suffix of word, pos tag...
         self.observations = []
         # surface name of the Token
         self.surface = surface
+        self.pos = pos
+        self.chunk = chunk
+        self.dep = dep
+        self.embedding = embedding
 
     def add(self, features):
         """
@@ -37,7 +49,7 @@ class Sequence(object):
 
     def F(self, t, yt_1, yt):
         """
-
+        feature function for obtaining the features at each timestep t
         :param t: current time step
         :param yt_1: y[t-1]
         :param yt: y[t]
@@ -51,7 +63,7 @@ class Sequence(object):
         # label-label / state-state features, also called transition features in HMM
         yield '%s-%s' % (yt_1, yt)
 
-class Feature(object):
+class FeatureIndexer(object):
     """
     bijective mapping feature and feature index
     """
@@ -89,7 +101,7 @@ class Feature(object):
 
     def add_many(self, x):
         for k in x:
-            self.add(x)
+            self.add(k)
 
     def __getitem__(self, k):
         """
@@ -140,70 +152,6 @@ class Feature(object):
         return map(self.lookup, x)
 
 
-def get_shape(word):
-    s = ''
-    for ch in word:
-        if ch.isupper():
-            s += 'U'
-        elif ch.islower():
-            s += 'L'
-        elif ch.isdigit():
-            s += 'D'
-        elif ch in ('.', ','):
-            s += '.'
-        elif ch in (';', ':', '?', '!'):
-            s += ';'
-        elif ch in ('+', '-', '*', '/', '=', '|', '_'):
-            s += '-'
-        elif ch in ('(', '<', '{', '['):
-            s += '('
-        elif ch in (')', '>', '}', ']'):
-            s += ')'
-        else:
-            s += ch
-    return ch
 
 
-def token_features(w):
-    """
-    generate observation features, follow the idea in https://github.com/ppfliu/opinion-target/blob/master/absa.py
-    """
-    # word identity
-    yield 'word=%s' % w
-    w_shape = get_shape(w)
-    yield 'word_shape=%s' % w_shape
-    # lower- or upper-case
-    yield 'word.lower()=%s' % w.lower()
-    yield 'word.upper()=%s' % w.upper()
 
-    # is-xxx feature
-    yield 'word.isdigit()=%s' % w.isdigit()
-    yield 'word.isupper()=%s' % w.isupper()
-    yield 'word.isalpha()=%s' % w.isalpha()
-    yield 'word.istitle()=%s' % w.istitle()
-
-    # prefix and suffix
-    if len(w) >= 3:
-        p3 = w[:3]
-        s3 = w[-3:]
-    else:
-        p3 = ''
-        s3 = ''
-    if len(w) >= 2:
-        p2 = w[:2]
-        s2 = w[-2:]
-    else:
-        p2 = ''
-        s2 = ''
-    if len(w) >= 1:
-        p1 = w[:1]
-        s1 = w[-1:]
-    else:
-        p1 = ''
-        s1 = ''
-    yield 'prefix3=%s' % p3
-    yield 'suffix3=%s' % s3
-    yield 'prefix2=%s' % p2
-    yield 'suffix2=%s' % s2
-    yield 'prefix1=%s' % p1
-    yield 'suffix1=%s' % s1
