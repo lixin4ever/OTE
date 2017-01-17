@@ -277,7 +277,7 @@ def conv_lstm_extractor(train_set, test_set, embeddings, win_size):
 
     ConvLSTM_extractor.add(Embedding(output_dim=dim_symbol,
                                    input_dim=n_symbol + 1, weights=[embeddings_weights],
-                                   mask_zero=True, input_length=max_len+win_size-1))
+                                   mask_zero=False, input_length=max_len+win_size-1))
     ConvLSTM_extractor.add(Convolution1D(nb_filter=1, filter_length=win_size,
                                             input_shape=(max_len+win_size-1, dim_symbol)))
     ConvLSTM_extractor.add(Bidirectional(LSTM(100, return_sequences=True), merge_mode='concat'))
@@ -345,7 +345,7 @@ def run(ds_name, model_name='crf', feat='word'):
     elif model_name == 'svm':
         svm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
     elif model_name == 'lstm':
-        lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings, win_size=3)
+        lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings, win_size=5)
     elif model_name == 'conv_lstm':
         conv_lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings, win_size=3)
 
