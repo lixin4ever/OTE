@@ -5,25 +5,8 @@ from tabulate import tabulate
 from keras.preprocessing.sequence import pad_sequences
 from nltk import ngrams
 import os
-from keras.utils.np_utils import to_categorical
-
-def contain_upper(word):
-    for ch in word:
-        if 'A' <= ch <= 'Z':
-            return True
-    return False
-
-def contain_lower(word):
-    for ch in word:
-        if 'a' <= ch <= 'z':
-            return True
-    return False
-
-def contain_digit(word):
-    for ch in word:
-        if '0' <= ch <= "9":
-            return True
-    return False
+#from keras.utils.np_utils import to_categorical
+from data import Token, Sequence, FeatureIndexer
 
 def word2features(sent, i):
     """
@@ -87,7 +70,17 @@ def sent2embeddings(sent, embeddings):
     """
     transform sentence to embedding-based features
     """
-    return [word2vector(w2v=embeddings[w]) for w in sent]
+    dim_w = embeddings['the']
+    res = []
+    if not embeddings:
+        # input embeddings are empty
+        embeddings = {}
+    for w in sent['words']:
+        if w.lower() in embeddings:
+            res.append(embeddings[w.lower()])
+        else:
+            res.append(np.random.uniform(-0.25, 0.25, dim_w))
+    return res
 
 def sent2tags(sent):
     return [t for t in sent['tags']]
@@ -95,10 +88,15 @@ def sent2tags(sent):
 def sent2postags(sent):
     return [t for t in sent['postags']]
 
-def sent2tokens(sent):
+def sent2words(sent):
     return [w for w in sent['words']]
 
-
+def sent2tokens(sent, embeddings=None):
+    words = sent2words(sent)
+    postags = sent2postags(sent)
+    word_vectors = sent2embeddings(sent, embeddings)
+    # chunk tags, dependency features or embedding features can also be added
+    return [Token(surface=w, pos=postag, embedding=emb) for (w, postag, emb) in zip(words, postags, word_vectors)]
 
 def tag2aspect(tag_sequence):
     """
@@ -270,7 +268,7 @@ def evaluate(test_Y, pred_Y):
 
 def evaluate_chunk(test_Y, pred_Y):
     """
-    evaluate function for aspect term extraction, generally, it can also be used to evaluate the NER, chunking task
+    evaluate function for aspect term extraction, generally, it can also be used to evaluate the NER, NP-chunking task
     """
     assert len(test_Y) == len(pred_Y)
     length = len(test_Y)
@@ -472,7 +470,7 @@ def padding_special(X, Y, max_len, winsize, special_value):
 
 def get_valid_seq(padded_seq, raw_len):
     """
-    get valid tag sequence from the predicted padded sequence
+    get valid tag sequence from the predicted, padded sequence
     :param raw_len: original length of the corresponding sequence
     :param padded_seq: padded sequence predicted from raw length
     :return:
@@ -481,8 +479,6 @@ def get_valid_seq(padded_seq, raw_len):
     identifier2tag = {0: 'O', 1: 'T'}
     for i in xrange(raw_len):
         raw_seq.append(identifier2tag[padded_seq[i]])
-    #print "labels:", padded_seq[:raw_len]
-    #print "tags:", raw_seq
     return raw_seq
 
 def output(test_set, pred_Y, model_name):
@@ -511,4 +507,204 @@ def output(test_set, pred_Y, model_name):
         os.mkdir('./res')
     with open('./res/%s.txt' % model_name, 'w+') as fp:
         fp.writelines(lines)
+
+def preprocess_seq(x):
+    """
+    collect features for each token in sequence x
+    :param x: a sequence of Token object
+    :return:
+    """
+    x[0].add(['word.BOS=True'])
+    x[-1].add(['word.EOS=True'])
+    for t in x:
+        assert isinstance(t, Token)
+        t.add(token_features(token=t))
+    # feature from x[t-1]
+    for i in xrange(1, len(x)):
+        x[i].add(f + '@-1' for f in token_features(x[i-1]))
+    # feature from x[t+1]
+    for i in xrange(0, len(x) - 1):
+        x[i].add(f + '@+1' for f in token_features(x[i+1]))
+    return x
+
+def token_features(token):
+    """
+    generate observation features, follow the idea in https://github.com/ppfliu/opinion-target/blob/master/absa.py
+    """
+    w = token.surface
+    embedding = token.embedding
+    # word identity
+    yield 'word=%s' % w
+    w_shape = get_shape(w)
+    yield 'word.shape=%s' % w_shape
+    # lower- or upper-case
+    yield 'word.lower=%s' % w.lower()
+    yield 'word.upper=%s' % w.upper()
+
+    # is-xxx feature
+    yield 'word.isdigit=%s' % w.isdigit()
+    yield 'word.isupper=%s' % w.isupper()
+    yield 'word.isalpha=%s' % w.isalpha()
+    yield 'word.istitle=%s' % w.istitle()
+
+    # prefix and suffix
+    if len(w) >= 3:
+        p3 = w[:3]
+        s3 = w[-3:]
+    else:
+        p3 = ''
+        s3 = ''
+    if len(w) >= 2:
+        p2 = w[:2]
+        s2 = w[-2:]
+    else:
+        p2 = ''
+        s2 = ''
+    if len(w) >= 1:
+        p1 = w[:1]
+        s1 = w[-1:]
+    else:
+        p1 = ''
+        s1 = ''
+    yield 'word.prefix3=%s' % p3
+    yield 'word.suffix3=%s' % s3
+    yield 'word.prefix2=%s' % p2
+    yield 'word.suffix2=%s' % s2
+    yield 'word.prefix1=%s' % p1
+    yield 'word.suffix1=%s' % s1
+    if embedding:
+        for i in xrange(len(embedding)):
+            yield 'embedding.%s=%s' % (i, embedding[i])
+
+def get_shape(word):
+    s = ''
+    for ch in word:
+        if ch.isupper():
+            s += 'U'
+        elif ch.islower():
+            s += 'L'
+        elif ch.isdigit():
+            s += 'D'
+        elif ch in ('.', ','):
+            s += '.'
+        elif ch in (';', ':', '?', '!'):
+            s += ';'
+        elif ch in ('+', '-', '*', '/', '=', '|', '_'):
+            s += '-'
+        elif ch in ('(', '<', '{', '['):
+            s += '('
+        elif ch in (')', '>', '}', ']'):
+            s += ')'
+        else:
+            s += ch
+    return ch
+
+def build_indexer(training_data):
+    """
+
+    :param training_data:
+    :return:
+    """
+    # state / label feature indexer
+    label_indexer = FeatureIndexer()
+    # observation / token feature indexer
+    observation_indexer = FeatureIndexer()
+    for x in training_data:
+        assert isinstance(x, Sequence)
+        tags = x.tags
+        f = x.F
+        # first token
+        observation_indexer.add_many(f(t=0, yt_1=None, yt=tags[0]))
+        for t in xrange(1, len(x)):
+            observation_indexer.add_many(f(t=t, yt_1=tags[t-1], yt=tags[t]))
+        label_indexer.add_many(tags)
+    observation_indexer._frozen()
+    print "number of feature functions:", len(observation_indexer)
+    return observation_indexer, label_indexer
+
+def to_array(features, feat_vocab, dtype='float64'):
+    """
+    transform dictionary into array
+    :param features: feature dictionary
+    :param feat_vocab: mapping between feature and feature id
+    :param dtype:
+    :return:
+    """
+    n_feature = len(feat_vocab)
+    X_array = []
+    for seq in features:
+        x = []
+        for feat_map in seq:
+            feature_array = np.zeros(n_feature)
+            for k in feat_map:
+                fid = feat_vocab[k]
+                v = feat_map[k]
+                if v == 'True':
+                    v = 1
+                if v == 'False':
+                    v = 0
+                feature_array[fid] = v
+            x.append(feature_array.astype(dtype=dtype))
+        X_array.append(x)
+    return X_array
+
+def feature_extractor(data, _type='map', feat='word', embeddings=None):
+    """
+    feature extractor for crfsuite or other existing taggers
+    :param data:
+    :param _type: input form of features, for crfsuite, it is "map", for the svm and other learning, it is "array"
+    :param feat: type of features, word-level features and embedding features are available
+    :param embeddings: pre-trained or random-initialized word embeddings
+    :return:
+    """
+    X = []
+    indexer = FeatureIndexer()
+    for sent in data:
+        seq_features = []
+        tokens = sent2tokens(sent, embeddings)
+        for i in xrange(len(tokens)):
+            tmp = {'bias': 1.0}
+            assert isinstance(tokens[i], Token)
+            for f in tokens[i].observations:
+                k, v = f.split('=')
+                if k.startswith('word') and feat == 'embedding':
+                    continue
+                if k.startswith('embedding') and feat == 'word':
+                    continue
+                tmp[k] = v
+                indexer.add(k)
+            if i > 0:
+                for f in tokens[i-1].observations:
+                    k, v = f.split('=')
+                    if k.startswith('word') and feat == 'embedding':
+                        continue
+                    if k.startswith('embedding') and feat == 'word':
+                        continue
+                    cur_k = '%s@-1' % k
+                    tmp[cur_k] = v
+                    indexer.add(cur_k)
+            else:
+                if feat == 'word':
+                    # using word-level features
+                    tmp['word.BOS'] = "True"
+                    indexer.add('word.BOS')
+            if i < len(tokens) - 1:
+                for f in tokens[i+1].observations:
+                    k, v = f.split('=')
+                    if k.startswith('word') and feat == 'embedding':
+                        continue
+                    if k.startswith('embedding') and feat == 'word':
+                        continue
+                    cur_k = '%s@+1' % k
+                    tmp[cur_k] = v
+                    indexer.add(cur_k)
+            else:
+                if feat == 'word':
+                    tmp['word.EOS'] = "True"
+            seq_features.append(tmp)
+        X.append(seq_features)
+    if _type == 'string':
+        return X
+    else:
+        return to_array(features=X, feat_vocab=indexer._mapping)
 
