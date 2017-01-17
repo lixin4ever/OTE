@@ -46,8 +46,8 @@ def crf_extractor(train_set, test_set, embeddings=None):
         embeddings['DIGIT'] = np.random.uniform(-0.25, 0.25, dim_w)
         embeddings['UNKNOWN'] = np.random.uniform(-0.25, 0.25, dim_w)
 
-        train_X = [sent2embeddings(sent, embeddings) for sent in train_words]
-        test_X = [sent2embeddings(sent, embeddings) for sent in test_words]
+        train_X = [sent2embeddings(sent, embeddings) for sent in train_words_norm]
+        test_X = [sent2embeddings(sent, embeddings) for sent in test_words_norm]
 
 
     crf = sklearn_crfsuite.CRF(
