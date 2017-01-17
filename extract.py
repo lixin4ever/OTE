@@ -328,7 +328,7 @@ def run(ds_name, model_name='crf', feat='word'):
     dim_w = len(glove_embeddings['the'])
     vocab = {}
     for sent in train_set + test_set:
-        tokens = sent2tokens(sent)
+        tokens = sent2words(sent)
         for w in tokens:
             if w.lower() not in vocab:
                 w_norm = w.lower()

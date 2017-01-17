@@ -70,11 +70,14 @@ def sent2embeddings(sent, embeddings):
     """
     transform sentence to embedding-based features
     """
-    dim_w = embeddings['the']
+    #dim_w = embeddings['the']
     res = []
     if not embeddings:
         # input embeddings are empty
         embeddings = {}
+	dim_w = 100
+    else:
+	dim_w = embeddings['the']
     for w in sent['words']:
         if w.lower() in embeddings:
             res.append(embeddings[w.lower()])
@@ -96,7 +99,11 @@ def sent2tokens(sent, embeddings=None):
     postags = sent2postags(sent)
     word_vectors = sent2embeddings(sent, embeddings)
     # chunk tags, dependency features or embedding features can also be added
-    return [Token(surface=w, pos=postag, embedding=emb) for (w, postag, emb) in zip(words, postags, word_vectors)]
+    tokens = [Token(surface=w, pos=postag, embedding=emb) for (w, postag, emb) in zip(words, postags, word_vectors)]
+    for t in tokens:
+        # generate features
+        t.add(token_features(token=t))
+    return tokens
 
 def tag2aspect(tag_sequence):
     """
@@ -493,7 +500,7 @@ def output(test_set, pred_Y, model_name):
     n_sen = len(test_set)
     lines = []
     for i in xrange(n_sen):
-        tokens = sent2tokens(test_set[i])
+        tokens = sent2words(test_set[i])
         pred = pred_Y[i]
         assert len(tokens) == len(pred)
         aspects, _, _ = tag2aspect(tag_sequence=ot2bieos(tag_sequence=pred))
@@ -572,7 +579,7 @@ def token_features(token):
     yield 'word.suffix2=%s' % s2
     yield 'word.prefix1=%s' % p1
     yield 'word.suffix1=%s' % s1
-    if embedding:
+    if not embedding is None:
         for i in xrange(len(embedding)):
             yield 'embedding.%s=%s' % (i, embedding[i])
 
@@ -703,7 +710,7 @@ def feature_extractor(data, _type='map', feat='word', embeddings=None):
                     tmp['word.EOS'] = "True"
             seq_features.append(tmp)
         X.append(seq_features)
-    if _type == 'string':
+    if _type == 'map':
         return X
     else:
         return to_array(features=X, feat_vocab=indexer._mapping)
