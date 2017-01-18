@@ -365,6 +365,8 @@ def run(ds_name, model_name='crf', feat='word'):
         lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings, win_size=5)
     elif model_name == 'conv_lstm':
         conv_lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings, win_size=3)
+    elif model_name == 'ap':
+        ap_extractor(train_set=train_set, test_set=test_set)
 
 
 if __name__ == '__main__':
