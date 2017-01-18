@@ -247,7 +247,7 @@ class AveragedPerceptron(object):
         self.n_iter = 20
         self.alpha = 1
         # number of updates elapsed
-        self.n_updates_elapsed = 0
+        self.time = 0
 
     def fit(self, trainset):
         """
@@ -255,7 +255,8 @@ class AveragedPerceptron(object):
         :return:
         """
         Y = [sent2tags(sent) for sent in trainset]
-        self.classes = list(set(np.array(Y).flatten()))
+        print Y[0]
+        self.classes = list(set(np.hstack(Y)))
         self.n_class = len(self.classes)
         print "begin training..."
         for i in xrange(self.n_iter):
@@ -284,8 +285,8 @@ class AveragedPerceptron(object):
         tags_pred = []
         Phi = []
         for phi in self.f_observe(words, postags):
-            phi = phi + self.f_transition(tags=Y_pred[-self.order:])
-            y_pred = max(self.scores(phi).items(), key=itemgetter[1])[0]
+            phi = phi + self.f_transition(tags=tags_pred[-self.order:])
+            y_pred = max(self.scores(phi).items(), key=itemgetter(1))[0]
             tags_pred.append(y_pred)
             Phi.append(phi)
         return tags_pred, Phi
@@ -313,7 +314,8 @@ class AveragedPerceptron(object):
         p_y_x = dict.fromkeys(self.classes, 0)
         for f in feat:
             for (y, weight) in self.weights[f].items():
-                p_y_x[y] += weight
+                p_y_x[y] += weight.get()
+        #print p_y_x
         return p_y_x
 
     def update(self, y_gold, y_pred, feats):
@@ -376,7 +378,7 @@ class AveragedPerceptron(object):
             yield 'word.identity=%s, word.identity@+1=%s' % (words[i], words[i+1])
 
             yield 'word.postag@+1=%s' % postags[i+1]
-            yield 'word.postag, word.postag@+1=%s' % (postags[i], postags[i+1])
+            yield 'word.postag=%s, word.postag@+1=%s' % (postags[i], postags[i+1])
 
         if i < n_words - 2:
             # word identity at i+2 time
@@ -384,9 +386,9 @@ class AveragedPerceptron(object):
             yield 'word.identity@+1=%s, word.identity@+2=%s' % (words[i+1], words[i+2])
 
             yield 'word.postag@+2=%s' % postags[i+2]
-            yield 'word.postag@+1=%s, word.postag@+2' % (postags[i+1], postags[i+2])
+            yield 'word.postag@+1=%s, word.postag@+2=%s' % (postags[i+1], postags[i+2])
             # trigram postag features
-            yield 'word.postag=%s, word.postag@+1=%s, word.postag@+2' % (postags[i], postags[i+1], postags[i+2])
+            yield 'word.postag=%s, word.postag@+1=%s, word.postag@+2=%s' % (postags[i], postags[i+1], postags[i+2])
 
     def f_transition(self, tags):
         """
@@ -414,10 +416,11 @@ class AveragedPerceptron(object):
         for (f, clsweights) in self.weights.items():
             for (y, weight) in clsweights.items():
                 weight.average(self.time)
+                print "%s: %s, %s" % (f, y, weight.get())        
 
 
 class Weight(object):
-    def __init__(self, t):
+    def __init__(self):
         self.weight = 0.0
         self.total = 0.0
         self.time = 0
