@@ -9,6 +9,7 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import LSTM, Bidirectional, Embedding, TimeDistributed, Dense, Reshape, Convolution1D
 from keras.callbacks import EarlyStopping
+from models import AveragedPerceptron
 #from layers import MyEmbedding
 
 #embeddings = {}
@@ -304,6 +305,21 @@ def conv_lstm_extractor(train_set, test_set, embeddings, win_size):
     print evaluate_chunk(test_Y=test_tags, pred_Y=pred_tags)
 
     output(test_set=test_set, pred_Y=pred_tags, model_name='ConvLSTM')
+
+def ap_extractor(train_set, test_set):
+    """
+    averaged perceptron extractor
+    :param train_set: training set
+    :param test_set: testing set
+    :return:
+    """
+    ap = AveragedPerceptron()
+    ap.fit(trainset=train_set)
+    Y_pred = ap.infer(testset=test_set)
+    Y_gold = [sent2tags(sent) for sent in test_set]
+    print evaluate_chunk(test_Y=Y_gold, pred_Y=Y_pred)
+
+    output(test_set=test_set, pred_Y=Y_pred, model_name='ap')
 
 
 def run(ds_name, model_name='crf', feat='word'):

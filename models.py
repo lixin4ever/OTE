@@ -3,6 +3,10 @@ __author__ = 'lixin77'
 from data import Token, Sequence
 from numpy import empty, zeros, int32, log, exp, sum, add
 from collections import defaultdict
+from operator import itemgetter
+from functools import partial
+from utils import *
+import random
 
 
 def logexpsum(a):
@@ -220,5 +224,223 @@ class CRF(object):
             assert isinstance(x, Sequence)
             if x.feature_table is None:
                 pass
+
+class AveragedPerceptron(object):
+    """
+    averaged perceptron extractor
+    """
+    def __init__(self, t=0, order=2):
+        """
+        construct function
+        :param t: time step
+        :return:
+        """
+        # timesteps
+        self.t = t
+        # parameters of the model
+        self.weights = defaultdict(partial(defaultdict, Weight))
+        self.order = order
+        self.classes = []
+        # number of classes / tags
+        self.n_class = 0
+        # number of iterations
+        self.n_iter = 20
+        self.alpha = 1
+        # number of updates elapsed
+        self.n_updates_elapsed = 0
+
+    def fit(self, trainset):
+        """
+        :param trainset: training set
+        :return:
+        """
+        Y = [sent2tags(sent) for sent in trainset]
+        self.classes = list(set(np.array(Y).flatten()))
+        self.n_class = len(self.classes)
+        print "begin training..."
+        for i in xrange(self.n_iter):
+            # shuffle the sentence order
+            random.shuffle(trainset)
+            for sent in trainset:
+                Y_gold = sent['tags']
+                words = sent['words']
+                postags = sent['postags']
+                Y_pred, Phi = self.predict(words=words, postags=postags)
+                self.time += 1
+                for (y, y_pred, phi) in zip(Y_gold, Y_pred, Phi):
+                    if y != y_pred:
+                        # update the parameter
+                        self.update(y_gold=y, y_pred=y_pred, feats=phi)
+        # averaging the historical parameters. (Totally, n_iter * n_train weight vectors are generated)
+        self.average()
+
+    def predict(self, words, postags):
+        """
+        Predict tags given the observation features, e.g., words, part-of-speech tags and any others
+        :param words:
+        :param postags:
+        :return:
+        """
+        tags_pred = []
+        Phi = []
+        for phi in self.f_observe(words, postags):
+            phi = phi + self.f_transition(tags=Y_pred[-self.order:])
+            y_pred = max(self.scores(phi).items(), key=itemgetter[1])[0]
+            tags_pred.append(y_pred)
+            Phi.append(phi)
+        return tags_pred, Phi
+
+    def infer(self, testset):
+        """
+        Predict tags given the testing sentences, the same as predict
+        :param testset: testing dataset
+        :return:
+        """
+        Y_pred = []
+        for sent in testset:
+            words = sent2words(sent)
+            postags = sent2postags(sent)
+            tags_pred, _ = self.predict(words=words, postags=postags)
+            Y_pred.append(tags_pred)
+        return Y_pred
+
+    def scores(self, feat):
+        """
+        predict the tag based on observation and transition features
+        :param feat: derived observation and transition features
+        :return:
+        """
+        p_y_x = dict.fromkeys(self.classes, 0)
+        for f in feat:
+            for (y, weight) in self.weights[f].items():
+                p_y_x[y] += weight
+        return p_y_x
+
+    def update(self, y_gold, y_pred, feats):
+        """
+        update weight vector of the model
+        :param y_gold:
+        :param y_pred:
+        :param feats: features derived from single token and its contexts
+        :return:
+        """
+        for f in feats:
+            ptr = self.weights[f]
+            # update weight objects
+            assert isinstance(ptr[y_gold], Weight)
+            ptr[y_gold].update(self.alpha, self.time)
+            ptr[y_pred].update(-self.alpha, self.time)
+
+    def f_observe(self, words, postags):
+        """
+
+        :param words:
+        :param postags:
+        :return:
+        """
+        return [list(self.f_observe_i(words, postags, i)) for i in xrange(len(words))]
+
+    def f_observe_i(self, words, postags, i):
+        """
+        get observed features by following the feature template in http://www.aclweb.org/anthology/W02-1001
+        :return:
+        """
+        assert len(words) == len(postags)
+        yield 'word.identity=%s' % words[i]
+        yield 'word.postag=%s' % postags[i]
+        n_words = len(words)
+        if i == 0:
+            yield 'word.BOS=True'
+        if i == n_words - 1:
+            yield 'word.EOS=True'
+        if i >= 1:
+            # word identity at i-1 time
+            yield 'word.identity@-1=%s' % words[i-1]
+            yield 'word.identity@-1=%s, word.identity=%s' % (words[i-1], words[i])
+            # pos tag features
+            yield 'word.postag@-1=%s' % postags[i-1]
+            yield 'word.postag@-1=%s, word.postag=%s' % (postags[i-1], postags[i])
+        if i >= 2:
+            # word identity at i-2 time
+            yield 'word.identity@-2=%s' % words[i-2]
+            yield 'word.identity@-2=%s, word.identity@-1=%s' % (words[i-2], words[i-1])
+
+            yield 'word.postag@-2=%s' % postags[i-2]
+            yield 'word.postag@-2=%s, word.postag@-1=%s' % (postags[i-2], postags[i-1])
+
+            # trigram postag features
+            yield 'word.postag@-2=%s, word.postag@-1=%s, word.postag=%s' % (postags[i-2], postags[i-1], postags[i])
+        if i < n_words - 1:
+            # word identity at i+1 time
+            yield 'word.identity@+1=%s' % words[i+1]
+            yield 'word.identity=%s, word.identity@+1=%s' % (words[i], words[i+1])
+
+            yield 'word.postag@+1=%s' % postags[i+1]
+            yield 'word.postag, word.postag@+1=%s' % (postags[i], postags[i+1])
+
+        if i < n_words - 2:
+            # word identity at i+2 time
+            yield 'word.identity@+2=%s' % words[i+2]
+            yield 'word.identity@+1=%s, word.identity@+2=%s' % (words[i+1], words[i+2])
+
+            yield 'word.postag@+2=%s' % postags[i+2]
+            yield 'word.postag@+1=%s, word.postag@+2' % (postags[i+1], postags[i+2])
+            # trigram postag features
+            yield 'word.postag=%s, word.postag@+1=%s, word.postag@+2' % (postags[i], postags[i+1], postags[i+2])
+
+    def f_transition(self, tags):
+        """
+        yield label / transition features
+        :param tags: tag sequence
+        :return:
+        """
+        feats = []
+        if not tags:
+            return []
+        n_tag = len(tags)
+        for i in xrange(n_tag):
+            uni_f = 'word.tag@-%s=%s' % (n_tag - i, tags[i])
+            feats.append(uni_f)
+            if i < n_tag - 1:
+                bi_f = 'word.tag@-%s=%s, word.tag@-%s=%s' % (n_tag - i, tags[i], n_tag - i - 1, tags[i+1])
+                feats.append(bi_f)
+        return feats
+
+    def average(self):
+        """
+
+        :return:
+        """
+        for (f, clsweights) in self.weights.items():
+            for (y, weight) in clsweights.items():
+                weight.average(self.time)
+
+
+class Weight(object):
+    def __init__(self, t):
+        self.weight = 0.0
+        self.total = 0.0
+        self.time = 0
+
+    def get(self):
+        return self.weight
+
+    def update(self, value, time):
+        """
+        update the current weight and summed weight
+        :param value:
+        :param time:
+        :return:
+        """
+        self.total += (time - self.time) * self.weight
+        # update the time of the most recent modification
+        self.time = time
+        # update weight
+        self.weight += value
+
+    def average(self, time):
+        self.total += (time - self.time) * self.weight
+        self.time = time
+        self.weight = self.total / self.time
 
 
