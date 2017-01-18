@@ -273,7 +273,7 @@ def evaluate(test_Y, pred_Y):
     F1 = 2 * precision * recall / (precision + recall)
     return precision, recall, F1
 
-def evaluate_chunk(test_Y, pred_Y):
+def evaluate_chunk(test_Y, pred_Y, testset=None):
     """
     evaluate function for aspect term extraction, generally, it can also be used to evaluate the NER, NP-chunking task
     """
@@ -286,14 +286,26 @@ def evaluate_chunk(test_Y, pred_Y):
     n_mult_gold, n_s_gold = 0, 0
     # predicted count of mult-word aspect and singleton
     n_mult_pred, n_s_pred = 0, 0
+    # number of errors in sentences not having aspect
+    n_error_nsubj = 0
+    n_error_nsubj_pred = 0
+
+    hard_cases = []
     for i in xrange(length):
         gold = test_Y[i]
         pred = pred_Y[i]
+        if 'T' in pred and 'T' not in gold:
+            n_error_nsubj += 1
         assert len(gold) == len(pred)
         gold_aspects, n_s_g, n_mult_g = tag2aspect(tag_sequence=ot2bieos(tag_sequence=gold))
         pred_aspects, n_s_p, n_mult_p = tag2aspect(tag_sequence=ot2bieos(tag_sequence=pred))
-        n_hit, n_hit_s, n_hit_mult = match_aspect(pred=pred_aspects, gold=gold_aspects)
+        n_hit, n_hit_s, n_hit_mult, n_e_nsubj = match_aspect(pred=pred_aspects, gold=gold_aspects)
 
+        n_error_nsubj_pred += n_e_nsubj
+        if n_e_nsubj:
+            words = sent2words(testset[i])
+            assert len(words) == len(gold)
+            hard_cases.append(' '.join(words))
         n_s += n_hit_s
         n_s_gold += n_s_g
         n_s_pred += n_s_p
@@ -311,6 +323,12 @@ def evaluate_chunk(test_Y, pred_Y):
     precision = float(TP) / float(TP + FP)
     recall = float(TP) / float(TP + FN)
     F1 = 2 * precision * recall / (precision + recall)
+
+    print "\nErrors in nsubj:", n_error_nsubj
+    print "Error predictions in nsubj:", n_error_nsubj_pred
+    print "\n\n"
+    for sent in hard_cases:
+        print sent
     return precision, recall, F1
 
 
@@ -318,6 +336,10 @@ def evaluate_chunk(test_Y, pred_Y):
 def match_aspect(pred, gold):
     true_count = 0
     n_mult, n_s = 0, 0
+    # number of error predictions in the sentence not having aspects 
+    n_error_nsubj = 0
+    if gold == [] and pred != []:
+        n_error_nsubj = len(pred)
     for t in pred:
         if t in gold:
             true_count += 1
@@ -325,7 +347,7 @@ def match_aspect(pred, gold):
                 n_mult += 1
             else:
                 n_s += 1
-    return true_count, n_s, n_mult
+    return true_count, n_s, n_mult, n_error_nsubj
 
 
 def to_lower(word_seqs):

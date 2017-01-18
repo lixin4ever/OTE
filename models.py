@@ -249,6 +249,8 @@ class AveragedPerceptron(object):
         # number of updates elapsed
         self.time = 0
 
+        self.tmp_flag = True
+
     def fit(self, trainset):
         """
         :param trainset: training set
@@ -267,11 +269,14 @@ class AveragedPerceptron(object):
                 words = sent['words']
                 postags = sent['postags']
                 Y_pred, Phi = self.predict(words=words, postags=postags)
-                self.time += 1
+                #if self.tmp_flag:
+                #    print Phi
+                #    self.tmp_flag = False
                 for (y, y_pred, phi) in zip(Y_gold, Y_pred, Phi):
                     if y != y_pred:
                         # update the parameter
                         self.update(y_gold=y, y_pred=y_pred, feats=phi)
+                self.time += 1
         # averaging the historical parameters. (Totally, n_iter * n_train weight vectors are generated)
         self.average()
 
@@ -416,7 +421,7 @@ class AveragedPerceptron(object):
         for (f, clsweights) in self.weights.items():
             for (y, weight) in clsweights.items():
                 weight.average(self.time)
-                print "%s: %s, %s" % (f, y, weight.get())        
+                #print "%s: %s, %s" % (f, y, weight.get())        
 
 
 class Weight(object):

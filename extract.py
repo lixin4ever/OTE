@@ -73,7 +73,7 @@ def crf_extractor(train_set, test_set, embeddings=None):
 
     print(metrics.flat_classification_report(test_Y, pred_Y, labels=labels, digits=3))
 
-    print evaluate_chunk(test_Y=test_Y, pred_Y=pred_Y)
+    print evaluate_chunk(test_Y=test_Y, pred_Y=pred_Y, testset=test_set)
 
     output(test_set=test_set, pred_Y=pred_Y, model_name='crf')
 
@@ -124,11 +124,11 @@ def lstm_extractor(train_set, test_set, embeddings, win_size=1):
     :param win_size: window size, should be an odd number
     """
     print "Bi-directional LSTM with word embeddings..."
-    train_words = [sent2tokens(sent) for sent in train_set]
+    train_words = [sent2words(sent) for sent in train_set]
     train_tags = [sent2tags(sent) for sent in train_set]
     train_words = to_lower(word_seqs=train_words)
 
-    test_words = [sent2tokens(sent) for sent in test_set]
+    test_words = [sent2words(sent) for sent in test_set]
     test_words = to_lower(word_seqs=test_words)
     test_tags = [sent2tags(sent) for sent in test_set]
 
@@ -206,7 +206,7 @@ def lstm_extractor(train_set, test_set, embeddings, win_size=1):
     for (i, raw_seq) in enumerate(test_tags):
         pred_tags.append(get_valid_seq(padded_seq=res[i], raw_len=len(raw_seq)))
 
-    print evaluate_chunk(test_Y=test_tags, pred_Y=pred_tags)
+    print evaluate_chunk(test_Y=test_tags, pred_Y=pred_tags, testset=test_set)
 
 def conv_lstm_extractor(train_set, test_set, embeddings, win_size):
     """
@@ -218,11 +218,11 @@ def conv_lstm_extractor(train_set, test_set, embeddings, win_size):
     :return:
     """
     print "Convolutional Bi-direction LSTM with word embeddings..."
-    train_words = [sent2tokens(sent) for sent in train_set]
+    train_words = [sent2words(sent) for sent in train_set]
     train_tags = [sent2tags(sent) for sent in train_set]
     train_words = to_lower(word_seqs=train_words)
 
-    test_words = [sent2tokens(sent) for sent in test_set]
+    test_words = [sent2words(sent) for sent in test_set]
     test_words = to_lower(word_seqs=test_words)
     test_tags = [sent2tags(sent) for sent in test_set]
 
@@ -362,7 +362,7 @@ def run(ds_name, model_name='crf', feat='word'):
     elif model_name == 'svm':
         svm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
     elif model_name == 'lstm':
-        lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings, win_size=5)
+        lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings, win_size=3)
     elif model_name == 'conv_lstm':
         conv_lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings, win_size=3)
     elif model_name == 'ap':
