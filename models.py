@@ -12,7 +12,9 @@ from sklearn.linear_model import LogisticRegression
 import random
 import string
 from keras.layers import Conv1D, LSTM, Dense, Embedding, Dropout, Activation
+from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential
+from keras.callbacks import ModelCheckpoint
 from nltk.corpus import stopwords 
 
 
@@ -495,9 +497,13 @@ class AsepectDetector(object):
         # number of documents
         n_d = len(trainset) + len(testset)
         vocab, df = {}, {}
-        dim_w = len(self.embeddings['the'])
-        print "dimension of word embedding:", dim_w
-        idx = 0
+        dim_symbol = len(self.embeddings['the'])
+        print "dimension of word embedding:", dim_symbol
+        if self.model_name == 'lstm' or self.model_name == 'cnn':
+            # idx starts from 1 because zero padding is needed in the neural model
+            idx = 1
+        else:
+            idx = 0
         for doc in train_words + test_words:
             for w in set(doc):
                 norm_w = w.lower()
@@ -519,7 +525,7 @@ class AsepectDetector(object):
                 train_Y.append(1)
             else:
                 train_Y.append(0)
-            x = np.zeros(dim_w)
+            x = np.zeros(dim_symbol)
             n_w = 0
             for w in words:
                 if w in delset:
@@ -528,7 +534,7 @@ class AsepectDetector(object):
                 if w in self.embeddings:
                     vec = self.embeddings[w]
                 else:
-                    vec = np.random.uniform(-0.25, 0.25, dim_w)
+                    vec = np.random.uniform(-0.25, 0.25, dim_symbol)
                     n_not_find += 1
                 for i in xrange(len(vec)):
                     #x[i] = x[i] + idf[w] * vec[i]
@@ -543,7 +549,7 @@ class AsepectDetector(object):
             else:
                 test_Y.append(0)
             words = [w.lower() for w in sent2words(sent)]
-            x = np.zeros(dim_w)
+            x = np.zeros(dim_symbol)
             n_w = 0
             filtered_words = []
             for w in words:
@@ -552,7 +558,7 @@ class AsepectDetector(object):
                 if w in self.embeddings:
                     vec = self.embeddings[w]
                 else:
-                    vec = np.random.uniform(-0.25, 0.25, dim_w)
+                    vec = np.random.uniform(-0.25, 0.25, dim_symbol)
                     n_not_find += 1
                 for i in xrange(len(vec)):
                     #x[i] = x[i] + idf[w] * vec[i]
@@ -571,19 +577,65 @@ class AsepectDetector(object):
             train_X = np.asarray(train_X)
             test_X = np.asarray(test_X)
             self.model = Sequential()
-            self.model.add(Dense(100, input_shape=(dim_w,)))
+            self.model.add(Dense(100, input_shape=(dim_symbol,)))
             self.model.add(Activation('sigmoid'))
             self.model.add(Dense(100))
             self.model.add(Dropout(p=0.5))
             self.model.add(Activation('sigmoid'))
             self.model.add(Dense(1, activation="sigmoid"))
 
-            print "build the neural model..."
+            print "build the FCN..."
             self.model.compile(loss="binary_crossentropy",
                 optimizer="adam", metrics=['accuracy'])
 
             self.model.fit(train_X, train_Y, nb_epoch=30, validation_data=(test_X, test_Y))
             pred_Y = []
+        elif self.model_name == 'lstm':
+            n_symbole = len(vocab)
+            embedding_weights = np.zeros((n_symbole + 1, dim_symbol))
+            for w in vocab:
+                idx = vocab[w]
+                if w in self.embeddings:
+                    embedding_weights[idx, :] = self.embeddings[w]
+                else:
+                    embedding_weights[idx, :] = np.random.uniform(-0.25, 0.25, dim_symbol)
+            max_len = 0
+            for words in train_words:
+                ids = []
+                for w in words:
+                    norm_w = w.lower()
+                    ids.append(vocab[norm_w])
+                if max_len < len(words):
+                    max_len = len(words)
+                train_X.append(ids)
+            for words in test_words:
+                ids = []
+                for w in words:
+                    norm_w = w.lower()
+                    ids.append(vocab[norm_w])
+                if max_len < len(words):
+                    max_len = len(words)
+                test_X.append(ids)
+            train_X = pad_sequences(sequences=train_X, maxlen=max_len)
+            test_X = pad_sequences(sequences=test_X, maxlen=max_len)
+            self.model = Sequential()
+            self.model.add(Embedding(weights=[embedding_weights], input_dim=n_symbole + 1,
+                                     input_length=max_len, dropout=0.2, mask_zero=True))
+            self.model.add(LSTM(output_dim=128, dropout_U=0.2, dropout_W=0.2))
+            self.model.add(Dense(1, activation='sigmoid'))
+
+            print "build the lstm..."
+            self.model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+            model_checkpoint = ModelCheckpoint(filepath='./model/%s.hdf5' % self.model_name,
+                                               monitor='val_acc', save_best_only=True, monitor='max')
+            self.model.fit(train_X, train_Y, nb_epoch=100, validation_data=(test_X, test_Y),
+                           callbacks=[model_checkpoint])
+
+            # load best model from the disk
+            self.model.load_weights(filepath='./model/%s.hdf5' % self.model_name)
+
+            pred_Y = self.model.predict(test_X)
         return pred_Y
 
 

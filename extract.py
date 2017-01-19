@@ -22,7 +22,7 @@ def crf_extractor(train_set, test_set, embeddings=None):
     train_Y = [sent2tags(sent) for sent in train_set]
     test_Y = [sent2tags(sent) for sent in test_set]
 
-    AD = AsepectDetector(name='rf', embeddings=embeddings)
+    AD = AsepectDetector(name='lstm', embeddings=embeddings)
     embeddings = None
     pred_res = AD.classify(trainset=train_set, testset=test_set)
     # filtered sentence without aspects
