@@ -6,9 +6,16 @@ from collections import defaultdict
 from operator import itemgetter
 from functools import partial
 from utils import *
+from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
 import random
+import string
+from keras.layers import Conv1D, LSTM, Dense, Embedding
+from keras.models import Sequential
 
 
+delset = string.punctuation
 def logexpsum(a):
     """
     calculate score: log(exp(a).sum())
@@ -450,5 +457,101 @@ class Weight(object):
         self.total += (time - self.time) * self.weight
         self.time = time
         self.weight = self.total / self.time
+
+class AsepectDetector(object):
+    """
+    determine if a sentence contains aspect
+    """
+    def __init__(self, name, embeddings=None):
+        # classification model
+        self.model_name = name
+        # parameters used in neural models
+        self.embeddings = embeddings
+
+        if name == 'svm':
+            self.model = SVC(kernel='linear')
+        elif name == 'lr':
+            self.model = LogisticRegression()
+        elif name == 'rf':
+            self.model = RandomForestClassifier(n_estimators=25)
+        elif name == 'cnn' or name == 'lstm':
+            # build the model at the running time
+            pass
+            # TODO
+
+    def classify(self, trainset, testset):
+        """
+
+        :param trainset:
+        :param testset:
+        :return:
+        """
+        train_Y, test_Y = [], []
+        train_X, test_X = [], []
+        train_words = [sent2words(sent) for sent in trainset]
+        test_words = [sent2words(sent) for sent in testset]
+        # number of documents
+        n_d = len(trainset) + len(testset)
+        vocab, df = {}, {}
+        dim_w = self.embeddings['the']
+        idx = 0
+        for doc in train_words + test_words:
+            for w in set(doc):
+                norm_w = w.lower()
+                if norm_w not in vocab:
+                    vocab[norm_w] = idx
+                    idx += 1
+                    df[norm_w] = 1
+                else:
+                    df[norm_w] += 1
+        idf = {}
+        for w in df:
+            idf[w] = log(1.0 + n_d / float(df[w] + 1.0))
+
+
+        for sent in trainset:
+            tags = sent2tags(sent)
+            words = [w.lower() for w in sent2words(sent)]
+            if 'T' in tags:
+                train_Y.append(1)
+            else:
+                train_Y.append(0)
+            x = np.zeros(dim_w)
+            for w in words:
+                if w in delset:
+                    # ignore the punctuations
+                    continue
+                if w in self.embeddings:
+                    vec = self.embeddings[w]
+                else:
+                    vec = np.random.uniform(-0.25, 0.25, dim_w)
+                x = x + df[w] * vec
+            train_X.append(x)
+
+        for sent in testset:
+            tags = sent2tags(sent)
+            if 'T' in tags:
+                test_Y.append(1)
+            else:
+                test_Y.append(0)
+            words = [w.lower() for w in sent2words(sent)]
+            x = np.zeros(dim_w)
+            for w in words:
+                if w in delset:
+                    continue
+                if w in self.embeddings:
+                    vec = self.embeddings[w]
+                else:
+                    vec = np.random.unifor(-0.25, 0.25, dim_w)
+                x = x + df[w] * vec
+            test_X.append(x)
+
+        if self.model_name != 'cnn' and self.model_name != 'lstm':
+            # non-neural model
+            self.model.fit(train_X, train_Y)
+            print "classification results:"
+            print self.model.score(test_X, test_Y)
+
+
 
 

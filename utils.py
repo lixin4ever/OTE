@@ -303,6 +303,7 @@ def evaluate_chunk(test_Y, pred_Y, testset=None):
 
         n_error_nsubj_pred += n_e_nsubj
         if n_e_nsubj:
+            # the ground truth does not contain aspect but predictions does
             words = sent2words(testset[i])
             assert len(words) == len(gold)
             hard_cases.append(' '.join(words))

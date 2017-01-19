@@ -9,7 +9,7 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import LSTM, Bidirectional, Embedding, TimeDistributed, Dense, Reshape, Convolution1D
 from keras.callbacks import EarlyStopping
-from models import AveragedPerceptron
+from models import AveragedPerceptron, AsepectDetector
 #from layers import MyEmbedding
 
 #embeddings = {}
@@ -21,6 +21,10 @@ def crf_extractor(train_set, test_set, embeddings=None):
     """
     train_Y = [sent2tags(sent) for sent in train_set]
     test_Y = [sent2tags(sent) for sent in test_set]
+
+    AD = AsepectDetector(name='svm', embeddings=embeddings)
+    embeddings = None
+    AD.classify(trainset=train_set, testset=test_set)
 
     if not embeddings:
         print "crf with word-level features..."
@@ -358,7 +362,7 @@ def run(ds_name, model_name='crf', feat='word'):
         if feat_name == 'embedding':
             crf_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
         else:
-            crf_extractor(train_set=train_set, test_set=test_set)
+            crf_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
     elif model_name == 'svm':
         svm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
     elif model_name == 'lstm':
