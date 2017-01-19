@@ -27,7 +27,7 @@ def crf_extractor(train_set, test_set, embeddings=None):
     pred_res = AD.classify(trainset=train_set, testset=test_set)
     # filtered sentence without aspects
     new_test_set = [test_set[i] for (i, y) in enumerate(pred_res) if y == 1]
-
+    #new_test_set = test_set
     if not embeddings:
         print "crf with word-level features..."
         #train_X = feature_extractor(data=train_set, _type='map', feat='word', embeddings=embeddings)
@@ -82,7 +82,7 @@ def crf_extractor(train_set, test_set, embeddings=None):
 
     print evaluate_chunk(test_Y=test_Y, pred_Y=pred_Y, testset=new_test_set)
 
-    output(test_set=test_set, pred_Y=pred_Y, model_name='crf')
+    output(test_set=new_test_set, pred_Y=pred_Y, model_name='crf')
 
 def svm_extractor(train_set, test_set, embeddings=None):
     """
@@ -342,7 +342,7 @@ def run(ds_name, model_name='crf', feat='word'):
 
     glove_embeddings, embeddings = {}, {}
     print "load word embeddings..."
-    with open('./embeddings/glove.42B.300d.txt', 'r') as fp:
+    with open('../WIKI/word_vec_200.txt', 'r') as fp:
         for line in fp:
             values = line.strip().split()
             word, vec = values[0], values[1:]
