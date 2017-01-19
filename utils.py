@@ -328,8 +328,8 @@ def evaluate_chunk(test_Y, pred_Y, testset=None):
     print "\nErrors in nsubj:", n_error_nsubj
     print "Error predictions in nsubj:", n_error_nsubj_pred
     print "\n\n"
-    for sent in hard_cases:
-        print sent
+    #for sent in hard_cases:
+    #    print sent
     return precision, recall, F1
 
 

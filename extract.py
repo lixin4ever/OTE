@@ -22,7 +22,7 @@ def crf_extractor(train_set, test_set, embeddings=None):
     train_Y = [sent2tags(sent) for sent in train_set]
     test_Y = [sent2tags(sent) for sent in test_set]
 
-    AD = AsepectDetector(name='svm', embeddings=embeddings)
+    AD = AsepectDetector(name='nn', embeddings=embeddings)
     embeddings = None
     AD.classify(trainset=train_set, testset=test_set)
 
@@ -339,7 +339,7 @@ def run(ds_name, model_name='crf', feat='word'):
 
     glove_embeddings, embeddings = {}, {}
     print "load word embeddings..."
-    with open('./embeddings/glove_6B_300d.txt', 'r') as fp:
+    with open('./embeddings/glove.42B.300d.txt', 'r') as fp:
         for line in fp:
             values = line.strip().split()
             word, vec = values[0], values[1:]

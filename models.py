@@ -1,4 +1,4 @@
-__author__ = 'lixin77'
+f__author__ = 'lixin77'
 
 from data import Token, Sequence
 from numpy import empty, zeros, int32, log, exp, sum, add
@@ -11,11 +11,13 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 import random
 import string
-from keras.layers import Conv1D, LSTM, Dense, Embedding
+from keras.layers import Conv1D, LSTM, Dense, Embedding, Dropout, Activation
 from keras.models import Sequential
+from nltk.corpus import stopwords 
 
 
 delset = string.punctuation
+stopws = stopwords.words('english')
 def logexpsum(a):
     """
     calculate score: log(exp(a).sum())
@@ -473,7 +475,7 @@ class AsepectDetector(object):
         elif name == 'lr':
             self.model = LogisticRegression()
         elif name == 'rf':
-            self.model = RandomForestClassifier(n_estimators=25)
+            self.model = RandomForestClassifier(n_estimators=50)
         elif name == 'cnn' or name == 'lstm':
             # build the model at the running time
             pass
@@ -493,7 +495,8 @@ class AsepectDetector(object):
         # number of documents
         n_d = len(trainset) + len(testset)
         vocab, df = {}, {}
-        dim_w = self.embeddings['the']
+        dim_w = len(self.embeddings['the'])
+        print "dimension of word embedding:", dim_w
         idx = 0
         for doc in train_words + test_words:
             for w in set(doc):
@@ -508,7 +511,7 @@ class AsepectDetector(object):
         for w in df:
             idf[w] = log(1.0 + n_d / float(df[w] + 1.0))
 
-
+        n_not_find = 0
         for sent in trainset:
             tags = sent2tags(sent)
             words = [w.lower() for w in sent2words(sent)]
@@ -517,6 +520,7 @@ class AsepectDetector(object):
             else:
                 train_Y.append(0)
             x = np.zeros(dim_w)
+            n_w = 0
             for w in words:
                 if w in delset:
                     # ignore the punctuations
@@ -525,9 +529,13 @@ class AsepectDetector(object):
                     vec = self.embeddings[w]
                 else:
                     vec = np.random.uniform(-0.25, 0.25, dim_w)
-                x = x + df[w] * vec
-            train_X.append(x)
-
+                    n_not_find += 1
+                for i in xrange(len(vec)):
+                    #x[i] = x[i] + idf[w] * vec[i]
+                    x[i] = x[i] + vec[i]
+                n_w += 1
+            train_X.append(x / n_w)
+        
         for sent in testset:
             tags = sent2tags(sent)
             if 'T' in tags:
@@ -536,21 +544,45 @@ class AsepectDetector(object):
                 test_Y.append(0)
             words = [w.lower() for w in sent2words(sent)]
             x = np.zeros(dim_w)
+            n_w = 0
+            filtered_words = []
             for w in words:
                 if w in delset:
                     continue
                 if w in self.embeddings:
                     vec = self.embeddings[w]
                 else:
-                    vec = np.random.unifor(-0.25, 0.25, dim_w)
-                x = x + df[w] * vec
-            test_X.append(x)
-
-        if self.model_name != 'cnn' and self.model_name != 'lstm':
+                    vec = np.random.uniform(-0.25, 0.25, dim_w)
+                    n_not_find += 1
+                for i in xrange(len(vec)):
+                    #x[i] = x[i] + idf[w] * vec[i]
+                    x[i] = x[i] + vec[i]
+                filtered_words.append(w)
+                n_w += 1
+            test_X.append(x / n_w)
+        print "%s words not exist in word-embeddings..." % n_not_find
+        print "Begin training and classification..."
+        if self.model_name != 'cnn' and self.model_name != 'lstm' and self.model_name != 'nn':
             # non-neural model
             self.model.fit(train_X, train_Y)
             print "classification results:"
             print self.model.score(test_X, test_Y)
+        elif self.model_name == 'nn':
+            train_X = np.asarray(train_X)
+            test_X = np.asarray(test_X)
+            self.model = Sequential()
+            self.model.add(Dense(100, input_shape=(dim_w,)))
+            self.model.add(Activation('sigmoid'))
+            self.model.add(Dense(100))
+            self.model.add(Dropout(p=0.5))
+            self.model.add(Activation('sigmoid'))
+            self.model.add(Dense(1, activation="sigmoid"))
+
+            print "build the neural model..."
+            self.model.compile(loss="binary_crossentropy",
+                optimizer="adam", metrics=['accuracy'])
+
+            self.model.fit(train_X, train_Y, nb_epoch=30, validation_data=(test_X, test_Y))
 
 
 
