@@ -560,13 +560,13 @@ class AsepectDetector(object):
                 filtered_words.append(w)
                 n_w += 1
             test_X.append(x / n_w)
-        print "%s words not exist in word-embeddings..." % n_not_find
         print "Begin training and classification..."
         if self.model_name != 'cnn' and self.model_name != 'lstm' and self.model_name != 'nn':
             # non-neural model
             self.model.fit(train_X, train_Y)
             print "classification results:"
-            print self.model.score(test_X, test_Y)
+            #print self.model.score(test_X, test_Y)
+            pred_Y = self.model.predict(test_X)
         elif self.model_name == 'nn':
             train_X = np.asarray(train_X)
             test_X = np.asarray(test_X)
@@ -583,7 +583,8 @@ class AsepectDetector(object):
                 optimizer="adam", metrics=['accuracy'])
 
             self.model.fit(train_X, train_Y, nb_epoch=30, validation_data=(test_X, test_Y))
-
+            pred_Y = []
+        return pred_Y
 
 
 
