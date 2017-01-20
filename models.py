@@ -11,10 +11,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 import random
 import string
-from keras.layers import Conv1D, LSTM, Dense, Embedding, Dropout, Activation
+from keras.layers import Conv1D, LSTM, Dense, Embedding, Dropout, Activation, Input, GlobalMaxPooling1D, merge
 from keras.preprocessing.sequence import pad_sequences
-from keras.models import Sequential
+from keras.models import Sequential, Model
 from keras.callbacks import ModelCheckpoint
+from keras.constraints import maxnorm
 from nltk.corpus import stopwords 
 
 
@@ -590,9 +591,9 @@ class AsepectDetector(object):
 
             self.model.fit(train_X, train_Y, nb_epoch=30, validation_data=(test_X, test_Y))
             pred_Y = []
-        elif self.model_name == 'lstm':
+        elif self.model_name == 'lstm' or self.model_name == 'cnn':
             n_symbole = len(vocab)
-	    train_X, test_X = [],[]
+            train_X, test_X = [], []
             embedding_weights = np.zeros((n_symbole + 1, dim_symbol))
             for w in vocab:
                 idx = vocab[w]
@@ -619,9 +620,64 @@ class AsepectDetector(object):
                 test_X.append(ids)
             train_X = pad_sequences(sequences=train_X, maxlen=max_len)
             test_X = pad_sequences(sequences=test_X, maxlen=max_len)
+
+            model_input = Input(shape=(max_len, ), name='%s_input' % self.model_name)
+            # obtain sentence embeddings
+            if self.model_name == 'lstm':
+                mask_zero = True
+            else:
+                mask_zero = False
+            sent_embeddings = Embedding(input_dim=n_symbole + 1, output_dim=dim_symbol,
+                                   input_length=max_len, weights=[embedding_weights],
+                                    dropout=0.2, mask_zero=mask_zero)(model_input)
+            if self.model_name == 'lstm':
+                print "build the lstm model..."
+                optimizer = 'adam'
+                lstm_out = LSTM(output_dim=128, dropout_U=0.2, dropout_W=0.2)(sent_embeddings)
+                model_output = Dense(1, activation='sigmoid', name='model_output')(lstm_out)
+            if self.model_name == 'cnn':
+                # use cnn model in Kim et al (EMNLP 2014)
+                optimizer = 'adadelta'
+                print "build the cnn model..."
+                nb_filter = 100
+
+                para_constrains = maxnorm(m=3)
+                conv1_output = Conv1D(nb_filter=nb_filter, filter_length=3, activation='relu',
+                                      border_mode='valid', b_constraint=para_constrains,
+                                      W_constraint=para_constrains)(sent_embeddings)
+                conv_pool1_output = GlobalMaxPooling1D()(conv1_output)
+
+                conv2_output = Conv1D(nb_filter=nb_filter, filter_length=4, activation='relu',
+                                      border_mode='valid', b_constraint=para_constrains,
+                                      W_constraint=para_constrains)(sent_embeddings)
+                conv_pool2_output = GlobalMaxPooling1D(conv2_output)
+
+                conv3_output = Conv1D(nb_filter=nb_filter, filter_length=5, activation='relu',
+                                      border_mode='valid', b_constraint=para_constrains,
+                                      W_constraint=para_constrains)(sent_embeddings)
+                conv_pool3_output = GlobalMaxPooling1D()(conv3_output)
+
+                x = merge(inputs=[conv_pool1_output, conv_pool2_output, conv_pool3_output], mode='concat')
+
+                x_dropout = Dropout(p=0.5)(x)
+
+                model_output = Dense(1, activation='sigmoid', name='model_output')(x_dropout)
+            self.model = Model(input=[model_input], output=[model_output])
+
+            self.model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics='accuracy')
+
+
+            best_model = ModelCheckpoint(filepath='./model/%s.hdf5' % self.model_name,
+                                               monitor='val_acc', save_best_only=True, mode='max')
+            self.model.fit(train_X, train_Y, nb_epoch=50,
+                           validation_data=(test_X, test_Y),
+                           callbacks=[best_model])
+            # load best model from the disk
+            self.model.load_weights(filepath='./model/%s.hdf5' % self.model_name)
+            """
             self.model = Sequential()
-            self.model.add(Embedding(input_dim=n_symbole + 1, output_dim=dim_symbol, 
-					input_length=max_len, weights=[embedding_weights],
+            self.model.add(Embedding(input_dim=n_symbole + 1, output_dim=dim_symbol,
+                                     input_length=max_len, weights=[embedding_weights],
                                      dropout=0.2, mask_zero=True))
             self.model.add(LSTM(output_dim=128, dropout_U=0.2, dropout_W=0.2))
             self.model.add(Dense(1, activation='sigmoid'))
@@ -629,14 +685,12 @@ class AsepectDetector(object):
             print "build the lstm..."
             self.model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-            model_checkpoint = ModelCheckpoint(filepath='./model/%s.hdf5' % self.model_name,
-                                               monitor='val_acc', save_best_only=True, mode='max')
+
             self.model.fit(train_X, train_Y, nb_epoch=100, validation_data=(test_X, test_Y),
                            callbacks=[model_checkpoint])
 
-            # load best model from the disk
-            self.model.load_weights(filepath='./model/%s.hdf5' % self.model_name)
 
+            """
             pred_Y = self.model.predict(test_X)
         return pred_Y
 
