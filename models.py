@@ -592,6 +592,7 @@ class AsepectDetector(object):
             pred_Y = []
         elif self.model_name == 'lstm':
             n_symbole = len(vocab)
+	    train_X, test_X = [],[]
             embedding_weights = np.zeros((n_symbole + 1, dim_symbol))
             for w in vocab:
                 idx = vocab[w]
@@ -619,8 +620,9 @@ class AsepectDetector(object):
             train_X = pad_sequences(sequences=train_X, maxlen=max_len)
             test_X = pad_sequences(sequences=test_X, maxlen=max_len)
             self.model = Sequential()
-            self.model.add(Embedding(weights=[embedding_weights], input_dim=n_symbole + 1,
-                                     input_length=max_len, dropout=0.2, mask_zero=True))
+            self.model.add(Embedding(input_dim=n_symbole + 1, output_dim=dim_symbol, 
+					input_length=max_len, weights=[embedding_weights],
+                                     dropout=0.2, mask_zero=True))
             self.model.add(LSTM(output_dim=128, dropout_U=0.2, dropout_W=0.2))
             self.model.add(Dense(1, activation='sigmoid'))
 
@@ -628,7 +630,7 @@ class AsepectDetector(object):
             self.model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
             model_checkpoint = ModelCheckpoint(filepath='./model/%s.hdf5' % self.model_name,
-                                               monitor='val_acc', save_best_only=True, monitor='max')
+                                               monitor='val_acc', save_best_only=True, mode='max')
             self.model.fit(train_X, train_Y, nb_epoch=100, validation_data=(test_X, test_Y),
                            callbacks=[model_checkpoint])
 
