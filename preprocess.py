@@ -84,7 +84,7 @@ def build_pkl(ds, schema="OT"):
             if has_parsed:
                 parse_triples = dependencies[i]
             else:
-                parse_res = list(dep_parser.parse(word_seq))[0]
+                parse_res = list(dep_parser.parse([unicode(w, encoding='utf-8') for w in word_seq]))[0]
                 # head->relation->tail
                 parse_triples = [(str(head[0]), str(relation), str(tail[0])) for (head, relation, tail) in list(parse_res.triples())]
 
@@ -227,6 +227,11 @@ def extract_text(dataset_name):
         cur_text = cur_text.replace('dont', "don't")
         cur_text = cur_text.replace('didnt', "didn't")
 
+        # replace some special symbol
+        cur_text = cur_text.replace(u"‘", "")
+        cur_text = cur_text.replace(u"’", "'")
+        # "‘, ’"
+
         #tokens = cur_text.split()
         tokens = word_tokenize(cur_text)
 
@@ -275,12 +280,12 @@ if __name__ == '__main__':
     #ds = '14semeval_laptop_train'
     ds = 'all'
     if ds == 'all':
-        for ds in ['14semeval_laptop_train', '14semeval_laptop_test', '14semeval_rest_train', '14semeval_rest_test',
-                   '15semeval_rest_train', '15semeval_rest_test', '16semeval_rest_train', '16semeval_rest_test']:
-            #extract_text(dataset_name=ds)
-            build_pkl(ds=ds)
+        for ds in ['15semeval_rest_test', '15semeval_rest_train', '14semeval_laptop_train', '14semeval_laptop_test', 
+        '14semeval_rest_train', '14semeval_rest_test', '16semeval_rest_train', '16semeval_rest_test']:
+            extract_text(dataset_name=ds)
+            #build_pkl(ds=ds)
     else:
-        #extract_text(dataset_name=ds)
-        build_pkl(ds=ds)
+        extract_text(dataset_name=ds)
+        #build_pkl(ds=ds)
 
 
