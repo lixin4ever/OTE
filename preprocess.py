@@ -6,9 +6,11 @@ import cPickle
 import nltk
 from nltk import word_tokenize
 from nltk.tag.stanford import StanfordPOSTagger
+from nltk.parse.stanford import StanfordDependencyParser
 import sys
 import string
 from utils import ot2bieos
+import os
 
 
 def build_pkl(ds, schema="OT"):
@@ -20,7 +22,41 @@ def build_pkl(ds, schema="OT"):
     print "process dataset: %s..." % ds
     ctx = 0
     records = []
-    tagger = StanfordPOSTagger("english-bidirectional-distsim.tagger")
+    # Stanford POS Tagger
+    pos_tagger = StanfordPOSTagger("english-bidirectional-distsim.tagger")
+    # Stanford Dependency Parser
+    dep_parser = StanfordDependencyParser(model_path=u'edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz')
+    
+    chunk_tags = []
+    chunk_path = './dataset/chunktags/%s_chunk.txt' % ds
+    with open(chunk_path) as fp:
+        for line in fp:
+            tags = line.strip().split()
+            chunk_tags.append(tags)
+    
+    pos_tags = []
+    pos_path = './dataset/postags/%s_pos.txt' % ds
+    has_tagged = os.path.exists(pos_path)
+    if has_tagged:
+        with open(pos_path) as fp:
+            tags = line.strip().split('\t')
+            pos_tags.append(tags)
+
+    dependencies = []
+    dep_path = './dataset/dependencies/%s_dep.txt' % ds
+    has_parsed = os.path.exists(dep_path)
+    if has_parsed:
+        with open(dep_path) as fp:
+            text, deps = line.strip().split('####')
+            triple_strings = deps.split('\t')
+            triples = []
+            for t in triple_strings:
+                head, relation, tail = t.split('->')
+                triples.append((head, relation, tail))
+            dependencies.append(triples)
+    pos_tag_lines = []
+    dependency_lines = []
+    i = 0
     with open(path) as fp:
         for line in fp:
             r = {}
@@ -41,16 +77,47 @@ def build_pkl(ds, schema="OT"):
             r['words'] = word_seq
             r['tags'] = tag_seq
             r['text'] = text
-            res = tagger.tag(word_seq)
-            postag_seq = [tag for (w, tag) in res]
+            if has_tagged:
+                pos_res = pos_tags[i]
+            else:
+                pos_res = pos_tagger.tag(word_seq)
+            if has_parsed:
+                parse_triples = dependencies[i]
+            else:
+                parse_res = list(dep_parser.parse(word_seq))[0]
+                # head->relation->tail
+                parse_triples = [(str(head[0]), str(relation), str(tail[0])) for (head, relation, tail) in list(parse_res.triples())]
+
+            postag_seq = [tag for (w, tag) in pos_res]
+            #print parse_triples
+            #print postag_seq
             r['postags'] = postag_seq
-            assert len(postag_seq) == len(word_seq) == len(tag_seq)
+            r['chunktags'] = chunk_tags[i]
+            r['dependencies'] = parse_triples
+
+            assert len(postag_seq) == len(word_seq) == len(tag_seq) == len(chunk_tags[i])
             records.append(r)
+
+            if not has_tagged:
+                pos_tag_lines.append('%s\n' % '\t'.join(postag_seq))
+            if not has_parsed:
+                triples = ['->'.join(list(t)) for t in parse_triples]
+                dependency_lines.append('%s####%s\n' % (text, '\t'.join(triples)))
+
             ctx += 1
             if ctx % 100 == 0:
                 print "process %s sentences" % ctx
+            i += 1
     print "write back to the disk..."
     cPickle.dump(records, open('./pkl/%s.pkl' % ds, 'w+'))
+
+    if not has_tagged:
+        with open(pos_path, 'w+') as fp:
+            fp.writelines(pos_tag_lines)
+
+    if not has_parsed:
+        with open(dep_path, 'w+') as fp:
+            fp.writelines(dependency_lines)
 
 
 def extract_text(dataset_name):
@@ -210,10 +277,10 @@ if __name__ == '__main__':
     if ds == 'all':
         for ds in ['14semeval_laptop_train', '14semeval_laptop_test', '14semeval_rest_train', '14semeval_rest_test',
                    '15semeval_rest_train', '15semeval_rest_test', '16semeval_rest_train', '16semeval_rest_test']:
-            extract_text(dataset_name=ds)
-            #build_pkl(ds=ds)
+            #extract_text(dataset_name=ds)
+            build_pkl(ds=ds)
     else:
-        extract_text(dataset_name=ds)
-        #build_pkl(ds=ds)
+        #extract_text(dataset_name=ds)
+        build_pkl(ds=ds)
 
 
