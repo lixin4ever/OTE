@@ -134,15 +134,31 @@ def extract_text(dataset_name):
                     n_singleton += 1
         y = []
         x = []
-        cur_text = cur_text.replace('.', ' .')
-        cur_text = cur_text.replace(',', ' ,')
-        cur_text = cur_text.replace('-', '')
-        cur_text = cur_text.replace('?', ' ?')
-        cur_text = cur_text.replace('!', ' !')
+        # string preprocessing and aspect term will not be processed
+        dot_exist = ('.' in cur_text)
+        cur_text = cur_text.replace('.', '')
+        cur_text = cur_text.replace('-', ' ')
+        # split words and punctuations
+        if '? ' not in cur_text:
+            cur_text = cur_text.replace('?', '? ').strip()
+        if '! ' not in cur_text:
+            cur_text = cur_text.replace('!', '! ').strip()
         cur_text = cur_text.replace('(', '')
         cur_text = cur_text.replace(')', '')
-        cur_text = cur_text.replace('...', ' ')
-        tokens = cur_text.split()
+        cur_text = cur_text.replace('...', ', ').strip('.').strip().strip(',')
+        # remove quote
+        cur_text = cur_text.replace('"', '')
+        cur_text = cur_text.replace(':', ', ')
+        if dot_exist:
+            cur_text += '.'
+        # correct some typos
+        cur_text = cur_text.replace('cant', "can't")
+        cur_text = cur_text.replace('wouldnt', "wouldn't")
+        cur_text = cur_text.replace('dont', "don't")
+        cur_text = cur_text.replace('didnt', "didn't")
+
+        #tokens = cur_text.split()
+        tokens = word_tokenize(cur_text)
 
         for t in tokens:
             if t.startswith('ASPECT'):
@@ -191,10 +207,10 @@ if __name__ == '__main__':
     if ds == 'all':
         for ds in ['14semeval_laptop_train', '14semeval_laptop_test', '14semeval_rest_train', '14semeval_rest_test',
                    '15semeval_rest_train', '15semeval_rest_test', '16semeval_rest_train', '16semeval_rest_test']:
-            #extract_text(dataset_name=ds)
-            build_pkl(ds=ds)
+            extract_text(dataset_name=ds)
+            #build_pkl(ds=ds)
     else:
-        #extract_text(dataset_name=ds)
-        build_pkl(ds=ds)
+        extract_text(dataset_name=ds)
+        #build_pkl(ds=ds)
 
 
