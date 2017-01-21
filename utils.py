@@ -16,36 +16,88 @@ def word2features(sent, i):
     postag = sent['postags'][i]
     #embedding = embeddings[word] if word in embeddings else np.random.uniform(-0.25, 0.25, 200)
     #embedding = [str(ele) for ele in embedding]
-    features = {'bias': 1.0, 'word.lower()': word.lower(), 'word.isupper()': word.isupper(),
-                'word.isdigit()': word.isdigit(), 'pos_tag': postag, 'prefix1': word[:1] if len(word) >= 1 else '',
-                'prefix2': word[:2] if len(word) >= 2 else '', 'prefix3': word[:3] if len(word) >= 3 else '',
-                'suffix1': word[-1:] if len(word) >= 1 else '', 'suffix2': word[-2:] if len(word) >= 2 else '',
-                'suffix3': word[-3:] if len(word) >= 3 else '',}
+    features = {'bias': 1.0, 'word.identity': word.lower(), 'word.isupper': word.isupper(),
+                'word.isdigit': word.isdigit(), 'word.pos_tag': postag, 'word.prefix1': word[:1] if len(word) >= 1 else '',
+                'word.prefix2': word[:2] if len(word) >= 2 else '', 'word.prefix3': word[:3] if len(word) >= 3 else '',
+                'word.suffix1': word[-1:] if len(word) >= 1 else '', 'word.suffix2': word[-2:] if len(word) >= 2 else '',
+                'word.suffix3': word[-3:] if len(word) >= 3 else '',}
+    # Use feature templates in http://aclweb.org/anthology/N/N03/N03-1028.pdf
+    #features = {'bias': 1.0, 'word.identity': word.lower(), 'word.isupper': word.isupper(),
+    #            'word.isdigit': word.isdigit(), 'word.pos_tag': postag, 'word.istitle': word.istitle()}
     #for idx in xrange(len(embedding)):
     #    features['e%s' % idx] = embedding[idx]
     if i > 0:
         word_l1 = sent['words'][i-1]
         postag_l1 = sent['postags'][i-1]
         features.update({
-            '-1:word.lower()': word_l1.lower(),
-            '-1:word.istitle()': word_l1.istitle(),
-            '-1:word.isupper()': word_l1.isupper(),
-            '-1:postag': postag_l1,
+            '-1:word.identity': word_l1.lower(),
+            '-1:word.identity, word.identity': '%s, %s' % (word_l1.lower(), word.lower()),
+            '-1:word.istitle': word_l1.istitle(),
+            '-1:word.isupper': word_l1.isupper(),
+            '-1:word.isdigit': word_l1.isdigit(),
+            '-1:word.postag': postag_l1,
+            '-1:word.postag, word.postag': '%s, %s' % (postag_l1, postag),
         })
     else:
         features['BOS'] = True
+    if i > 1:
+        word_l2 = sent['words'][i-2]
+        postag_l2 = sent['postags'][i-2]
+        postag_l1 = sent['postags'][i-1]
+        features.update({
+            '-2:word.identity': word_l2.lower(),
+            '-2:word.istitle': word_l2.istitle(),
+            '-2:word.isupper': word_l2.isupper(),
+            '-2:word.isdigit': word_l2.isdigit(),
+            '-2:word.postag': postag_l2,
+            '-2:word.postag, -1:word.postag': '%s, %s' % (postag_l2, postag_l1),
+            '-2:word.postag. -1:word.postag, word.postag': '%s, %s, %s' % (postag_l2, postag_l1, postag),
+        })
+
+    if 0 < i < len(sent['words'])-1:
+        postag_l1 = sent['postags'][i-1]
+        postag_r1 = sent['postags'][i+1]
+    elif i == 0 and i < len(sent['words'])-1:
+        postag_l1 = 'NULL'
+        postag_r1 = sent['postags'][i+1]
+    elif i > 0 and i == len(sent['words'])-1:
+        postag_l1 = sent['postags'][i-1]
+        postag_r1 = 'NULL'
+    else:
+        postag_l1 = 'NULL'
+        postag_r1 = 'NULL'
+    features.update({
+        '-1:word.postag, word.postag, +1:word.postag': '%s, %s, %s' % (postag_l1, postag, postag_r1)
+    })
 
     if i < len(sent['words'])-1:
         word_r1 = sent['words'][i+1]
-        postag_r1 = sent['words'][i+1]
+        postag_r1 = sent['postags'][i+1]
         features.update({
-            '+1:word.lower()': word_r1.lower(),
-            '+1:word.istitle()': word_r1.istitle(),
-            '+1:word.isupper()': word_r1.isupper(),
-            '+1:postag': postag_r1,
+            '+1:word.identity': word_r1.lower(),
+            'word.identity, +1:word.identity': '%s, %s' % (word.lower(), word_r1.lower()),
+            '+1:word.istitle': word_r1.istitle(),
+            '+1:word.isupper': word_r1.isupper(),
+            '+1:word.isdigit': word_r1.isdigit(),
+            '+1:word.postag': postag_r1,
+            'word.postag, +1:word.postag': '%s, %s' % (postag, postag_r1),
         })
     else:
         features['EOS'] = True
+
+    if i < len(sent['words']) - 2:
+        word_r2 = sent['words'][i+2]
+        postag_r2 = sent['postags'][i+2]
+        postag_r1 = sent['postags'][i+1]
+        features.update({
+            '+2:word.identity': word_r2.lower(),
+            '+2:word.istitle': word_r2.istitle(),
+            '+2:word.isupper': word_r2.isupper(),
+            '+2:word.isdigit': word_r2.isdigit(),
+            '+2:word.postag': postag_r2,
+            '+1:word.postag, +2:word.postag': '%s, %s' % (postag_r1, postag_r2),
+            'word.postag, +1:word.postag, +2:word.postag': '%s, %s, %s' % (postag, postag_r1, postag_r2)
+        })
 
     return features
 
@@ -273,7 +325,7 @@ def evaluate(test_Y, pred_Y):
     F1 = 2 * precision * recall / (precision + recall)
     return precision, recall, F1
 
-def evaluate_chunk(test_Y, pred_Y, testset=None):
+def evaluate_chunk(test_Y, pred_Y, testset=None, model_name='crf', ds_name='15semeval_rest'):
     """
     evaluate function for aspect term extraction, generally, it can also be used to evaluate the NER, NP-chunking task
     """
@@ -290,7 +342,8 @@ def evaluate_chunk(test_Y, pred_Y, testset=None):
     n_error_nsubj = 0
     n_error_nsubj_pred = 0
 
-    hard_cases = []
+    error_cases = []
+    #hard_cases = []
     for i in xrange(length):
         gold = test_Y[i]
         pred = pred_Y[i]
@@ -299,14 +352,29 @@ def evaluate_chunk(test_Y, pred_Y, testset=None):
         assert len(gold) == len(pred)
         gold_aspects, n_s_g, n_mult_g = tag2aspect(tag_sequence=ot2bieos(tag_sequence=gold))
         pred_aspects, n_s_p, n_mult_p = tag2aspect(tag_sequence=ot2bieos(tag_sequence=pred))
-        n_hit, n_hit_s, n_hit_mult, n_e_nsubj = match_aspect(pred=pred_aspects, gold=gold_aspects)
+        n_hit, n_hit_s, n_hit_mult, n_e_nsubj, error_type = match_aspect(pred=pred_aspects, gold=gold_aspects)
 
         n_error_nsubj_pred += n_e_nsubj
-        if n_e_nsubj:
+        #if n_e_nsubj:
             # the ground truth does not contain aspect but predictions does
+        #    words = sent2words(testset[i])
+        #    assert len(words) == len(gold)
+        #    hard_cases.append(' '.join(words))
+        if error_type != 'GOOD':
+            # model perform error predictions on the sentence
             words = sent2words(testset[i])
             assert len(words) == len(gold)
-            hard_cases.append(' '.join(words))
+            gold_aspect_term, predict_aspect_term = [], []
+            for (b, e) in gold_aspects:
+                gold_aspect_term.append(' '.join(words[b:(e+1)]))
+            if gold_aspect_term == []:
+                gold_aspect_term = ['GOLD_NONE']
+            for (b, e) in pred_aspects:
+                predict_aspect_term.append(' '.join(words[b:(e+1)]))
+            if predict_aspect_term == []:
+                predict_aspect_term = ['PREDICT_NONE']
+            error_cases.append('%s####%s####%s####%s\n' % (' '.join(words), 
+                ','.join(gold_aspect_term), ','.join(predict_aspect_term), error_type))
         n_s += n_hit_s
         n_s_gold += n_s_g
         n_s_pred += n_s_p
@@ -330,6 +398,8 @@ def evaluate_chunk(test_Y, pred_Y, testset=None):
     print "\n\n"
     #for sent in hard_cases:
     #    print sent
+    with open('./error/%s_%s_error.txt' % (model_name, ds_name), 'w+') as fp:
+        fp.writelines(error_cases)
     return precision, recall, F1
 
 
@@ -341,6 +411,7 @@ def match_aspect(pred, gold):
     n_error_nsubj = 0
     if gold == [] and pred != []:
         n_error_nsubj = len(pred)
+    n_error_s, n_error_mult = 0, 0
     for t in pred:
         if t in gold:
             true_count += 1
@@ -348,7 +419,20 @@ def match_aspect(pred, gold):
                 n_mult += 1
             else:
                 n_s += 1
-    return true_count, n_s, n_mult, n_error_nsubj
+        else:
+            if t[1] > t[0]:
+                n_error_mult += 1
+            else:
+                n_error_s += 1
+    error_type = 'GOOD'
+    if n_error_nsubj:
+        # the ground truth has no aspects but the model predict some aspects for sentence
+        error_type = 'NON_OT'
+    elif n_mult + n_s != len(gold):
+        # do not predict all of the tags
+        error_type = 'ERROR'
+
+    return true_count, n_s, n_mult, n_error_nsubj, error_type
 
 
 def to_lower(word_seqs):

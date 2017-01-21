@@ -650,7 +650,7 @@ class AsepectDetector(object):
                 conv2_output = Conv1D(nb_filter=nb_filter, filter_length=4, activation='relu',
                                       border_mode='valid', b_constraint=para_constrains,
                                       W_constraint=para_constrains)(sent_embeddings)
-                conv_pool2_output = GlobalMaxPooling1D(conv2_output)
+                conv_pool2_output = GlobalMaxPooling1D()(conv2_output)
 
                 conv3_output = Conv1D(nb_filter=nb_filter, filter_length=5, activation='relu',
                                       border_mode='valid', b_constraint=para_constrains,
@@ -664,7 +664,7 @@ class AsepectDetector(object):
                 model_output = Dense(1, activation='sigmoid', name='model_output')(x_dropout)
             self.model = Model(input=[model_input], output=[model_output])
 
-            self.model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics='accuracy')
+            self.model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
 
 
             best_model = ModelCheckpoint(filepath='./model/%s.hdf5' % self.model_name,
@@ -688,7 +688,6 @@ class AsepectDetector(object):
 
             self.model.fit(train_X, train_Y, nb_epoch=100, validation_data=(test_X, test_Y),
                            callbacks=[model_checkpoint])
-
 
             """
             pred_Y = self.model.predict(test_X)

@@ -1,0 +1,227 @@
+I have to say they have one of the fastest delivery times in the city .####delivery times####PREDICT_NONE####ERROR
+I trust the people at Go Sushi , it never disappoints .####people####Sushi####ERROR
+I love the drinks , esp lychee martini , and the food is also VERY good .####drinks,lychee martini,food####drinks,esp lychee martini,food####ERROR
+In fact , this was not a Nicoise salad and was barely eatable .####Nicoise salad####salad####ERROR
+Once we sailed , the topnotch food and live entertainment sold us on a unforgettable evening .####food,live entertainment####food####ERROR
+The portions of the food that came out were mediocre .####portions of the food####portions,food####ERROR
+From the beginning , we were met by friendly staff memebers , and the convienent parking at Chelsea Piers made it easy for us to get to the boat .####staff memebers,parking####staff memebers####ERROR
+Desserts are almost incredible: my personal favorite is their Tart of the Day .####Desserts,Tart of the Day####Desserts####ERROR
+THE LASAGNA WAS PROBABLY THE BEST I HAVE TASTED .####LASAGNA####PREDICT_NONE####ERROR
+Harumi Sushi has the freshest and most delicious array of sushi in NYC .####array of sushi####sushi####ERROR
+If you're craving some serious indian food and desire a cozy ambiance , this is quite and exquisite choice .####indian food,ambiance####serious indian food,ambiance####ERROR
+It was pleasantly uncrowded , the service was delightful , the garden adorable , the food from appetizers to entrees was delectable .####service,garden,food,appetizers,entrees####service,garden,food from appetizers,entrees####ERROR
+Two wasted steaks what a crime !####steaks####PREDICT_NONE####ERROR
+I think the meatball parm is good .####meatball parm####PREDICT_NONE####ERROR
+If you want good tasting , well seasoned latin food eat at Cabana and you can't go wrong .####latin food####seasoned latin food####ERROR
+Had a great experience at Trio . . . staff was pleasant; food was tasty and large in portion size I would highly recommend the portobello/gorgonzola/sausage appetizer and the lobster risotto .####staff,food,portion size,portobello/gorgonzola/sausage appetizer,lobster risotto####staff,pleasant; food,portobello/gorgonzola/sausage appetizer,lobster risotto####ERROR
+Entrees include classics like lasagna , fettuccine Alfredo and chicken parmigiana .####Entrees,lasagna,fettuccine Alfredo,chicken parmigiana####Entrees,lasagna,chicken parmigiana####ERROR
+We love it , and took buses and cabs to get there .####GOLD_NONE####buses,cabs####NON_OT
+The spicy mussels are a highlight .####spicy mussels####mussels####ERROR
+Also get the Onion Rings best we've ever had .####Onion Rings####PREDICT_NONE####ERROR
+A nice space , as long as it doesn't get too crowded and a singleminded devotion to its chosen cuisine make Mare a great choice for seafood lovers .####space,cuisine,seafood####space,chosen cuisine####ERROR
+I never had an orange donut before so I gave it a shot .####orange donut####PREDICT_NONE####ERROR
+mojitos and the service are the best part in there####mojitos,service####service####ERROR
+The steak melted in my mouth .####steak####steak melted####ERROR
+i dont know what some people who rave about this hot dog are talking about .####hot dog####PREDICT_NONE####ERROR
+I can say that the wraps , burgers and salads were all fresh , tasty and the mango margareta at $9 was WELL WORTH the money .####wraps,burgers,salads,mango margareta####burgers,salads,mango margareta####ERROR
+The folding chair I was seated at was uncomfortable .####folding chair####PREDICT_NONE####ERROR
+As we waited I watched 3 seperate groups of diners discuss how dissapointed they also were .####GOLD_NONE####diners####NON_OT
+The food was very good and I was pleasantly surprised to see so many vegan options .####food,vegan options####food####ERROR
+Be sure to try the Smoked Trout . . .ASPECT1 , Veal Chops , Rabbit , the potato gratin , on and on and on . . .####Smoked Trout,Veal Chops,Rabbit,potato gratin####Smoked,Veal Chops,potato gratin####ERROR
+Everything from the eggs benedict to the mussels and even the hamburger were done well and very tasty .####eggs benedict,mussels,hamburger####eggs,mussels####ERROR
+I highly reccomend the grand marnier shrimp , it's insanely good .####grand marnier shrimp####marnier shrimp####ERROR
+The service is great , my soup always arrives nice and hot .####service,soup####service####ERROR
+It had been awhile and I forgot just how delicious crepes can be .####crepes####PREDICT_NONE####ERROR
+Montparnasse's desserts the silken creme brulee and paperthin apple tart good enough on their own to make the restaurant worth the trip .####desserts,creme brulee,apple tart####silken creme brulee,paperthin apple####ERROR
+Beware of the chili signed food items not unless you want to call the fire department to douse the flames in your mouth .####chili signed food items####chili,food####ERROR
+A beautiful atmosphere , perfect for drinks and/or appetizers .####atmosphere,drinks,appetizers####atmosphere,drinks and/or appetizers####ERROR
+We started with the scallops and asparagus and also had the soft shell crab as well as the cheese plate .####scallops,asparagus,soft shell crab,cheese plate####scallops,shell crab,cheese plate####ERROR
+this without question is one of the worst hotdogs i have ever had .####hotdogs####PREDICT_NONE####ERROR
+The staff is unbelievably friendly , and I dream about their Saag gosht . . .so good .####staff,Saag gosht####staff####ERROR
+I also recommend the garlic knots .####garlic knots####PREDICT_NONE####ERROR
+The food was great sushi was good , but the cooked food amazed us .####food,sushi,food####food,sushi,cooked food####ERROR
+Sit back in one of those comfortable chairs .####chairs####PREDICT_NONE####ERROR
+My favs here are the Tacos Pastor and the Tostada de Tinga . . .####Tacos Pastor,Tostada de Tinga####Tacos Pastor####ERROR
+For a savory take on the soup and sandwich meal , try the hot and sour soup .####soup and sandwich meal,hot and sour soup####take,soup,sandwich meal,soup####ERROR
+i especially like their soft shell crab sandwich with fries .####soft shell crab sandwich with fries####shell crab sandwich with fries####ERROR
+if you're looking for authentic hong kong-style food , look no further .####hong kong-style food####food####ERROR
+There was a heat problem to boot , so it was about 40 degrees in the restaurant we had to request to uncheck our coats !####GOLD_NONE####degrees####NON_OT
+personally i say save your money .####GOLD_NONE####money####NON_OT
+In addition to great hot dogs , DOTP has wonderful breakfast sandwiches that feature , in addition to great things like tator tots and English muffins , a delicious NJbased pork product know to us Jersey girls and boys as Taylor ham .####hot dogs,breakfast sandwiches,tator tots,English muffins,pork product,Taylor ham####hot dogs,breakfast sandwiches,pork####ERROR
+When the dish arrived it was blazing with green chillis , definitely not edible by a human .####dish,green chillis####dish####ERROR
+It's about $7 for lunch and they have take-out or dine-in .####lunch,take-out,dine-in####lunch####ERROR
+Be sure to accompany your food with one of their fresh juice concoctions .####food,fresh juice concoctions####food####ERROR
+The place is clean , and if you like soul food , then this is the place to be !####place,soul food,place####soul food####ERROR
+It's the kind of place I like to support !####GOLD_NONE####place####NON_OT
+Malted Milk Ball Gelato have you ever in your life heard of anything so ridiculously wonderful ?####Malted Milk Ball Gelato####PREDICT_NONE####ERROR
+The unattractive lighting made me want to gag , the food was overpriced , there was the most awful disco pop duo performingand my escargot looked like it might crawl off the plate .####lighting,food,disco pop duo,escargot####food,disco pop duo,escargot####ERROR
+it is a cozy place to go with a couple of friends .####place####PREDICT_NONE####ERROR
+Over priced , overrated . . . .stay away !####GOLD_NONE####priced####NON_OT
+Dieters stick to salads or indulge in vegetarian platters .####salads,vegetarian platters####Dieters,salads####ERROR
+I usually get one the Vietnamese Beef Noodle Soup .####Vietnamese Beef Noodle Soup####Vietnamese Beef####ERROR
+We were wondering why they were there to make our dining experience miserable ?####dining experience####dining####ERROR
+Intimate but charming interior with extremely friendly and attentive service .####interior,service####service####ERROR
+The menu is great , with a good selection , and everything that I have tried is absolutely delicious .####menu,selection####menu####ERROR
+They have an excellent selection the rolls with crab are really great .####selection,rolls with crab####rolls with crab####ERROR
+The skillfully chosen Portuguese cheese cart paired with quality port provides the perfect Iberian ending .####Portuguese cheese cart,port####Portuguese cheese cart,quality port####ERROR
+My friend had a burger and I had these wonderful blueberry pancakes .####burger,blueberry pancakes####burger,pancakes####ERROR
+The place just isn't ready for prime time .####GOLD_NONE####place####NON_OT
+Coffee is a better deal than overpriced Cosi sandwiches .####Coffee,Cosi sandwiches####Cosi sandwiches####ERROR
+The food is so good and so popular that waiting can really be a nightmare .####food,waiting####food####ERROR
+The crowd was older and the restaurant is very cramped , but it has old school charm .####GOLD_NONE####crowd####NON_OT
+First walking in the place seemed to have great ambience .####place,ambience####ambience####ERROR
+Average cake thats been courted by a LOT of hype .####cake####cake thats####ERROR
+My fiance and I recently wanted to see the city and deceided to take a dinner cruise .####GOLD_NONE####dinner cruise####NON_OT
+The $72 Delmonico steak had to be sent back because it was not cooked to order .####Delmonico steak####$72 Delmonico steak####ERROR
+Half a chicken with a mountain of rice and beans for $6 .25 .####chicken,rice,beans####chicken,rice####ERROR
+Casablanca servces delicious falafel , tabouleh , humus and other Mediterranean delights , which are all very inexpensive .####falafel,tabouleh,humus,Mediterranean delights####Casablanca servces,tabouleh####ERROR
+The pizza's are made fresh , crispy , and ready to serve .####pizza's####PREDICT_NONE####ERROR
+Chef Waldy's always measures up .####Chef####PREDICT_NONE####ERROR
+This diamond in the ruff is definitely worth my 10minute walk from the 6 train .####GOLD_NONE####ruff####NON_OT
+Go for the Seafood Paella for two .####Seafood Paella for two####Seafood Paella####ERROR
+Whether one pizza place is better than another is often very subjective .####GOLD_NONE####pizza place####NON_OT
+Host and Host was quite rude .####Host,Host####Host####ERROR
+The food is average: breakfast food , soups , salads , sandwiches , etc .####food,food,soups,salads,sandwiches####food,breakfast food,soups,salads,sandwiches####ERROR
+THE BANANA PUDDING THEY SERVE HAS NEVER SEEN AN OVEN ,THE CRABCAKES ARE WAY OVER SALTED AND DON'T GET ME STARTED ON THE VERY GREASY MAC AND CHEESE .####BANANA PUDDING,CRABCAKES,MAC AND CHEESE####BANANA PUDDING THEY SERVE,CRABCAKES####ERROR
+I've come here for casual lunches as well as for a friend's birthday and I always enjoy myself .####casual lunches####lunches####ERROR
+If you are a Tequila fan you will not be disappointed .####Tequila####PREDICT_NONE####ERROR
+Not to sound too negative but be wary of the delivary .####delivary####PREDICT_NONE####ERROR
+Feels like family when we go there .####GOLD_NONE####Feels####NON_OT
+They have homemade pastas of all kinds I recommend the gnocchi yum !####homemade pastas,gnocchi####pastas,gnocchi yum####ERROR
+the homemade Guacamole , the unbelievable entree , and thee most amazing deserts .####homemade Guacamole,entree,deserts####entree,deserts####ERROR
+Best things to order are from the grill Churrasco and Ribs .####grill Churrasco,Ribs####PREDICT_NONE####ERROR
+The traditional Italian items are great cheap and served in a cozy setting .####traditional Italian items,served,setting####served,setting####ERROR
+last Tuesday for a late lunch with a friend .####late lunch####lunch####ERROR
+The unfortunate lady next to us thought she had ordered a salad including asking for salad dressing and was instead given a quesedilla .####salad,salad,quesedilla####salad,salad dressing####ERROR
+El Nidos one of the best restaurants in New York which I've ever been to , has a great variety of tasty , mouth watering pizza's .####pizza's####PREDICT_NONE####ERROR
+Chef Vincenzo , always there if you need him , is a real talent and a real Roman .####Chef####Chef Vincenzo,talent####ERROR
+You must try Odessa stew or Rabbit stew salads good; and kompot is soo refreshing during the hot summer day they make it the way my mom does , reminds me of home a lot .####Odessa stew,Rabbit stew salads,kompot####Odessa stew,stew salads####ERROR
+The quality of the meat was on par with your local grocery store .####quality of the meat####meat####ERROR
+They specialize in smoothies and fresh juices .####smoothies,fresh juices####PREDICT_NONE####ERROR
+In mi burrito , here was nothing but dark chicken that had that cooked last week and just warmed up in a microwave taste .####chicken,taste####taste####ERROR
+Don't waste your time or your money .####GOLD_NONE####money####NON_OT
+it's good but , like the movie is never as good as the book , this is same analogy .####GOLD_NONE####movie####NON_OT
+From the erbazzone emiliana to the mostarda on the cheese plate , the dishes at this restaurant are all handled with delicate care .####erbazzone emiliana,mostarda on the cheese plate,dishes####cheese plate,dishes####ERROR
+There's candlelight and music .####candlelight,music####music####ERROR
+It was such a fantastic dining experience , that I returned again the same week .####dining experience####dining####ERROR
+I ordered the Chicken Teriyaki and my husband got Garlic Shrimp .####Chicken Teriyaki,Garlic Shrimp####Chicken Teriyaki####ERROR
+the icing MADE this cake , it was fluffy , not ultra sweet , creamy and light .####cake####PREDICT_NONE####ERROR
+Finally let into the store 5 at a time , to buy expensive slices from a harried staff .####slices,staff####staff####ERROR
+Everything about this place is adorable even the bathroom !####bathroom####PREDICT_NONE####ERROR
+Speedy delivers , great food , decent prices , and friendly service combine to ensure an enjoyable repast .####delivers,food,prices,service,repast####food,prices,service####ERROR
+THEY HAVE WAITERS ON THE SIDEWALK TRYING TO PULL YOU IN WHICH MADE US SUSPICIOUS .####WAITERS####PREDICT_NONE####ERROR
+IT WAS OUR ONLY OPPORTUNITY TO VISIT AND WANTED AN AUTHENTIC ITALIAN MEAL .####ITALIAN MEAL####PREDICT_NONE####ERROR
+Generously garnished , organic grilled burgers are the most popular dish , but the Jerusalem market-style falafel wraps and Mediterranean salads--layered with beets, goat cheese and walnuts equally scrumptious .####organic grilled burgers,dish,Jerusalem market-style falafel wraps,Mediterranean salads--layered with beets, goat cheese and walnuts####organic grilled burgers,dish,Mediterranean salads--layered with beets, goat cheese####ERROR
+Result red velvet: Great texture , soft and velvety , nice hint of cocoa .####texture,hint of cocoa####cocoa####ERROR
+Ask for the round corner table next to the large window .####round corner table next to the large window####round corner table####ERROR
+Their twist on pizza is heatlhy , but full of flavor .####twist on pizza,flavor####pizza,flavor####ERROR
+The lack of AC and the fact that there are a million swarming bodies although everyone is polite and no one is pushing is a slight turn off .####AC####PREDICT_NONE####ERROR
+I love the Little Pie Company as much as anyone else who has written reviews , but must discourage anyone from visiting the Grand Central location due to their RUDE service from two sales people .####service,sales people####service####ERROR
+Didn't seem like any effort was made to the display and quality of the food .####display and quality of the food####quality,food####ERROR
+At night the atmoshere changes turning into this hidden jewel that is waiting to be discovered .####atmoshere####atmoshere changes,waiting####ERROR
+The other times I've gone it's romantic date heaven , you can walk in get a booth by the windows , be treated like a VIP in a notcrowded place , with great food and service .####booth by the windows,place,food,service####place,food,service####ERROR
+I used to be a regular costumer at pongal until dosa hut opened right next door to it .####GOLD_NONE####costumer,dosa hut####NON_OT
+Somewhat disappointing wine list only new vintages .####wine list,vintages####wine list####ERROR
+If your looking for nasty high priced food with a dash of ghetto scenery cheap BX A$$ this is the place to be ! !####priced food,scenery####priced food####ERROR
+new hamburger with special sauce is ok at least better than big mac !####new hamburger with special sauce,big mac####special sauce####ERROR
+This little place is wonderfully warm welcoming .####place####PREDICT_NONE####ERROR
+Has the warmth of a family local yet it is a great place to watch sporting events .####place####PREDICT_NONE####ERROR
+My only complaint might be the fortune cookies I've never had a cookie predict bad luck for me before I visited Kar .####fortune cookies,cookie####fortune cookies####ERROR
+Have a mojito and sit in the back patio .####mojito,back patio####back patio####ERROR
+The waitress came by to pick up the soy sauce WHILE we were eating our lunch ! ! ! ! !####waitress,soy sauce,lunch####waitress,soy sauce WHILE,lunch####ERROR
+I reccomend the fried pork dumplings , the orange chicken/beef , and the fried rice .####fried pork dumplings,orange chicken/beef,fried rice####fried pork dumplings,chicken/beef,fried rice####ERROR
+The french fries -- with the kalmata dip were terrific !####french fries -- with the kalmata dip####french fries,kalmata dip####ERROR
+They also have a great assortment of wraps if your not in the mood for traditional Mediterranean fare .####assortment of wraps,traditional Mediterranean fare####Mediterranean fare####ERROR
+Fresh veggies , all sorts of middle eastern spreads , cheese and falafel , soup , fish , rice , root vegetables , a rice medley , some spinach thing , middle eastern spreads , cheese baclava . . . soooo much middle eastern spreads , and all of it delicious .####Fresh veggies,middle eastern spreads,cheese,falafel,soup,fish,rice,root vegetables,rice,spinach thing,middle eastern spreads,cheese,middle eastern spreads####veggies,spreads,cheese,soup,fish,rice,root vegetables,rice medley,spreads,cheese baclava,spreads####ERROR
+In Short The Black Sheep distinguishes itself from the Midtown pub herd with a look that's a mix of sportsbar butch and ornate kitsch .####look####Black Sheep distinguishes,sportsbar butch####ERROR
+The happy hour is so cheap , but that does not reflect the service or the atmosphere .####happy hour,service,atmosphere####service,atmosphere####ERROR
+After waiting for almost an hour , the waiter brusquely told us he'd forgotten to give the kitchen our order .####waiting,waiter,kitchen####waiting,waiter####ERROR
+With all the mundane or mediocre places on 8th avenue it is nice to have one that is a step above in quaility and atmosphere .####quaility,atmosphere####atmosphere####ERROR
+A mix of students and area residents crowd into this narrow , barely there space for its quick , tasty treats at dirtcheap prices .####space,treats,prices####mix of students,area residents,space,prices####ERROR
+It gets crowded at lunchtime but there are lots of seats in back and everyone who works there is so nice .####seats####seats in back####ERROR
+the negative reviews on city search are probably from jealous competing restaurants who realize they can't compete with Temple's entire positive attitude about the proper way to treat their customers and deliver top quality food .####attitude,food####quality food####ERROR
+It was good , but none of the flavors WOW .####flavors####PREDICT_NONE####ERROR
+Overall , this is a nice place to take a few friends to hang out at and the service is excellent .####place,service####service####ERROR
+the food was mediocre to be kind the interior is small and average the owners are a tagteam of unpleasantries so rude and snotty i actually let out a hearty guffaw whilst dining .####food,interior,owners,dining####food,interior,owners####ERROR
+Good service , great food , good value , and never have to wait in line !####service,food,value,wait####service,food,value####ERROR
+Offerings like hot cakes and the Egg McMuffin sandwich are available for breakfast .####hot cakes,Egg McMuffin sandwich,breakfast####hot cakes,Egg McMuffin sandwich####ERROR
+Cuisine is bill as asian fusion doesn't meet the bill .####Cuisine,bill,asian fusion,bill####bill,bill####ERROR
+Creative dishes like king crab salad with passion fruit vinaigrette and fettuccine with grilled seafood in a rosemary-orange sauce are unexpected elements on an otherwise predictable bistro menu .####dishes,king crab salad with passion fruit vinaigrette,fettuccine with grilled seafood in a rosemary-orange sauce,bistro menu####dishes like king crab salad with passion fruit vinaigrette,grilled seafood,sauce,menu####ERROR
+Dishes denoted as "Roy's Classics" marked on the menu with asterisks are triedandtrue recipes , such as macadamia-crusted mahi mahi , or subtly sweet honey-mustard beef short ribs .####Dishes,"Roy's Classics",menu,recipes,macadamia-crusted mahi mahi,sweet honey-mustard beef short ribs####Dishes,menu with asterisks,macadamia-crusted mahi mahi,beef####ERROR
+The lone argentine chorizo appetizer at $8 .95 was a heavy fennel flavored Italian sausage like the ones that sell for $2 .99/lb at the store .####argentine chorizo appetizer,fennel flavored Italian sausage####chorizo appetizer####ERROR
+Best Chinese on the Upper East , prompt delivery , good value .####delivery,value####Chinese,delivery####ERROR
+It has good music , nice tapas , an interesting selection of wines (primarily Spanish) and a lowkey hip neighborhood clientele .####music,tapas,selection of wines (primarily Spanish),clientele####music,tapas,selection of wines (primarily Spanish)####ERROR
+The food is great , I love their dumplings , cold sesame noodles , chicken and shrimp dishs .####food,dumplings,cold sesame noodles,chicken,shrimp dishs####food,dumplings,sesame noodles,chicken,shrimp dishs####ERROR
+Waiting three hours before getting our entrees was a treat as well .####Waiting,entrees####entrees####ERROR
+It's the conversations that make this a fun place to be .####place####conversations####ERROR
+The wine list was superb , our tapas delightful , and the quiet atmosphere perfect for good conversation .####wine list,tapas,atmosphere####wine list,atmosphere####ERROR
+You can eat gourmet food at a fast food price .####food,food price####gourmet food,fast food price####ERROR
+the dinner menu offers a variety of great entrees , including fresh seafood and huge steaks , there's also a couple of non-meat alternatives .####dinner menu,entrees,seafood,steaks,non-meat alternatives####dinner menu,entrees,seafood,steaks####ERROR
+15% gratuity automatically added to the bill .####gratuity,bill####bill####ERROR
+The halibut cheek appetizer came with a generous portion of foie gras , but that's about the only positive thing I can say about the meal .####halibut cheek appetizer,portion of foie gras,meal####halibut cheek appetizer,portion,meal####ERROR
+Alltime favorites include the Big Mac , Chicken McNuggets , Filet-O-Fish sandwich and McDonald's famous french fries lighter options like entree-sized salads are also available .####Big Mac,Chicken McNuggets,Filet-O-Fish sandwich,McDonald's famous french fries,entree-sized salads####Big Mac,Chicken McNuggets,Filet-O-Fish sandwich,french fries,entree-sized salads####ERROR
+Not too much so , but enough that there's a great scene .####scene####PREDICT_NONE####ERROR
+I got the opportunity to dine at your establishment again a few weeks ago , I was in your upstrairs dining area .####upstrairs dining area####PREDICT_NONE####ERROR
+Menus feature seasonal picks , like sweet corn-foie gras brulee .####Menus,sweet corn-foie gras brulee####Menus,corn-foie gras brulee####ERROR
+Innovations are just as assured , from the simple Carinthia cheese ravioli with wild mushrooms to the caviar-topped sturgeon , beautifully matched with a bright green spinach-vodka sauce .####Carinthia cheese ravioli with wild mushrooms,caviar-topped sturgeon,green spinach-vodka sauce####Innovations,Carinthia cheese ravioli with wild mushrooms,spinach-vodka sauce####ERROR
+And these are not small , wimpy fast food type burgers these are real , full sized patties .####burgers,patties####fast food####ERROR
+Chinatown definitely has better quality with cheaper prices .####quality,prices####prices####ERROR
+I had to flag down a third staff person for a fork . . . so now it's goodbye Little RUDE Pie Company .####staff person,fork####staff####ERROR
+Atmosphere is a bore .####Atmosphere####PREDICT_NONE####ERROR
+The dishes are remarkably tasty and such a cozy and intimate place !####dishes,place####dishes####ERROR
+Alias is warm and cozy and you don't get that squishedin feeling you get at 71 Clinton .####GOLD_NONE####Alias####NON_OT
+I HAVE NEVER HAD A BAD MEAL BAD SERVICE @ PIGALLE .####MEAL,SERVICE####PREDICT_NONE####ERROR
+This is a typical example of an establishment in which its owners do not know anything about the restaurant business !####GOLD_NONE####owners####NON_OT
+Really Lovely dining experience in the midst of buzzing midtown area .####dining experience####PREDICT_NONE####ERROR
+Maybe it's that most of Dumont's patrons are younger and have lower expectations , but I cannot recommend Dumont .####GOLD_NONE####patrons####NON_OT
+Finally a curry that I can eat , enjoy and not suffer from gastritis from 3 hours later .####curry####PREDICT_NONE####ERROR
+All are GREAT poori , naan , paratha all FRESH .####poori,naan,paratha####poori,naan####ERROR
+It also has lots of other Korean dishes that are affordable and just as yummy .####Korean dishes####dishes####ERROR
+This place is classy , chic , the service is warm and hospitable , and the food is outstanding .####place,service,food####service,food####ERROR
+Great burgers , grilled cheeses and french fries .####burgers,grilled cheeses,french fries####grilled cheeses,french fries####ERROR
+The Yellowfin Tuna and Calf's liver are my favorites !####Yellowfin Tuna,Calf's liver####Yellowfin Tuna####ERROR
+They bring a sauce cart up to your table and offer you up to 7 or 8 choices of sauces for your steak I tried them ALL .####sauce cart,table,choices of sauces,steak####sauce cart,choices of sauces,steak####ERROR
+good variety but nothing surprising .####variety####PREDICT_NONE####ERROR
+After I paid for my purchase , I noticed they had not given me utensils so I could eat my pie .####utensils,pie####PREDICT_NONE####ERROR
+Likewise if you like really thin crust or really big slices then Nick and Joe's may not be your favorite .####thin crust,slices####crust####ERROR
+No green beans , no egg , no anchovy dressing , no nicoise olives , no red onion .####green beans,egg,anchovy dressing,nicoise olives,red onion####egg####ERROR
+Build a meal with side orders like Amazin' Greens salads , Buffalo Chicken Kickers and Cinna Stix .####meal,side orders,Amazin' Greens salads,Buffalo Chicken Kickers,Cinna Stix####meal,salads,Buffalo Chicken Kickers####ERROR
+Thick fries , meaty chili and stuffed baked potatoes round out a menu that includes a cool , ultrathick chocolate Frosty .####fries,meaty chili,stuffed baked potatoes,menu,chocolate Frosty####fries,meaty chili,baked potatoes,menu####ERROR
+Good cake BUT: it was not the best cake i've ever had , and definately not worth standing outside on the sidewalk being herded like cattle by indifferent and overworked employees .####cake,cake,employees####cake,employees####ERROR
+The closest that I got was the Cherry Marscapone , but they were out of it that day .####Cherry Marscapone####PREDICT_NONE####ERROR
+It doesn't look like much on the outside , but the minute you walk inside , it's a whole other atmosphere .####outside,atmosphere####atmosphere####ERROR
+I have to say the place was awesome .####GOLD_NONE####place####NON_OT
+The ground chickpea soup we sampled as a starter tasted somewhat thin .####ground chickpea soup,starter####ground chickpea soup####ERROR
+The service , however , is a peg or two below the quality of food horrible bartenders , and the clientele , for the most part , are rowdy , loudmouthed commuters this could explain the bad attitudes from the staff getting loaded for an AC/DC concert or a Knicks game .####service,quality of food,bartenders,clientele,staff####service,food,bartenders,clientele,staff,AC/DC concert####ERROR
+The restaurant could use a little paint , but all in all a great sushi place !####GOLD_NONE####sushi place####NON_OT
+Make more tables perhaps a rooftop bar ?####tables,rooftop bar####tables,bar####ERROR
+Stick to the items the place does best , brisket , ribs , wings , cajun shrimp is good , not great .####brisket,ribs,wings,cajun shrimp####ribs,wings,cajun shrimp####ERROR
+My Chelsea's impressive and creative menu includes modern , Westernized Japanese dishes such as Foie Gras Unagi Napolean , Jap style hamburger steak , spicy cod roe spaghetti , black cod with miso base , and rack of lamb in black truffle sauce , to name a few .####menu,Japanese dishes,Foie Gras Unagi Napolean,Jap style hamburger steak,spicy cod roe spaghetti,black cod with miso base,rack of lamb in black truffle sauce####menu,Japanese dishes,Foie Gras Unagi Napolean,Jap style hamburger steak,cod roe spaghetti,black cod with miso base,lamb in black truffle sauce####ERROR
+The pasta primavera was outstanding as well , lots of fresh veggies .####pasta primavera,fresh veggies####pasta primavera,veggies####ERROR
+Being Puerto Rican I know a thing or two about flan and this place serves one of the best I hope Mom doesn't read this ! .####flan####PREDICT_NONE####ERROR
+Highly recommended . . . As stated , I haven't dined *in* the restaurant but stopped by there to pick up takeout and it seems a very relaxing place also , the bar looks nice .####takeout,place,bar####place,bar####ERROR
+but , the filet mignon was not very good at all cocktail hour includes free appetizers nice non-sushi selection .####filet mignon,cocktail hour,appetizers,non-sushi selection####filet mignon,appetizers,non-sushi selection####ERROR
+Can be a bit busy around peak times because of the size .####size####PREDICT_NONE####ERROR
+I was on jury duty , rode my bike up Centre Street on my lunch break and came across this great little place with awesome chicken tacos and Hibiscus lemonade .####place,chicken tacos,Hibiscus lemonade####lunch break,place,chicken tacos####ERROR
+good place to hang out during the day after shopping or to grab a simple soup or classic french dish over a glass of wine .####place,soup,french dish,glass of wine####soup,french dish,glass of wine####ERROR
+Very nice touch that very much fits the place .####place####PREDICT_NONE####ERROR
+However , there is just something so great about being outdoors , in great landscaping , enjoying a casual drink that makes going to this place worthwhile .####outdoors,casual drink,place####drink####ERROR
+If you are here as a pre-show meal , hop in a cab and take the extra 10 minutes to go to the uptown location .####pre-show meal####meal####ERROR
+The sauce is excellent very fresh with dabs of real mozzarella .####sauce,dabs of real mozzarella####sauce####ERROR
+Don't ever bother the drinks were awful , but it was the people who work there that really made this the worst experience at dining .####drinks,people,dining####drinks,people####ERROR
+A small , outdoor eating area makes for a private , comfortable space to study alone or meet up with friends .####outdoor eating area,space####space####ERROR
+The best dessert , a chocolate and peanut butter tart , isn't particularly Hawaiian , but it's a small world when it comes to sweets .####dessert,chocolate and peanut butter tart,sweets####dessert,chocolate,peanut butter####ERROR
+After dinner I heard music playing and discovered that there is a lounge downstairs .####dinner,music,lounge####dinner,music####ERROR
+But now that it's under new ownership and has been renovated , it looks great .####GOLD_NONE####ownership####NON_OT
+The room is a gorgeous , bi-level space and the long bar perfect for a drink .####room,bi-level space,long bar,drink####room,space,bar,drink####ERROR
+Two complaints their appetizer selection stinks , it would be nice to get some mozzarella sticks on the menu .####appetizer selection,mozzarella sticks,menu####appetizer selection stinks,menu####ERROR
+The chicken and falafel platters were nondescript combinations with fresh leaf salad .####chicken and falafel platters,fresh leaf salad####chicken,falafel platters,fresh leaf salad####ERROR
+We were seated next to a couple whose kitchen was being renovated and we agreed since we're all foodies who eat out a lot that this wasn't a place we'd return to .####GOLD_NONE####foodies####NON_OT
+They are served on Focacchia bread and are to die for .####served,Focacchia bread####served,bread####ERROR
+The guac is fresh , yet lacking flavor , we like to add our fresh salsa into it .####guac,flavor,fresh salsa####guac,salsa####ERROR
+The new menu has a few creative items ,they were smart enough to keep some of the old favorites but they raised the prices , the staff is friendly most of the time , but I must agree with the person that wrote about their favorite words: No , can't , sorry . . . , boy , they won't bend the rules for anyone .####new menu,prices,staff####menu,prices,staff####ERROR
+If you like seafood and/or Greek food you will love this place though it is not limited to just these things .####seafood,Greek food####seafood,food####ERROR
+" The menu includes pub fare , steaks and shepherds pie even a portabella lasagna for those black sheep known as "vegetarians .####menu,pub fare,steaks,shepherds pie,portabella lasagna####menu includes pub fare,steaks,shepherds pie,portabella lasagna####ERROR
+How can they survive serving mediocre food at exorbitant prices ? !####food,prices####serving mediocre food,prices####ERROR
+Sweet Irish bartender is always happy and able to bring a smile to my friends a my face .####bartender####Irish bartender####ERROR
+Creamy appetizers , eggplant salad , and Greek yogurt (with cuccumber, dill, and garlic) taste excellent when on warm pitas .####Creamy appetizers,eggplant salad,Greek yogurt (with cuccumber, dill, and garlic),warm pitas####appetizers,eggplant salad,garlic),pitas####ERROR

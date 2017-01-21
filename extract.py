@@ -13,7 +13,7 @@ from models import AveragedPerceptron, AsepectDetector
 #from layers import MyEmbedding
 
 #embeddings = {}
-def crf_extractor(train_set, test_set, embeddings=None):
+def crf_extractor(train_set, test_set, embeddings=None, model_name=None, ds_name=None):
     """
     linear-chain crf extractor with basic feature template
     :param train_set: training dataset
@@ -22,12 +22,12 @@ def crf_extractor(train_set, test_set, embeddings=None):
     train_Y = [sent2tags(sent) for sent in train_set]
     test_Y = [sent2tags(sent) for sent in test_set]
 
-    AD = AsepectDetector(name='lstm', embeddings=embeddings)
-    embeddings = None
-    pred_res = AD.classify(trainset=train_set, testset=test_set)
+    #AD = AsepectDetector(name='cnn', embeddings=embeddings)
+    #embeddings = None
+    #pred_res = AD.classify(trainset=train_set, testset=test_set)
     # filtered sentence without aspects
-    new_test_set = [test_set[i] for (i, y) in enumerate(pred_res) if y > 0.5]
-    #new_test_set = test_set
+    #new_test_set = [test_set[i] for (i, y) in enumerate(pred_res) if y > 0.5]
+    new_test_set = test_set
     if not embeddings:
         print "crf with word-level features..."
         #train_X = feature_extractor(data=train_set, _type='map', feat='word', embeddings=embeddings)
@@ -37,11 +37,11 @@ def crf_extractor(train_set, test_set, embeddings=None):
         test_Y = [sent2tags(sent) for sent in new_test_set]
     else:
         print "crf with word embeddings..."
-        train_words = [sent2tokens(sent) for sent in train_set]
+        train_words = [sent2words(sent) for sent in train_set]
         #train_Y = [sent2tags(sent) for sent in train_set]
         train_words = to_lower(word_seqs=train_words)
 
-        test_words = [sent2tokens(sent) for sent in test_set]
+        test_words = [sent2words(sent) for sent in test_set]
         test_words = to_lower(word_seqs=test_words)
         #test_Y = [sent2tags(sent) for sent in test_set]
 
@@ -80,9 +80,10 @@ def crf_extractor(train_set, test_set, embeddings=None):
 
     print(metrics.flat_classification_report(test_Y, pred_Y, labels=labels, digits=3))
 
-    print evaluate_chunk(test_Y=test_Y, pred_Y=pred_Y, testset=new_test_set)
+    print evaluate_chunk(test_Y=test_Y, pred_Y=pred_Y, testset=new_test_set, 
+        model_name=model_name, ds_name=ds_name)
 
-    output(test_set=new_test_set, pred_Y=pred_Y, model_name='crf')
+    output(test_set=new_test_set, pred_Y=pred_Y, model_name=model_name)
 
 def svm_extractor(train_set, test_set, embeddings=None):
     """
@@ -365,7 +366,7 @@ def run(ds_name, model_name='crf', feat='word'):
         if feat_name == 'embedding':
             crf_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
         else:
-            crf_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
+            crf_extractor(train_set=train_set, test_set=test_set, model_name=model_name, ds_name=ds_name)
     elif model_name == 'svm':
         svm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
     elif model_name == 'lstm':

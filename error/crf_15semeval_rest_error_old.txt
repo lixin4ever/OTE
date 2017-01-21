@@ -1,0 +1,255 @@
+Love Al Di La####Al Di La####PREDICT_NONE####ERROR
+I recommend this place to everyone .####place####PREDICT_NONE####ERROR
+The pastas are incredible , the risottos particularly the sepia are fantastic and the braised rabbit is amazing .####pastas,risottos,sepia,braised rabbit####pastas,sepia####ERROR
+There are so many other great places to go to eat and drink . . . . . this place is not worth it . . .####GOLD_NONE####place####NON_OT
+An awesome organic dog , and a conscious eco friendly establishment .####dog,establishment####PREDICT_NONE####ERROR
+I was visiting New York City with a friend and we discovered this really warm and inviting restaurant .####restaurant####PREDICT_NONE####ERROR
+We had fun eating in there , we were there like around 3 a .m . in the morning !####GOLD_NONE####fun eating####NON_OT
+Excellent food , although the interior could use some help .####food,interior####food####ERROR
+The space kind of feels like an Alice in Wonderland setting , without it trying to be that .####space####setting####ERROR
+Have never had a problem with service save a missing rice once .####service####PREDICT_NONE####ERROR
+Delivery can be spot on or lacking depending on the weather and the day of the week .####Delivery####Delivery can be spot####ERROR
+We've found it to be better and fresher than Kiku which is comparable in price .####GOLD_NONE####Kiku####NON_OT
+Best . Sushi . Ever .####Sushi####PREDICT_NONE####ERROR
+The waiter was attentive , the food was delicious and the views of the city were great .####waiter,food,views of the city####waiter,food####ERROR
+my favorite place lol####place####PREDICT_NONE####ERROR
+i love their chicken pasta cant remember the name but is sooo good####chicken pasta####chicken pasta cant####ERROR
+its just a fun place to go , not a five star restaraunt .####restaraunt####place####ERROR
+I wasn't here for the pizza so I can't comment on that yet but what I had was very good .####GOLD_NONE####pizza####NON_OT
+Very immature bartender , didnt know how to make specific drinks , service was so slowwwww , the food was not fresh or warm , waitresses were busy flirting with men at the bar and werent very attentive to all the customers .####bartender,service,food,waitresses####service,food,waitresses####ERROR
+I would never recommend this place to anybody even for a casual dinner .####place####PREDICT_NONE####ERROR
+overpriced japanese food with mediocre service####japanese food,service####service####ERROR
+I was looking for banana tempura for dessert and they dont have .####dessert####banana tempura####ERROR
+The food was excellent as well as service , however , I left The Four Seasons very dissappointed .####food,service,The Four Seasons####food,Four Seasons####ERROR
+I do not think dinner in Manhattan should cost $400 .00 where I am not swept off my feet .####dinner####PREDICT_NONE####ERROR
+Just go to Yamato and order the Red Dragon Roll .####Yamato,Red Dragon Roll####Red Dragon Roll####ERROR
+Favorite Sushi in NYC####Sushi####PREDICT_NONE####ERROR
+I have eaten at some of the 'best' sushi joints in NYC Nobu , Bond Street , JewelBako , etc and Yamato is my favorite .####GOLD_NONE####'best' sushi joints,JewelBako####NON_OT
+The rolls are creative and I have yet to find another sushi place that serves up more inventive yet delicious japanese food .####rolls,japanese food####rolls####ERROR
+The Dancing, White River and Millenium rolls are musts .####Dancing, White River and Millenium rolls####rolls####ERROR
+Gross food – Wow####food####Gross food####ERROR
+My quesadilla tasted like it had been made by a threeyear old with no sense of proportion or flavor .####quesadilla####PREDICT_NONE####ERROR
+And $11 for a plate of bland guacamole ?####guacamole####PREDICT_NONE####ERROR
+This place was reccomended to me by a friend .####GOLD_NONE####place####NON_OT
+When I got there the place was packed but they made sure to seat me quickly .####GOLD_NONE####place####NON_OT
+I noticed alot of indian people eatting there which is a great sign for an indian place !####indian place####PREDICT_NONE####ERROR
+We were offered water for the table but were not told the Voss bottles of water were $8 a piece .####Voss bottles of water####Voss bottles####ERROR
+Nice view of river and NYC .####view of river and NYC####view####ERROR
+Great survice####survice####PREDICT_NONE####ERROR
+A beautifully designed dreamy Egyptian restaurant that gets sceney at night .####Egyptian restaurant####PREDICT_NONE####ERROR
+Watch the talented belly dancers as you enjoy delicious baba ganoush that's more lemony than smoky .####belly dancers,baba ganoush####baba ganoush####ERROR
+Oh , and there's hookah .####hookah####PREDICT_NONE####ERROR
+Raymond the bartender rocks !####Raymond####PREDICT_NONE####ERROR
+The drinks are great , especially when made by Raymond .####drinks,Raymond####drinks####ERROR
+The omlette for brunch is great . . .####omlette for brunch####PREDICT_NONE####ERROR
+the spinach is fresh , definately not frozen . . .####spinach####PREDICT_NONE####ERROR
+quacamole at pacifico is yummy , as are the wings with chimmichuri .####quacamole,wings with chimmichuri####wings with chimmichuri####ERROR
+A weakness is the chicken in the salads .####chicken in the salads####chicken,salads####ERROR
+Also , I personally wasn't a fan of the portobello and asparagus mole .####portobello and asparagus mole####portobello####ERROR
+Overall , decent food at a good price , with friendly people .####food,people####food####ERROR
+This small Astoria souvlaki spot makes what many consider the best gyros in New York .####gyros####Astoria souvlaki spot####ERROR
+What really makes it shine is the food , which is aggressively seasoned with Cyrpriot spices , and all made inhouse even the gyro meat and sausages , and made of much higher quality ingredients that might otherwise be expected .####food,gyro meat,sausages,ingredients####food,sausages,ingredients####ERROR
+All the various Greek and Cypriot dishes are excellent , but the gyro is the reason to comeif you don't eat one your trip was wasted .####Greek and Cypriot dishes,gyro####Cypriot dishes####ERROR
+Best restaurant in Brooklyn####restaurant####PREDICT_NONE####ERROR
+Its dark , and cozy . . there is always jazz music playing when we go .####GOLD_NONE####jazz music####NON_OT
+Most of the booths allow you to sit next to eachother without looking like 'that' couple .####booths####PREDICT_NONE####ERROR
+I've enjoyed 99% of the dishes we've ordered with the only exceptions being the occasional tooauthenticforme dish I'm a daring eater but not THAT daring .####dishes,dish####PREDICT_NONE####ERROR
+My daughter's wedding reception at Water's Edge received the highest compliments from our guests .####Water's Edge####PREDICT_NONE####ERROR
+Everyone raved about the atmosphere elegant rooms and absolutely incomparable views and the fabulous food !####atmosphere,rooms,views,food####atmosphere elegant rooms,views,food####ERROR
+Paul , the maitre d' , was totally professional and always on top of things .####Paul####maitre d'####ERROR
+Thank you everyone at Water's Edge .####Water's Edge####PREDICT_NONE####ERROR
+Service ok but unfriendly ,filthy bathroom .####Service,bathroom####Service####ERROR
+The bread we received was horrible rock hard and cold and the "free" appetizer of olives was disappointing .####bread,appetizer of olives####bread####ERROR
+However , our main course was wonderful .####main course####PREDICT_NONE####ERROR
+I had fish and my husband had the filet both of which exceeded our expectations .####fish,filet####fish####ERROR
+The dessert we had a pear torte was good but , once again , the staff was unable to provide appropriate drink suggestions .####pear torte,staff####dessert,staff,drink suggestions####ERROR
+Not what I would expect for the price and prestige of this location .####location####PREDICT_NONE####ERROR
+All in all , I would return as it was a beautiful restaurant but I hope the staff pays more attention to the little details in the future .####restaurant,staff####staff,details####ERROR
+short and sweet – seating is great:it's romantic ,cozy and private .####seating####– seating####ERROR
+Over all the looks of the place exceeds the actual meals .####looks,meals####actual meals####ERROR
+So what you really end up paying for is the restaurant not the food .####restaurant,food####food####ERROR
+Servers are all different , Greg is my favorite .####Greg####Servers####ERROR
+Sometimes tables don't understand his sense of humor but it's refreshing to have a server who has personality , professionalism , and respects the privacy of your dinner .####server####PREDICT_NONE####ERROR
+This is the first place I've been that a runner remembers my order . . . hope he likes his job because I have half a mind to steal him for my restaurant .####runner####PREDICT_NONE####ERROR
+Prices are fair across the board for both food and bev .####food,bev####food####ERROR
+Restaurants in manhattan should try to model food and service after this place .####GOLD_NONE####service,place####NON_OT
+amazing fresh dogs but best of all endless toppings ! ! !####dogs,toppings####PREDICT_NONE####ERROR
+this place had ALL the trimmings and i mean all .####trimmings####place####ERROR
+peppers , onions , relish , chilli , cheeses , you NAME it .####GOLD_NONE####onions,chilli,cheeses####NON_OT
+amazing fun for hot dog lovers of all ages PLEASE do yourself a favor and check this place out ! ! ! !####hot dog,place####place####ERROR
+Stepping into Casa La Femme last night was a true experience unlike any other in New York !####Casa La Femme####PREDICT_NONE####ERROR
+The have a great cocktail with Citrus Vodka and lemon and lime juice and mint leaves that is to die for !####cocktail with Citrus Vodka and lemon and lime juice and mint leaves####PREDICT_NONE####ERROR
+Nevertheless , I finished my plate , and that's when I found a maggot in mushroom sauce at the bottom .####mushroom sauce####PREDICT_NONE####ERROR
+When the bill came , nothing was comped , so I told the manager very politely that we were willing to pay for the wine , but I didn't think I should have to pay for food with a maggot in it .####GOLD_NONE####manager,wine####NON_OT
+Yes , I ate the food , but I certainly would not have if I had seen the maggot before eating , and I was at this point fairly sick to my stomach .####GOLD_NONE####food####NON_OT
+I have worked in restaurants and cook a lot , and there is no way a maggot should be able to get into well prepared food .####food####PREDICT_NONE####ERROR
+For a restaurant with such a good reputation and that is usually so packed , there was no reason for such a lack of intelligent customer service .####restaurant,customer service####customer service####ERROR
+A fairly late entry into the haute barnyard sweepstakes , Flatbush Farm isn't in the same league as the Blue Hills or even the Farm on Adderlys of the world , but it's pretty good , albeit with a somewhat dismal setting .####GOLD_NONE####setting####NON_OT
+I got hair in my food 2 times of then !####food####PREDICT_NONE####ERROR
+Sushi experience was unbelievable with my fiance .####Sushi####PREDICT_NONE####ERROR
+Yamato is an excellent place to go if youre not into sashimi , or if you have friends who doesnt like sushi much .####Yamato####place####ERROR
+They have great rolls , the triple color and norwegetan rolls , are awesome and filling .####rolls,rolls####rolls,norwegetan rolls####ERROR
+One special roll and one regular roll is enough to fill you up , but save room for dessert !####special roll,regular roll,dessert####One special roll,regular roll,dessert####ERROR
+Mazing interior .####interior####PREDICT_NONE####ERROR
+I've had my fair share of modern Japanese and this spot delivers .####modern Japanese####spot####ERROR
+The atmosphere was pretty nice but had a bit lacking , which it tries to make up for with a crazy scheme of mirrors .####atmosphere,scheme of mirrors####atmosphere####ERROR
+Despite the confusing mirrors this will likely be my goto for modern Japanese food for the foreseeable future .####mirrors,modern Japanese food####PREDICT_NONE####ERROR
+Another review here claimed the prefix was $29/per person including sake but it is $55 per person not including sake .####GOLD_NONE####prefix####NON_OT
+Not a very fancy place but very good Chinese style Indian food .####place,Chinese style Indian food####PREDICT_NONE####ERROR
+The chicken lollipop is my favorite , most of the dishes I have to agree with a previous reviewer are quite oily and very spicy , espeically the Chilli Chicken .####chicken lollipop,dishes,Chilli Chicken####chicken lollipop,Chilli Chicken####ERROR
+Rather than eating the meat entree being offered , I requested a vegetarian dish .####GOLD_NONE####vegetarian dish####NON_OT
+great food , great wine list , great service in a great neighborhood . . .####food,wine list,service,neighborhood####food,wine list,service####ERROR
+Patsy's Pizza : true love####Patsy's Pizza####PREDICT_NONE####ERROR
+great hot dogs . .####hot dogs####PREDICT_NONE####ERROR
+great toppings definitely a place you need to check out for late night munchies or a mid day boost !####toppings,place####PREDICT_NONE####ERROR
+For me dishes a little oily , but overall dining experience good .####dishes####PREDICT_NONE####ERROR
+Helpful service and average price per dish $10 .####service,dish####service####ERROR
+The only thing that strikes you is the decor ?not very pleasant .####decor####decor ?not####ERROR
+The flavors are amazing and the value is phenomenal .####GOLD_NONE####flavors####NON_OT
+Best Indian Chinese in the city , by far !####Indian Chinese####PREDICT_NONE####ERROR
+I have been living in NYC for bit now and I have to say I love to go out and explore the scene .####GOLD_NONE####scene####NON_OT
+I came across Village Underground by accident , now I go there all the time .####Village Underground####PREDICT_NONE####ERROR
+You can get a table without a reservation if you get there early I they don't make you by bottles .####GOLD_NONE####bottles####NON_OT
+In the end you end up with a fair tab and NOTHING BUT A GREAT TIME ! ! !####GOLD_NONE####tab####NON_OT
+This establishment is the real deal .####establishment####PREDICT_NONE####ERROR
+This is a twentysomething guy that doesn't mind laying down $300 for a fine and delicious meal for 2 on special occassions .####GOLD_NONE####meal####NON_OT
+But $500 for a dinner for two that didn't include Wine ?####dinner for two####PREDICT_NONE####ERROR
+What you are paying for is the environment and the name .####environment####PREDICT_NONE####ERROR
+Starters: Kobe Beef Sashimi .####GOLD_NONE####Kobe Beef Sashimi####NON_OT
+Which of course is not real Kobe but Wagyu beef .####GOLD_NONE####Wagyu beef####NON_OT
+A beef Consomme .####GOLD_NONE####beef Consomme####NON_OT
+Entrees: Vanison steak and Bison Steak .####GOLD_NONE####Vanison steak####NON_OT
+Vanison was good but not amazing .####Vanison####PREDICT_NONE####ERROR
+Bison was quite excellent however .####Bison####PREDICT_NONE####ERROR
+Dessert pure disaster .####Dessert####Dessert pure disaster####ERROR
+I read reviews that called the restaurant too expensive and I thought to myself , but may be it is worth it .####restaurant####PREDICT_NONE####ERROR
+The Four Seasons has history and it is a sort of landmark of New York City restaurants , but trust me , they will charge you through the nose just so that you can say "I've been to the four seasons restaurant" .####The Four Seasons####Four Seasons####ERROR
+The environment is very upscale and you will see a lot of rich guys with trophy wives or just highly paid escorts .####environment####PREDICT_NONE####ERROR
+I literally just got back home after visiting Casa La Femme and was so offended by my visit felt it necessary to try and warn other diners who value their money and time .####Casa La Femme####PREDICT_NONE####ERROR
+We did arrive late for our reservation so I can not complain too much about the wait for a table .####wait####PREDICT_NONE####ERROR
+However , our $14 drinks were were horrible !####drinks####PREDICT_NONE####ERROR
+Once we finally got a table , despite indicating we wanted an alla carte menu we were pushed into a table that was only price fixed !####GOLD_NONE####alla carte menu####NON_OT
+After the 4th time i asked again and the waiter than said after our dinner .####waiter####PREDICT_NONE####ERROR
+We asked for sides which the waiter than admitted that he forgot to put in that part of our order .####waiter####PREDICT_NONE####ERROR
+My chicken was inedible as there were so many fatty lumps which i had to keep spitting out into my napkin .####chicken####PREDICT_NONE####ERROR
+I would not expect this for a $55 dinner .####dinner####PREDICT_NONE####ERROR
+What we did do was waste 3 hours being trapped in a table waiting and waiting for food and drinks and hooka . . some of which we never received !####GOLD_NONE####drinks####NON_OT
+The only beverage we did receive was water in dirty glasses !####GOLD_NONE####glasses####NON_OT
+To top it all off . . the main reason we came to your restaurant was for the belly dancers and missed the first show as we were not seated yet and the 2nd belly dancer only danced at two tables in the back of the restaurant and never made it around to the other half of the restaurant .####GOLD_NONE####main reason,belly dancers,back####NON_OT
+If it seemed possible to do so while there I would have fought my bill since my dinner portion of my meal was inedible !####meal####PREDICT_NONE####ERROR
+I have never left a restaurant feeling as if i was abused , and wasted my hard earned money .####restaurant####PREDICT_NONE####ERROR
+The hostess said "Wow that's a large group , unless you aren't together" , to which I replied "no we are , and there will be one more , so a table for six please ."####GOLD_NONE####hostess####NON_OT
+There was no tap beer that evening , which was a disappointment .####beer####PREDICT_NONE####ERROR
+Not much of a selection of bottled beer either , we went with Brahma .####selection of bottled beer####PREDICT_NONE####ERROR
+The appetizers we ordered were served quickly an order of fried oysters and clams were delicious but a tiny portion maybe 3 of each .####fried oysters and clams####appetizers,portion####ERROR
+I believe there were 2 shrimp in the "salt encrusted shrimp" appetizer .####"salt encrusted shrimp" appetizer####PREDICT_NONE####ERROR
+The waitress appeared and asked us if we wanted to go ahead and order .####GOLD_NONE####waitress####NON_OT
+The food arrived in about 15 minutes .####GOLD_NONE####food####NON_OT
+I had the Thai style Fried Sea Bass . . .which was very good .####Thai style Fried Sea Bass####Fried Sea Bass####ERROR
+I lived on 50th st , and wanted Indian one day so decided to check this place out .####GOLD_NONE####place####NON_OT
+I have it a 4 instead of 5 because of the price just chicken tikka masala no bread of rice is $25 , which I would expect at a upscale Indian restaurant but this place doesn't have an upscale feel .####chicken tikka masala,place,feel####place,feel####ERROR
+But if you're prepared to spend some $ and remember to ask if something they offer is complimentary , then this is the place to go for Indian food####place,Indian food####place,food####ERROR
+Bukhara Grill , the tagline says it all . . "INDIAN SPICE RAVE"####Bukhara Grill####PREDICT_NONE####ERROR
+We go often for lunch and the place is packed .####GOLD_NONE####place####NON_OT
+We have gone for dinner only a few times but the same great quality and service is given .####dinner,service####service####ERROR
+I have never been so disgusted by both food an service .####food,service####service####ERROR
+However , once I received my predictably mediocre order of what Dokebi thinks passes as Korean fair , sometimes you have to settle when it's your only option , I got through about half my kimchee before I found a piece of random lettuce accompanied by a far more disgusting , slimy , clearly bad piece of fish skin .####Korean fair,kimchee####fish skin####ERROR
+My girlfriend , being slightly more aggressive , and having been equally disgusted causing her to throw out the remainder of her barely eaten meal , called back only to be informed that I was probably wrong and that it was most likely an oyster , and that we were also blacklisted from their restaurant .####meal####PREDICT_NONE####ERROR
+Not only have I worked in restaurants for many years , I am now in culinary school , I am a huge lover of oysters and fish , and my girlfriend is half Korean !####GOLD_NONE####fish####NON_OT
+We know the difference between and oyster and bad fish .####GOLD_NONE####fish####NON_OT
+I book a gorgeous white organza tent which included a four course prix fix menu which we enjoyed a lot .####white organza tent,four course prix fix menu####fix menu####ERROR
+I completely recommend Casa La Femme for any special occasion and to REALLY impress your date .####Casa La Femme####PREDICT_NONE####ERROR
+The bibimbap was average , but the stone bowl wasn't even close to sizzling .####bibimbap,stone bowl####stone bowl####ERROR
+Too bad I had paid an extra $2 for the stone bowl .####stone bowl####PREDICT_NONE####ERROR
+The nakgi-bokum was horrible .####nakgi-bokum####PREDICT_NONE####ERROR
+Easily the worst stir-fried squid I've ever tasted .####stir-fried squid####PREDICT_NONE####ERROR
+I mentioned the squid dish wasn't very good when the waitress visited .####GOLD_NONE####squid dish,waitress####NON_OT
+As to my comment about the food , no apology or acknowledgment was made .####GOLD_NONE####food####NON_OT
+My wife had barely touched that mess of a dish .####dish####PREDICT_NONE####ERROR
+Authentic Korean food lovers should visit 32nd Street , of course .####GOLD_NONE####Korean food####NON_OT
+The wife had the risotto which was amazing .####risotto####PREDICT_NONE####ERROR
+i love margherita pizza – i looove east village pizza####margherita pizza,east village pizza####margherita pizza –,pizza####ERROR
+A quintessential slice of NYC pizza .####slice of NYC pizza####PREDICT_NONE####ERROR
+This is undoubtedly my favorite modern Japanese brasserie that don’t serve sushi , and in my opinion , one of the most romantic restaurants in the city !####modern Japanese brasserie####sushi####ERROR
+Not only is it an adventure getting to this somewhat hidden spot , once you enter the unmarked wooden doors , the zen and intimate décor will make you feel like you’re no longer in the city .####spot,unmarked wooden doors,décor####spot####ERROR
+If you’re planning to come here , make sure that your date is someone whom you really like since you’ll be ushered to private booths where there will be no people or food watching choose the ones on the ground level that have glass ceilings so you may see the stars in the sky ! .####private booths,glass ceilings####booths,glass ceilings####ERROR
+Our first course was Tuna Sashimi with Green Yuzu Sauce .####GOLD_NONE####Green Yuzu Sauce####NON_OT
+For desserts , we tried the frozen black sesame mousse interesting but not extraordinary and matcha (powdered green tea) and blueberry cheesecake , which was phenomenal .####frozen black sesame mousse,matcha (powdered green tea) and blueberry cheesecake####desserts,matcha (powdered green tea),blueberry cheesecake####ERROR
+Maybe it was the great company I had friends visiting from Philly – yes , it was not a date this time or the super reasonable price point , but I just can’t say enough good things about this brasserie .####brasserie####PREDICT_NONE####ERROR
+I don’t usually visit the same establishment more than once , what more twice , but I’ll come to Zenkichi anytime for a quiet , unhurried and memorable dinner .####Zenkichi####PREDICT_NONE####ERROR
+They are extremely rude , not even apologizing for the horrible service we got and handing us a bill well over $500 for some drinks adn their pita bread !####service,drinks,pita bread####service,pita bread####ERROR
+To be honest we only ever eat the Shabu Shabu .####GOLD_NONE####Shabu Shabu####NON_OT
+I tried a couple other dishes but wasn't too impressed .####dishes####PREDICT_NONE####ERROR
+In fact there is only one I've tried that even compares shabu Tatsu and even then I prefer Dokebi .####GOLD_NONE####shabu Tatsu####NON_OT
+The meat is fresh , the sauces are great , you get kimchi and a salad free with your meal and service is good too .####meat,sauces,kimchi,salad,meal,service####sauces,kimchi and a salad free,service####ERROR
+Dokebi gives Williamsburg the right onetwo punch of classic Korean food and fusion twists like pork belly tacos .####Korean food,fusion twists,pork belly tacos####Korean food,pork belly tacos####ERROR
+The hot dogs are good , yes , but the reason to get over here is the fantastic pork croquette sandwich , perfect on its supermarket squishy bun .####hot dogs,pork croquette sandwich,bun####hot dogs,pork croquette sandwich####ERROR
+We order a bit of everything on the menu .####GOLD_NONE####menu####NON_OT
+This place has totally weird decor , stairs going up with mirrored walls I am surprised how no one yet broke their head or fall off the stairs mirrored walls make you dizzy and delusional . . .####decor,mirrored walls,mirrored walls####place,decor####ERROR
+The concept of japanese tapas is newly created and clearly doesn't work .####japanese tapas####PREDICT_NONE####ERROR
+Go to japanese sushi place or Spanish tapas place this creation in Williamsburg is a misstake .####GOLD_NONE####Spanish tapas place####NON_OT
+Over all it was a very nice romantic place .####place####PREDICT_NONE####ERROR
+A coworker and I tried Pacifico after work a few Fridays and loved it .####Pacifico####PREDICT_NONE####ERROR
+I must say I am surprised by the bad reviews of the restaurant earlier in the year , though .####restaurant####PREDICT_NONE####ERROR
+Dumbfoundingly Poor####GOLD_NONE####Dumbfoundingly Poor####NON_OT
+A different server enhanced the fun , dumping our entrees in front of us halfway through our appetizer which was delicious .####server,appetizer####PREDICT_NONE####ERROR
+Overall the food quality was pretty good , though I hear the salmon is much better when it hasn't sat cooling in front of the guest .####food####salmon####ERROR
+The place has a nice fit-out , some attractive furnishings and , from what I could tell , a reasonable wine list I was given the food menu when I asked for the carte des vins####fit-out,furnishings,wine list####place,food,carte des vins####ERROR
+How is this palce still open ?####palce####PREDICT_NONE####ERROR
+We ordered our appetizers , I ordered the chicken and my boyfriend the salmon .####GOLD_NONE####chicken,salmon####NON_OT
+It was served with skin , over a bed of extremely undercooked spinach and mashed potatoes .####spinach####mashed potatoes####ERROR
+My boyfriend asked me if I wanted to switch and eat his salmon instead , while he deskinned the chicken so that I could enjoy the white meat .####GOLD_NONE####salmon####NON_OT
+I took one bite from the $24 salmon , and I have never , in the 17 years I have been going to restaurants tasted salmon as fishy , as dry , and as bland as the one in Flatbush Farms .####salmon,salmon####$24 salmon####ERROR
+So , I switch with my boyfriend again to see if maybe I could stomach the meat and spinach again , but the spinach was so undercooked that I just could not bite through it .####spinach,spinach####PREDICT_NONE####ERROR
+I couldn't even enjoy the mashed potatoes because it was hidden completely under the chicken and spinach .####GOLD_NONE####mashed potatoes,chicken####NON_OT
+I've had better chicken at BBQs ! ! ! !####GOLD_NONE####better chicken####NON_OT
+So I decide to report back to the waitress because it was completely inedible .####GOLD_NONE####waitress####NON_OT
+After that she simply took our plates , walked away , came back another TWENTY minutes later with the bill and the chicken on it ! ! ! ! ! ! ! ! ! ! ! !####GOLD_NONE####chicken####NON_OT
+No desert menu , no apology , nothing ! ! ! ! ! !####GOLD_NONE####desert menu####NON_OT
+This is where it really really gets bad: the manager said , there is absolutely nothing we can do , it's a matter of taste that she didn't like it , and I cannot comp it .####manager####PREDICT_NONE####ERROR
+We refused to pay for it because at this point it had nothing to do with the food anymore .####GOLD_NONE####food####NON_OT
+The manager came to the table and said we can do what we want , so we paid for what we did enjoy , the drinks and appetizers , and walked out .####manager,drinks,appetizers####drinks####ERROR
+I HAVE NEVER EVER HAD SUCH AN UNPLEASANT EXPERIENCE .####GOLD_NONE####EVER HAD SUCH####NON_OT
+THIS STAFF SHOULD BE FIRED .####STAFF####PREDICT_NONE####ERROR
+cirspy crust margherita pizza####margherita pizza####crust margherita pizza####ERROR
+we have been there 3 times since last week we alked it by chance first day the manager offerd us the margherita pizza adn we said yes .####GOLD_NONE####margherita pizza adn####NON_OT
+I'll being with a couple of positives: cool decor , good pita and hummus , and grilled octopus that was actually pretty tasty .####decor,pita,hummus,grilled octopus####decor,pita####ERROR
+Casa La Femme is to middle eastern dining what Chuckie Cheeze is to italian .####GOLD_NONE####Casa La Femme,Chuckie Cheeze####NON_OT
+The reason there are 4 different results on citysearch for the same place is because they keep trying to start a new thread so they can stock it with positive reviews .####GOLD_NONE####place####NON_OT
+The decor however seems to be the distraction so you won't notice that you just payed 300 bucks for some cold eggplant that took 2 FRICKIN HOURS TO COME ! ! ! !####decor,eggplant####decor####ERROR
+How this place survives the competitive west village market in this economy , or any other for that matter , is beyond me .####place####PREDICT_NONE####ERROR
+Great Hot Dogs !####Hot Dogs####PREDICT_NONE####ERROR
+Though it's been crowded most times I've gone here , Bark always delivers on their food .####Bark,food####food####ERROR
+The hot dogs are top notch , and they're Slamwich is amazing !####hot dogs,Slamwich####hot dogs####ERROR
+Going to Bark is always worth the train ride , and will make your tongue and belly very happy !####Bark####PREDICT_NONE####ERROR
+Fabulous food if the front of house staff don't put you off –####food,front of house staff####food####ERROR
+Each time we've been , the front of house staff not the waiters they're fantastic but the people who greet and seat you has been so hideous to us that were it not for the exceptional fish dishes I would never return .####front of house staff,waiters,fish dishes####waiters,fish dishes####ERROR
+As BFC doesn't take reservations you almost always have to wait by the bar and be abused by the front of house staff until you are seated , which can be over an hour later !####BFC,front of house staff####staff####ERROR
+The frizzy retro girl with winged/ Dame Edna glasses will yell at you if you try to order a drink .####girl####winged/ Dame Edna glasses####ERROR
+There's another girl who I can't describe , she is about 5'6" with brown hair , who eavesdrops on your conversation and chimes in except she only hears the last part of what you said , so her uninvited opinions are often out of context and nothing to do with what you're *really* talking about .####girl####PREDICT_NONE####ERROR
+Maitre-D and get out"####Maitre-D####PREDICT_NONE####ERROR
+While finishing our meals which included a highend bottle of wine , our son's fiance joined us for a glass of wine and dessert .####bottle of wine####meals,dessert####ERROR
+This guy refused to seat her and she left , followed shortly by the four of us , but not before I told him that in my 40 years of world travel , including Paris , that I had never seen such a display of bad behavior by a frontman in a restaurant .####frontman####PREDICT_NONE####ERROR
+A word to the wise: you can't dine here and disturb the maitre-D sense of " table turnover" , as whacked as it is , or else .####maitre-D####table turnover"####ERROR
+Mussles and calamari were superb Saturday evening .####Mussles,calamari####Mussles and calamari####ERROR
+My father had the flank steak which was very good , and my mother had the swordfish .####flank steak####steak,swordfish####ERROR
+The Four Seasons restaurant is a great experience .####The Four Seasons restaurant####Four Seasons restaurant####ERROR
+The food is great and the environment is even better .####food,environment####food####ERROR
+Taking Hot Dogs to the next level####Hot Dogs####PREDICT_NONE####ERROR
+At first glance this place seems a bit pricey for a hot dog joint , but at Bark you don't just get your average hot dog .####hot dog,Bark,hot dog####PREDICT_NONE####ERROR
+Here the hot dog is elevated to the level of a real entree with numerous variations available .####hot dog####entree####ERROR
+Went to this place this place on a real cold night and needed a quick meal .####GOLD_NONE####place,place####NON_OT
+Cool atmosphere , the fire place in the back really ads to it but needs a bit more heat throughout on a cold night .####atmosphere,fire place####atmosphere,back####ERROR
+Poor service and management####service,management####Poor service,management####ERROR
+Had an awful experience at Casa la Femme on a Saturday dinner .####Casa la Femme####PREDICT_NONE####ERROR
+Appetizers took nearly an hour .####GOLD_NONE####Appetizers####NON_OT
+Can’t believe how an expensive NYC restaurant can be so disrespectful to its clients .####restaurant####PREDICT_NONE####ERROR
+There is no way it justifies the accolades it receives , the attitude of the staff or the wait for a table .####staff,wait####staff####ERROR
+Mistakes happen , but they are usually accompanied by an apology , perhaps even a glass of wine . . .but not the grunt that we received from the Al Di La staff .####staff####Al Di La staff####ERROR
+The bread was stale , the salad was overpriced and empty .####bread,salad####salad####ERROR
+The only thing that my friend left out is that when we sat down at the bar the bartender disappeared .####bartender####PREDICT_NONE####ERROR
+I asked for a menu and the same waitress looked at my like I was insane .####waitress####same waitress####ERROR
+I was there for brunch recently , and we were tag teamed by a waitress and a waiter .####waitress,waiter####waitress####ERROR
+I can't believe that it was , but please put the bag down before delivering food !####GOLD_NONE####food####NON_OT
+She then put the check down without asking if we were done , and came to check on the bill every two minutes , even though we were one of three occupied tables .####GOLD_NONE####tables####NON_OT
+I wish I could like this place more , and I wish someone would retrain the staff .####place,staff####staff####ERROR
