@@ -137,7 +137,10 @@ def extract_text(dataset_name):
         # string preprocessing and aspect term will not be processed
         dot_exist = ('.' in cur_text)
         cur_text = cur_text.replace('.', '')
-        cur_text = cur_text.replace('-', ' ')
+        #cur_text = cur_text.replace('-', ' ')
+        cur_text = cur_text.replace(' - ', ', ').strip()
+        #cur_text = cur_text.replace(' – ', ', ').strip()
+        cur_text = cur_text.replace(u' – ', ', ').strip()
         # split words and punctuations
         if '? ' not in cur_text:
             cur_text = cur_text.replace('?', '? ').strip()
