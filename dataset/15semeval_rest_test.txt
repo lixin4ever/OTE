@@ -5,7 +5,7 @@ One of my favorite places in Brooklyn. ####One=O of=O my=O favorite=O places=O i
 The pastas are incredible, the risottos (particularly the sepia) are fantastic and the braised rabbit is amazing.####The=O pastas=T are=O incredible=O ,=O the=O risottos=T particularly=O the=O sepia=T are=O fantastic=O and=O the=O braised=T rabbit=T is=O amazing=O .=O
 Overpriced and not tasty ####Overpriced=O and=O not=O tasty=O
 The food here was mediocre at best. ####The=O food=T here=O was=O mediocre=O at=O best=O .=O
-It was totally overpriced- fish and chips was about $15.... ####It=O was=O totally=O overpriced-=O fish=T and=T chips=T was=O about=O $=O 15=O .=O
+It was totally overpriced- fish and chips was about $15.... ####It=O was=O totally=O overpriced=O fish=T and=T chips=T was=O about=O $=O 15=O .=O
 There are so many other great places to go to eat and drink..... this place is not worth it...####There=O are=O so=O many=O other=O great=O places=O to=O go=O to=O eat=O and=O drink=O this=O place=O is=O not=O worth=O it=O .=O
 Tasty Dog!####Tasty=O Dog=T !=O
 An awesome organic dog, and a conscious eco friendly establishment.####An=O awesome=O organic=O dog=T ,=O and=O a=O conscious=O eco=O friendly=O establishment=T .=O
@@ -98,7 +98,7 @@ If you don't like it, I don't know what to tell you.####If=O you=O do=O n't=O li
 The Seafood Dynamite is also otherworldly.####The=O Seafood=T Dynamite=T is=O also=O otherworldly=O .=O
 I'm not even going to bother to describe it; it speaks for itself.####I=O 'm=O not=O even=O going=O to=O bother=O to=O describe=O it=O ;=O it=O speaks=O for=O itself=O .=O
 Favorite Sushi in NYC####Favorite=O Sushi=T in=O NYC=O
-I have eaten at some of the 'best' sushi joints in NYC (Nobu, Bond Street, JewelBako, etc) and Yamato is my favorite.####I=O have=O eaten=O at=O some=O of=O the=O 'best=O '=O sushi=O joints=O in=O NYC=O Nobu=O ,=O Bond=O Street=O ,=O JewelBako=O ,=O etc=O and=O Yamato=O is=O my=O favorite=O .=O
+I have eaten at some of the 'best' sushi joints in NYC (Nobu, Bond Street, JewelBako, etc) and Yamato is my favorite.####I=O have=O eaten=O at=O some=O of=O the=O best=O sushi=O joints=O in=O NYC=O Nobu=O ,=O Bond=O Street=O ,=O JewelBako=O ,=O etc=O and=O Yamato=O is=O my=O favorite=O .=O
 An unpretentious spot in Park Slope, the sushi is consistently good, the service is pleasant, effective and unassuming.####An=O unpretentious=O spot=T in=O Park=O Slope=O ,=O the=O sushi=T is=O consistently=O good=O ,=O the=O service=T is=O pleasant=O ,=O effective=O and=O unassuming=O .=O
 In the summer months, the back garden area is really nice.####In=O the=O summer=O months=O ,=O the=O back=T garden=T area=T is=O really=O nice=O .=O
 The rolls are creative and I have yet to find another sushi place that serves up more inventive yet delicious japanese food.####The=O rolls=T are=O creative=O and=O I=O have=O yet=O to=O find=O another=O sushi=O place=O that=O serves=O up=O more=O inventive=O yet=O delicious=O japanese=T food=T .=O
@@ -167,7 +167,7 @@ Got a date? Go here!####Got=O a=O date=O ?=O Go=O here=O !=O
 Every time I have a special occasion with my boyfriend I have a hard time going anywhere else.####Every=O time=O I=O have=O a=O special=O occasion=O with=O my=O boyfriend=O I=O have=O a=O hard=O time=O going=O anywhere=O else=O .=O
 It is so romantic.####It=O is=O so=O romantic=O .=O
 Its dark, and cozy.. there is always jazz music playing when we go.####Its=O dark=O ,=O and=O cozy=O there=O is=O always=O jazz=O music=O playing=O when=O we=O go=O .=O
-Most of the booths allow you to sit next to eachother without looking like 'that' couple.####Most=O of=O the=O booths=T allow=O you=O to=O sit=O next=O to=O eachother=O without=O looking=O like=O 'that=O '=O couple=O .=O
+Most of the booths allow you to sit next to eachother without looking like 'that' couple.####Most=O of=O the=O booths=T allow=O you=O to=O sit=O next=O to=O eachother=O without=O looking=O like=O that=O couple=O .=O
 The food is all shared so we get to order together and eat together.####The=O food=T is=O all=O shared=O so=O we=O get=O to=O order=O together=O and=O eat=O together=O .=O
 I've enjoyed 99% of the dishes we've ordered with the only exceptions being the occasional too-authentic-for-me dish (I'm a daring eater but not THAT daring).####I=O 've=O enjoyed=O 99=O %=O of=O the=O dishes=T we=O 've=O ordered=O with=O the=O only=O exceptions=O being=O the=O occasional=O too-authentic-for-me=O dish=T I=O 'm=O a=O daring=O eater=O but=O not=O THAT=O daring=O .=O
 Once you try it for a special occasion beware.. you can't stop!####Once=O you=O try=O it=O for=O a=O special=O occasion=O beware=O you=O ca=O n't=O stop=O !=O .=O
@@ -600,7 +600,7 @@ The hot dogs are top notch, and they're Slamwich is amazing!####The=O hot=T dogs
 Going to Bark is always worth the train ride, and will make your tongue and belly very happy!####Going=O to=O Bark=T is=O always=O worth=O the=O train=O ride=O ,=O and=O will=O make=O your=O tongue=O and=O belly=O very=O happy=O !=O
 Only complaint is the pricing--I believe it would be more reasonable to pay a dollar less on each item listed on the menu.####Only=O complaint=O is=O the=O pricing=O --=O I=O believe=O it=O would=O be=O more=O reasonable=O to=O pay=O a=O dollar=O less=O on=O each=O item=O listed=O on=O the=O menu=T .=O
 But nonetheless--great spot, great food.####But=O nonetheless=O --=O great=O spot=T ,=O great=O food=T .=O
-Fabulous food - if the front of house staff don't put you off – ####Fabulous=O food=T ,=O if=O the=O front=T of=T house=T staff=T do=O n't=O put=O you=O off=O –=O
+Fabulous food - if the front of house staff don't put you off – ####Fabulous=O food=T ,=O if=O the=O front=T of=T house=T staff=T do=O n't=O put=O you=O off=O
 We live nearby BFC. ####We=O live=O nearby=O BFC=O .=O
 It's a little out of our price range for dining there except on special occasions, but we've eaten there 6 times in the last 2 years. ####It=O 's=O a=O little=O out=O of=O our=O price=O range=O for=O dining=O there=O except=O on=O special=O occasions=O ,=O but=O we=O 've=O eaten=O there=O 6=O times=O in=O the=O last=O 2=O years=O .=O
 Each time we've been, the front of house staff (not the waiters - they're fantastic - but the people who greet and seat you) has been so hideous to us that were it not for the exceptional fish dishes I would never return. ####Each=O time=O we=O 've=O been=O ,=O the=O front=T of=T house=T staff=T not=O the=O waiters=T ,=O they=O 're=O fantastic=O ,=O but=O the=O people=O who=O greet=O and=O seat=O you=O has=O been=O so=O hideous=O to=O us=O that=O were=O it=O not=O for=O the=O exceptional=O fish=T dishes=T I=O would=O never=O return=O .=O

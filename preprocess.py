@@ -206,6 +206,7 @@ def extract_text(dataset_name):
         cur_text = cur_text.replace('.', '')
         #cur_text = cur_text.replace('-', ' ')
         cur_text = cur_text.replace(' - ', ', ').strip()
+        cur_text = cur_text.replace('- ', ' ').strip()
         #cur_text = cur_text.replace(' – ', ', ').strip()
         cur_text = cur_text.replace(u' – ', ', ').strip()
         # split words and punctuations
@@ -218,6 +219,9 @@ def extract_text(dataset_name):
         cur_text = cur_text.replace('...', ', ').strip('.').strip().strip(',')
         # remove quote
         cur_text = cur_text.replace('"', '')
+        cur_text = cur_text.replace(" '", " ")
+        cur_text = cur_text.replace("' ", " ")
+        
         cur_text = cur_text.replace(':', ', ')
         if dot_exist:
             cur_text += '.'
@@ -226,11 +230,15 @@ def extract_text(dataset_name):
         cur_text = cur_text.replace('wouldnt', "wouldn't")
         cur_text = cur_text.replace('dont', "don't")
         cur_text = cur_text.replace('didnt', "didn't")
+        cur_text = cur_text.replace("you 're", "you're")
 
         # replace some special symbol
         cur_text = cur_text.replace(u"‘", "")
         cur_text = cur_text.replace(u"’", "'")
         # "‘, ’"
+        #xx = '▒' ('\xe9', '\u2026'), 
+        # filter the non-ascii character
+        cur_text = ''.join([ch if ord(ch) < 128 else ' ' for ch in cur_text])
 
         #tokens = cur_text.split()
         tokens = word_tokenize(cur_text)
@@ -280,8 +288,9 @@ if __name__ == '__main__':
     #ds = '14semeval_laptop_train'
     ds = 'all'
     if ds == 'all':
-        for ds in ['15semeval_rest_test', '15semeval_rest_train', '14semeval_laptop_train', '14semeval_laptop_test', 
-        '14semeval_rest_train', '14semeval_rest_test', '16semeval_rest_train', '16semeval_rest_test']:
+        for ds in ['14semeval_laptop_train', '14semeval_laptop_test', 
+        '14semeval_rest_train', '14semeval_rest_test', '16semeval_rest_train', '16semeval_rest_test',
+        '15semeval_rest_test', '15semeval_rest_train']:
             extract_text(dataset_name=ds)
             #build_pkl(ds=ds)
     else:

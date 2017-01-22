@@ -22,7 +22,7 @@ Every time in New York I make it a point to visit Restaurant Saul on Smith Stree
 Everything is always cooked to perfection, the service is excellent, the decor cool and understated.####Everything=O is=O always=O cooked=O to=O perfection=O ,=O the=O service=T is=O excellent=O ,=O the=O decor=T cool=O and=O understated=O .=O
 I had the duck breast special on my last visit and it was incredible.####I=O had=O the=O duck=T breast=T special=T on=O my=O last=O visit=O and=O it=O was=O incredible=O .=O
 Can't wait wait for my next visit.####Ca=O n't=O wait=O wait=O for=O my=O next=O visit=O .=O
-I had my eyes on this place, promising myself I will one day 'give it a try.' ####I=O had=O my=O eyes=O on=O this=O place=O ,=O promising=O myself=O I=O will=O one=O day=O 'give=O it=O a=O try=O '=O .=O
+I had my eyes on this place, promising myself I will one day 'give it a try.' ####I=O had=O my=O eyes=O on=O this=O place=O ,=O promising=O myself=O I=O will=O one=O day=O give=O it=O a=O try=O '=O .=O
 And I hate to say this but I doubt I'll ever go back. ####And=O I=O hate=O to=O say=O this=O but=O I=O doubt=O I=O 'll=O ever=O go=O back=O .=O
 The food is very average...the Thai fusion stuff is a bit too sweet, every thing they serve is too sweet here.####The=O food=T is=O very=O averagethe=O Thai=T fusion=T stuff=T is=O a=O bit=O too=O sweet=O ,=O every=O thing=O they=O serve=O is=O too=O sweet=O here=O .=O
 The only thing I moderately enjoyed was their Grilled Chicken special with Edamame Puree.####The=O only=O thing=O I=O moderately=O enjoyed=O was=O their=O Grilled=T Chicken=T special=T with=T Edamame=T Puree=T .=O
@@ -77,9 +77,9 @@ Frankly, when you compare what you can have here for lunch, versus McDs or so ma
 Go hungry and enjoy.####Go=O hungry=O and=O enjoy=O .=O
 The food here is rather good, but only if you like to wait for it.####The=O food=T here=O is=O rather=O good=O ,=O but=O only=O if=O you=O like=O to=O wait=O for=O it=O .=O
 I like the somosas, chai, and the chole, but the dhosas and dhal were kinda dissapointing.####I=O like=O the=O somosas=T ,=O chai=T ,=O and=O the=O chole=T ,=O but=O the=O dhosas=T and=O dhal=T were=O kinda=O dissapointing=O .=O
-The service varys from day to day- sometimes they're very nice, and sometimes not.####The=O service=T varys=O from=O day=O to=O day-=O sometimes=O they=O 're=O very=O nice=O ,=O and=O sometimes=O not=O .=O
+The service varys from day to day- sometimes they're very nice, and sometimes not.####The=O service=T varys=O from=O day=O to=O day=O sometimes=O they=O 're=O very=O nice=O ,=O and=O sometimes=O not=O .=O
 The kitchen however, is almost always slow.####The=O kitchen=T however=O ,=O is=O almost=O always=O slow=O .=O
-Also, specify if you like your food spicy- its rather bland if you don't.####Also=O ,=O specify=O if=O you=O like=O your=O food=T spicy-=O its=O rather=O bland=O if=O you=O do=O n't=O .=O
+Also, specify if you like your food spicy- its rather bland if you don't.####Also=O ,=O specify=O if=O you=O like=O your=O food=T spicy=O its=O rather=O bland=O if=O you=O do=O n't=O .=O
 The ambience is pretty and nice for conversation, so a casual lunch here would probably be best.####The=O ambience=T is=O pretty=O and=O nice=O for=O conversation=O ,=O so=O a=O casual=O lunch=O here=O would=O probably=O be=O best=O .=O
 Just went here for my girlfriends 23rd bday.####Just=O went=O here=O for=O my=O girlfriends=O 23rd=O bday=O .=O
 If you've ever been along the river in Weehawken you have an idea of the top of view the chart house has to offer.####If=O you=O 've=O ever=O been=O along=O the=O river=O in=O Weehawken=O you=O have=O an=O idea=O of=O the=O top=O of=O view=T the=O chart=O house=O has=O to=O offer=O .=O
@@ -185,7 +185,7 @@ Much more reasonably priced too!####Much=O more=O reasonably=O priced=O too=O !=
 I take all my NYC guests to VT's.####I=O take=O all=O my=O NYC=O guests=O to=O VT's=T .=O
 Not sure where the previous reviewer, lonk, dined, but Saul is in a great neighborhood and has great food!####Not=O sure=O where=O the=O previous=O reviewer=O ,=O lonk=O ,=O dined=O ,=O but=O Saul=O is=O in=O a=O great=O neighborhood=T and=O has=O great=O food=T !=O
 I've been there three times and have always had wonderful experiences.####I=O 've=O been=O there=O three=O times=O and=O have=O always=O had=O wonderful=O experiences=O .=O
-I'd highly recommend it for a special occasion -- it provides and intimate setting and nice service.####I=O 'd=O highly=O recommend=O it=O for=O a=O special=O occasion=O --=O it=O provides=O and=O intimate=O setting=T and=O nice=O service=T .=O
+I'd highly recommend it for a special occasion -- it provides and intimate setting and nice service.####I=O 'd=O highly=O recommend=O it=O for=O a=O special=O occasion=O -=O it=O provides=O and=O intimate=O setting=T and=O nice=O service=T .=O
 I'm not sure where the other reviewers ate but it seems as if we visited two different restaurants because my friends and I all enjoy Mizu very much... and we're repeat customers.####I=O 'm=O not=O sure=O where=O the=O other=O reviewers=O ate=O but=O it=O seems=O as=O if=O we=O visited=O two=O different=O restaurants=O because=O my=O friends=O and=O I=O all=O enjoy=O Mizu=T very=O much=O and=O we=O 're=O repeat=O customers=O .=O
 Even after they overcharged me the last time I was there.####Even=O after=O they=O overcharged=O me=O the=O last=O time=O I=O was=O there=O .=O
 Make sure you have the Spicy Scallop roll.. .####Make=O sure=O you=O have=O the=O Spicy=T Scallop=T roll=T .=O
@@ -196,7 +196,7 @@ Told us to sit anywhere, and when we sat he said the table was reserved.####Told
 Stepped on my foot on the SECOND time he reached over me to adjust lighting.####Stepped=O on=O my=O foot=O on=O the=O SECOND=O time=O he=O reached=O over=O me=O to=O adjust=O lighting=O .=O
 Tiny dessert was $8.00...just plain overpriced for what it is.####Tiny=O dessert=T was=O $=O 800just=O plain=O overpriced=O for=O what=O it=O is=O .=O
 The drinks are always welll made and wine selection is fairly priced.####The=O drinks=T are=O always=O welll=O made=O and=O wine=T selection=T is=O fairly=O priced=O .=O
-Try their chef's specials-- they are to die for.####Try=O their=O chef's=T specials=T --=O they=O are=O to=O die=O for=O .=O
+Try their chef's specials-- they are to die for.####Try=O their=O chef's=T specials=T they=O are=O to=O die=O for=O .=O
 Service is not exactly five star, but thats not really a big deal.####Service=T is=O not=O exactly=O five=O star=O ,=O but=O thats=O not=O really=O a=O big=O deal=O .=O
 Downstairs lounge is always a good attraction####Downstairs=T lounge=T is=O always=O a=O good=O attraction=O
 Raga's is a romantic, cozy restaurant.####Raga's=T is=O a=O romantic=O ,=O cozy=O restaurant=O .=O
@@ -227,7 +227,7 @@ Compared to other shabu restaurants around town, this places wins hands-down.###
 But too far east!####But=O too=O far=O east=O !=O
 I live a block away and go to Patsy's frequently.####I=O live=O a=O block=O away=O and=O go=O to=O Patsy=O 's=O frequently=O .=O
 The pizza is delicious - they use fresh mozzarella instead of the cheap, frozen, shredded cheese common to most pizzaria's.####The=O pizza=T is=O delicious=O ,=O they=O use=O fresh=T mozzarella=T instead=O of=O the=O cheap=O ,=O frozen=O ,=O shredded=O cheese=O common=O to=O most=O pizza=T 's=O .=O
-Two complaints- their appetizer selection stinks, it would be nice to get some mozzarella sticks on the menu.####Two=O complaints-=O their=O appetizer=T selection=T stinks=O ,=O it=O would=O be=O nice=O to=O get=O some=O mozzarella=O sticks=O on=O the=O menu=O .=O
+Two complaints- their appetizer selection stinks, it would be nice to get some mozzarella sticks on the menu.####Two=O complaints=O their=O appetizer=T selection=T stinks=O ,=O it=O would=O be=O nice=O to=O get=O some=O mozzarella=O sticks=O on=O the=O menu=O .=O
 Also, because it is so thin, it gets cold very quickly and its not that filling.####Also=O ,=O because=O it=O is=O so=O thin=O ,=O it=O gets=O cold=O very=O quickly=O and=O its=O not=O that=O filling=O .=O
 So eat fast and order a lot.####So=O eat=O fast=O and=O order=O a=O lot=O .=O
 Wait staff is blantently unappreciative of your business but its the best pie on the UWS!####Wait=T staff=T is=O blantently=O unappreciative=O of=O your=O business=O but=O its=O the=O best=O pie=T on=O the=O UWS=O !=O
@@ -273,7 +273,7 @@ You cannot go wrong at the Red Eye Grill.####You=O can=O not=O go=O wrong=O at=O
 If we were to move from the upper east side, we would genuinely miss this restaurant.####If=O we=O were=O to=O move=O from=O the=O upper=O east=O side=O ,=O we=O would=O genuinely=O miss=O this=O restaurant=T .=O
 We've lived in the area for more than 8 years.####We=O 've=O lived=O in=O the=O area=O for=O more=O than=O 8=O years=O .=O
 The restaurant is cute but not upscale.####The=O restaurant=T is=O cute=O but=O not=O upscale=O .=O
-The food is a diamond in rough -- the food is delicious and homemade with the perfect balance of herbs and tomatoes.####The=O food=T is=O a=O diamond=O in=O rough=O --=O the=O food=T is=O delicious=O and=O homemade=O with=O the=O perfect=O balance=T of=T herbs=T and=T tomatoes=T .=O
+The food is a diamond in rough -- the food is delicious and homemade with the perfect balance of herbs and tomatoes.####The=O food=T is=O a=O diamond=O in=O rough=O -=O the=O food=T is=O delicious=O and=O homemade=O with=O the=O perfect=O balance=T of=T herbs=T and=T tomatoes=T .=O
 I would highly recommend it.####I=O would=O highly=O recommend=O it=O .=O
 It's one of our favorite places to eat in NY.####It=O 's=O one=O of=O our=O favorite=O places=O to=O eat=O in=O NY=O .=O
 We had a great time at the Jekyll and hyde Pub last night.####We=O had=O a=O great=O time=O at=O the=O Jekyll=T and=T hyde=T Pub=T last=O night=O .=O
@@ -345,10 +345,10 @@ This is some really good, inexpensive sushi.####This=O is=O some=O really=O good
 It costs $2 extra to turn a regular roll into an inside-out roll, but the roll more than triples in size, and that's not just from the rice.####It=O costs=O $=O 2=O extra=O to=O turn=O a=O regular=O roll=O into=O an=O inside-out=O roll=O ,=O but=O the=O roll=O more=O than=O triples=O in=O size=O ,=O and=O that=O 's=O not=O just=O from=O the=O rice=O .=O
 The spicy Tuna roll is huge and probably the best that I've had at this price range.####The=O spicy=T Tuna=T roll=T is=O huge=O and=O probably=O the=O best=O that=O I=O 've=O had=O at=O this=O price=O range=O .=O
 The Yellowtail was particularly good as well.####The=O Yellowtail=T was=O particularly=O good=O as=O well=O .=O
-I have reservations about the all you can eat deal, however -- the choices are fairly limited and you can probably order more food than you can eat for less than $18 by just going off the menu.####I=O have=O reservations=O about=O the=O all=T you=T can=T eat=T deal=T ,=O however=O --=O the=O choices=O are=O fairly=O limited=O and=O you=O can=O probably=O order=O more=O food=O than=O you=O can=O eat=O for=O less=O than=O $=O 18=O by=O just=O going=O off=O the=O menu=O .=O
+I have reservations about the all you can eat deal, however -- the choices are fairly limited and you can probably order more food than you can eat for less than $18 by just going off the menu.####I=O have=O reservations=O about=O the=O all=T you=T can=T eat=T deal=T ,=O however=O -=O the=O choices=O are=O fairly=O limited=O and=O you=O can=O probably=O order=O more=O food=O than=O you=O can=O eat=O for=O less=O than=O $=O 18=O by=O just=O going=O off=O the=O menu=O .=O
 In any event, this is a place I'll be sure to stop by again when I'm in this part of town.####In=O any=O event=O ,=O this=O is=O a=O place=T I=O 'll=O be=O sure=O to=O stop=O by=O again=O when=O I=O 'm=O in=O this=O part=O of=O town=O .=O
 Big Wong gets big Ups for a fine establishment.####Big=T Wong=T gets=O big=O Ups=O for=O a=O fine=O establishment=O .=O
-They have it all -- great price, food, and service.####They=O have=O it=O all=O --=O great=O price=O ,=O food=T ,=O and=O service=T .=O
+They have it all -- great price, food, and service.####They=O have=O it=O all=O -=O great=O price=O ,=O food=T ,=O and=O service=T .=O
 The atmosphere is noisy and the waiters are literally walking around doing things as fast as they can.####The=O atmosphere=T is=O noisy=O and=O the=O waiters=T are=O literally=O walking=O around=O doing=O things=O as=O fast=O as=O they=O can=O .=O
 The food is prepared quickly and efficiently.####The=O food=O is=O prepared=O quickly=O and=O efficiently=O .=O
 And it all comes at a very reasonable price (congee, noodles, and rice dishes are no more than $3-6 each).####And=O it=O all=O comes=O at=O a=O very=O reasonable=O price=O congee=T ,=O noodles=T ,=O and=O rice=T dishes=T are=O no=O more=O than=O $=O 3-6=O each=O .=O
@@ -443,9 +443,9 @@ You will find yourself returning quite often.####You=O will=O find=O yourself=O 
 P.S. Please don't tell anyone in my family i eat there.####PS=O Please=O do=O n't=O tell=O anyone=O in=O my=O family=O i=O eat=O there=O .=O
 LOL####LOL=O
 A restaurant that doesn't try to do anything except serve great food with great service in a pleasant atmosphere.####A=O restaurant=O that=O does=O n't=O try=O to=O do=O anything=O except=O serve=O great=O food=T with=O great=O service=T in=O a=O pleasant=O atmosphere=T .=O
-No gimmicks here -- the food speaks for itself in its freshness and preparation.####No=O gimmicks=O here=O --=O the=O food=T speaks=O for=O itself=O in=O its=O freshness=O and=O preparation=O .=O
-The dining room is quietly elegant with no music to shout over -- how refreshing!####The=O dining=T room=T is=O quietly=O elegant=O with=O no=O music=O to=O shout=O over=O --=O how=O refreshing=O !=O
-The service was impeccable and unobtrusive -- the staff knows what they are there to do -- to know their menu, present your meal, and attend to your needs.####The=O service=T was=O impeccable=O and=O unobtrusive=O --=O the=O staff=T knows=O what=O they=O are=O there=O to=O do=O --=O to=O know=O their=O menu=O ,=O present=O your=O meal=O ,=O and=O attend=O to=O your=O needs=O .=O
+No gimmicks here -- the food speaks for itself in its freshness and preparation.####No=O gimmicks=O here=O -=O the=O food=T speaks=O for=O itself=O in=O its=O freshness=O and=O preparation=O .=O
+The dining room is quietly elegant with no music to shout over -- how refreshing!####The=O dining=T room=T is=O quietly=O elegant=O with=O no=O music=O to=O shout=O over=O -=O how=O refreshing=O !=O
+The service was impeccable and unobtrusive -- the staff knows what they are there to do -- to know their menu, present your meal, and attend to your needs.####The=O service=T was=O impeccable=O and=O unobtrusive=O -=O the=O staff=T knows=O what=O they=O are=O there=O to=O do=O -=O to=O know=O their=O menu=O ,=O present=O your=O meal=O ,=O and=O attend=O to=O your=O needs=O .=O
 Looking around, I saw a room full of New Yorkers enjoying a real meal in a real restaurant, not a clubhouse of the fabulous trying to be seen.####Looking=O around=O ,=O I=O saw=O a=O room=O full=O of=O New=O Yorkers=O enjoying=O a=O real=O meal=T in=O a=O real=O restaurant=T ,=O not=O a=O clubhouse=O of=O the=O fabulous=O trying=O to=O be=O seen=O .=O
 Beautiful experience.####Beautiful=O experience=O .=O
 The view is breathtaking the service is top notch... the ambiance is wonderfull.####The=O view=T is=O breathtaking=O the=O service=T is=O top=O notch=O the=O ambiance=T is=O wonderfull=O .=O
@@ -678,7 +678,7 @@ I recommend the jelly fish, drunken chicken and the soupy dumplings, certainly t
 The food is so cheap and the waiters are nice.####The=O food=T is=O so=O cheap=O and=O the=O waiters=T are=O nice=O .=O
 Of course, it is crowded but who cares.####Of=O course=O ,=O it=O is=O crowded=O but=O who=O cares=O .=O
 Authentic Shanghai style and I cannot recommend a better Shanghai place in New York.####Authentic=O Shanghai=O style=O and=O I=O can=O not=O recommend=O a=O better=O Shanghai=O place=O in=O New=O York=O .=O
-Have frequented 'ino for several years and the food remains excellent.####Have=O frequented=O 'ino=O for=O several=O years=O and=O the=O food=T remains=O excellent=O .=O
+Have frequented 'ino for several years and the food remains excellent.####Have=O frequented=O ino=O for=O several=O years=O and=O the=O food=T remains=O excellent=O .=O
 Cheese plate is a varied delight and great bargain at $10.####Cheese=T plate=T is=O a=O varied=O delight=O and=O great=O bargain=O at=O $=O 10=O .=O
 The large selection of bruschettas, paninis, tramezzinis keep the palate from stagnating.####The=O large=O selection=O of=O bruschettas=T ,=O paninis=T ,=O tramezzinis=T keep=O the=O palate=O from=O stagnating=O .=O
 (The asparagus, truffle oil, parmesan bruschetta is a winner!)####The=O asparagus,=T truffle=T oil,=T parmesan=T bruschetta=T is=O a=O winner=O !=O
@@ -1030,7 +1030,7 @@ it's a perfect place to have a amanzing indian food.####it=O 's=O a=O perfect=O 
 I really loved the different and inovated touch that's the cheff gives to the food.####I=O really=O loved=O the=O different=O and=O inovated=O touch=O that=O 's=O the=O cheff=T gives=O to=O the=O food=O .=O
 also it's great to have dinner in a very romantic and confortable place, the service it's just perfect...they're so frendly that we never want to live the place!####also=O it=O 's=O great=O to=O have=O dinner=O in=O a=O very=O romantic=O and=O confortable=O place=T ,=O the=O service=T it=O 's=O just=O perfectthey=O 're=O so=O frendly=O that=O we=O never=O want=O to=O live=O the=O place=T !=O .=O
 I love Ess-a-bagel, but I live on the west side, so I often go to Murray's for convenience.####I=O love=O Ess-a-bagel=O ,=O but=O I=O live=O on=O the=O west=O side=O ,=O so=O I=O often=O go=O to=O Murray=O 's=O for=O convenience=O .=O
-Their bagels are fine, but they are a little overcooked, and not really a 'special' bagel experience.####Their=O bagels=T are=O fine=O ,=O but=O they=O are=O a=O little=O overcooked=O ,=O and=O not=O really=O a=O 'special=O '=O bagel=O experience=O .=O
+Their bagels are fine, but they are a little overcooked, and not really a 'special' bagel experience.####Their=O bagels=T are=O fine=O ,=O but=O they=O are=O a=O little=O overcooked=O ,=O and=O not=O really=O a=O special=O bagel=O experience=O .=O
 Better than the bagel shop on the corner, but not worth going out of your way for, in my opinion.####Better=O than=O the=O bagel=O shop=O on=O the=O corner=O ,=O but=O not=O worth=O going=O out=O of=O your=O way=O for=O ,=O in=O my=O opinion=O .=O
 Also a little more expensive than your average bagel place.####Also=O a=O little=O more=O expensive=O than=O your=O average=O bagel=O place=O .=O
 Great bagels made the old-fashioned way.####Great=O bagels=T made=O the=O old-fashioned=O way=O .=O
@@ -1239,7 +1239,7 @@ If you don't mind pre-sliced low quality fish, unfriendly staff and a sushi chef
 Price and quality of fish alone will keep us from making a return visit.####Price=O and=O quality=O of=O fish=T alone=O will=O keep=O us=O from=O making=O a=O return=O visit=O .=O
 Wasn't going to share but I feel obligated...while sitting at the sushi bar dining we watched the chef accidentally drop a piece of Unagi on the floor and upon retrieving it from the floor proceed to use the piece in the delivery order he was preparing.####Was=O n't=O going=O to=O share=O but=O I=O feel=O obligatedwhile=O sitting=O at=O the=O sushi=O bar=O dining=O we=O watched=O the=O chef=T accidentally=O drop=O a=O piece=O of=O Unagi=O on=O the=O floor=O and=O upon=O retrieving=O it=O from=O the=O floor=O proceed=O to=O use=O the=O piece=O in=O the=O delivery=O order=O he=O was=O preparing=O .=O
 No thanks!!!####No=O thanks=O !=O !=O !=O
-This place, which is only a few months old, is perhaps Queens' biggest secret!####This=O place=T ,=O which=O is=O only=O a=O few=O months=O old=O ,=O is=O perhaps=O Queens=O '=O biggest=O secret=O !=O
+This place, which is only a few months old, is perhaps Queens' biggest secret!####This=O place=T ,=O which=O is=O only=O a=O few=O months=O old=O ,=O is=O perhaps=O Queens=O biggest=O secret=O !=O
 Fabulous decor - makes you feel like you're in a trendy Manhattan restaurant, very very good food, cheaply-priced, generally friendly staff, and if you're a Manhattanite, or spend most of your time in Manhattan, Rice Avenue will make you feel at home.....very Soho/Village/Upper West Side minus the expensive prices and pretentious clientele.....all on Roosevelt Avenue!####Fabulous=O decor=T ,=O makes=O you=O feel=O like=O you=O 're=O in=O a=O trendy=O Manhattan=O restaurant=O ,=O very=O very=O good=O food=T ,=O cheaply-priced=O ,=O generally=O friendly=O staff=T ,=O and=O if=O you=O 're=O a=O Manhattanite=O ,=O or=O spend=O most=O of=O your=O time=O in=O Manhattan=O ,=O Rice=T Avenue=T will=O make=O you=O feel=O at=O homevery=O Soho/Village/Upper=O West=O Side=O minus=O the=O expensive=O prices=O and=O pretentious=O clienteleall=O on=O Roosevelt=O Avenue=O !=O .=O
 We were seated outside and the waiter spilled red wine and hot tea on myself and my date.####We=O were=O seated=O outside=O and=O the=O waiter=T spilled=O red=O wine=O and=O hot=O tea=O on=O myself=O and=O my=O date=O .=O
 We were then shooed inside.####We=O were=O then=O shooed=O inside=O .=O
@@ -1277,10 +1277,10 @@ I've eaten at Pizza Gruppo a few times, but more often I order delivery.####I=O 
 The food is great.####The=O food=T is=O great=O .=O
 Personal pans are the perfect size for those hungry nights.####Personal=T pans=T are=O the=O perfect=O size=O for=O those=O hungry=O nights=O .=O
 I heartily recommend.####I=O heartily=O recommend=O .=O
-There is a downside if you're ordering in -- the delivery guys have MAJOR attitude.####There=O is=O a=O downside=O if=O you=O 're=O ordering=O in=O --=O the=O delivery=T guys=T have=O MAJOR=O attitude=O .=O
+There is a downside if you're ordering in -- the delivery guys have MAJOR attitude.####There=O is=O a=O downside=O if=O you=O 're=O ordering=O in=O -=O the=O delivery=T guys=T have=O MAJOR=O attitude=O .=O
 Never have I had such dramatic delivery guys (a lot of huffing and panting and muttering under breath b/c I live in a walkup) who always seem disappointed with their tips.####Never=O have=O I=O had=O such=O dramatic=O delivery=T guys=T a=O lot=O of=O huffing=O and=O panting=O and=O muttering=O under=O breath=O b/c=O I=O live=O in=O a=O walkup=O who=O always=O seem=O disappointed=O with=O their=O tips=O .=O
 Hey, I think $2+ for a 5 block walk ain't bad.####Hey=O ,=O I=O think=O $=O 2+=O for=O a=O 5=O block=O walk=O ai=O n't=O bad=O .=O
-Love the scene first off- the place has a character and nice light to it..very fortunate, location wise.####Love=O the=O scene=T first=O off-=O the=O place=T has=O a=O character=O and=O nice=O light=O to=O itvery=O fortunate=O ,=O location=T wise=O .=O
+Love the scene first off- the place has a character and nice light to it..very fortunate, location wise.####Love=O the=O scene=T first=O off=O the=O place=T has=O a=O character=O and=O nice=O light=O to=O itvery=O fortunate=O ,=O location=T wise=O .=O
 The pizza was pretty good and huge.####The=O pizza=T was=O pretty=O good=O and=O huge=O .=O
 The price very reasonable.####The=O price=O very=O reasonable=O .=O
 We were 4 and got the family size penne a la vodka which was tremendously gigantic portion...a bucket of food literally.####We=O were=O 4=O and=O got=O the=O family=O size=O penne=T a=T la=T vodka=T which=O was=O tremendously=O gigantic=O portiona=O bucket=O of=O food=O literally=O .=O

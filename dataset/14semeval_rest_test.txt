@@ -1,6 +1,6 @@
 The bread is top notch as well.####The=O bread=T is=O top=O notch=O as=O well=O .=O
 I have to say they have one of the fastest delivery times in the city.####I=O have=O to=O say=O they=O have=O one=O of=O the=O fastest=O delivery=T times=T in=O the=O city=O .=O
-Food is always fresh and hot- ready to eat!####Food=T is=O always=O fresh=O and=O hot-=O ready=O to=O eat=O !=O
+Food is always fresh and hot- ready to eat!####Food=T is=O always=O fresh=O and=O hot=O ready=O to=O eat=O !=O
 Did I mention that the coffee is OUTSTANDING?####Did=O I=O mention=O that=O the=O coffee=T is=O OUTSTANDING=O ?=O
 Certainly not the best sushi in New York, however, it is always fresh, and the place is very clean, sterile.####Certainly=O not=O the=O best=O sushi=T in=O New=O York=O ,=O however=O ,=O it=O is=O always=O fresh=O ,=O and=O the=O place=T is=O very=O clean=O ,=O sterile=O .=O
 I trust the people at Go Sushi, it never disappoints.####I=O trust=O the=O people=T at=O Go=O Sushi=O ,=O it=O never=O disappoints=O .=O
@@ -36,7 +36,7 @@ It was pleasantly uncrowded, the service was delightful, the garden adorable, th
 You will be very happy with the experience.####You=O will=O be=O very=O happy=O with=O the=O experience=O .=O
 The food is surprisingly good, and the decor is nice.####The=O food=T is=O surprisingly=O good=O ,=O and=O the=O decor=T is=O nice=O .=O
 How pretentious and inappropriate for MJ Grill to claim that it provides power lunch and dinners!####How=O pretentious=O and=O inappropriate=O for=O MJ=O Grill=O to=O claim=O that=O it=O provides=O power=O lunch=T and=O dinners=T !=O
-Two wasted steaks -- what a crime!####Two=O wasted=O steaks=T --=O what=O a=O crime=O !=O
+Two wasted steaks -- what a crime!####Two=O wasted=O steaks=T -=O what=O a=O crime=O !=O
 The staff should be a bit more friendly.####The=O staff=T should=O be=O a=O bit=O more=O friendly=O .=O
 I absolutely suggest this place.####I=O absolutely=O suggest=O this=O place=O .=O
 I think the meatball parm is good.####I=O think=O the=O meatball=T parm=T is=O good=O .=O
@@ -52,7 +52,7 @@ Meal was very expensive for what you get.####Meal=T was=O very=O expensive=O for
 Try the Peanut Butter Sorbet and the pizza with soy cheese!####Try=O the=O Peanut=T Butter=T Sorbet=T and=O the=O pizza=T with=T soy=T cheese=T !=O
 Good food at the right price, what more can you ask for.####Good=O food=T at=O the=O right=O price=T ,=O what=O more=O can=O you=O ask=O for=O .=O
 We love it, and took buses and cabs to get there.####We=O love=O it=O ,=O and=O took=O buses=O and=O cabs=O to=O get=O there=O .=O
-If you' re in New York, you do not want to miss this place.####If=O you=O '=O re=O in=O New=O York=O ,=O you=O do=O not=O want=O to=O miss=O this=O place=O .=O
+If you' re in New York, you do not want to miss this place.####If=O you=O re=O in=O New=O York=O ,=O you=O do=O not=O want=O to=O miss=O this=O place=O .=O
 The food is top notch, the service is attentive, and the atmosphere is great.####The=O food=T is=O top=O notch=O ,=O the=O service=T is=O attentive=O ,=O and=O the=O atmosphere=T is=O great=O .=O
 I've been coming here on and off for the past five years and I have to say that La Lanterna has never, ever dissapointed me.####I=O 've=O been=O coming=O here=O on=O and=O off=O for=O the=O past=O five=O years=O and=O I=O have=O to=O say=O that=O La=O Lanterna=O has=O never=O ,=O ever=O dissapointed=O me=O .=O
 Great food, great waitstaff, great atmosphere, and best of all GREAT beer!####Great=O food=T ,=O great=O waitstaff=T ,=O great=O atmosphere=T ,=O and=O best=O of=O all=O GREAT=O beer=T !=O
@@ -65,7 +65,7 @@ The food was delicious and clearly fresh ingredients were used.####The=O food=T 
 This made it obvious that the food wasn't cooked fresh; it was obviously made before hand and then reheated.####This=O made=O it=O obvious=O that=O the=O food=T was=O n't=O cooked=O fresh=O ;=O it=O was=O obviously=O made=O before=O hand=O and=O then=O reheated=O .=O
 Appetizer are excellent here; you can make a great (and inexpensive) meal out of them.####Appetizer=T are=O excellent=O here=O ;=O you=O can=O make=O a=O great=O and=O inexpensive=O meal=T out=O of=O them=O .=O
 The spicy mussels are a highlight.####The=O spicy=T mussels=T are=O a=O highlight=O .=O
-Also get the Onion Rings -- best we've ever had.####Also=O get=O the=O Onion=T Rings=T --=O best=O we=O 've=O ever=O had=O .=O
+Also get the Onion Rings -- best we've ever had.####Also=O get=O the=O Onion=T Rings=T -=O best=O we=O 've=O ever=O had=O .=O
 Would not return for the amount we paid.####Would=O not=O return=O for=O the=O amount=O we=O paid=O .=O
 However, being foodies, we were utterly disappointed with the food.####However=O ,=O being=O food=T ,=O we=O were=O utterly=O disappointed=O with=O the=O food=T .=O
 Huge portions, great and attentive service, and pretty good prices.####Huge=O portions=T ,=O great=O and=O attentive=O service=T ,=O and=O pretty=O good=O prices=T .=O
@@ -73,7 +73,7 @@ I was highly disappointed by their service and food.####I=O was=O highly=O disap
 I complained to the waiter and then to the manager, but the intensity of rudeness from them just went up.####I=O complained=O to=O the=O waiter=T and=O then=O to=O the=O manager=T ,=O but=O the=O intensity=O of=O rudeness=O from=O them=O just=O went=O up=O .=O
 The food is great and the milkshakes are even better!####The=O food=T is=O great=O and=O the=O milkshakes=T are=O even=O better=O !=O
 Stay away if you're claustrophobic####Stay=O away=O if=O you=O 're=O claustrophobic=O
-If you're in the 'hood, definitely stop in.####If=O you=O 're=O in=O the=O 'hood=O ,=O definitely=O stop=O in=O .=O
+If you're in the 'hood, definitely stop in.####If=O you=O 're=O in=O the=O hood=O ,=O definitely=O stop=O in=O .=O
 the mushroom barley soup is amazing.####the=O mushroom=T barley=T soup=T is=O amazing=O .=O
 On the recommendation of a friend, I checked out Arezzo with my wife.####On=O the=O recommendation=O of=O a=O friend=O ,=O I=O checked=O out=O Arezzo=O with=O my=O wife=O .=O
 I'm glad I did as the food was very good and the staff was friendly, courteous and efficient.####I=O 'm=O glad=O I=O did=O as=O the=O food=T was=O very=O good=O and=O the=O staff=T was=O friendly=O ,=O courteous=O and=O efficient=O .=O
@@ -105,7 +105,7 @@ Stay with the roasted chickens and you'll be fine.####Stay=O with=O the=O roaste
 The atmosphere is warm, comfortable, artsy and sexy.####The=O atmosphere=T is=O warm=O ,=O comfortable=O ,=O artsy=O and=O sexy=O .=O
 The food is great (big selection, reasonable prices) and the drinks are really good.####The=O food=T is=O great=O big=O selection=T ,=O reasonable=O prices=T and=O the=O drinks=T are=O really=O good=O .=O
 The steak melted in my mouth.####The=O steak=T melted=O in=O my=O mouth=O .=O
-The food did take a few extra minutes to come, but the cute waiters' jokes and friendliness made up for it.####The=O food=T did=O take=O a=O few=O extra=O minutes=O to=O come=O ,=O but=O the=O cute=O waiters=T '=O jokes=O and=O friendliness=O made=O up=O for=O it=O .=O
+The food did take a few extra minutes to come, but the cute waiters' jokes and friendliness made up for it.####The=O food=T did=O take=O a=O few=O extra=O minutes=O to=O come=O ,=O but=O the=O cute=O waiters=T jokes=O and=O friendliness=O made=O up=O for=O it=O .=O
 Most importantly, it is reasonably priced.####Most=O importantly=O ,=O it=O is=O reasonably=O priced=T .=O
 The selection of food is excellent (I'm not used to having much choice at restaurants), and the atmosphere is great.####The=O selection=T of=T food=T is=O excellent=O I=O 'm=O not=O used=O to=O having=O much=O choice=O at=O restaurants=O ,=O and=O the=O atmosphere=T is=O great=O .=O
 Only suggestion is that you skip the dessert, it was overpriced and fell short on taste.####Only=O suggestion=O is=O that=O you=O skip=O the=O dessert=T ,=O it=O was=O overpriced=O and=O fell=O short=O on=O taste=T .=O
@@ -184,7 +184,7 @@ I also recommend the garlic knots.####I=O also=O recommend=O the=O garlic=T knot
 Best Indian food I have ever eaten.####Best=O Indian=T food=T I=O have=O ever=O eaten=O .=O
 You won't be dissapointed.####You=O wo=O n't=O be=O dissapointed=O .=O
 This place has the best pizza.####This=O place=O has=O the=O best=O pizza=T .=O
-Culinaria is a welcome addition to the Garment district- far better than any restaurant in the area.####Culinaria=O is=O a=O welcome=O addition=O to=O the=O Garment=O district-=O far=O better=O than=O any=O restaurant=O in=O the=O area=O .=O
+Culinaria is a welcome addition to the Garment district- far better than any restaurant in the area.####Culinaria=O is=O a=O welcome=O addition=O to=O the=O Garment=O district=O far=O better=O than=O any=O restaurant=O in=O the=O area=O .=O
 The music which is sometimes a little too heavy for my taste.####The=O music=T which=O is=O sometimes=O a=O little=O too=O heavy=O for=O my=O taste=O .=O
 The service is excellent and always informative without an air.####The=O service=T is=O excellent=O and=O always=O informative=O without=O an=O air=O .=O
 The owner and staff go to great lengths to make you feel comfortable.####The=O owner=T and=O staff=T go=O to=O great=O lengths=O to=O make=O you=O feel=O comfortable=O .=O
@@ -222,7 +222,7 @@ And as SOON as one person is done, she asked to pick up the plate immediately.##
 This place is Italian, not French.####This=O place=O is=O Italian=O ,=O not=O French=O .=O
 After so many great reviews here, my bf and I went to Esca to celebrate my birthday last nite.####After=O so=O many=O great=O reviews=O here=O ,=O my=O bf=O and=O I=O went=O to=O Esca=O to=O celebrate=O my=O birthday=O last=O nite=O .=O
 While their kitchen food is delicious, their Sushi is out of this world.####While=O their=O kitchen=T food=T is=O delicious=O ,=O their=O Sushi=T is=O out=O of=O this=O world=O .=O
-There was a heat problem to boot, so it was about 40 degrees in the restaurant -- we had to request to uncheck our coats!####There=O was=O a=O heat=O problem=O to=O boot=O ,=O so=O it=O was=O about=O 40=O degrees=O in=O the=O restaurant=O --=O we=O had=O to=O request=O to=O uncheck=O our=O coats=O !=O
+There was a heat problem to boot, so it was about 40 degrees in the restaurant -- we had to request to uncheck our coats!####There=O was=O a=O heat=O problem=O to=O boot=O ,=O so=O it=O was=O about=O 40=O degrees=O in=O the=O restaurant=O -=O we=O had=O to=O request=O to=O uncheck=O our=O coats=O !=O
 everything is scrumptious, from the excellent service by cute waitresses, to the extremely lush atmosphere.####everything=O is=O scrumptious=O ,=O from=O the=O excellent=O service=T by=O cute=O waitresses=T ,=O to=O the=O extremely=O lush=O atmosphere=T .=O
 It's traditional, simple italian food.####It=O 's=O traditional=O ,=O simple=O italian=T food=T .=O
 My girlfriend and I just spent our 10 month anniversary at Lou Lou.####My=O girlfriend=O and=O I=O just=O spent=O our=O 10=O month=O anniversary=O at=O Lou=O Lou=O .=O
@@ -422,7 +422,7 @@ After reading the great reviews, I invited a die-hard downtown friend of mine to
 Not to sound too negative but be wary of the delivary.####Not=O to=O sound=O too=O negative=O but=O be=O wary=O of=O the=O delivary=T .=O
 Feels like family when we go there.####Feels=O like=O family=O when=O we=O go=O there=O .=O
 I found the food to be just as good as its owner, Da Silvano, just much less expensive.####I=O found=O the=O food=T to=O be=O just=O as=O good=O as=O its=O owner=T ,=O Da=O Silvano=O ,=O just=O much=O less=O expensive=O .=O
-They have homemade pastas of all kinds -- I recommend the gnocchi -- yum!####They=O have=O homemade=T pastas=T of=O all=O kinds=O --=O I=O recommend=O the=O gnocchi=T --=O yum=O !=O
+They have homemade pastas of all kinds -- I recommend the gnocchi -- yum!####They=O have=O homemade=T pastas=T of=O all=O kinds=O -=O I=O recommend=O the=O gnocchi=T -=O yum=O !=O
 My vegetable risotto was burnt, and infused totally in a burnt flavor.####My=O vegetable=T risotto=T was=O burnt=O ,=O and=O infused=O totally=O in=O a=O burnt=O flavor=T .=O
 What a pleasant surprise!####What=O a=O pleasant=O surprise=O !=O
 The main draw of this place is the price.####The=O main=O draw=O of=O this=O place=O is=O the=O price=T .=O
@@ -471,7 +471,7 @@ The food is also outstanding and is served quite quickly.####The=O food=T is=O a
 I just have nothing to say about this place that is negative except that it's not a cheap night out...but it's SO worth it.####I=O just=O have=O nothing=O to=O say=O about=O this=O place=O that=O is=O negative=O except=O that=O it=O 's=O not=O a=O cheap=O night=O outbut=O it=O 's=O SO=O worth=O it=O .=O
 From the erbazzone emiliana to the mostarda on the cheese plate, the dishes at this restaurant are all handled with delicate care.####From=O the=O erbazzone=T emiliana=T to=O the=O mostarda=T on=T the=T cheese=T plate=T ,=O the=O dishes=T at=O this=O restaurant=O are=O all=O handled=O with=O delicate=O care=O .=O
 The food is delicious and the bar has a great vibe.####The=O food=T is=O delicious=O and=O the=O bar=T has=O a=O great=O vibe=T .=O
-expectations were real hi reading the '10's'.####expectations=O were=O real=O hi=O reading=O the=O '10=O 's=O '=O .=O
+expectations were real hi reading the '10's'.####expectations=O were=O real=O hi=O reading=O the=O 10=O 's=O '=O .=O
 There's candlelight and music.####There=O 's=O candlelight=T and=O music=T .=O
 It's nice to find a place that is open 24 hours (especially in downtown Brooklyn).####It=O 's=O nice=O to=O find=O a=O place=O that=O is=O open=O 24=O hours=O especially=O in=O downtown=O Brooklyn=O .=O
 Simple healthy unglamorous food cheap.####Simple=O healthy=O unglamorous=O food=T cheap=O .=O
@@ -517,7 +517,7 @@ Somewhat disappointing wine list (only new vintages.####Somewhat=O disappointing
 Both were very good, but nothing you couldn't get at similar restaurant.####Both=O were=O very=O good=O ,=O but=O nothing=O you=O could=O n't=O get=O at=O similar=O restaurant=O .=O
 If your looking for nasty high priced food with a dash of ghetto scenery cheap BX A$$ this is the place to be!!####If=O your=O looking=O for=O nasty=O high=O priced=T food=T with=O a=O dash=O of=O ghetto=O scenery=T cheap=O BX=O A=O $=O $=O this=O is=O the=O place=O to=O be=O !=O !=O
 new hamburger with special sauce is ok - at least better than big mac!####new=T hamburger=T with=T special=T sauce=T is=O ok=O ,=O at=O least=O better=O than=O big=T mac=T !=O
-Perfectly al dente pasta, not drowned in sauce -- generous portions.####Perfectly=O al=O dente=O pasta=T ,=O not=O drowned=O in=O sauce=T --=O generous=O portions=T .=O
+Perfectly al dente pasta, not drowned in sauce -- generous portions.####Perfectly=O al=O dente=O pasta=T ,=O not=O drowned=O in=O sauce=T -=O generous=O portions=T .=O
 I can understand the prices if it served better food, like some Chinese restaurants in midtown/uptown area.####I=O can=O understand=O the=O prices=T if=O it=O served=O better=O food=T ,=O like=O some=O Chinese=O restaurants=O in=O midtown/uptown=O area=O .=O
 Service was awful - mostly because staff were overwhelmed on a Saturday night.####Service=T was=O awful=O ,=O mostly=O because=O staff=T were=O overwhelmed=O on=O a=O Saturday=O night=O .=O
 To the owners; good job guys, this place is a keeper!####To=O the=O owners=T ;=O good=O job=O guys=O ,=O this=O place=O is=O a=O keeper=O !=O
@@ -544,7 +544,7 @@ They also have a great assortment of wraps if your not in the mood for tradition
 Fresh veggies, all sorts of middle eastern spreads, cheese and falafel, soup, fish, rice, root vegetables, a rice medley, some spinach thing, lamb kebabs, cheese baclava... soooo much fooood, and all of it delicious.####Fresh=T veggies=T ,=O all=O sorts=O of=O middle=T eastern=T spreads=T ,=O cheese=T and=O falafel=T ,=O soup=T ,=O fish=T ,=O rice=T ,=O root=T vegetables=T ,=O a=O rice=T medley=O ,=O some=O spinach=T thing=T ,=O middle=T eastern=T spreads=T ,=O cheese=T baclava=O soooo=O much=O middle=T eastern=T spreads=T ,=O and=O all=O of=O it=O delicious=O .=O
 Disappointingly, their wonderful Saketini has been taken off the bar menu.####Disappointingly=O ,=O their=O wonderful=O Saketini=T has=O been=O taken=O off=O the=O bar=T menu=T .=O
 In Short The Black Sheep distinguishes itself from the Midtown pub herd with a look that's a mix of sports-bar butch and ornate kitsch.####In=O Short=O The=O Black=O Sheep=O distinguishes=O itself=O from=O the=O Midtown=O pub=O herd=O with=O a=O look=T that=O 's=O a=O mix=O of=O sports-bar=O butch=O and=O ornate=O kitsch=O .=O
-I would definitely go back -- if only for some of those exotic martinis on the blackboard.####I=O would=O definitely=O go=O back=O --=O if=O only=O for=O some=O of=O those=O exotic=O martinis=T on=O the=O blackboard=O .=O
+I would definitely go back -- if only for some of those exotic martinis on the blackboard.####I=O would=O definitely=O go=O back=O -=O if=O only=O for=O some=O of=O those=O exotic=O martinis=T on=O the=O blackboard=O .=O
 They are located off the beaten path but are certainly worth the trip.####They=O are=O located=O off=O the=O beaten=O path=O but=O are=O certainly=O worth=O the=O trip=O .=O
 then she made a fuss about not being able to add 1 or 2 chairs on either end of the table for additional people.####then=O she=O made=O a=O fuss=O about=O not=O being=O able=O to=O add=O 1=O or=O 2=O chairs=T on=O either=O end=O of=O the=O table=T for=O additional=O people=O .=O
 The happy hour is so cheap, but that does not reflect the service or the atmosphere.####The=O happy=T hour=T is=O so=O cheap=O ,=O but=O that=O does=O not=O reflect=O the=O service=T or=O the=O atmosphere=T .=O
@@ -611,7 +611,7 @@ Was her Monday for lunch - was working on a film in the area - and found this ra
 Not too much so, but enough that there's a great scene.####Not=O too=O much=O so=O ,=O but=O enough=O that=O there=O 's=O a=O great=O scene=T .=O
 You feel like you made it to New York when you eat here.####You=O feel=O like=O you=O made=O it=O to=O New=O York=O when=O you=O eat=O here=O .=O
 We'd walked by it dozens of times and finally settled on a Monday night.####We=O 'd=O walked=O by=O it=O dozens=O of=O times=O and=O finally=O settled=O on=O a=O Monday=O night=O .=O
-SUM IT: don't read the '10's' reviews, try it to judge for yourself so you won't have as hi expectations, then you'll be sure to enjoy it.####SUM=O IT=O ,=O do=O n't=O read=O the=O '10=O 's=O '=O reviews=O ,=O try=O it=O to=O judge=O for=O yourself=O so=O you=O wo=O n't=O have=O as=O hi=O expectations=O ,=O then=O you=O 'll=O be=O sure=O to=O enjoy=O it=O .=O
+SUM IT: don't read the '10's' reviews, try it to judge for yourself so you won't have as hi expectations, then you'll be sure to enjoy it.####SUM=O IT=O ,=O do=O n't=O read=O the=O 10=O 's=O reviews=O ,=O try=O it=O to=O judge=O for=O yourself=O so=O you=O wo=O n't=O have=O as=O hi=O expectations=O ,=O then=O you=O 'll=O be=O sure=O to=O enjoy=O it=O .=O
 We went there, no one greeted us.####We=O went=O there=O ,=O no=O one=O greeted=O us=O .=O
 Dug the blue bar area too.####Dug=O the=O blue=T bar=T area=T too=O .=O
 We spent so much time getting elbowed around while we waited we left.####We=O spent=O so=O much=O time=O getting=O elbowed=O around=O while=O we=O waited=O we=O left=O .=O
@@ -653,7 +653,7 @@ The portions are very large and the service is fantastic!!####The=O portions=T a
 I recomend the chicken milanese.####I=O recomend=O the=O chicken=T milanese=T .=O
 excellent tapas at great prices, romantic, small but not overly crowed, excellent####excellent=O tapas=T at=O great=O prices=T ,=O romantic=O ,=O small=O but=O not=O overly=O crowed=O ,=O excellent=O
 The service is a quite slow, but friendly.####The=O service=T is=O a=O quite=O slow=O ,=O but=O friendly=O .=O
-The chocolate raspberry cake is heavenly- not too sweet, but full of flavor.####The=O chocolate=T raspberry=T cake=T is=O heavenly-=O not=O too=O sweet=O ,=O but=O full=O of=O flavor=T .=O
+The chocolate raspberry cake is heavenly- not too sweet, but full of flavor.####The=O chocolate=T raspberry=T cake=T is=O heavenly=O not=O too=O sweet=O ,=O but=O full=O of=O flavor=T .=O
 Our waiter was helpful and charming, the food was perfect, and the wine was good, too.####Our=O waiter=T was=O helpful=O and=O charming=O ,=O the=O food=T was=O perfect=O ,=O and=O the=O wine=T was=O good=O ,=O too=O .=O
 Alias is warm and cozy and you don't get that squished-in feeling you get at 71 Clinton.####Alias=O is=O warm=O and=O cozy=O and=O you=O do=O n't=O get=O that=O squished-in=O feeling=O you=O get=O at=O 71=O Clinton=O .=O
 I HAVE NEVER HAD A BAD MEAL(OR BAD SERVICE )@ PIGALLE.####I=O HAVE=O NEVER=O HAD=O A=O BAD=O MEAL=T BAD=O SERVICE=T @=O PIGALLE=O .=O
@@ -724,7 +724,7 @@ Bring your date and a bottle of wine!####Bring=O your=O date=O and=O a=O bottle=
 Not only is this the best Thai restaurant I have been to, but it also ranks as one of my favorite places to dine.####Not=O only=O is=O this=O the=O best=O Thai=O restaurant=O I=O have=O been=O to=O ,=O but=O it=O also=O ranks=O as=O one=O of=O my=O favorite=O places=O to=O dine=O .=O
 Don't be put off by another reviewers extremely negative review.####Do=O n't=O be=O put=O off=O by=O another=O reviewers=O extremely=O negative=O review=O .=O
 My Chelsea's impressive and creative menu includes modern, Westernized Japanese dishes such as Foie Gras Unagi Napolean, Jap style hamburger steak, spicy cod roe spaghetti, black cod with miso base, and rack of lamb in black truffle sauce, to name a few.####My=O Chelsea=O 's=O impressive=O and=O creative=O menu=T includes=O modern=O ,=O Westernized=O Japanese=T dishes=T such=O as=O Foie=T Gras=T Unagi=T Napolean=T ,=O Jap=T style=T hamburger=T steak=T ,=O spicy=T cod=T roe=T spaghetti=T ,=O black=T cod=T with=T miso=T base=T ,=O and=O rack=T of=T lamb=T in=T black=T truffle=T sauce=T ,=O to=O name=O a=O few=O .=O
-His food is excellent (and not expensive by NYC standards- no entrees over $30, most appetizers $12 to 14).####His=O food=T is=O excellent=O and=O not=O expensive=O by=O NYC=O standards-=O no=O entrees=T over=O $=O 30=O ,=O most=O appetizers=T $=O 12=O to=O 14=O .=O
+His food is excellent (and not expensive by NYC standards- no entrees over $30, most appetizers $12 to 14).####His=O food=T is=O excellent=O and=O not=O expensive=O by=O NYC=O standards=O no=O entrees=T over=O $=O 30=O ,=O most=O appetizers=T $=O 12=O to=O 14=O .=O
 The food is consistant and good but how it got name Best Diner In Manhattan is beyond me.####The=O food=T is=O consistant=O and=O good=O but=O how=O it=O got=O name=O Best=O Diner=O In=O Manhattan=O is=O beyond=O me=O .=O
 The pasta primavera was outstanding as well, lots of fresh veggies.####The=O pasta=T primavera=T was=O outstanding=O as=O well=O ,=O lots=O of=O fresh=T veggies=T .=O
 don't get me wrong - sushi was good, just not fantastic.####do=O n't=O get=O me=O wrong=O ,=O sushi=T was=O good=O ,=O just=O not=O fantastic=O .=O
@@ -762,7 +762,7 @@ After dinner I heard music playing and discovered that there is a lounge downsta
 But now that it's under new ownership and has been renovated, it looks great.####But=O now=O that=O it=O 's=O under=O new=O ownership=O and=O has=O been=O renovated=O ,=O it=O looks=O great=O .=O
 The room is a gorgeous, bi-level space and the long bar perfect for a drink.####The=O room=T is=O a=O gorgeous=O ,=O bi-level=T space=T and=O the=O long=T bar=T perfect=O for=O a=O drink=T .=O
 Now we moved out of the state and every visit to NYC includes a stop here.####Now=O we=O moved=O out=O of=O the=O state=O and=O every=O visit=O to=O NYC=O includes=O a=O stop=O here=O .=O
-Two complaints- their appetizer selection stinks, it would be nice to get some mozzarella sticks on the menu.####Two=O complaints-=O their=O appetizer=T selection=T stinks=O ,=O it=O would=O be=O nice=O to=O get=O some=O mozzarella=T sticks=T on=O the=O menu=T .=O
+Two complaints- their appetizer selection stinks, it would be nice to get some mozzarella sticks on the menu.####Two=O complaints=O their=O appetizer=T selection=T stinks=O ,=O it=O would=O be=O nice=O to=O get=O some=O mozzarella=T sticks=T on=O the=O menu=T .=O
 I don't remember what we had; nothing was memorable.####I=O do=O n't=O remember=O what=O we=O had=O ;=O nothing=O was=O memorable=O .=O
 It is bland and nothing extrodinary.####It=O is=O bland=O and=O nothing=O extrodinary=O .=O
 I was especially impressed during the bday party when the waitstaff went above and beyond in helping me decorate and bring out a bday cake as well as offering prompt and friendly service to a 15 person party.####I=O was=O especially=O impressed=O during=O the=O bday=O party=O when=O the=O waitstaff=T went=O above=O and=O beyond=O in=O helping=O me=O decorate=O and=O bring=O out=O a=O bday=O cake=O as=O well=O as=O offering=O prompt=O and=O friendly=O service=T to=O a=O 15=O person=O party=O .=O
@@ -770,7 +770,7 @@ The chicken and falafel platters were nondescript combinations with fresh leaf s
 Every time I visit NYC, I come here.####Every=O time=O I=O visit=O NYC=O ,=O I=O come=O here=O .=O
 I've been coming here regularly since it opened, about 2 years ago.####I=O 've=O been=O coming=O here=O regularly=O since=O it=O opened=O ,=O about=O 2=O years=O ago=O .=O
 The atmosphere takes you to that place, the place many dream of.####The=O atmosphere=T takes=O you=O to=O that=O place=O ,=O the=O place=O many=O dream=O of=O .=O
-several times and put up with the waiters' bad manners, knowing that their job isn't easy.####several=O times=O and=O put=O up=O with=O the=O waiters=T '=O bad=O manners=O ,=O knowing=O that=O their=O job=O is=O n't=O easy=O .=O
+several times and put up with the waiters' bad manners, knowing that their job isn't easy.####several=O times=O and=O put=O up=O with=O the=O waiters=T bad=O manners=O ,=O knowing=O that=O their=O job=O is=O n't=O easy=O .=O
 The service is great (maybe even borderline nagging but at least you get attention), the desserts are excellent and the coffee is so very good...####The=O service=T is=O great=O maybe=O even=O borderline=O nagging=O but=O at=O least=O you=O get=O attention=O ,=O the=O desserts=T are=O excellent=O and=O the=O coffee=T is=O so=O very=O good=O .=O
 We were seated next to a couple whose kitchen was being renovated and we agreed since we're all foodies who eat out a lot - that this wasn't a place we'd return to.####We=O were=O seated=O next=O to=O a=O couple=O whose=O kitchen=O was=O being=O renovated=O and=O we=O agreed=O since=O we=O 're=O all=O foodies=O who=O eat=O out=O a=O lot=O ,=O that=O this=O was=O n't=O a=O place=O we=O 'd=O return=O to=O .=O
 They are served on Focacchia bread and are to die for.####They=O are=O served=T on=O Focacchia=T bread=T and=O are=O to=O die=O for=O .=O
@@ -778,7 +778,7 @@ While the smoothies are a little big for me, the fresh juices are the best I hav
 The food is just OKAY, and it's almost not worth going unless you're getting the pialla, which is the only dish that's really good.####The=O food=T is=O just=O OKAY=O ,=O and=O it=O 's=O almost=O not=O worth=O going=O unless=O you=O 're=O getting=O the=O pialla=T ,=O which=O is=O the=O only=O dish=T that=O 's=O really=O good=O .=O
 The guac is fresh, yet lacking flavor, we like to add our fresh salsa into it.####The=O guac=T is=O fresh=O ,=O yet=O lacking=O flavor=T ,=O we=O like=O to=O add=O our=O fresh=T salsa=T into=O it=O .=O
 The new menu has a few creative items,they were smart enough to keep some of the old favorites (but they raised the prices), the staff is friendly most of the time, but I must agree with the person that wrote about their favorite words: No, can't, sorry..., boy, they won't bend the rules for anyone.####The=O new=T menu=T has=O a=O few=O creative=O items=O ,=O they=O were=O smart=O enough=O to=O keep=O some=O of=O the=O old=O favorites=O but=O they=O raised=O the=O prices=T ,=O the=O staff=T is=O friendly=O most=O of=O the=O time=O ,=O but=O I=O must=O agree=O with=O the=O person=O that=O wrote=O about=O their=O favorite=O words=O ,=O No=O ,=O ca=O n't=O ,=O sorry=O ,=O boy=O ,=O they=O wo=O n't=O bend=O the=O rules=O for=O anyone=O .=O
-It' only open for lunch but the food is so good!####It=O '=O only=O open=O for=O lunch=T but=O the=O food=T is=O so=O good=O !=O
+It' only open for lunch but the food is so good!####It=O only=O open=O for=O lunch=T but=O the=O food=T is=O so=O good=O !=O
 If you like seafood and/or Greek food you will love this place though it is not limited to just these things.####If=O you=O like=O seafood=T and/or=O Greek=T food=T you=O will=O love=O this=O place=O though=O it=O is=O not=O limited=O to=O just=O these=O things=O .=O
 " The menu includes pub fare--burgers, steaks and shepherds pie--and even a portabella lasagna for those black sheep known as "vegetarians.####The=O menu=T includes=O pub=T fare=T --=O burgers=T ,=O steaks=T and=O shepherds=T pie=T --=O and=O even=O a=O portabella=T lasagna=T for=O those=O black=O sheep=O known=O as=O vegetarians=O .=O
 How can they survive serving mediocre food at exorbitant prices?!####How=O can=O they=O survive=O serving=O mediocre=O food=T at=O exorbitant=O prices=T ?=O !=O
@@ -791,7 +791,7 @@ I stopped by for some brunch today and had the vegan cranberry pancakes and some
 Weekends can get crowded, but still highly recommended.####Weekends=O can=O get=O crowded=O ,=O but=O still=O highly=O recommended=O .=O
 It gets very crowded so I would suggest that you get their early.####It=O gets=O very=O crowded=O so=O I=O would=O suggest=O that=O you=O get=O their=O early=O .=O
 Sweet Irish bartender is always happy and able to bring a smile to my friends a my face.####Sweet=O Irish=O bartender=T is=O always=O happy=O and=O able=O to=O bring=O a=O smile=O to=O my=O friends=O a=O my=O face=O .=O
-I always find myself sitting next to someone in the theatre industry- interesting to hear ideas hashed out while having a quick bite to eat.####I=O always=O find=O myself=O sitting=O next=O to=O someone=O in=O the=O theatre=O industry-=O interesting=O to=O hear=O ideas=O hashed=O out=O while=O having=O a=O quick=O bite=O to=O eat=O .=O
+I always find myself sitting next to someone in the theatre industry- interesting to hear ideas hashed out while having a quick bite to eat.####I=O always=O find=O myself=O sitting=O next=O to=O someone=O in=O the=O theatre=O industry=O interesting=O to=O hear=O ideas=O hashed=O out=O while=O having=O a=O quick=O bite=O to=O eat=O .=O
 Its good to go there for drinks if you don't want to get drunk because you'll be lucky if you can get one drink an hour the service is so bad.####Its=O good=O to=O go=O there=O for=O drink=T if=O you=O do=O n't=O want=O to=O get=O drunk=O because=O you=O 'll=O be=O lucky=O if=O you=O can=O get=O one=O drink=T an=O hour=O the=O service=T is=O so=O bad=O .=O
 Anyway, the owner was fake.####Anyway=O ,=O the=O owner=T was=O fake=O .=O
 Owner is pleasant and entertaining.####Owner=T is=O pleasant=O and=O entertaining=O .=O
