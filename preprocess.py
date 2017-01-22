@@ -74,9 +74,14 @@ def build_pkl(ds, schema="OT"):
                 tag_seq.append(t)
             if schema == 'BIEOS':
                 tag_seq = ot2bieos(tag_sequence=tag_seq)
+            # for debug
+            if i < 400:
+                i += 1
+                continue
             r['words'] = word_seq
             r['tags'] = tag_seq
             r['text'] = text
+
             if has_tagged:
                 pos_res = pos_tags[i]
             else:
@@ -85,6 +90,7 @@ def build_pkl(ds, schema="OT"):
                 parse_triples = dependencies[i]
             else:
                 parse_res = list(dep_parser.parse([unicode(w, encoding='utf-8') for w in word_seq]))[0]
+                print list(parse_res.triples())
                 # head->relation->tail
                 parse_triples = [(str(head[0]), str(relation), str(tail[0])) for (head, relation, tail) in list(parse_res.triples())]
 
@@ -145,6 +151,11 @@ def extract_text(dataset_name):
         n_sen += 1
         text = sen.xpath('.//text/text()').extract()[0]
         text = text.replace(u'\xa0', ' ')
+        # note: preprocessing in the raw text should not change the index
+        text = text.replace(u'é', 'e')
+        text = text.replace(u'’', "'")
+        #text = text.replace(u"‘", "")
+        #text = text.replace(u' – ', ', ').strip()
         cur_text = text
 
         assert isinstance(dataset_name, str)
@@ -174,6 +185,11 @@ def extract_text(dataset_name):
                     # there is no aspect in the text
                     continue
                 flag = False
+                # remove special symbol in aspect term
+                target = target.replace(u'é', 'e')
+                target = target.replace(u'’', "'")
+                #target = target.replace(u"‘", "")
+                #target = target.replace(u' – ', ', ').strip()
                 if text[_from:_to] == target:
                     flag = True
                 elif (_from - 1 >= 0) and text[(_from - 1):(_to - 1)] == target:
@@ -207,8 +223,7 @@ def extract_text(dataset_name):
         #cur_text = cur_text.replace('-', ' ')
         cur_text = cur_text.replace(' - ', ', ').strip()
         cur_text = cur_text.replace('- ', ' ').strip()
-        #cur_text = cur_text.replace(' – ', ', ').strip()
-        cur_text = cur_text.replace(u' – ', ', ').strip()
+        
         # split words and punctuations
         if '? ' not in cur_text:
             cur_text = cur_text.replace('?', '? ').strip()
@@ -221,7 +236,7 @@ def extract_text(dataset_name):
         cur_text = cur_text.replace('"', '')
         cur_text = cur_text.replace(" '", " ")
         cur_text = cur_text.replace("' ", " ")
-        
+
         cur_text = cur_text.replace(':', ', ')
         if dot_exist:
             cur_text += '.'
@@ -233,8 +248,12 @@ def extract_text(dataset_name):
         cur_text = cur_text.replace("you 're", "you're")
 
         # replace some special symbol
+        cur_text = cur_text.replace(u' – ', ', ').strip()
+        #cur_text = cur_text.replace(u"", "e")
+        
         cur_text = cur_text.replace(u"‘", "")
-        cur_text = cur_text.replace(u"’", "'")
+        #cur_text = cur_text.replace(u"’", "'")
+        #cur_text = cur_text.encode('utf-8')
         # "‘, ’"
         #xx = '▒' ('\xe9', '\u2026'), 
         # filter the non-ascii character
@@ -288,9 +307,10 @@ if __name__ == '__main__':
     #ds = '14semeval_laptop_train'
     ds = 'all'
     if ds == 'all':
-        for ds in ['14semeval_laptop_train', '14semeval_laptop_test', 
-        '14semeval_rest_train', '14semeval_rest_test', '16semeval_rest_train', '16semeval_rest_test',
-        '15semeval_rest_test', '15semeval_rest_train']:
+        for ds in ['15semeval_rest_test', '15semeval_rest_train', 
+        '14semeval_laptop_train', '14semeval_laptop_test', 
+        '14semeval_rest_train', '14semeval_rest_test', 
+        '16semeval_rest_train', '16semeval_rest_test']:
             extract_text(dataset_name=ds)
             #build_pkl(ds=ds)
     else:
