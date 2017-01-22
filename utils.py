@@ -143,6 +143,12 @@ def sent2tags(sent):
 def sent2postags(sent):
     return [t for t in sent['postags']]
 
+def sent2chunktags(sent):
+    return [t for t in sent['chunktags']]
+
+def sent2deps(sent):
+    return sent['dependencies']
+
 def sent2words(sent):
     return [w for w in sent['words']]
 
