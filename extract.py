@@ -22,18 +22,22 @@ def crf_extractor(train_set, test_set, embeddings=None, model_name=None, ds_name
     train_Y = [sent2tags(sent) for sent in train_set]
     test_Y = [sent2tags(sent) for sent in test_set]
 
+    n_nsubj_train = sum([1 for tags in train_Y if 'T' not in tags])
+    n_nsubj_test = sum([1 for tags in test_Y if 'T' not in tags])
+    print "n_train_w/o_aspect:", n_nsubj_train
+    print "n_test_w/o_aspect:", n_nsubj_test
     #AD = AsepectDetector(name='cnn', embeddings=embeddings)
     #embeddings = None
     #pred_res = AD.classify(trainset=train_set, testset=test_set)
     # filtered sentence without aspects
     #new_test_set = [test_set[i] for (i, y) in enumerate(pred_res) if y > 0.5]
     new_test_set = test_set
-    if not embeddings:
+    if True:
         print "crf with word-level features..."
         #train_X = feature_extractor(data=train_set, _type='map', feat='word', embeddings=embeddings)
         #test_X = feature_extractor(data=test_set, _type='map', feat='word', embeddings=embeddings)
-        train_X = [sent2features(sent) for sent in train_set]
-        test_X = [sent2features(sent) for sent in new_test_set]
+        train_X = [sent2features(sent, embeddings) for sent in train_set]
+        test_X = [sent2features(sent, embeddings) for sent in new_test_set]
         test_Y = [sent2tags(sent) for sent in new_test_set]
     else:
         print "crf with word embeddings..."
@@ -342,13 +346,14 @@ def run(ds_name, model_name='crf', feat='word'):
     test_set = cPickle.load(open('./pkl/%s_test.pkl' % ds_name, 'rb'))
 
     glove_embeddings, embeddings = {}, {}
-    print "load word embeddings..."
-    with open('../WIKI/word_vec_200.txt', 'r') as fp:
+    embedding_path = '../yelp/yelp_vec_200_2.txt'
+    print "load word embeddings from %s..." % embedding_path
+    with open(embedding_path, 'r') as fp:
         for line in fp:
             values = line.strip().split()
             word, vec = values[0], values[1:]
             glove_embeddings[word] = vec
-
+    n_oov = 0
     dim_w = len(glove_embeddings['the'])
     vocab = {}
     for sent in train_set + test_set:
@@ -361,12 +366,14 @@ def run(ds_name, model_name='crf', feat='word'):
                     word_emb = [float(ele) for ele in glove_embeddings[w_norm]]
                 else:
                     word_emb = np.random.uniform(-0.25, 0.25, dim_w)
+                    n_oov += 1
                 embeddings[w_norm] = word_emb
+    print "n_oov = %s" % n_oov
     if model_name == 'crf':
         if feat_name == 'embedding':
-            crf_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
+            crf_extractor(train_set=train_set, test_set=test_set, model_name=model_name, ds_name=ds_name, embeddings=embeddings)
         else:
-            crf_extractor(train_set=train_set, test_set=test_set, model_name=model_name, ds_name=ds_name)
+            crf_extractor(train_set=train_set, test_set=test_set, model_name=model_name, ds_name=ds_name, embeddings=embeddings)
     elif model_name == 'svm':
         svm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
     elif model_name == 'lstm':

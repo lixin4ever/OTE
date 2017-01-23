@@ -1,0 +1,216 @@
+Not the biggest portions but adequate .####portions####PREDICT_NONE####ERROR
+I 've been to this restaurant over a dozen times with no complaints to date .####restaurant####PREDICT_NONE####ERROR
+We love breakfast food .####GOLD_NONE####breakfast food####NON_OT
+This is a great place to get a delicious meal .####meal####PREDICT_NONE####ERROR
+I was highly disappointed in the food at Pagoda .####food####PREDICT_NONE####ERROR
+The lemon chicken tasted like sticky sweet donuts and the honey walnut prawns , the few they actually give youwere not good .####lemon chicken,honey walnut prawns####lemon chicken tasted like sticky sweet donuts,honey walnut prawns####ERROR
+The prices are outrageous , especially since the food was actually less satisfying than most neighborhood Chinese establishments .####GOLD_NONE####food####NON_OT
+I complained to the manager , but he was not even apologetic .####manager####PREDICT_NONE####ERROR
+I highly recommend Mioposto .####Mioposto####PREDICT_NONE####ERROR
+I am so happy to have a wonderful Italian restaurant in my neighborhood .####Italian restaurant####PREDICT_NONE####ERROR
+She had heard from a co-worker about this place .####GOLD_NONE####place####NON_OT
+Finally a meal that you will remember for a long time !####meal####PREDICT_NONE####ERROR
+Some of the food is clearly oriented toward foodies like me so if your not a foodie nothing wrong with that head over to McDonalds or some Ruby Tuesday and have at it !####GOLD_NONE####food####NON_OT
+I have eaten here three times and have found the quality and variety of the fish to be excellent .####fish####PREDICT_NONE####ERROR
+Portions contain less fish than one would expect , particularly since prices are in line with the best sushi places in NYC Masa excluded , of course .####GOLD_NONE####Portions####NON_OT
+We were then charged for their most expensive sake $ 20+ per serving when we in fact drank a sake of less than half that price .####GOLD_NONE####sake####NON_OT
+They pay such detail to everything from miso soup to complex rolls .####miso soup,rolls####rolls####ERROR
+Their apps are all delicious .####apps####PREDICT_NONE####ERROR
+the bus boy even spotted that my table was shaking a stabilized it for me .####bus boy####PREDICT_NONE####ERROR
+the only problem is you really have to warm up the pizza before it 's edible , even when you order ahead .####pizza####PREDICT_NONE####ERROR
+BUt once done , it 's not too much dough , not too much cheese , not too much sauce .####GOLD_NONE####cheese,sauce####NON_OT
+Its worth the wait , especially since they 'll give you a call when the table is ready .####GOLD_NONE####wait####NON_OT
+and the best summertime deck experience -- they will even bring you a blanket if you get cold in the Seattle evening weather .####deck####PREDICT_NONE####ERROR
+Every time 0-sixtynine is called the bartender buys everyone drinks !####bartender####PREDICT_NONE####ERROR
+Not alot of smoking places left in New York , but I have found my favorite smoking balconey in the city .####balconey####PREDICT_NONE####ERROR
+Go Beyond the California Rolls .####GOLD_NONE####Rolls####NON_OT
+I 've had the Jellyfish , Horse Mackerel , Blue Fin Tuna and the Sake Ikura roll among others , and they were all good .####Jellyfish,Horse Mackerel,Blue Fin Tuna,Sake Ikura roll####Sake Ikura roll####ERROR
+My only negative comment is that I wish the pieces were a little bigger .####pieces####PREDICT_NONE####ERROR
+We ate on the outside patio area for dinner on a Saturday night .####GOLD_NONE####outside patio area####NON_OT
+The outside patio area has an abbreviated menu .####menu####outside patio area####ERROR
+We ordered the marinated grapes , buffalo style chicken wings , and the turkey sandwich .####GOLD_NONE####buffalo style chicken wings####NON_OT
+We are locals , and get the feeling the only way this place survives with such average food is because most customers are probably one-time customer tourists .####place,food####food####ERROR
+Unless you are just stopping in for a few drinks I would n't recommend going here .####drinks####PREDICT_NONE####ERROR
+I loved the pumpkin ravioli and the goat cheese gnocchi 5 big ones to a plate instead of 20 or so little gnocchis and my sister loved her filet mignon on top of spinach and mashed potatoes .####pumpkin ravioli,goat cheese gnocchi,filet mignon on top of spinach and mashed potatoes####pumpkin ravioli,goat cheese gnocchi####ERROR
+It was romantic , and even nice even with my sister , reminded me of Italy , and had artwork and music that kept up the feeling of being in a Mediterrean villa .####artwork,music####artwork and music####ERROR
+The chicken curry and chicken tikka masala are my favorite meat dishes .####chicken curry,chicken tikka masala####chicken curry and chicken tikka masala####ERROR
+It 's located in a strip mall near the Beverly Center , not the greatest location , but the food keeps me coming back for more .####location,food####food####ERROR
+I think I have probably tried each item on their menu at least once it is all excellent .####menu####PREDICT_NONE####ERROR
+I can highly recommend their various saag and paneer and korma .####saag,paneer,korma####PREDICT_NONE####ERROR
+I really enjoyed my meal here .####meal####PREDICT_NONE####ERROR
+I had yummy lamb korma , saag paneer , samosas , naan , etc .####lamb korma,saag paneer,samosas,naan####lamb korma,saag paneer,samosas####ERROR
+The naan was some of the best I 've had and I really enjoyed the bhartha , not too tomatoey .####naan,bhartha####naan####ERROR
+I do n't understand how I was a stranger to this place for so long the fajita salad , the colorado , the fajitas , EVERYTHING is delicious .####place,fajita salad,colorado,fajitas####fajita salad,fajitas####ERROR
+I just found out that you can have the place to yourself on nights and weekends for a private party , ca n't wait to celebrate my next birthday there .####place####PREDICT_NONE####ERROR
+first of all henrymillionare you do n't know a thing about middle eastern food so do n't talk .####GOLD_NONE####middle eastern food####NON_OT
+Great financial district mexican spot .####mexican spot####district mexican spot####ERROR
+I had the beef kabobs with a side of cucumber yogurt .####GOLD_NONE####beef kabobs####NON_OT
+Her sister had the baklava for dessert !####GOLD_NONE####baklava for dessert####NON_OT
+Holy Hummus !####Hummus####Holy Hummus####ERROR
+The food is here is incredible , though the quality is inconsistent during lunch .####food,lunch####food####ERROR
+The side of potatoes is to die for , as is the labne (yogurt dip) .####side of potatoes,labne (yogurt dip)####PREDICT_NONE####ERROR
+My first time to dine at this restaurant was with my son and it was absolutely horrible !####restaurant####PREDICT_NONE####ERROR
+We waited over 30 minutes for our drinks and over 1 1/2 hours for our food .####GOLD_NONE####food####NON_OT
+I swore never to return for a warm beer and mediocre meal .####beer,meal####beer####ERROR
+Outside in the area between the restaurant and the park , children were running around while their parents sipped wine .####GOLD_NONE####park,wine####NON_OT
+We ordered a selection of the small plates , and the shoe string onions , goat cheese pizza , grilled asparagus and fried brie with fruit were all very good .####shoe string onions,goat cheese pizza,grilled asparagus,fried brie with fruit####goat cheese pizza,grilled asparagus####ERROR
+It was like dining at a completely different restaurant .####GOLD_NONE####restaurant####NON_OT
+Sunday afternoons there is a band playing and it is lots of fun .####band####PREDICT_NONE####ERROR
+Seattle 's BEST Winelist####Winelist####PREDICT_NONE####ERROR
+Ray 's suprisingly has the city 's BEST & most diverse wine list .####wine list####PREDICT_NONE####ERROR
+I would go back for the wine experience alone .####wine####PREDICT_NONE####ERROR
+Nice job !####GOLD_NONE####job####NON_OT
+It is sad to see a place that was once THE place to meet and eat for Bfast or Lunch , now be the place that is a big DONT BOTHER .####place,place,place####place,place####ERROR
+The food is not what it once was potions have seriously seen downsizing prices have gone up , and the service is the worst I have experienced anywhere including mainland Europe .####food,potions,service####food,service####ERROR
+What may be interesting to most is the worst sevice/attitude comes from the owners of this establishment .####owners####PREDICT_NONE####ERROR
+Perhaps now , Scooner or Later falls into the Dive category .####Scooner or Later####PREDICT_NONE####ERROR
+I hope one day Scooner or Later returns to what it once was .####Scooner or Later####PREDICT_NONE####ERROR
+Open & Cool Place with the Best Pizza and Coffee####Place,Pizza,Coffee####Place,Pizza and Coffee####ERROR
+The coffe is very good , too .####coffe####PREDICT_NONE####ERROR
+It 's a great place to enjoy food and meet friends .####place,food####PREDICT_NONE####ERROR
+I was visiting SoCal a couple of months ago when the friend I was visiting decided to take me to this restaurant .####GOLD_NONE####restaurant####NON_OT
+She was actually going to take me to another mediterranean restaurant right across the street but they were not open yet even though it was a few minutes past their opening time .####GOLD_NONE####mediterranean restaurant####NON_OT
+WHAT ELSE CAN YOU SAY NICE PEOPLE AMAZING FOOD WOW####PEOPLE,FOOD####PEOPLE AMAZING FOOD WOW####ERROR
+Eggs , pancakes , potatoes , fresh fruit and yogurt - everything they serve is delicious .####Eggs,pancakes,potatoes,fresh fruit,yogurt####Eggs,pancakes,potatoes,fresh fruit####ERROR
+great meal , the fish on the omikase platter was absolutely decadent - there was none of the stringiness that sometimes accompanies fair sushi - this fish was perfect ! ! ! !####meal,fish on the omikase platter####meal,fish,fish####ERROR
+Melt in your mouth nigiri and sashmi , and very tasty rolls too .####nigiri,sashmi,rolls####rolls####ERROR
+Be sure to try the oyster roll .####oyster roll####PREDICT_NONE####ERROR
+I ca n't saybenough good things about this restaurant , and I ca n't wait for my next several visits .####restaurant####PREDICT_NONE####ERROR
+The best Chuwam Mushi I have ever had .####Chuwam Mushi####PREDICT_NONE####ERROR
+A cozy spot for 2####spot####PREDICT_NONE####ERROR
+I ca n't believe Murphy's has been around for over 25 years , amazing .####Murphy's####PREDICT_NONE####ERROR
+Brunch at Murphy 's is to die for , my specialty egg white omelet , the food is always freshly prepared .####Brunch,egg white omelet,food####specialty egg white omelet,food####ERROR
+The restaurant offers an extensive wine list and an ambiance you wo n't forget !####wine list,ambiance####ambiance####ERROR
+Love the enchiladas and chicken soup , and be sure to check out their specials .####enchiladas,chicken soup,specials####enchiladas and chicken soup,specials####ERROR
+The cooks have been at the restaurant for years and cook family recipes .####cooks####PREDICT_NONE####ERROR
+Should have gone to Trader Joe 's and had frozen pizza ,####GOLD_NONE####frozen pizza####NON_OT
+We stood there for 10 minutes while employees walked back and forth ignoring us .####employees####PREDICT_NONE####ERROR
+Once seated it took about 30 minutes to finally get the meal .####GOLD_NONE####meal####NON_OT
+The pizza was slightly reminescent of Baker 's Beach pizza which occupied the the space years ago a distant second .####GOLD_NONE####pizza,pizza,space####NON_OT
+This establishment is consistent with my feelings of the rest of Chow Foods group .####GOLD_NONE####establishment####NON_OT
+Check out the art on the walls , very colorful !####art on the walls####walls####ERROR
+i have been eating at this place for over 8 years now and i have never had one bad meal .####meal####PREDICT_NONE####ERROR
+plenty of food , trust me .####food####PREDICT_NONE####ERROR
+The place is the next best thing to my Moms cooking .####GOLD_NONE####place####NON_OT
+Not only can the selection be innovative , but there 's a nice balance of traditional sushi as well .####selection,sushi####balance of traditional sushi####ERROR
+The nicest waiters in town .####waiters####PREDICT_NONE####ERROR
+Your a sushi fan , you love expertly cut fish , great sake , a killer SOHO location , and of course , Salmon , Tuna , Fluke , Yellow Tail , Cod , Mackeral , JellyASPECT1 , fish , fish , fish , fish , fish , fish , Blue Fin Tuna , fish , fish , sake , sake , sake , sake , sake , and a varity of sake .####sushi,fish,sake,SOHO location,Salmon,Tuna,Fluke,Yellow Tail,Cod,Mackeral,fish,fish,fish,fish,fish,fish,Tuna,fish,fish,sake,sake,sake,sake,sake,sake####fish,sake,fish,fish,fish,fish,fish,Blue Fin Tuna,fish,sake,sake,sake,sake,sake####ERROR
+There is only one place on the east coast that has it all , plus a lot more .####place####PREDICT_NONE####ERROR
+Bring your cell phone cause you may have to wait to get into the best sushi restaurant in the world , BLUE RIBBON SUSHI .####BLUE RIBBON SUSHI####sushi restaurant####ERROR
+Blue Ribbon lives up to it 's fantastic reputation .####Blue Ribbon####PREDICT_NONE####ERROR
+I know many people have their favorite types of pizza and pizza places , but Mioposto 's pizza lacks quality and good taste .####pizza,pizza,pizza####pizza,pizza####ERROR
+The only positive thing about Mioposto is the nice location .####Mioposto,location####location####ERROR
+People complain about the dim lighting , but that is one what I love about this place , if you want to stare at your food in bright light , go to McDonalds .####GOLD_NONE####dim lighting,place,food####NON_OT
+The only problem would be the wait , but we usually just have a drink in the front while wait .####wait,wait####PREDICT_NONE####ERROR
+Seafood Plus####Seafood####Seafood Plus####ERROR
+The appetizer of oysters, lobster, crab (small size) made a perfect entre for my wife .####appetizer of oysters, lobster, crab (small size)####crab (small size)####ERROR
+Leave room for dessert .####dessert####PREDICT_NONE####ERROR
+I noice most reviews mention the bad service .####GOLD_NONE####service####NON_OT
+We had a very hard time getting the waitress attention and finally had to get up and go inside to speak to a manager .####waitress####PREDICT_NONE####ERROR
+As it turns out the owner was seated right next to us and when he came over to check on our problems was very dismissive and offered a token 20 % discount on our bill .####owner####PREDICT_NONE####ERROR
+When the bill came , he only took the discount off the food and not the drinks .####GOLD_NONE####food,drinks####NON_OT
+I went home & looked them up online again where I discovered there is a link for a give away that does n't work so emailed the restaurant about the non existent service & deceptive link .####restaurant####service####ERROR
+After sitting at the bar for over 20 minutes the bar keep had made only 2 drinks & kept telling us she 'd be right with us .####bar keep####PREDICT_NONE####ERROR
+If you can , come to this place by boat and make it a whole evening .####place####PREDICT_NONE####ERROR
+Great seasonal fish and seafood , with a classy waterfront setting .####seasonal fish,seafood,waterfront setting####seasonal fish####ERROR
+Great Pizza , Poor Service####Pizza,Service####Service####ERROR
+Love their pizza , especially the mushroom pizza .####pizza,pizza####pizza,mushroom pizza####ERROR
+Prefer to order it and pick it up though because I do n't like the servers , one young woman in particular .####servers,young woman####servers,woman####ERROR
+Management should really take notice and train their waitstaff and teach them some proper manners .####Management,waitstaff####waitstaff,manners####ERROR
+This place is famous for their breakfast .####breakfast####place####ERROR
+The food is great and they make a mean bloody mary .####food,bloody mary####food,mean bloody mary####ERROR
+I love breakfast here .####breakfast####PREDICT_NONE####ERROR
+there was a guy playing the piano and singing at the bar area which was separate from the dinning area .####GOLD_NONE####piano,bar area####NON_OT
+You can easily hear him though so it was a pleasant sound and not overbearing .####GOLD_NONE####sound####NON_OT
+we ordered the honey walnut prawns which we always order at every chinese restaurant to determine the quality of food .####GOLD_NONE####honey walnut prawns,food####NON_OT
+First off , the food came fast and all together , i like that i hate the pretentiousness of things coming in one after the other .####GOLD_NONE####food####NON_OT
+so about the prawns , they were fresh and had a slight crispiness about the batter soooo good the walnuts were cut in smaller pieces and very crunchy and tasty .####prawns,batter,walnuts####prawns,batter####ERROR
+best honey walnyt prawns that we have every tasted .####honey walnyt prawns####PREDICT_NONE####ERROR
+the brocollis were so fresh and tasty .####brocollis####PREDICT_NONE####ERROR
+i would normally not finish the brocolli when i order these kinds of food but for the first time , every piece was as eventful as the first one the scallops and prawns was so fresh and nicely cooked .####brocolli,scallops,prawns####scallops,prawns####ERROR
+for desert we had the mango ginger creme brulee oh la la yummy ! ! ! .####mango ginger creme brulee####mango ginger creme brulee oh la la####ERROR
+The sushi here is perfectly good , but for $ 5 a piece , either the slices of fish should be larger , or there should be no pretense that this is a moderately priced restaurant even for NYC .####sushi,restaurant####sushi,slices of fish####ERROR
+The restaurant was busy , however there were a few tables open .####GOLD_NONE####restaurant####NON_OT
+So here we are , my wife , 3 year old daughter and I trying to pass the time by hanging out in the front of the building where the murals and artifacts are .####GOLD_NONE####murals####NON_OT
+We went back to the restaurant and low and behold , we were seated at one of the tables that was available 30 minutes ago ! !####GOLD_NONE####tables####NON_OT
+We put in our order and although we ordered 4 appetizers , the food did n't arrive until 45 minutes laterWITH OUR MAIN COURSE .####GOLD_NONE####food####NON_OT
+Oh I forgot to mention that they do n't have bread service .####GOLD_NONE####service####NON_OT
+Food wise , its ok but a bit pricey for what you get considering the restaurant is n't a fancy place .####Food,restaurant####Food,place####ERROR
+If I needed to name some they would include the location to the beach or Golden Gate park .####location####Golden Gate park####ERROR
+Parking is reasonably good , they have their own lot and you can park in the park nearby .####GOLD_NONE####Parking####NON_OT
+Another plus is the open feel of the restaurant with glass walls on all sides .####feel,glass walls####feel####ERROR
+I 'd hate for tourists to go to Park Chalet and think that this is how all San Francisco restaurants are like .####GOLD_NONE####Park####NON_OT
+Amazing Spanish Mackeral special appetizer and perfect box sushi that eel with avodcao - um um um .####Spanish Mackeral special appetizer,box sushi,eel with avodcao####Spanish Mackeral special appetizer,box sushi####ERROR
+As usual the omikase did n't disappoint in freshness , although it scored low on creativity and selection .####omikase####PREDICT_NONE####ERROR
+It is n't the cheapest sushi but has been worth it every time .####sushi####PREDICT_NONE####ERROR
+Schooner or Later 's charming location along the marina in Long Beach and average food does not , unfortunately , compensate for its very poor customer service .####location along the marina in Long Beach,food,customer service####food,customer service####ERROR
+As part of a small party of four , our food was dropped off without comment ;####GOLD_NONE####food####NON_OT
+When we finally were able to flag someone down , it was someone entirely different from the person who had dropped off the food , who was also not the same person who had taken our order .####GOLD_NONE####food####NON_OT
+After one member of our party had been bumped repeatedly by a waitress , a polite request that he not be bumped sent the waitress into an abusive rant .####waitress,waitress####waitress####ERROR
+She promised to speak to the waitress who had flown off in a rage , but we could hardly take her promise seriously , seeing as she had n't bothered to get the waitresses name .####GOLD_NONE####waitress,waitresses####NON_OT
+We were only in Seattle for one night and I 'm so glad we picked Rays for dinner !####Rays####PREDICT_NONE####ERROR
+We shared the family platter and I especially enjoyed the black cod in sake kasu .####black cod in sake kasu####black cod####ERROR
+I ended the meal with the unusual dessert of a port and chocolate tasting ! .####dessert of a port and chocolate tasting####dessert####ERROR
+Great drinks , corn beef hash , coffee , B Fast burritos , Gluten Free menu .####drinks,corn beef hash,coffee,B Fast burritos,menu####drinks,corn beef hash,coffee,burritos####ERROR
+Best Neighborhood Standby .####Standby####PREDICT_NONE####ERROR
+In Grammercy/Union Square/East Village this is my neighbors and my favorite spot .####spot####PREDICT_NONE####ERROR
+The music is great , no night better or worse , the bar tenders are generous with the pouring , and the lighthearted atmosphere will lifts you spirits .####music,bar tenders,atmosphere####music,bar tenders,lighthearted atmosphere will####ERROR
+Good Food , Great Service , Average Prices For the Strip####Food,Service####Food####ERROR
+I decided to eat at Stack because of their price fixed pre-show dinner .####price fixed pre-show dinner####PREDICT_NONE####ERROR
+The music playing was very hip , 20-30 something pop music , but the subwoofer to the sound system was located under my seat , which became annoying midway through dinner .####music,music,subwoofer to the sound system####music playing,sound system####ERROR
+We were quickly seated and requested the special dinner , which came with , 1 Shellfish and Shrimp appetizer or Caesar Salad , 2 9 oz steak with a single potato chip , and 3 homemade donut holes .####GOLD_NONE####special dinner####NON_OT
+It was n't the freshest seafood ever , but the taste and presentation was OK .####seafood####presentation####ERROR
+Before the steak came , the server told us that the steak did not come with any sides and suggested I pick something from the menu .####GOLD_NONE####steak,server,sides####NON_OT
+The 9 oz steak came next and it tasted great , at least initially .####9 oz steak####steak####ERROR
+The steak was done to my exact liking medium rare and was nice and juicy .####steak####PREDICT_NONE####ERROR
+It ? s served with either a peppercorn sauce or red wine reduction , though both were indistinguishable in taste .####peppercorn sauce,red wine reduction####peppercorn sauce or red wine reduction####ERROR
+Though , one thing I realized later on was that the restaurant either used MSG or a meat tenderizer on the steak .####steak####PREDICT_NONE####ERROR
+The desert was the perfect ending to an almost perfect dinner .####desert,dinner####desert####ERROR
+Overall , I would go back and eat at the restaurant again .####restaurant####PREDICT_NONE####ERROR
+good sake , good food , i honestly do n't know much about japanese food at all .####sake,food,food####sake,food####ERROR
+Server made several sake suggestions which were very good .####Server,sake####Server,sake suggestions####ERROR
+had many dishes but the BEST was the lobster 3 ways .####lobster 3 ways####PREDICT_NONE####ERROR
+Also , there was only one bathroom stall probably need more for such big crowds .####bathroom stall####bathroom####ERROR
+My favortie pizza joint in Seattle####pizza joint####PREDICT_NONE####ERROR
+I also really enjoy the simplicity of the decor and intimate feeling of a small restaurant .####decor,feeling####decor,restaurant####ERROR
+It 's just the right size for the menu .####GOLD_NONE####menu####NON_OT
+My husband and I love eating at Mioposto Cafe .####Mioposto Cafe####PREDICT_NONE####ERROR
+We 're ca n't say enough about their delicious gourmet pizza's !####pizza's####PREDICT_NONE####ERROR
+You wo n't be disappointed by their menu .####menu####PREDICT_NONE####ERROR
+It 's a salad on top of pizza crust .####GOLD_NONE####salad####NON_OT
+Nothing on the menu is less than amazing .####menu####PREDICT_NONE####ERROR
+Go with some friends , wait the half hour or so with a cup of joe , and enjoy more than your average breakfast .####breakfast####PREDICT_NONE####ERROR
+Good eats .####eats####PREDICT_NONE####ERROR
+Maybe it is good for that one night once in a blue moon when the chefs decide to use fish that 's half-way decent .####fish####PREDICT_NONE####ERROR
+Fancy pieces of exotic fish on a $ 100 dollar plate and NOT ONE was eatable .####exotic fish,plate####fish####ERROR
+The best dish are the honwy walnut prawns just outstanding .####honwy walnut prawns####dish####ERROR
+Southglenn is largest location .####GOLD_NONE####Southglenn,location####NON_OT
+There was a really nice vibe about the placegood music , atmosphere and happy looking people .####vibe,music,atmosphere,people####vibe,placegood music,atmosphere####ERROR
+To the owners of Open Sesame ca n't wait to come back to dine at your restaurant ! .####Open Sesame####owners of Open Sesame####ERROR
+It 's a tiny place so if you get there before 8pm on a weekend Thurs ? Sun you will find it easier to get a table or a seat at the sushi bar .####place####PREDICT_NONE####ERROR
+Sit in the Balcony####Balcony####PREDICT_NONE####ERROR
+Fair menu selection .####menu selection####Fair menu selection####ERROR
+If it 's nice outside , request for a table in the balcony .####balcony####PREDICT_NONE####ERROR
+That was the last night in Vegas and was too late and most of the restaurant were closing , so we walked in the check the place .####GOLD_NONE####place####NON_OT
+We were seated right away , the table was private and nice .####table####PREDICT_NONE####ERROR
+Groovy music made the dinner casual .####music####Groovy music####ERROR
+I have a but here , there was a bathroom attendant in the restroom which was odd .####restroom####bathroom attendant####ERROR
+I felt ackward and next time went to the casino bathroom .####GOLD_NONE####casino bathroom####NON_OT
+The chips and salsa are so yummy , and the prices are fabulous .####chips and salsa####chips,salsa####ERROR
+The catering is out of this world , and Raouls chicken vegetable soup rocks my world ! ! !####catering,Raouls chicken vegetable soup####Raouls chicken vegetable soup####ERROR
+This review is for the Southglen location which is not listed in Citysearch , I wish this review would make a difference enough for it to be addressed by management but Snooze has people climbing over each other for a chance to eat at this overpriced restaurant with mediocre food and service , so this review as well as the other negative ones for their Larimer location will go unaddressed .####GOLD_NONE####Southglen location,restaurant,food,service,Larimer location####NON_OT
+The presentation of Snooze is excellent and it is one of those places that you feel more sophisticated just for being there ; but peel back the layers and you have an overpriced IHOP with a high brow menu .####Snooze,menu####presentation of Snooze####ERROR
+They serve it in a tall , skinny hour-glass shaped glass to disguise the fact that you a getting a small juice at the price of a half gallon in a supermarket .####juice####PREDICT_NONE####ERROR
+The pancakes were certainly inventive but $ 850 for 3 , 6 pancakes one of them was more like 5 in the pancake flight sample of 3 different pancakes is well over-priced .####pancakes,pancakes,pancakes####pancakes,pancakes####ERROR
+The flavors were good but I have had far better pancakes at a German pancake specialty restaurant that were a little cheaper but significan'tly larger .####GOLD_NONE####flavors,pancakes,German pancake specialty restaurant####NON_OT
+On my meal I had to send back my eggs for a simple request of breaking the yokes before cooking , and would have had to send them back again if I had n't rejected the meal all together .####meal,eggs,meal####PREDICT_NONE####ERROR
+I rejected it because in the process of attempting to fix the eggs they broke something else in the dish and I was too frustrated to continue .####dish####eggs####ERROR
+To their credit they removed the dish from the check ; but no manager stopped by to ask what the problem was .####manager####PREDICT_NONE####ERROR
+In the end our check came to $ 27 for 4 small pancakes , a breakfast burrito , an orange juice and an iced tea I had water .####pancakes,breakfast burrito,orange juice,iced tea####pancakes,orange juice####ERROR
+Snooze provided an inventive pancake offering , but Le Peep would have provided better service and quality .####GOLD_NONE####service####NON_OT
+To start things off , our lovely server Brooke was quickly on hand to take my drink order .####Brooke####server Brooke####ERROR
+My party of two was feeling particularly ambitious , and we splurged on the Shilshole Sampler beautiful assortment of enormous white gulf prawns , smoked albacore tuna , Ray 's fantastic manila clams seasoned with dill , scallops in a tasty soy dressing , and a tiny pile of Dungeness crab atop a sublime butter sauce .####Shilshole Sampler,white gulf prawns,manila clams,soy dressing,butter sauce####Shilshole Sampler,smoked albacore tuna,manila clams,scallops####ERROR
+My friend enjoyed the grilled Alaskan King Salmon with delectable creamed Washington russet potatoes and crisp green beans .####grilled Alaskan King Salmon,creamed Washington russet potatoes,green beans####grilled Alaskan King Salmon####ERROR
+I had a taste of all three items on her plate , and they were superb .####plate####PREDICT_NONE####ERROR
+While I could have done without the youth who shared the evening with us , our wonderful server and food made the experience a very positive one .####server,food####server and food####ERROR
+Oh yeahthe view was good , too .####view####yeahthe view####ERROR

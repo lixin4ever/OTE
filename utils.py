@@ -8,9 +8,9 @@ import os
 #from keras.utils.np_utils import to_categorical
 from data import Token, Sequence, FeatureIndexer
 
-def word2features(sent, i):
+def word2features(sent, i, embeddings):
     """
-    construct word-level features for each token
+    crf feature extractor
     """
     word = sent['words'][i]
     postag = sent['postags'][i]
@@ -99,6 +99,11 @@ def word2features(sent, i):
             'word.postag, +1:word.postag, +2:word.postag': '%s, %s, %s' % (postag, postag_r1, postag_r2)
         })
 
+    # add embedding features
+    word_embeddings = sent2embeddings(sent, embeddings)[i]
+    for i in xrange(len(word_embeddings)):
+        features['word.emb%s' % i] = word_embeddings[i]
+
     return features
 
 
@@ -112,11 +117,11 @@ def word2vector(w2v):
         features['dim%s' % (i + 1)] = w2v[i]
     return features
 
-def sent2features(sent):
+def sent2features(sent, embeddings):
     """
     transform sentence to word-level features
     """
-    return [word2features(sent, i) for i in xrange(len(sent['words']))]
+    return [word2features(sent, i, embeddings) for i in xrange(len(sent['words']))]
 
 def sent2embeddings(sent, embeddings):
     """
