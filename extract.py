@@ -10,6 +10,7 @@ from keras.models import Sequential
 from keras.layers import LSTM, Bidirectional, Embedding, TimeDistributed, Dense, Reshape, Convolution1D
 from keras.callbacks import EarlyStopping
 from models import AveragedPerceptron, AsepectDetector
+from numpy import linalg as LA
 #from layers import MyEmbedding
 
 #embeddings = {}
@@ -367,6 +368,8 @@ def run(ds_name, model_name='crf', feat='word'):
                 else:
                     word_emb = np.random.uniform(-0.25, 0.25, dim_w)
                     n_oov += 1
+                # perform L2 normalization
+                #embeddings[w_norm] = np.array(word_emb) / LA.norm(word_emb)
                 embeddings[w_norm] = word_emb
     print "n_oov = %s" % n_oov
     if model_name == 'crf':

@@ -13,6 +13,12 @@ def word2features(sent, i, embeddings):
     crf feature extractor
     """
     word = sent['words'][i]
+    # preprocessing
+    #if i == 0:
+    #    word = word[0].upper() + word[1:].lower()
+    #else:
+    #    word = word.lower()
+
     postag = sent['postags'][i]
     #embedding = embeddings[word] if word in embeddings else np.random.uniform(-0.25, 0.25, 200)
     #embedding = [str(ele) for ele in embedding]

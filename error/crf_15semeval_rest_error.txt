@@ -1,226 +1,223 @@
-Boot time is super fast , around anywhere from 35 seconds to 1 minute .####Boot time####time####ERROR
-Set up was easy .####Set up####up####ERROR
-Other than not being a fan of click pads industry standard these days and the lousy internal speakers , it 's hard for me to find things about this notebook I do n't like , especially considering the $ 350 price tag .####click pads,internal speakers,price tag####pads,lousy,speakers,price tag####ERROR
-Works well , and I am extremely happy to be back to an apple OS .####Works,apple OS####Works,OS####ERROR
-I am pleased with the fast log on , speedy WiFi connection and the long battery life > 6 hrs .####log on,WiFi connection,battery life####log,WiFi connection,battery life####ERROR
-Made interneting part of my business very difficult to maintain .####interneting####PREDICT_NONE####ERROR
-Luckily , for all of us contemplating the decision , the Mac Mini is priced just right .####priced####PREDICT_NONE####ERROR
-Super light , super sexy and everything just works .####works####PREDICT_NONE####ERROR
-I 've had my computer for 2 weeks already and it works perfectly .####works####PREDICT_NONE####ERROR
-This thing is awesome , everything always works , everything is always easy to set up , everything is compatible , its literally everything I could ask for .####works,set up####set up####ERROR
-Keyboard responds well to presses .####Keyboard####Keyboard responds####ERROR
-Everything is so easy and intuitive to setup or configure .####setup,configure####setup####ERROR
-The new MBP offers great portability and gives us confidence that we are not going to need to purchase a new laptop in 18 months .####portability####PREDICT_NONE####ERROR
-The criticism has waned , and now I 'd be the first to recommend an Air for truly portable computing .####portable computing####criticism####ERROR
-I would have given it 5 starts was it not for the fact that it had Windows 8####Windows 8####Windows####ERROR
-MS Office 2011 for Mac is wonderful , well worth it .####MS Office 2011 for Mac####MS Office 2011,Mac####ERROR
-After using it for over a month , an issue started to surface .####GOLD_NONE####surface####NON_OT
-They do n't just look good ; they deliver excellent performance .####look,performance####performance####ERROR
-I have had it over a year now with out a Glitch of any kindI love the lit up keys and screen display thing is Fast and clear as can be .####lit up keys,screen display####up keys,screen display####ERROR
-The Mountain Lion OS is not hard to figure out if you are familiar with Microsoft Windows .####Mountain Lion OS,Microsoft Windows####Mountain Lion OS,Windows####ERROR
-However , I can refute that OSX is FAST .####OSX####PREDICT_NONE####ERROR
-Built-in apps are purely amazing .####Built-in apps####apps####ERROR
-From the speed to the multi touch gestures this operating system beats Windows easily .####speed,multi touch gestures,operating system,Windows####speed,operating system,Windows####ERROR
-I opted for the SquareTrade 3-Year Computer Accidental Protection Warranty $ 1500-2000 which also support accidents like drops and spills that are NOT covered by AppleCare .####SquareTrade 3-Year Computer Accidental Protection Warranty,AppleCare####SquareTrade 3-Year,Protection Warranty,support####ERROR
-Once you get past learning how to use the poorly designed Windows 8 Set-Up you may feel frustrated .####Windows 8 Set-Up####Windows 8####ERROR
-It 's been time for a new laptop , and the only debate was which size of the Mac laptops , and whether to spring for the retina display .####size,retina display####display####ERROR
-Apple removed the DVD drive Firewire port will work with adapter and put the SDXC slot in a silly position on the back .####DVD drive Firewire port,adapter,SDXC slot####DVD drive,port,slot####ERROR
-Apple is unmatched in product quality , aesthetics , craftmanship , and customer service .####product quality,aesthetics,craftmanship,customer service####quality,customer service####ERROR
-It is a great size and amazing windows 8 included !####size,windows 8####size,windows####ERROR
-Startup times are incredibly long , over two minutes .####Startup times####PREDICT_NONE####ERROR
-And windows 7 works like a charm .####windows 7####windows 7 works####ERROR
-Set up was a breeze .####Set up####up####ERROR
-But I do NOT like Win8 .####Win8####PREDICT_NONE####ERROR
-I had the same reasons as most PC users , the price , the overbearing restrictions of OSX and lack of support for games .####price,OSX,support for games####price,support,games####ERROR
-I wanted it for it 's mobility and man , this little bad boy is very nice .####mobility####PREDICT_NONE####ERROR
-Having USB3 is why I bought this Mini .####USB3####PREDICT_NONE####ERROR
-HUGE Apple MAC Fan !####GOLD_NONE####Fan####NON_OT
-Thank goodness for OpenOffice !####OpenOffice####PREDICT_NONE####ERROR
-Awesome form factor , great battery life , wonderful UX .####form factor,battery life,UX####form,battery life,UX####ERROR
-Needless to say , the leap from that to this has been amazing and aside from the financial reasons I am astounded that I had n't made the switch sooner .####GOLD_NONE####switch####NON_OT
-I 've already upgraded o Mavericks and I am impressed with everything about this computer .####Mavericks####PREDICT_NONE####ERROR
-Not as fast as I would have expect for an i5 .####i5####PREDICT_NONE####ERROR
-The performance seems quite good , and built-in applications like iPhoto work great with my phone and camera .####performance,built-in applications,iPhoto####performance,camera####ERROR
-I did swap out the hard drive for a Samsung 830 SSD which I highly recommend .####hard drive,Samsung 830 SSD####hard drive####ERROR
-Starts up in a hurry and everything is ready to go .####Starts up####PREDICT_NONE####ERROR
-Yes , that 's a good thing , but it 's made from aluminum that scratches easily .####aluminum####PREDICT_NONE####ERROR
-Took a long time trying to decide between one with retina display and one without .####retina display####PREDICT_NONE####ERROR
-It is very easy to navigate even for a novice .####navigate####PREDICT_NONE####ERROR
-The device speaks about it self .####GOLD_NONE####device####NON_OT
-I used windows XP , windows Vista , and Windows 7 extensively .####windows XP,windows Vista,Windows 7####windows XP,windows Vista,Windows 7 extensively####ERROR
-I did add a SSD drive and memory####SSD drive,memory####drive,memory####ERROR
-On start up it asks endless questions just so itune can sell you more of their products .####start up,itune####PREDICT_NONE####ERROR
-One more thing , this mac does NOT come with restore disks and I am not sure if you can make them direct from the mac like you can with newer PC 's , also the charging cables are made of the same cheap material as the iPhone/iPod touch cables .####restore disks,charging cables,material####charging cables,iPhone/iPod touch cables####ERROR
-I bought it to my son who uses it for graphic design .####graphic design####design####ERROR
-I never tried any external mics with that iMac .####external mics####PREDICT_NONE####ERROR
-I have experienced no problems , works as anticipated .####works####PREDICT_NONE####ERROR
-Easy to customize setting and even create your own bookmarks .####customize setting,create your own bookmarks####PREDICT_NONE####ERROR
-The MAC Mini , wireless keyboard / mouse and a HDMI cable is all I need to get some real work done .####wireless keyboard / mouse,HDMI cable####MAC Mini,wireless keyboard,mouse,HDMI cable####ERROR
-it has all the features that we expected and the price was good , working well so far .####features,price,working####features,price####ERROR
-I work as a designer and coder and I needed a new buddy to work with , not gaming .####gaming####PREDICT_NONE####ERROR
-I ca n't believe how quiet the hard drive is and how quick this thing boots up .####hard drive,boots up####hard drive####ERROR
-The only issue came when I tried scanning to the mac .####scanning####PREDICT_NONE####ERROR
-I think this is about as good as it gets at anything close to this price point .####price point####price####ERROR
-It 's just what we were looking for and it works great .####works####PREDICT_NONE####ERROR
-It 's so quick and responsive that it makes working on a computer so much more pleasurable !####working####PREDICT_NONE####ERROR
-My wife was so excited to open the box , but quickly came to see that it did not function as it should .####function####PREDICT_NONE####ERROR
-Apple "Help" is a mixed bag .####Apple "Help"####PREDICT_NONE####ERROR
-It suddenly can not work .####work####PREDICT_NONE####ERROR
-Harddrive was in poor condition , had to replace it .####Harddrive####PREDICT_NONE####ERROR
-My only complaint is the total lack of instructions that come with the mac mini .####instructions####PREDICT_NONE####ERROR
-The only task that this computer would not be good enough for would be gaming , otherwise the integrated Intel 4000 graphics work well for other tasks .####gaming,integrated Intel 4000 graphics####integrated Intel,graphics work####ERROR
-The only solution is to turn the brightness down , etc .####brightness####PREDICT_NONE####ERROR
-It is robust , with a friendly use as all Apple products .####use####PREDICT_NONE####ERROR
-And the fact that it comes with an i5 processor definitely speeds things up####i5 processor####processor####ERROR
-I have been PC for years but this computer is intuitive and its built in features are a great help####built in features####features####ERROR
-I 've installed to it additional SSD and 16Gb RAM .####SSD,16Gb RAM####RAM####ERROR
-It works great and I am so happy I bought it .####works####PREDICT_NONE####ERROR
-USB3 Peripherals are noticably less expensive than the ThunderBolt ones .####USB3 Peripherals,ThunderBolt####PREDICT_NONE####ERROR
-It 's fast , light , and is perfect for media editing , which is mostly why I bought it in the first place .####media editing####media####ERROR
-The battery lasts as advertised give or take 15-20 minutes , and the entire user experience is very elegant .####battery,user experience####battery####ERROR
-! Excelent performance , usability , presentation and time response .####performance,usability,presentation,time response####Excelent performance####ERROR
-In fact I still use manyASPECT0 Appleworks , FileMaker Pro , Quicken , Photoshop etc !####Appleworks,FileMaker Pro,Quicken,Photoshop####PREDICT_NONE####ERROR
-It 's small but powerful , light but strong , elegant and beautiful In resume , it 's a Mac ! .####GOLD_NONE####resume####NON_OT
-I love the form factor .####form factor####PREDICT_NONE####ERROR
-I have n't used the product long enough to write a detailed technical review .####GOLD_NONE####technical####NON_OT
-It 's fast at loading the internet .####loading the internet####internet####ERROR
-So much faster and sleeker looking .####looking####PREDICT_NONE####ERROR
-Unfortunately , it runs XP and Microsoft is dropping support next April .####XP,support####runs XP,Microsoft####ERROR
-First off , I really do like my MBP once used to the OS it is pretty easy to get around , and the overall build is great eg the keyboard is one of the best to type on .####OS,overall build,keyboard####build,keyboard####ERROR
-It 's ok but does n't have a disk drive which I did n't know until after I bought it .####disk drive####drive####ERROR
-It should n't happen like that , I do n't have any design app open or anything .####design app####design####ERROR
-MY TRACKPAD IS NOT WORKING .####TRACKPAD####PREDICT_NONE####ERROR
-It looks and feels solid , with a flawless finish .####looks,feels,finish####PREDICT_NONE####ERROR
-Then the system would many times not power down without a forced power-off .####system,power down####system####ERROR
-It was also suffering from hardware (keyboard) issues , relatively slow performance and shortening battery lifetime .####hardware (keyboard),performance,battery lifetime####hardware,performance,battery####ERROR
-It 's silent and has a very small footprint on my desk .####footprint####PREDICT_NONE####ERROR
-Apple is aware of this issue and this is either old stock or a defective design involving the intel 4000 graphics chipset .####design,intel 4000 graphics chipset####design,intel,graphics chipset####ERROR
-OSX Mountain Lion soon to upgrade to Mavericks .####OSX Mountain Lion,Mavericks####Mountain Lion####ERROR
-It wakes in less than a second when I open the lid .####wakes,lid####PREDICT_NONE####ERROR
-My last laptop was a 17 ASUS gaming machine , which performed admirably , but having since built my own desktop and really settling into the college life , I found myself wanting something smaller and less cumbersome , not to mention that the ASUS had been slowly developing problems ever since I bought it about 4 years ago .####performed####PREDICT_NONE####ERROR
-However , it did not have any scratches , ZERO battery cycle count pretty surprised , and all the hardware seemed to be working perfectly .####battery cycle count,hardware####battery,hardware####ERROR
-And as for all the fancy finger swipes - I just gave up and attached a mouse .####finger swipes,mouse####mouse####ERROR
-I needed a laptop with big storage , a nice screen and fast so I can photoshop without any problem .####storage,screen,photoshop####storage,screen####ERROR
-I like coming back to Mac OS but this laptop is lacking in speaker quality compared to my $ 400 old HP laptop .####Mac OS,speaker quality####speaker quality####ERROR
-User friendly , fast and high tech It is amazing !####GOLD_NONE####tech####NON_OT
-It 's great for streaming video and other entertainment uses .####streaming video,entertainment uses####PREDICT_NONE####ERROR
-There were small problems with Mac office .####Mac office####office####ERROR
-I understand I should call Apple Tech Support about any variableswhich is my purpose of writing this con as variables could be a bigger future problem .####Apple Tech Support####Tech####ERROR
-I ordered my 2012 mac mini after being disappointed with spec of the new 27 Imacs .####spec####27 Imacs####ERROR
-It still works and it 's extremely user friendly , so I would recommend it for new computer user and also for those who are just looking for a more efficient way to do things####works####PREDICT_NONE####ERROR
-Its fast , easy to use and it looks great .####use,looks####use####ERROR
-but Office can be purchased IF I ever need a laptop again I am for sure purchasing another Toshiba ! !####Office####PREDICT_NONE####ERROR
-I have n't tried the one with retina display Maybe in the future .####retina display####PREDICT_NONE####ERROR
-Performance is much much better on the Pro , especially if you install an SSD on it .####Performance,SSD####Performance####ERROR
-Note , however , that any existing MagSafe accessories you have will not work with the MagSafe 2 connection .####MagSafe accessories,MagSafe 2 connection####MagSafe 2 connection####ERROR
-The only thing I dislike is the touchpad , alot of the times its unresponsive and does things I do n't want it too , I would recommend using a mouse with it .####touchpad,mouse####touchpad####ERROR
-The Mac mini is about 8x smaller than my old computer which is a huge bonus and runs very quiet , actually the fans are n't audible unlike my old pc####runs,fans####Mac mini,runs####ERROR
-MAYBE The Mac OS improvement were not The product they Want to offer .####Mac OS####PREDICT_NONE####ERROR
-I thought the transition would be difficult at best and would take some time to fully familiarize myself with the new Mac ecosystem .####Mac ecosystem####transition####ERROR
-I am please with the products ease of use ; out of the box ready ; appearance and functionality .####use,appearance,functionality####use,functionality####ERROR
-Perfect for all my graphic design classes I 'm taking this year in college , -####graphic design####PREDICT_NONE####ERROR
-! so nice stable fast now i got my SSD ! .####SSD####PREDICT_NONE####ERROR
-Also , in using the built-in camera , my voice recording for my vlog sounds like the interplanetary transmissions in the Star Wars saga .####built-in camera,voice recording####built-in camera####ERROR
-I love the quick start up .####start up####up####ERROR
-Yet my mac continues to function properly .####function####PREDICT_NONE####ERROR
-Here are the things that made me confident with my purchase , Build Quality , Seriously , you ca n't beat a unibody construction .####Build Quality,unibody construction####Build Quality,construction####ERROR
-It provides much more flexibility for connectivity .####flexibility for connectivity####connectivity####ERROR
-I want the portability of a tablet , without the limitations of a tablet and that 's where this laptop comes into play .####portability####PREDICT_NONE####ERROR
-Mac tutorials do help .####Mac tutorials####PREDICT_NONE####ERROR
-I got the new adapter and there was no change .####adapter####PREDICT_NONE####ERROR
-Logic board utterly fried , cried , and laid down and died .####Logic board####Logic board utterly####ERROR
-Having heard from friends and family about how reliable a Mac product is , I never expected to have an application crash within the first month , but I did .####application####PREDICT_NONE####ERROR
-The Macbook pro 's physical form is wonderful .####physical form####PREDICT_NONE####ERROR
-3D rendering slows it down considerably .####3D rendering####PREDICT_NONE####ERROR
-fast , great screen , beautiful apps for a laptop ; priced at 1100 on the apple website ; amazon had it for 1098+ tax , plus i had a 10 % off coupon from amazon-ASPECT3 me 998 plus tax 1070 OTD !####screen,apps,priced####screen####ERROR
-The Like New condition of the iMac MC309LL/A on Amazon is at $ 900+ level only , and it is a Quad-Core 2.5 GHz CPU similar to the $ 799 Mini , with Radeon HD 6750M 512MB graphic card this mini is integrated Intel 4000 card , and it even comes with wireless Apple Keyboard and Mouse , all put together in neat and nice package .####Quad-Core 2.5 GHz CPU,Radeon HD 6750M 512MB graphic card,integrated Intel 4000 card,wireless Apple Keyboard and Mouse,package####iMac,4000 card,wireless Apple Keyboard,Mouse####ERROR
-Put a cover on it and is a little better but that is my only complaint .####cover####PREDICT_NONE####ERROR
-This mac does come with an extender cable and I 'm using mine right now hoping the cable will stay nice for the many years I plan on using this mac .####extender cable,cable####cable,cable####ERROR
-The 2.9ghz dual-core i7 chip really out does itself .####2.9ghz dual-core i7 chip####2.9ghz####ERROR
-It is pretty snappy and starts up in about 30 seconds which is good enough for me .####starts up####PREDICT_NONE####ERROR
-I would say that 85 % of the design industry is Mac for good reason .####GOLD_NONE####design industry####NON_OT
-I was having a though time deciding between the 13 MacBook Air or the MacBook Pro 13 Both baseline models , priced at 1,200 $ retail####priced####PREDICT_NONE####ERROR
-Not too expense and has enough storage for most users and many ports .####storage,ports####ports####ERROR
-I am going to college next year and I needed a cheaper , quality computer for the goals I am trying to pursue .####GOLD_NONE####quality####NON_OT
-In the short time of one month since the 2012 Mac Mini was released there are well over 1000 posts regarding this issue and the numbers keep rising .####GOLD_NONE####numbers####NON_OT
-I do n't know why I did n't make the switch soonero ya because it 's expensive .####GOLD_NONE####switch####NON_OT
-Their products , including the MBP , are beautiful , sleek and clever .####GOLD_NONE####MBP####NON_OT
-The MBP is beautiful has many wonderful capabilities .####capabilities####MBP####ERROR
-I thought that it will be fine , if i do some settings .####settings####PREDICT_NONE####ERROR
-Boot-up slowed significan'tly after all Windows updates were installed .####Boot-up,Windows updates####Windows updates####ERROR
-I like the Mini Mac it was easy to setup and install , but I am learning as I go and could use a tutorial to learn how to use some of the features I was use to on the PC especially the right mouse click menu .####setup,install,tutorial,features,right mouse click menu####setup,install,features,mouse click####ERROR
-Since the machine 's slim profile is critical to me , that was a problem .####profile####PREDICT_NONE####ERROR
-The SD card reader is slightly recessed and upside down the nail slot on the card can not be accessed , if this was a self ejecting slot this would not be an issue , but its not .####SD card reader,nail slot on the card,slot####SD card reader,slot####ERROR
-Soft touch , anodized aluminum with laser cut precision and no flaws .####touch,anodized aluminum####cut precision####ERROR
-Simple details , crafted aluminium and real glass make this laptop blow away the other plastic ridden , bulky sticker filled laptops .####aluminium,glass####glass####ERROR
-First of all yes this is a mac and it has that nice brushed aluminum .####aluminum####PREDICT_NONE####ERROR
-After all was said and done , I essentially used that $ 450 savings to buy 16GB of RAM , TWO Seagate Momentus XT hybrid drives and an OWC upgrade kit to install the second hard drive .####16GB of RAM,Seagate Momentus XT hybrid drives,OWC upgrade kit,hard drive####RAM,Momentus XT hybrid drives,hard drive####ERROR
-The Dell Inspiron is fast and has a number pad on the keyboard , which I miss on my Apple laptops .####number pad on the keyboard####Dell Inspiron,pad,keyboard####ERROR
-I was concerned that the downgrade to the regular hard drive would make it unacceptably slow but I need not have worried , this machine is the fastest I have ever owned .####regular hard drive####hard drive####ERROR
-Customization on mac is impossible .####Customization####PREDICT_NONE####ERROR
-I am replacing the HD with a Micron SSD soon .####HD,Micron SSD####HD,Micron####ERROR
-Plus two finger clicking as a replacement for the right click button is surprisingly intuitive .####two finger clicking,right click button####click button####ERROR
-if yo like practicality this is the laptop for you .####practicality####PREDICT_NONE####ERROR
-I tried several monitors and several HDMI cables and this was the case each time .####monitors,HDMI cables####HDMI cables####ERROR
-The troubleshooting said it was the AC adaptor so we ordered a new one .####AC adaptor####PREDICT_NONE####ERROR
-Fan only comes on when you are playing a game .####Fan,playing a game####Fan####ERROR
-Which it did not have , only 3 USB 2 ports .####USB 2 ports####USB,ports####ERROR
-There is no "tools" menu .####"tools" menu####PREDICT_NONE####ERROR
-Needs a CD/DVD drive and a bigger power switch .####CD/DVD drive,power switch####drive,power switch####ERROR
-Not a scratch or mark on it .####GOLD_NONE####mark####NON_OT
-Easy to install also small to leave anywhere at your bedroom also very easy to configure for ADSl cable or wifi .####install,configure for ADSl cable or wifi####install,cable,wifi####ERROR
-Apple no longer includes iDVD with the computer and furthermore , Apple does n't even offer it anymore !####iDVD####PREDICT_NONE####ERROR
-At first , I feel a little bit uncomfortable in using the Mac system .####Mac system####system####ERROR
-It just works out of the box and you have a lot of cool software included with the OS .####works,software,OS####software,OS####ERROR
-its as advertised on here it works great and is not a waste of money ! .####works####PREDICT_NONE####ERROR
-I bought this Mac book pro along with a new 27 iMac and while they are still light years more reliable than a PC I have noticed a decline in the reliability of my Mac computers .####reliability####PREDICT_NONE####ERROR
-The sound as mentioned earlier is n't the best , but it can be solved with headphones .####sound,headphones####sound####ERROR
-The Mac Mini is probably the simplest example of compact computing out there .####compact computing####PREDICT_NONE####ERROR
-Instead , I 'll focus more on the actual performance and feature set of the hardware itself so you can make an educated decision on which Mac to buy .####performance and feature set of the hardware####performance,feature,hardware####ERROR
-Other ports include FireWire 800 , Gigabit Ethernet , MagSafe port , Microphone jack .####ports,FireWire 800,Gigabit Ethernet,MagSafe port,Microphone jack####FireWire,Gigabit Ethernet,MagSafe port,Microphone jack####ERROR
-Additionally , there is barely a ventilation system in the computer , and even the simple activity of watching videos let alone playing steam games causes the laptop to get very very hot , and in fact impossible to keep on lap .####ventilation system,watching videos,playing steam games####system,videos,games####ERROR
-Now that I have upgraded to Lion I am much happier about MAC OS and have just bought an iMac for office .####Lion,MAC OS####office####ERROR
-User upgradeable RAM and HDD .####RAM,HDD####upgradeable RAM,HDD####ERROR
-But I wanted the Pro for the CD/DVD player .####CD/DVD player####player####ERROR
-I was a little worry at first because I do n't have a lot of experience with os.x and windows has always been second nature to me after many years of using windows .####os.x,windows,windows####windows,windows####ERROR
-I then upgraded to Mac OS X 10.8 "Mountain Lion" .####Mac OS X 10.8 "Mountain Lion"####OS X####ERROR
-At home and the office it gets plugged into an external 24" LCD screen , so built in screen size is not terribly important .####external 24" LCD screen,built in screen size####external 24" LCD screen,screen size####ERROR
-Just beware no DVD slot so when I went to install software I had on CD I could n't .####DVD slot,install software####DVD slot,software####ERROR
-This version of MacBook Pro runs on a third-generation CPU ("Ivy Bridge") , not the latest fourth-generation Haswell CPU the 2013 version has .####third-generation CPU ("Ivy Bridge"),fourth-generation Haswell CPU####runs####ERROR
-No Cd Rom in the new version there 's no way I 'm spending that kind of money on something has less features than the older version .####Cd Rom,features####PREDICT_NONE####ERROR
-the volume is really low to low for a laptopwas not expectin t volume to be so lowan i hate that about this computer####volume,volume####volume####ERROR
-and its not hard to accidentally bang it against something so i recommend getting a case to protect it .####case####PREDICT_NONE####ERROR
-Every time I log into the system after a few hours , there is this endlessly frustrating process that I have to go through .####log into the system####PREDICT_NONE####ERROR
-Put a SSD and use a 21" LED screen , this set up is silky smooth !####SSD,21" LED screen,set up####21" LED screen,up####ERROR
-I had to buy a wireless mouse to go with it , as I am old school and hate the pad , but knew that before I bought it , now it works great , need to get adjusted to the key board , as I am used to a bigger one and pounding .####wireless mouse,pad,works,key board####wireless mouse,pad,key board####ERROR
-When considering a Mac , look at the total cost of ownership and not just the initial price tag .####cost of ownership,price tag####look,price tag####ERROR
-The only thing I dislike about this laptop are the rubber pads found on the bottom of the computer for grip .####rubber pads####PREDICT_NONE####ERROR
-The nicest part is the low heat output and ultra quiet operation .####heat output,operation####heat output####ERROR
-I will upgrade the ram myself because with this model you can you can do it later on .####upgrade the ram####ram####ERROR
-this Mac Mini does not have a built-in mic , and it would seem that its Mac OS 10.9 does not handle external microphones properly .####built-in mic,Mac OS 10.9,external microphones####built-in mic,Mac OS 10.9####ERROR
-A lot of features and shortcuts on the MBP that I was never exposed to on a normal PC .####features,shortcuts####features####ERROR
-air has higher resolution but the fonts are small .####resolution,fonts####resolution####ERROR
-working with Mac is so much easier , so many cool features .####working,features####features####ERROR
-I only wish this mac had a CD/DVD player built in .####CD/DVD player####CD/DVD player built####ERROR
-The only thing I miss is that my old Alienware laptop had backlit keys .####backlit keys####keys####ERROR
-The only thing I miss are the "Home/End" type keys and other things that I grew accustomed to after so long .####"Home/End" type keys####PREDICT_NONE####ERROR
-It has enough memory and speed to run my business with all the flexibility that comes with a laptop .####memory,speed,flexibility####memory,speed####ERROR
-The battery life is excellent , the display is excellent , and downloading apps is a breeze .####battery life,display,downloading apps####battery life,display,apps####ERROR
-i have dropped mine a couple times with only a slim plastic case covering it .####slim plastic case####PREDICT_NONE####ERROR
-I also made a recovery USB stick .####recovery USB stick####recovery USB####ERROR
-Further , this Mac Mini has a sloppy Bluetooth interface courtesy of the Mac OS and the range is poor .####Bluetooth interface,Mac OS,range####Bluetooth interface courtesy,Mac OS,range####ERROR
-If you start on the far right side and scroll to your left the start menu will automatically come up .####start menu####start####ERROR
-Fine if you have a touch screen .####touch screen####screen####ERROR
-As far as user type , I dabble in everything from games WoW to Photoshop , but nothing professionally .####games,Photoshop####PREDICT_NONE####ERROR
-It doesnt get hot like my PC , with technology always at the tip of our fingertips anytime I forget how to do something i just google it .####GOLD_NONE####technology####NON_OT
-I have n't used it for anything high tech yet , but I love it already .####GOLD_NONE####tech####NON_OT
-A veryimportant feature is Firewire 800 which in my experience works better then USB3 in PC enabled with USB3 was not originally sold on the MAC OS I felt it was inferior in many ways To Windows 7 .####Firewire 800,USB3,USB3,MAC OS,Windows 7####veryimportant feature,Windows 7####ERROR
-I like iTunes , the apparent security , the Mini form factor , all the nice graphics stuff .####iTunes,security,Mini form factor,graphics stuff####iTunes,apparent security####ERROR
-The first time I used the card reader it took half an hour and a pair of tweezers to remove the card .####card reader,remove the card####card,card####ERROR
-I know some people complained about HDMI issues but they released a firmware patch to address that issue .####HDMI,firmware patch####PREDICT_NONE####ERROR
-With the needs of a professional photographer I generally need to keep up with the best specs .####specs####PREDICT_NONE####ERROR
-I called Toshiba where I gave them the serial number and they informed me that they were having issues with the mother boards .####mother boards####boards####ERROR
-It also comes with 4G of RAM but if you 're like me you want to max that out so I immediately put 8G of RAM in her and I 've never used a computer that performs better .####4G of RAM,8G of RAM,performs####4G of RAM####ERROR
-This computer is also awesome for my sons virtual home schooling .####virtual home schooling####PREDICT_NONE####ERROR
-also excellent operating system size and weight for optimal mobility excellent durability of the battery the functions provided by the trackpad is unmatched by any other brand- .####operating system size,weight,mobility,durability of the battery,functions provided by the trackpad####operating system size,weight,battery,functions,trackpad####ERROR
-Screen , although some people might complain about low res which I think is ridiculous .####Screen,res####Screen####ERROR
+Love Al Di La####Al Di La####PREDICT_NONE####ERROR
+The pastas are incredible , the risottos particularly the sepia are fantastic and the braised rabbit is amazing .####pastas,risottos,sepia,braised rabbit####pastas,sepia,braised rabbit####ERROR
+There are so many other great places to go to eat and drink this place is not worth it .####GOLD_NONE####place####NON_OT
+An awesome organic dog , and a conscious eco friendly establishment .####dog,establishment####PREDICT_NONE####ERROR
+One of the best hot dogs I have ever eaten .####GOLD_NONE####hot dogs####NON_OT
+Super YUMMY Pizza !####Pizza####PREDICT_NONE####ERROR
+I was visiting New York City with a friend and we discovered this really warm and inviting restaurant .####restaurant####PREDICT_NONE####ERROR
+I LOOOVE their eggplant pizza , as well as their pastas !####eggplant pizza,pastas####eggplant pizza####ERROR
+We had half/half pizza , mine was eggplant and my friend had the buffalo and it was sooo huge for a small size pizza !####half/half pizza####pizza,buffalo,pizza####ERROR
+Excellent food , although the interior could use some help .####food,interior####food####ERROR
+The space kind of feels like an Alice in Wonderland setting , without it trying to be that .####space####PREDICT_NONE####ERROR
+Delivery can be spot on or lacking depending on the weather and the day of the week .####Delivery####Delivery can be spot####ERROR
+This place has ruined me for neighborhood sushi .####sushi####PREDICT_NONE####ERROR
+The waiter was attentive , the food was delicious and the views of the city were great .####waiter,food,views of the city####waiter,food,views####ERROR
+The space is limited so be prepared to wait up to 45 minutes , 1 hour , but be richly rewarded when you savor the delicious indo-chinese food .####space,indo-chinese food####indo-chinese food####ERROR
+my favorite place lol####place####PREDICT_NONE####ERROR
+im not necessarily fanatical about this place , but it was a fun time for low pirces .####place####PREDICT_NONE####ERROR
+its just a fun place to go , not a five star restaraunt .####restaraunt####place####ERROR
+WORST PLACE ON SMITH STREET IN BROOKLYN####PLACE####PREDICT_NONE####ERROR
+Very immature bartender , did n't know how to make specific drinks , service was so slowwwww , the food was not fresh or warm , waitresses were busy flirting with men at the bar and werent very attentive to all the customers .####bartender,service,food,waitresses####drinks,service,food,waitresses,bar####ERROR
+overpriced japanese food with mediocre service####japanese food,service####service####ERROR
+Not because you are The Four Seasons , you are allowed to charge an arm and a leg for a romatic dinner .####The Four Seasons####PREDICT_NONE####ERROR
+The food was excellent as well as service , however , I left The Four Seasons very dissappointed .####food,service,The Four Seasons####food,service####ERROR
+I do not think dinner in Manhattan should cost $ 40000 where I am not swept off my feet .####dinner####PREDICT_NONE####ERROR
+Just go to Yamato and order the Red Dragon Roll .####Yamato,Red Dragon Roll####Red Dragon Roll####ERROR
+The rolls are creative and I have yet to find another sushi place that serves up more inventive yet delicious japanese food .####rolls,japanese food####rolls,sushi place####ERROR
+My quesadilla tasted like it had been made by a three-year old with no sense of proportion or flavor .####quesadilla####PREDICT_NONE####ERROR
+Mine tasted like the bartender had forgotten to add the tequila .####GOLD_NONE####tequila####NON_OT
+Really , I find it rather scandalous that such a crappy restaurant attracts such crowds -- this , in the city of a million restaurants , at least 9/10 of which are way better than this one .####GOLD_NONE####restaurant####NON_OT
+Oh , and I never write reviews -- I just was so moved by how bad this place was , I felt it was my duty to spread the word .####place####PREDICT_NONE####ERROR
+We were offered water for the table but were not told the Voss bottles of water were $ 8 a piece .####Voss bottles of water####PREDICT_NONE####ERROR
+Nice view of river and NYC .####view of river and NYC####view of river####ERROR
+Great survice####survice####PREDICT_NONE####ERROR
+Watch the talented belly dancers as you enjoy delicious baba ganoush that 's more lemony than smoky .####belly dancers,baba ganoush####baba ganoush####ERROR
+Oh , and there 's hookah .####hookah####PREDICT_NONE####ERROR
+Raymond the bartender rocks !####Raymond####PREDICT_NONE####ERROR
+The drinks are great , especially when made by Raymond .####drinks,Raymond####drinks####ERROR
+quacamole at pacifico is yummy , as are the wings with chimmichuri .####quacamole,wings with chimmichuri####wings with chimmichuri####ERROR
+A weakness is the chicken in the salads .####chicken in the salads####salads####ERROR
+Small , bright , and clean , BZ Grill stands apart from the usual run of gyro joints , both in Astoria and out .####GOLD_NONE####Grill####NON_OT
+What really makes it shine is the food , which is aggressively seasoned with Cyrpriot spices , and all made in-house even the gyro meat and sausages , and made of much higher quality ingredients that might otherwise be expected .####food,gyro meat,sausages,ingredients####food,gyro meat and sausages,ingredients####ERROR
+Best restaurant in Brooklyn####restaurant####PREDICT_NONE####ERROR
+Its dark , and cozy there is always jazz music playing when we go .####GOLD_NONE####jazz music playing####NON_OT
+I 've enjoyed 99 % of the dishes we 've ordered with the only exceptions being the occasional too-authentic-for-me dish I 'm a daring eater but not THAT daring .####dishes,dish####dishes####ERROR
+My daughter 's wedding reception at Water's Edge received the highest compliments from our guests .####Water's Edge####PREDICT_NONE####ERROR
+Everyone raved about the atmosphere elegant rooms and absolutely incomparable views and the fabulous food !####atmosphere,rooms,views,food####atmosphere elegant rooms,views,food####ERROR
+Paul , the maitre d ' , was totally professional and always on top of things .####Paul####PREDICT_NONE####ERROR
+Thank you everyone at Water's Edge .####Water's Edge####PREDICT_NONE####ERROR
+During our trip to NYC , we made reservations to dine in the pool room of the Four Seasons for their pre-theater menu offering a modified menu for $ 65 pp .####GOLD_NONE####pool room####NON_OT
+The bread we received was horrible , rock hard and cold , and the free appetizer of olives was disappointing .####bread,appetizer of olives####appetizer of olives####ERROR
+Not what I would expect for the price and prestige of this location .####location####PREDICT_NONE####ERROR
+All in all , I would return , as it was a beautiful restaurant , but I hope the staff pays more attention to the little details in the future .####restaurant,staff####staff####ERROR
+The service was extremely fast and attentivethanks to the service button on your table but I barely understood 1 word when the waiter took our order .####service,service,waiter####service,service button,waiter####ERROR
+Over all the looks of the place exceeds the actual meals .####looks,meals####meals####ERROR
+So what you really end up paying for is the restaurant not the food .####restaurant,food####food####ERROR
+Servers are all different , Greg is my favorite .####Greg####Servers####ERROR
+Sometimes tables do n't understand his sense of humor but it 's refreshing to have a server who has personality , professionalism , and respects the privacy of your dinner .####server####PREDICT_NONE####ERROR
+This is the first place I 've been that a runner remembers my order hope he likes his job because I have half a mind to steal him for my restaurant .####runner####place####ERROR
+Prices are fair across the board for both food and bev .####food,bev####food####ERROR
+Restaurants in manhattan should try to model food and service after this place .####GOLD_NONE####food,service####NON_OT
+amazing fresh dogs but best of all endless toppings ! ! !####dogs,toppings####PREDICT_NONE####ERROR
+peppers , onions , relish , chilli , cheeses , you NAME it .####GOLD_NONE####peppers,onions,relish,chilli,cheeses####NON_OT
+amazing fun for hot dog lovers of all ages PLEASE do yourself a favor and check this place out ! ! ! !####hot dog,place####place####ERROR
+Stepping into Casa La Femme last night was a true experience unlike any other in New York !####Casa La Femme####PREDICT_NONE####ERROR
+Highly impressed from the decor to the food to the hospitality to the great night I had !####decor,food####PREDICT_NONE####ERROR
+The have a great cocktail with Citrus Vodka and lemon and lime juice and mint leaves that is to die for !####cocktail with Citrus Vodka and lemon and lime juice and mint leaves####cocktail with Citrus Vodka,lemon and lime juice,mint leaves####ERROR
+Maggot in the food !####food####PREDICT_NONE####ERROR
+I 've been wanting to go to this place forever and finally got a table .####GOLD_NONE####place####NON_OT
+Nevertheless , I finished my plate , and that 's when I found a maggot in mushroom sauce at the bottom .####mushroom sauce####PREDICT_NONE####ERROR
+I showed it to the manager , and he smilingly apologized and brought us two free desserts but did not ask us what we wanted and so brought the last two desserts we would have asked for .####manager####desserts,two desserts####ERROR
+When the bill came , nothing was comped , so I told the manager very politely that we were willing to pay for the wine , but I did n't think I should have to pay for food with a maggot in it .####GOLD_NONE####manager,wine####NON_OT
+Yes , I ate the food , but I certainly would not have if I had seen the maggot before eating , and I was at this point fairly sick to my stomach .####GOLD_NONE####food####NON_OT
+For a restaurant with such a good reputation and that is usually so packed , there was no reason for such a lack of intelligent customer service .####restaurant,customer service####service####ERROR
+A fairly late entry into the haute barnyard sweepstakes , Flatbush Farm is n't in the same league as the Blue Hills or even the Farm on Adderlys of the world , but it 's pretty good , albeit with a somewhat dismal setting .####GOLD_NONE####Farm,Blue Hills,setting####NON_OT
+I got hair in my food 2 times of then !####food####PREDICT_NONE####ERROR
+Sushi experience was unbelievable with my fiance .####Sushi####Sushi experience####ERROR
+Yamato is an excellent place to go if youre not into sashimi , or if you have friends who doesnt like sushi much .####Yamato####place####ERROR
+One special roll and one regular roll is enough to fill you up , but save room for dessert !####special roll,regular roll,dessert####One special roll,regular roll####ERROR
+Mazing interior .####interior####PREDICT_NONE####ERROR
+I 've had my fair share of modern Japanese and this spot delivers .####modern Japanese####spot####ERROR
+The atmosphere was pretty nice but had a bit lacking , which it tries to make up for with a crazy scheme of mirrors .####atmosphere,scheme of mirrors####atmosphere####ERROR
+Despite the confusing mirrors this will likely be my go-to for modern Japanese food for the foreseeable future .####mirrors,modern Japanese food####Japanese food####ERROR
+Not a very fancy place but very good Chinese style Indian food .####place,Chinese style Indian food####Chinese style Indian food####ERROR
+Rather than eating the meat entree being offered , I requested a vegetarian dish .####GOLD_NONE####meat entree,vegetarian dish####NON_OT
+This is the MOST wonderful restaurant in all of New York City , not just Brooklyn .####restaurant####PREDICT_NONE####ERROR
+for 7 years they have put out the most tasty , most delicious food and kept it that way .####food####PREDICT_NONE####ERROR
+great food , great wine list , great service in a great neighborhood .####food,wine list,service,neighborhood####food,wine list,service####ERROR
+My bf and I go to the walk-up counter and order a pie .####GOLD_NONE####pie####NON_OT
+great hot dogs .####hot dogs####PREDICT_NONE####ERROR
+great toppings definitely a place you need to check out for late night munchies or a mid day boost !####toppings,place####PREDICT_NONE####ERROR
+For me dishes a little oily , but overall dining experience good .####dishes####dining####ERROR
+Helpful service and average price per dish $ 10 .####service,dish####service####ERROR
+The flavors are amazing and the value is phenomenal .####GOLD_NONE####flavors,value####NON_OT
+Best Indian Chinese in the city , by far !####Indian Chinese####PREDICT_NONE####ERROR
+I came across Village Underground by accident , now I go there all the time .####Village Underground####PREDICT_NONE####ERROR
+THE SERVICE IS AMAZING , i 've had different waiters and they were all nice , which is a rare thing in NYC .####SERVICE,waiters####SERVICE####ERROR
+This establishment is the real deal .####establishment####PREDICT_NONE####ERROR
+This is a twenty-something guy that does n't mind laying down $ 300 for a fine and delicious meal for 2 on special occassions .####GOLD_NONE####guy,meal####NON_OT
+But $ 500 for a dinner for two that did n't include Wine ?####dinner for two####Wine####ERROR
+What you are paying for is the environment and the name .####environment####PREDICT_NONE####ERROR
+Drinks , 2 glasses of Dom Perignon at $ 35 each .####GOLD_NONE####Drinks####NON_OT
+Starters , Kobe Beef Sashimi .####GOLD_NONE####Kobe Beef Sashimi####NON_OT
+Which of course is not real Kobe but Wagyu beef .####GOLD_NONE####Kobe but Wagyu beef####NON_OT
+A beef Consomme .####GOLD_NONE####beef Consomme####NON_OT
+Entrees , Vanison steak and Bison Steak .####GOLD_NONE####steak,Bison Steak####NON_OT
+Vanison was good but not amazing .####Vanison####PREDICT_NONE####ERROR
+Some Pineapple covered in a glaze of some kind and some pear tart thing Not impressive at all .####GOLD_NONE####pear tart thing####NON_OT
+The Four Seasons has history and it is a sort of landmark of New York City restaurants , but trust me , they will charge you through the nose just so that you can say I 've been to the four seasons restaurant .####The Four Seasons####Four Seasons####ERROR
+All in all , the food was great except for the dessserts .####food,dessserts####food####ERROR
+You would think they would make up for it with service , sadly , no .####service####PREDICT_NONE####ERROR
+I agree that dining at Casa La Femme is like no other dining experience !####Casa La Femme####PREDICT_NONE####ERROR
+I literally just got back home after visiting Casa La Femme and was so offended by my visit felt it necessary to try and warn other diners who value their money and time .####Casa La Femme####PREDICT_NONE####ERROR
+We did arrive late for our reservation so I can not complain too much about the wait for a table .####wait####PREDICT_NONE####ERROR
+However , our $ 14 drinks were were horrible !####drinks####PREDICT_NONE####ERROR
+Once we finally got a table , despite indicating we wanted an alla carte menu we were pushed into a table that was only price fixed !####GOLD_NONE####alla carte menu####NON_OT
+I would not expect this for a $ 55 dinner .####dinner####PREDICT_NONE####ERROR
+To top it all off the main reason we came to your restaurant was for the belly dancers and missed the first show as we were not seated yet and the 2nd belly dancer only danced at two tables in the back of the restaurant and never made it around to the other half of the restaurant .####GOLD_NONE####main reason,belly dancers,show,2nd belly dancer####NON_OT
+I have never left a restaurant feeling as if i was abused , and wasted my hard earned money .####restaurant####PREDICT_NONE####ERROR
+The hostess said Wow that 's a large group , unless you are n't together , to which I replied no we are , and there will be one more , so a table for six please .####GOLD_NONE####hostess####NON_OT
+There was no tap beer that evening , which was a disappointment .####beer####tap beer####ERROR
+Not much of a selection of bottled beer either , we went with Brahma .####selection of bottled beer####bottled beer####ERROR
+The appetizers we ordered were served quickly , an order of fried oysters and clams were delicious but a tiny portion maybe 3 of each .####fried oysters and clams####appetizers,oysters,clams,portion####ERROR
+I believe there were 2 shrimp in the "salt encrusted shrimp" appetizer .####"salt encrusted shrimp" appetizer####PREDICT_NONE####ERROR
+The waitress appeared and asked us if we wanted to go ahead and order .####GOLD_NONE####waitress####NON_OT
+The food arrived in about 15 minutes .####GOLD_NONE####food####NON_OT
+I lived on 50th st , and wanted Indian one day so decided to check this place out .####GOLD_NONE####place####NON_OT
+I have it a 4 instead of 5 because of the price just chicken tikka masala , no bread of rice , is $ 25 , which I would expect at a upscale Indian restaurant but this place does n't have an upscale feel .####chicken tikka masala,place,feel####chicken tikka masala,place####ERROR
+But if you 're prepared to spend some $ and remember to ask if something they offer is complimentary , then this is the place to go for Indian food####place,Indian food####Indian food####ERROR
+We go often for lunch and the place is packed .####GOLD_NONE####place####NON_OT
+We have gone for dinner only a few times but the same great quality and service is given .####dinner,service####service####ERROR
+However , once I received my predictably mediocre order of what Dokebi thinks passes as Korean fair , sometimes you have to settle when it 's your only option , I got through about half my kimchee before I found a piece of random lettuce accompanied by a far more disgusting , slimy , clearly bad piece of fish skin .####Korean fair,kimchee####PREDICT_NONE####ERROR
+My girlfriend , being slightly more aggressive , and having been equally disgusted causing her to throw out the remainder of her barely eaten meal , called back only to be informed that I was probably wrong and that it was most likely an oyster , and that we were also blacklisted from their restaurant .####meal####PREDICT_NONE####ERROR
+Not only have I worked in restaurants for many years , I am now in culinary school , I am a huge lover of oysters and fish , and my girlfriend is half Korean !####GOLD_NONE####oysters,fish####NON_OT
+We know the difference between and oyster and bad fish .####GOLD_NONE####oyster,fish####NON_OT
+It was n't as if this restaurant had any major bragging points before hand , but now it 's simply repulsive .####restaurant####PREDICT_NONE####ERROR
+Gorgeous place ideal for a romantic dinner####place####PREDICT_NONE####ERROR
+I book a gorgeous white organza tent which included a four course prix fix menu which we enjoyed a lot .####white organza tent,four course prix fix menu####four course prix fix menu####ERROR
+I completely recommend Casa La Femme for any special occasion and to REALLY impress your date .####Casa La Femme####PREDICT_NONE####ERROR
+The dishes came out around 5 minutes apart .####GOLD_NONE####dishes####NON_OT
+Too bad I had paid an extra $ 2 for the stone bowl .####stone bowl####PREDICT_NONE####ERROR
+The nakgi-bokum was horrible .####nakgi-bokum####PREDICT_NONE####ERROR
+Easily the worst stir-fried squid I 've ever tasted .####stir-fried squid####PREDICT_NONE####ERROR
+I mentioned the squid dish was n't very good when the waitress visited .####GOLD_NONE####squid dish,waitress####NON_OT
+As to my comment about the food , no apology or acknowledgment was made .####GOLD_NONE####food####NON_OT
+My wife had barely touched that mess of a dish .####dish####PREDICT_NONE####ERROR
+Authentic Korean food lovers should visit 32nd Street , of course .####GOLD_NONE####Korean food####NON_OT
+It was well worth the wait .####GOLD_NONE####wait####NON_OT
+i love margherita pizza , i looove east village pizza####margherita pizza,east village pizza####love margherita pizza,east village pizza####ERROR
+Love this place , every time we are in the city this is one of the place we always go .####place,place####place####ERROR
+A quintessential slice of NYC pizza .####slice of NYC pizza####pizza####ERROR
+This is undoubtedly my favorite modern Japanese brasserie that do n't serve sushi , and in my opinion , one of the most romantic restaurants in the city !####modern Japanese brasserie####PREDICT_NONE####ERROR
+Not only is it an adventure getting to this somewhat hidden spot , once you enter the unmarked wooden doors , the zen and intimate decor will make you feel like you 're no longer in the city .####spot,unmarked wooden doors,decor####spot,zen,intimate decor####ERROR
+If you 're planning to come here , make sure that your date is someone whom you really like since you 'll be ushered to private booths where there will be no people or food watching choose the ones on the ground level that have glass ceilings so you may see the stars in the sky ! .####private booths,glass ceilings####booths,food####ERROR
+Our first course was Tuna Sashimi with Green Yuzu Sauce .####GOLD_NONE####Tuna Sashimi with Green Yuzu Sauce####NON_OT
+Maybe it was the great company I had friends visiting from Philly , yes , it was not a date this time or the super reasonable price point , but I just ca n't say enough good things about this brasserie .####brasserie####PREDICT_NONE####ERROR
+I do n't usually visit the same establishment more than once , what more twice , but I 'll come to Zenkichi anytime for a quiet , unhurried and memorable dinner .####Zenkichi####PREDICT_NONE####ERROR
+They are extremely rude , not even apologizing for the horrible service we got and handing us a bill well over $ 500 for some drinks adn their pita bread !####service,drinks,pita bread####service,pita bread####ERROR
+To be honest we only ever eat the Shabu Shabu .####GOLD_NONE####Shabu Shabu####NON_OT
+I tried a couple other dishes but was n't too impressed .####dishes####PREDICT_NONE####ERROR
+In fact there is only one I 've tried that even compares shabu Tatsu and even then I prefer Dokebi .####GOLD_NONE####shabu Tatsu####NON_OT
+The meat is fresh , the sauces are great , you get kimchi and a salad free with your meal and service is good too .####meat,sauces,kimchi,salad,meal,service####meat,sauces,meal,service####ERROR
+Dokebi gives Williamsburg the right one-two punch of classic Korean food and fusion twists like pork belly tacos .####Korean food,fusion twists,pork belly tacos####Korean food,pork belly tacos####ERROR
+The hot dogs are good , yes , but the reason to get over here is the fantastic pork croquette sandwich , perfect on its supermarket squishy bun .####hot dogs,pork croquette sandwich,bun####hot dogs,pork croquette sandwich####ERROR
+This place has totally weird decor , stairs going up with mirrored walls , I am surprised how no one yet broke their head or fall off the stairs , mirrored walls make you dizzy and delusional .####decor,mirrored walls,mirrored walls####place,decor,stairs,stairs####ERROR
+The concept of japanese tapas is newly created and clearly does n't work .####japanese tapas####concept of japanese tapas####ERROR
+Go to japanese sushi place or Spanish tapas place , this creation in Williamsburg is a misstake .####GOLD_NONE####japanese sushi place,Spanish tapas place####NON_OT
+A coworker and I tried Pacifico after work a few Fridays and loved it .####Pacifico####PREDICT_NONE####ERROR
+I must say I am surprised by the bad reviews of the restaurant earlier in the year , though .####restaurant####PREDICT_NONE####ERROR
+The servers at Flatbush Farm appear to have perfected that ghastly technique of making you feel guilty and ashamed for deigning to attract their attention .####servers####PREDICT_NONE####ERROR
+A different server enhanced the fun , dumping our entrees in front of us halfway through our appetizer which was delicious .####server,appetizer####server####ERROR
+The place has a nice fit-out , some attractive furnishings and , from what I could tell , a reasonable wine list I was given the food menu when I asked for the carte des vins####fit-out,furnishings,wine list####place,carte des vins####ERROR
+How is this palce still open ?####palce####PREDICT_NONE####ERROR
+We ordered our appetizers , I ordered the chicken and my boyfriend the salmon .####GOLD_NONE####chicken,salmon####NON_OT
+Everything was going good until we got our meals .####meals####PREDICT_NONE####ERROR
+It was served with skin , over a bed of extremely undercooked spinach and mashed potatoes .####spinach####mashed potatoes####ERROR
+I took one bite from the $ 24 salmon , and I have never , in the 17 years I have been going to restaurants tasted salmon as fishy , as dry , and as bland as the one in Flatbush Farms .####salmon,salmon####salmon####ERROR
+So , I switch with my boyfriend again to see if maybe I could stomach the meat and spinach again , but the spinach was so undercooked that I just could not bite through it .####spinach,spinach####meat,spinach####ERROR
+I could n't even enjoy the mashed potatoes because it was hidden completely under the chicken and spinach .####GOLD_NONE####mashed potatoes,chicken####NON_OT
+I 've had better chicken at BBQs ! ! ! !####GOLD_NONE####chicken at BBQs####NON_OT
+So I decide to report back to the waitress because it was completely inedible .####GOLD_NONE####waitress####NON_OT
+After that she simply took our plates , walked away , came back another TWENTY minutes later with the bill and the chicken on it ! ! ! ! ! ! ! ! ! ! ! !####GOLD_NONE####chicken####NON_OT
+No desert menu , no apology , nothing ! ! ! ! ! !####GOLD_NONE####desert menu####NON_OT
+I was literally going to explode , but instead , my boyfriend took the bill and went to find the manager .####GOLD_NONE####manager####NON_OT
+We refused to pay for it because at this point it had nothing to do with the food anymore .####GOLD_NONE####food####NON_OT
+The manager came to the table and said we can do what we want , so we paid for what we did enjoy , the drinks and appetizers , and walked out .####manager,drinks,appetizers####drinks,appetizers####ERROR
+cirspy crust margherita pizza####margherita pizza####cirspy crust margherita pizza####ERROR
+we have been there 3 times since last week we alked it by chance first day the manager offerd us the margherita pizza adn we said yes .####GOLD_NONE####manager,margherita pizza adn####NON_OT
+Single Worst Restaurant in Manhattan####Restaurant####PREDICT_NONE####ERROR
+I 'll being with a couple of positives , cool decor , good pita and hummus , and grilled octopus that was actually pretty tasty .####decor,pita,hummus,grilled octopus####decor,pita,grilled octopus####ERROR
+If I could give 0 stars I would do so for this place .####place####PREDICT_NONE####ERROR
+Casa La Femme is to middle eastern dining what Chuckie Cheeze is to italian .####GOLD_NONE####Casa La Femme####NON_OT
+The reason there are 4 different results on citysearch for the same place is because they keep trying to start a new thread so they can stock it with positive reviews .####GOLD_NONE####place####NON_OT
+Sometimes you pay a lot and do n't get much in return , it 's manhattan , things are expensive .####GOLD_NONE####things####NON_OT
+The decor however seems to be the distraction so you wo n't notice that you just payed 300 bucks for some cold eggplant that took 2 FRICKIN HOURS TO COME ! ! ! !####decor,eggplant####decor####ERROR
+Though it 's been crowded most times I 've gone here , Bark always delivers on their food .####Bark,food####food####ERROR
+The hot dogs are top notch , and they 're Slamwich is amazing !####hot dogs,Slamwich####hot dogs####ERROR
+Only complaint is the pricing -- I believe it would be more reasonable to pay a dollar less on each item listed on the menu .####menu####PREDICT_NONE####ERROR
+Fabulous food , if the front of house staff do n't put you off####food,front of house staff####staff####ERROR
+Each time we 've been , the front of house staff not the waiters , they 're fantastic , but the people who greet and seat you has been so hideous to us that were it not for the exceptional fish dishes I would never return .####front of house staff,waiters,fish dishes####waiters,people,seat,fish dishes####ERROR
+As BFC does n't take reservations you almost always have to wait by the bar , and be abused by the front of house staff until you are seated , which can be over an hour later !####BFC,front of house staff####PREDICT_NONE####ERROR
+The frizzy retro girl with winged/ Dame Edna glasses will yell at you if you try to order a drink .####girl####frizzy retro girl,Dame Edna####ERROR
+There 's another girl who I ca n't describe , she is about 5'6 with brown hair , who eavesdrops on your conversation and chimes in , except she only hears the last part of what you said , so her uninvited opinions are often out of context and nothing to do with what you 're *really* talking about .####girl####PREDICT_NONE####ERROR
+Maitre-D and get out####Maitre-D####PREDICT_NONE####ERROR
+The food and service were fine , however the maitre-D was incredibly unwelcoming and arrogant .####food,service,maitre-D####food,service####ERROR
+This guy refused to seat her and she left , followed shortly by the four of us , but not before I told him that in my 40 years of world travel , including Paris , that I had never seen such a display of bad behavior by a frontman in a restaurant .####frontman####PREDICT_NONE####ERROR
+A word to the wise , you ca n't dine here and disturb the maitre-D 's sense of table turnover , as whacked as it is , or else .####maitre-D####PREDICT_NONE####ERROR
+The Four Seasons restaurant is a great experience .####The Four Seasons restaurant####Four Seasons restaurant####ERROR
+At first glance this place seems a bit pricey for a hot dog joint , but at Bark you do n't just get your average hot dog .####hot dog,Bark,hot dog####place,hot dog joint####ERROR
+Went to this place this place on a real cold night and needed a quick meal .####GOLD_NONE####place,place,meal####NON_OT
+Cool atmosphere , the fire place in the back really ads to it but needs a bit more heat throughout on a cold night .####atmosphere,fire place####atmosphere####ERROR
+Poor service and management####service,management####service####ERROR
+Had an awful experience at Casa la Femme on a Saturday dinner .####Casa la Femme####PREDICT_NONE####ERROR
+Appetizers took nearly an hour .####GOLD_NONE####Appetizers####NON_OT
+When the main course finally arrived another 45mins half of our order was missing .####GOLD_NONE####main course####NON_OT
+Ca n't believe how an expensive NYC restaurant can be so disrespectful to its clients .####restaurant####PREDICT_NONE####ERROR
+There is no way it justifies the accolades it receives , the attitude of the staff or the wait for a table .####staff,wait####staff####ERROR
+Mistakes happen , but they are usually accompanied by an apology , perhaps even a glass of winebut not the grunt that we received from the Al Di La staff .####staff####Al Di La staff####ERROR
+I was one of the people that went for this horrible experience .####GOLD_NONE####people####NON_OT
+I asked for a menu and the same waitress looked at my like I was insane .####waitress####same waitress####ERROR
+Shame on this place for the horrible rude staff and non-existent customer service .####staff,customer service####staff,non-existent customer service####ERROR
+I generally like this place .####place####PREDICT_NONE####ERROR
+I ca n't believe that it was , but please put the bag down before delivering food !####GOLD_NONE####food####NON_OT
+I wish I could like this place more , and I wish someone would retrain the staff .####place,staff####staff####ERROR

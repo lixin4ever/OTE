@@ -1,10 +1,12 @@
-Other than not being a fan of click pads industry standard these days and the lousy internal speakers , it 's hard for me to find things about this notebook I do n't like , especially considering the $ 350 price tag .####click pads,internal speakers,price tag####internal speakers,price tag####ERROR
+Other than not being a fan of click pads industry standard these days and the lousy internal speakers , it 's hard for me to find things about this notebook I do n't like , especially considering the $ 350 price tag .####click pads,internal speakers,price tag####pads industry standard,internal speakers,price tag####ERROR
 I am pleased with the fast log on , speedy WiFi connection and the long battery life > 6 hrs .####log on,WiFi connection,battery life####WiFi connection,battery life####ERROR
 Made interneting part of my business very difficult to maintain .####interneting####PREDICT_NONE####ERROR
 Super light , super sexy and everything just works .####works####PREDICT_NONE####ERROR
 Strong build though which really adds to its durability .####build,durability####durability####ERROR
 I 've had my computer for 2 weeks already and it works perfectly .####works####PREDICT_NONE####ERROR
+I 'm pretty sure when I bought it , my bank account went ouch !####GOLD_NONE####bank####NON_OT
 This thing is awesome , everything always works , everything is always easy to set up , everything is compatible , its literally everything I could ask for .####works,set up####set up####ERROR
+Keyboard responds well to presses .####Keyboard####Keyboard responds####ERROR
 Everything is so easy and intuitive to setup or configure .####setup,configure####setup####ERROR
 The criticism has waned , and now I 'd be the first to recommend an Air for truly portable computing .####portable computing####PREDICT_NONE####ERROR
 MS Office 2011 for Mac is wonderful , well worth it .####MS Office 2011 for Mac####MS Office####ERROR
@@ -36,7 +38,7 @@ Yes , that 's a good thing , but it 's made from aluminum that scratches easily 
 Quick and has built in virus control .####built in virus control####virus control####ERROR
 The cons are more annoyances that can be lived with .####GOLD_NONE####cons####NON_OT
 On start up it asks endless questions just so itune can sell you more of their products .####start up,itune####PREDICT_NONE####ERROR
-One more thing , this mac does NOT come with restore disks and I am not sure if you can make them direct from the mac like you can with newer PC 's , also the charging cables are made of the same cheap material as the iPhone/iPod touch cables .####restore disks,charging cables,material####charging cables,iPhone/iPod touch cables####ERROR
+One more thing , this mac does NOT come with restore disks and I am not sure if you can make them direct from the mac like you can with newer PC 's , also the charging cables are made of the same cheap material as the iPhone/iPod touch cables .####restore disks,charging cables,material####charging cables####ERROR
 I bought it to my son who uses it for graphic design .####graphic design####PREDICT_NONE####ERROR
 I never tried any external mics with that iMac .####external mics####PREDICT_NONE####ERROR
 The new os is great on my macbook pro !####os####PREDICT_NONE####ERROR
@@ -50,15 +52,13 @@ It 's just what we were looking for and it works great .####works####PREDICT_NON
 It 's so quick and responsive that it makes working on a computer so much more pleasurable !####working####PREDICT_NONE####ERROR
 I 'm using this computer for word processing , web browsing , some gaming , and I 'm learning programming .####word processing,web browsing,gaming,programming####word processing,web browsing,gaming####ERROR
 My wife was so excited to open the box , but quickly came to see that it did not function as it should .####function####PREDICT_NONE####ERROR
-Apple "Help" is a mixed bag .####Apple "Help"####"Help"####ERROR
+Apple "Help" is a mixed bag .####Apple "Help"####PREDICT_NONE####ERROR
 It suddenly can not work .####work####PREDICT_NONE####ERROR
 Harddrive was in poor condition , had to replace it .####Harddrive####PREDICT_NONE####ERROR
-The on/off switch is a bit obscure in the rear corner .####on/off switch####switch####ERROR
 The only task that this computer would not be good enough for would be gaming , otherwise the integrated Intel 4000 graphics work well for other tasks .####gaming,integrated Intel 4000 graphics####Intel 4000 graphics####ERROR
 It is robust , with a friendly use as all Apple products .####use####PREDICT_NONE####ERROR
 I 've installed to it additional SSD and 16Gb RAM .####SSD,16Gb RAM####16Gb RAM####ERROR
 It works great and I am so happy I bought it .####works####PREDICT_NONE####ERROR
-I like the lighted screen at night .####lighted screen####PREDICT_NONE####ERROR
 USB3 Peripherals are noticably less expensive than the ThunderBolt ones .####USB3 Peripherals,ThunderBolt####USB3 Peripherals####ERROR
 It 's fast , light , and is perfect for media editing , which is mostly why I bought it in the first place .####media editing####PREDICT_NONE####ERROR
 The battery lasts as advertised give or take 15-20 minutes , and the entire user experience is very elegant .####battery,user experience####battery####ERROR
@@ -70,7 +70,7 @@ It 's fast at loading the internet .####loading the internet####internet####ERRO
 So much faster and sleeker looking .####looking####PREDICT_NONE####ERROR
 Unfortunately , it runs XP and Microsoft is dropping support next April .####XP,support####runs XP,dropping support####ERROR
 First off , I really do like my MBP once used to the OS it is pretty easy to get around , and the overall build is great eg the keyboard is one of the best to type on .####OS,overall build,keyboard####OS,build,keyboard####ERROR
-There is no HDMI receptacle , nor is there an SD card slot located anywhere on the device .####HDMI receptacle,SD card slot####HDMI receptacle####ERROR
+There is no HDMI receptacle , nor is there an SD card slot located anywhere on the device .####HDMI receptacle,SD card slot####HDMI receptacle,card slot located####ERROR
 It came in brand new and works perfectly .####works####PREDICT_NONE####ERROR
 MY TRACKPAD IS NOT WORKING .####TRACKPAD####PREDICT_NONE####ERROR
 It looks and feels solid , with a flawless finish .####looks,feels,finish####PREDICT_NONE####ERROR
@@ -95,7 +95,6 @@ Its fast , easy to use and it looks great .####use,looks####use####ERROR
 but Office can be purchased IF I ever need a laptop again I am for sure purchasing another Toshiba ! !####Office####PREDICT_NONE####ERROR
 Performance is much much better on the Pro , especially if you install an SSD on it .####Performance,SSD####Performance####ERROR
 Note , however , that any existing MagSafe accessories you have will not work with the MagSafe 2 connection .####MagSafe accessories,MagSafe 2 connection####MagSafe 2 connection####ERROR
-MAYBE The Mac OS improvement were not The product they Want to offer .####Mac OS####Mac OS improvement####ERROR
 I thought the transition would be difficult at best and would take some time to fully familiarize myself with the new Mac ecosystem .####Mac ecosystem####transition####ERROR
 I am please with the products ease of use ; out of the box ready ; appearance and functionality .####use,appearance,functionality####use,functionality####ERROR
 Perfect for all my graphic design classes I 'm taking this year in college , -####graphic design####PREDICT_NONE####ERROR
@@ -109,10 +108,11 @@ Here are the things that made me confident with my purchase , Build Quality , Se
 It provides much more flexibility for connectivity .####flexibility for connectivity####connectivity####ERROR
 Mac tutorials do help .####Mac tutorials####PREDICT_NONE####ERROR
 I got the new adapter and there was no change .####adapter####PREDICT_NONE####ERROR
+Having heard from friends and family about how reliable a Mac product is , I never expected to have an application crash within the first month , but I did .####application####PREDICT_NONE####ERROR
 The Macbook pro 's physical form is wonderful .####physical form####PREDICT_NONE####ERROR
 3D rendering slows it down considerably .####3D rendering####PREDICT_NONE####ERROR
 fast , great screen , beautiful apps for a laptop ; priced at 1100 on the apple website ; amazon had it for 1098+ tax , plus i had a 10 % off coupon from amazon-ASPECT3 me 998 plus tax 1070 OTD !####screen,apps,priced####screen,apps####ERROR
-The Like New condition of the iMac MC309LL/A on Amazon is at $ 900+ level only , and it is a Quad-Core 2.5 GHz CPU similar to the $ 799 Mini , with Radeon HD 6750M 512MB graphic card this mini is integrated Intel 4000 card , and it even comes with wireless Apple Keyboard and Mouse , all put together in neat and nice package .####Quad-Core 2.5 GHz CPU,Radeon HD 6750M 512MB graphic card,integrated Intel 4000 card,wireless Apple Keyboard and Mouse,package####Quad-Core 2.5 GHz CPU,Radeon HD 6750M 512MB graphic card,Intel 4000 card,Keyboard,Mouse####ERROR
+The Like New condition of the iMac MC309LL/A on Amazon is at $ 900+ level only , and it is a Quad-Core 2.5 GHz CPU similar to the $ 799 Mini , with Radeon HD 6750M 512MB graphic card this mini is integrated Intel 4000 card , and it even comes with wireless Apple Keyboard and Mouse , all put together in neat and nice package .####Quad-Core 2.5 GHz CPU,Radeon HD 6750M 512MB graphic card,integrated Intel 4000 card,wireless Apple Keyboard and Mouse,package####Quad-Core 2.5 GHz CPU,HD 6750M 512MB graphic card,Intel 4000 card,Keyboard,Mouse####ERROR
 Put a cover on it and is a little better but that is my only complaint .####cover####PREDICT_NONE####ERROR
 This mac does come with an extender cable and I 'm using mine right now hoping the cable will stay nice for the many years I plan on using this mac .####extender cable,cable####cable####ERROR
 My life has been enriched since I have been using Apple products .####GOLD_NONE####life####NON_OT
@@ -146,6 +146,7 @@ The SuperDrive is quiet .####SuperDrive####PREDICT_NONE####ERROR
 if yo like practicality this is the laptop for you .####practicality####PREDICT_NONE####ERROR
 The troubleshooting said it was the AC adaptor so we ordered a new one .####AC adaptor####PREDICT_NONE####ERROR
 Fan only comes on when you are playing a game .####Fan,playing a game####Fan####ERROR
+There is no "tools" menu .####"tools" menu####PREDICT_NONE####ERROR
 Easy to install also small to leave anywhere at your bedroom also very easy to configure for ADSl cable or wifi .####install,configure for ADSl cable or wifi####wifi####ERROR
 Nice packing .####packing####PREDICT_NONE####ERROR
 Apple no longer includes iDVD with the computer and furthermore , Apple does n't even offer it anymore !####iDVD####PREDICT_NONE####ERROR
@@ -158,8 +159,7 @@ The sound as mentioned earlier is n't the best , but it can be solved with headp
 Shipping was quick and product described was the product sent and so much more .####Shipping####PREDICT_NONE####ERROR
 The Mac Mini is probably the simplest example of compact computing out there .####compact computing####PREDICT_NONE####ERROR
 Instead , I 'll focus more on the actual performance and feature set of the hardware itself so you can make an educated decision on which Mac to buy .####performance and feature set of the hardware####performance,feature set,hardware####ERROR
-Other ports include FireWire 800 , Gigabit Ethernet , MagSafe port , Microphone jack .####ports,FireWire 800,Gigabit Ethernet,MagSafe port,Microphone jack####Gigabit Ethernet,MagSafe port,Microphone jack####ERROR
-Additionally , there is barely a ventilation system in the computer , and even the simple activity of watching videos let alone playing steam games causes the laptop to get very very hot , and in fact impossible to keep on lap .####ventilation system,watching videos,playing steam games####system,steam games####ERROR
+Additionally , there is barely a ventilation system in the computer , and even the simple activity of watching videos let alone playing steam games causes the laptop to get very very hot , and in fact impossible to keep on lap .####ventilation system,watching videos,playing steam games####steam games####ERROR
 Now that I have upgraded to Lion I am much happier about MAC OS and have just bought an iMac for office .####Lion,MAC OS####MAC OS####ERROR
 User upgradeable RAM and HDD .####RAM,HDD####RAM####ERROR
 I was a little worry at first because I do n't have a lot of experience with os.x and windows has always been second nature to me after many years of using windows .####os.x,windows,windows####windows,windows####ERROR
@@ -170,7 +170,7 @@ No Cd Rom in the new version there 's no way I 'm spending that kind of money on
 the volume is really low to low for a laptopwas not expectin t volume to be so lowan i hate that about this computer####volume,volume####volume####ERROR
 and its not hard to accidentally bang it against something so i recommend getting a case to protect it .####case####PREDICT_NONE####ERROR
 Every time I log into the system after a few hours , there is this endlessly frustrating process that I have to go through .####log into the system####system####ERROR
-Put a SSD and use a 21" LED screen , this set up is silky smooth !####SSD,21" LED screen,set up####21" LED screen,set####ERROR
+Put a SSD and use a 21" LED screen , this set up is silky smooth !####SSD,21" LED screen,set up####21" LED screen,set up####ERROR
 I had to buy a wireless mouse to go with it , as I am old school and hate the pad , but knew that before I bought it , now it works great , need to get adjusted to the key board , as I am used to a bigger one and pounding .####wireless mouse,pad,works,key board####wireless mouse,pad,key board####ERROR
 When considering a Mac , look at the total cost of ownership and not just the initial price tag .####cost of ownership,price tag####look,price tag####ERROR
 The nicest part is the low heat output and ultra quiet operation .####heat output,operation####operation####ERROR
@@ -182,6 +182,7 @@ I like the brightness and adjustments .####brightness,adjustments####PREDICT_NON
 I only wish this mac had a CD/DVD player built in .####CD/DVD player####PREDICT_NONE####ERROR
 The only thing I miss is that my old Alienware laptop had backlit keys .####backlit keys####keys####ERROR
 It has enough memory and speed to run my business with all the flexibility that comes with a laptop .####memory,speed,flexibility####memory,speed####ERROR
+While we struggle with all the crashes and viruses , the kids computers stay consistent and so we caved in and bought one for buisness !####GOLD_NONE####buisness####NON_OT
 i have dropped mine a couple times with only a slim plastic case covering it .####slim plastic case####plastic case####ERROR
 But with this laptop , the bass is very weak and the sound comes out sound tinny .####bass,sound,sound####bass,sound####ERROR
 As far as user type , I dabble in everything from games WoW to Photoshop , but nothing professionally .####games,Photoshop####games WoW to Photoshop####ERROR
@@ -191,7 +192,7 @@ I like iTunes , the apparent security , the Mini form factor , all the nice grap
 The first time I used the card reader it took half an hour and a pair of tweezers to remove the card .####card reader,remove the card####card reader,card####ERROR
 I know some people complained about HDMI issues but they released a firmware patch to address that issue .####HDMI,firmware patch####HDMI####ERROR
 packing and everything was perfect####packing####PREDICT_NONE####ERROR
-It also comes with 4G of RAM but if you 're like me you want to max that out so I immediately put 8G of RAM in her and I 've never used a computer that performs better .####4G of RAM,8G of RAM,performs####4G of RAM,RAM####ERROR
+It also comes with 4G of RAM but if you 're like me you want to max that out so I immediately put 8G of RAM in her and I 've never used a computer that performs better .####4G of RAM,8G of RAM,performs####4G of RAM,8G of RAM####ERROR
 This computer is also awesome for my sons virtual home schooling .####virtual home schooling####PREDICT_NONE####ERROR
 Cost is more as compared to other brands .####Cost####PREDICT_NONE####ERROR
 also excellent operating system size and weight for optimal mobility excellent durability of the battery the functions provided by the trackpad is unmatched by any other brand- .####operating system size,weight,mobility,durability of the battery,functions provided by the trackpad####operating system size,weight,battery,functions,trackpad####ERROR
