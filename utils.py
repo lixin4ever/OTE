@@ -839,3 +839,57 @@ def feature_extractor(data, _type='map', feat='word', embeddings=None):
     else:
         return to_array(features=X, feat_vocab=indexer._mapping)
 
+def subj_check(sent):
+    """
+    roughly check if the sentence is subjective
+    """
+    lexicon = []
+    with open('./source/lexicon.txt', 'r') as fp:
+        for line in fp:
+            lexicon.append(line.strip())
+    noun_tags = ['NN', 'NNP', 'NNS']
+    pronoun = ['it', 'i', 'you', 'him', 'he', 'she', 'me', 'her', 'this', 'that', 'there', 'here']
+    words = sent['words']
+    postags = sent['postags']
+    dependencies = sent['dependencies']
+    #print dependencies
+    # nsubj pattern (Adj->nsubj->NN), e.g., The [service] is [good]
+    nsubj = False
+    # amod pattern (NN->nsubj->Adj), 
+    amod = False
+    # dep pattern (NN->dep->Adj), e.g., [Tasty] [dogs]!
+    dep = False
+    # compound pattern (NN->compound->Adj), e.g., [Best]. [Sushi]. Ever!
+    compound = False
+    # dobj pattern (VP->dobj->NN)
+    dobj = False
+    # nsubjpass pattern (NN->nsubjpass->Adj), e.g., The [place] was highly [recommended] !
+    nsubjpass = False
+
+    for t in dependencies:
+        head, relation, tail = t
+        try:
+            h_idx = words.index(head)
+            t_idx = words.index(tail)
+        except ValueError:
+            continue
+        if relation == 'nsubj':
+            if head.lower() in lexicon and tail.lower() not in pronoun:
+                nsubj = True
+        elif relation == 'amod':
+            if tail.lower() in lexicon and postags[h_idx] in noun_tags:
+                amod = True
+        elif relation == 'dep':
+            if tail.lower() in lexicon and postags[h_idx] in noun_tags and head.lower() not in pronoun:
+                dep = True
+        elif relation == 'compound':
+            if tail.lower() in lexicon and postags[h_idx] in noun_tags and head.lower() not in pronoun:
+                compound = True
+        elif relation == 'dobj':
+            if head.lower() in lexicon and postags[t_idx] in noun_tags and tail.lower() not in pronoun:
+                dobj = True
+        elif relation == 'nsubjpass':
+            if tail.lower() in lexicon and postags[h_idx] in noun_tags and head.lower() not in pronoun:
+                nsubjpass = True
+    return nsubj or amod or dep or compound or dobj or nsubjpass
+

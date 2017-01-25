@@ -18,7 +18,7 @@ Run do n't walk .
 Super YUMMY Pizza !
 I was visiting New York City with a friend and we discovered this really warm and inviting restaurant .
 I LOOOVE their eggplant pizza , as well as their pastas !##eggplant_pizza
-We had half/half pizza , mine was eggplant and my friend had the buffalo and it was sooo huge for a small size pizza !##pizza##buffalo##pizza
+We had half/half pizza , mine was eggplant and my friend had the buffalo and it was sooo huge for a small size pizza !##pizza##eggplant##buffalo##pizza
 We had fun eating in there , we were there like around 3 am in the morning ! .
 Will comeback for sure , wish they have it here in LA .
 Excellent food , although the interior could use some help .##food
@@ -46,7 +46,7 @@ My wife and I went to Water 's Edge for a romantic dinner .
 We had a very nice time .
 The waiter was attentive , the food was delicious and the views of the city were great .##waiter##food##views
 I 'd definitely go back again .
-Great place to relax and enjoy your dinner##place
+Great place to relax and enjoy your dinner
 There is something about their atmosphere that makes me come back nearly every week .##atmosphere
 Place is open till late , no dress code .##Place
 Good food , my favorite is the seaASPECT0 spaghetti .##food##seaASPECT0_spaghetti
@@ -54,7 +54,7 @@ Highly recommended !
 Excellent food for great prices##food
 My husband and I have been sold on this from the first visit .
 The wait staff is very courteous and accomodating .##wait_staff
-The space is limited so be prepared to wait up to 45 minutes , 1 hour , but be richly rewarded when you savor the delicious indo-chinese food .##indo-chinese_food
+The space is limited so be prepared to wait up to 45 minutes , 1 hour , but be richly rewarded when you savor the delicious indo-chinese food .##food
 There are no negatives to speak of .
 the bestt !
 my favorite place lol
@@ -105,13 +105,13 @@ The rolls are creative and I have yet to find another sushi place that serves up
 The Dancing, White River and Millenium rolls are musts .##Dancing,_White_River_and_Millenium_rolls
 SO GOOD
 I CAN EAT HERE EVERY DAY OF THE WEEK REALLY LOL LOVE THIS PLACE .##PLACE
-Gross food , Wow-##food
+Gross food , Wow-
 I ca n't remember the last time I had such gross food in New York .##food
 My quesadilla tasted like it had been made by a three-year old with no sense of proportion or flavor .
 And $ 11 for a plate of bland guacamole ?##guacamole
 Come on .
 Do n't get me started on the margaritas , either .##margaritas
-Mine tasted like the bartender had forgotten to add the tequila .##tequila
+Mine tasted like the bartender had forgotten to add the tequila .
 Really , I find it rather scandalous that such a crappy restaurant attracts such crowds -- this , in the city of a million restaurants , at least 9/10 of which are way better than this one .##restaurant
 Save your money and your time and go somewhere else .
 Oh , and I never write reviews -- I just was so moved by how bad this place was , I felt it was my duty to spread the word .
@@ -142,17 +142,17 @@ Raymond the bartender rocks !
 Pacifico is a great place to casually hang out .##Pacifico
 The drinks are great , especially when made by Raymond .##drinks
 The omlette for brunch is great .##omlette_for_brunch
-the spinach is fresh , definately not frozen .##spinach
+the spinach is fresh , definately not frozen .
 quacamole at pacifico is yummy , as are the wings with chimmichuri .##wings_with_chimmichuri
 A weakness is the chicken in the salads .##salads
 It 's just average , just shredded , no seasoning on it .
 Also , I personally was n't a fan of the portobello and asparagus mole .##portobello_and_asparagus_mole
-Overall , decent food at a good price , with friendly people .##food##people
+Overall , decent food at a good price , with friendly people .##food
 Best Indian Restaurant in the City##Indian_Restaurant
 Decor needs to be upgraded but the food is amazing !##Decor##food
 This small Astoria souvlaki spot makes what many consider the best gyros in New York .##Astoria_souvlaki_spot##gyros
 Small , bright , and clean , BZ Grill stands apart from the usual run of gyro joints , both in Astoria and out .##Grill
-What really makes it shine is the food , which is aggressively seasoned with Cyrpriot spices , and all made in-house even the gyro meat and sausages , and made of much higher quality ingredients that might otherwise be expected .##food##gyro_meat_and_sausages##ingredients
+What really makes it shine is the food , which is aggressively seasoned with Cyrpriot spices , and all made in-house even the gyro meat and sausages , and made of much higher quality ingredients that might otherwise be expected .##food##gyro_meat_and_sausages
 All the various Greek and Cypriot dishes are excellent , but the gyro is the reason to come -- if you do n't eat one your trip was wasted .##Greek_and_Cypriot_dishes##gyro
 Best restaurant in Brooklyn
 The best !
@@ -174,7 +174,7 @@ Once you try it for a special occasion beware you ca n't stop ! .
 You 'll be ther for every anniversary , birthday , valentines day .
 For a Fabulous Wedding !
 My daughter 's wedding reception at Water's Edge received the highest compliments from our guests .
-Everyone raved about the atmosphere elegant rooms and absolutely incomparable views and the fabulous food !##atmosphere_elegant_rooms##views##food
+Everyone raved about the atmosphere elegant rooms and absolutely incomparable views and the fabulous food !##rooms##views##food
 Service was wonderful ;##Service
 everyone was cheerfully cooperative and helpful .
 Paul , the maitre d ' , was totally professional and always on top of things .
@@ -191,10 +191,10 @@ oh speaking of bathroom , the mens bathroom was disgusting .##mens_bathroom
 The floor was wet , the trash can filled with hand towels n all over the floor , no soap , and no hand towels left .
 Go to son cubano in edgewater nj instead .
 Good Experience
-During our trip to NYC , we made reservations to dine in the pool room of the Four Seasons for their pre-theater menu offering a modified menu for $ 65 pp .##pool_room
+During our trip to NYC , we made reservations to dine in the pool room of the Four Seasons for their pre-theater menu offering a modified menu for $ 65 pp .
 The wine list was extensive , though the staff did not seem knowledgeable about wine pairings .##wine_list##staff
 The bread we received was horrible , rock hard and cold , and the free appetizer of olives was disappointing .##appetizer_of_olives
-However , our main course was wonderful .##main_course
+However , our main course was wonderful .
 I had fish and my husband had the filet , both of which exceeded our expectations .##fish##filet
 The dessert we had a pear torte was good , but , once again , the staff was unable to provide appropriate drink suggestions .##dessert##pear_torte##staff##drink_suggestions
 When we inquired about ports , the waitress listed off several but did not know taste variations or cost .##waitress
@@ -219,9 +219,9 @@ I go out to eat and like my courses , servers are patient and never rush courses
 Restaurants in manhattan should try to model food and service after this place .##food##service
 amazing fresh dogs but best of all endless toppings ! ! !
 this place had ALL the trimmings and i mean all .##place##trimmings
-peppers , onions , relish , chilli , cheeses , you NAME it .##peppers##onions##relish##chilli##cheeses
+peppers , onions , relish , chilli , cheeses , you NAME it .##peppers##onions##chilli##cheeses
 amazing fun for hot dog lovers of all ages PLEASE do yourself a favor and check this place out ! ! ! !##place
-BEST DINING EXPERIENCE IN THE WEST VILLAGE !
+BEST DINING EXPERIENCE IN THE WEST VILLAGE !##DINING_EXPERIENCE
 Stepping into Casa La Femme last night was a true experience unlike any other in New York !
 Highly impressed from the decor to the food to the hospitality to the great night I had !
 The have a great cocktail with Citrus Vodka and lemon and lime juice and mint leaves that is to die for !##cocktail_with_Citrus_Vodka##lemon_and_lime_juice##mint_leaves
@@ -240,7 +240,7 @@ The manager finally said he would comp the two glasses of wine which cost less t
 We paid and left because we did n't feel like arguing any more .
 I have worked in restaurants and cook a lot , and there is no way a maggot should be able to get into well prepared food .##food
 For a restaurant with such a good reputation and that is usually so packed , there was no reason for such a lack of intelligent customer service .##service
-A fairly late entry into the haute barnyard sweepstakes , Flatbush Farm is n't in the same league as the Blue Hills or even the Farm on Adderlys of the world , but it 's pretty good , albeit with a somewhat dismal setting .##Farm##Blue_Hills##setting
+A fairly late entry into the haute barnyard sweepstakes , Flatbush Farm is n't in the same league as the Blue Hills or even the Farm on Adderlys of the world , but it 's pretty good , albeit with a somewhat dismal setting .##Farm##Blue_Hills
 Unhygienic
 I do not recommend .
 I went there 2times .
@@ -248,7 +248,7 @@ I got hair in my food 2 times of then !
 Great place , great value .##place
 The food is flavorful , plentiful and reasonably priced .##food
 The atmosphere is relaxed and casual .##atmosphere
-It 's a great place to order from or sit-in .##place
+It 's a great place to order from or sit-in .
 Awesome
 Inexpensive , unassuming , great time !
 Sushi experience was unbelievable with my fiance .##Sushi_experience
@@ -276,13 +276,13 @@ Still we keep going back ,
 I was speechless by the horrible food .##food
 I attended a holiday dinner at the restaurant , and the food was majorly disappointing .##food
 Rather than eating the meat entree being offered , I requested a vegetarian dish .##meat_entree##vegetarian_dish
-Rather than preparing vegetarian dish , the chef presented me with a plate of steamed vegetables minus sauce , seasoning , or any form or aesthetic presentation .##vegetarian_dish##chef##steamed_vegetables_minus_sauce
+Rather than preparing vegetarian dish , the chef presented me with a plate of steamed vegetables minus sauce , seasoning , or any form or aesthetic presentation .##chef##steamed_vegetables_minus_sauce
 I was so stunned , and I left the dinner hungry and majorly disappointing .
 This place survives on reputation alone .##place
 I will NEVER return .
 Best In ALL of NYC
 This is the MOST wonderful restaurant in all of New York City , not just Brooklyn .
-for 7 years they have put out the most tasty , most delicious food and kept it that way .
+for 7 years they have put out the most tasty , most delicious food and kept it that way .##food
 never swaying , never a bad meal , never bad service .##meal##service
 I 'm telling you .
 you should travel from the Bronx to try it .
@@ -312,13 +312,13 @@ AMAZING MY FAVORITE ! ! !
 I have been living in NYC for bit now and I have to say I love to go out and explore the scene .
 I came across Village Underground by accident , now I go there all the time .
 The martinis are amazing and very fairly priced .##martinis
-THE SERVICE IS AMAZING , i 've had different waiters and they were all nice , which is a rare thing in NYC .##SERVICE
+THE SERVICE IS AMAZING , i 've had different waiters and they were all nice , which is a rare thing in NYC .##SERVICE##waiters
 The DJ is awesome , I have been there for my birthday and a bunch of other times with friends and I keep going back .##DJ
 You can get a table without a reservation if you get there early I they do n't make you by bottles .
 Which lets face itat times it 's a good thing .
 In the end you end up with a fair tab and NOTHING BUT A GREAT TIME ! ! !
 Highly recommended !
-One of the best , if not THE best , restaurants in Park Slope and NY in general
+One of the best , if not THE best , restaurants in Park Slope and NY in general##Park_Slope
 Everything on the menu is great .##menu
 This establishment is the real deal .
 Wish NY had more of these kind of places , intimate , superb food , homey , top notch all the way around , certainly worth the wait .##food##wait
@@ -330,7 +330,7 @@ Look , the appetizers were really good .##appetizers
 The entree was also very good .##entree
 Ca n't argue about that , but they are clearly over priced .
 What you are paying for is the environment and the name .
-Yes , the place is classy and beautiful , but they most certainly target the uber whealthy Not the common joe that wants to go all out every once in a while .##place##common_joe
+Yes , the place is classy and beautiful , but they most certainly target the uber whealthy Not the common joe that wants to go all out every once in a while .##place##joe
 $ 500 included ,
 Drinks , 2 glasses of Dom Perignon at $ 35 each .##Drinks
 Starters , Kobe Beef Sashimi .##Kobe_Beef_Sashimi
@@ -342,7 +342,7 @@ Vanison was good but not amazing .
 Bison was quite excellent however .##Bison
 Dessert , pure disaster .##Dessert
 Just not good at all .
-Some Pineapple covered in a glaze of some kind and some pear tart thing Not impressive at all .##pear_tart_thing
+Some Pineapple covered in a glaze of some kind and some pear tart thing Not impressive at all .
 I read reviews that called the restaurant too expensive and I thought to myself , but may be it is worth it .##restaurant
 I was wrong .
 The Four Seasons has history and it is a sort of landmark of New York City restaurants , but trust me , they will charge you through the nose just so that you can say I 've been to the four seasons restaurant .##Four_Seasons
@@ -417,7 +417,7 @@ Very normal Indian food , but done really well .##Indian_food
 I have it a 4 instead of 5 because of the price just chicken tikka masala , no bread of rice , is $ 25 , which I would expect at a upscale Indian restaurant but this place does n't have an upscale feel .##chicken_tikka_masala##place
 Also , waiters try to push more food on you , like suggest things as if they are complimentary when they actually cost $ .##waiters
 I do n't appreciate places or people that try to drive up the bill without the patron 's knowledge so that was a huge turnoff more than the price .
-But if you 're prepared to spend some $ and remember to ask if something they offer is complimentary , then this is the place to go for Indian food##Indian_food
+But if you 're prepared to spend some $ and remember to ask if something they offer is complimentary , then this is the place to go for Indian food
 One of the BEST
 Bukhara Grill , the tagline says it all INDIAN SPICE RAVE .##Bukhara_Grill
 My GF and I dine at Bukhara often as she lives near it .
@@ -428,7 +428,7 @@ Bukhara is on my top 5 Indian places in NYC##Bukhara
 Wretched and retching
 This will be only the third online review I have ever made about a restaurant in my life .
 They have all been tonight and they have all been about the same restaurant .
-I have never been so disgusted by both food an service .##food##service
+I have never been so disgusted by both food an service .##food_an_service
 For starters they delivered us someone else 's order .
 Fine , I wont hang you for that .
 However , once I received my predictably mediocre order of what Dokebi thinks passes as Korean fair , sometimes you have to settle when it 's your only option , I got through about half my kimchee before I found a piece of random lettuce accompanied by a far more disgusting , slimy , clearly bad piece of fish skin .
@@ -488,7 +488,7 @@ We started off with a delightful sashimi amuse bouche .##sashimi_amuse_bouche
 Our first course was Tuna Sashimi with Green Yuzu Sauce .##Tuna_Sashimi_with_Green_Yuzu_Sauce
 I picked the Grilled Black Cod as my entree , which I absolutely devoured while someone commented that the Grilled Salmon dish was better .##Grilled_Black_Cod##Grilled_Salmon_dish
 The entrees were served with miso soup and rice .##entrees##soup##rice
-The sake's complimented the courses very well and is successfully easing me into the sake world .##sake's##courses
+The sake's complimented the courses very well and is successfully easing me into the sake world .##sake's
 For desserts , we tried the frozen black sesame mousse interesting but not extraordinary and matcha (powdered green tea) and blueberry cheesecake , which was phenomenal .##desserts##frozen_black_sesame_mousse##matcha_(powdered_green_tea)_and_blueberry_cheesecake
 Maybe it was the great company I had friends visiting from Philly , yes , it was not a date this time or the super reasonable price point , but I just ca n't say enough good things about this brasserie .
 I do n't usually visit the same establishment more than once , what more twice , but I 'll come to Zenkichi anytime for a quiet , unhurried and memorable dinner .
@@ -518,7 +518,7 @@ We order a bit of everything on the menu .
 Price is high but the food is good , so I would come back again .##food
 This place does n't make any sense##place
 Just want to warn you all , do n't waste your time and money .
-This place has totally weird decor , stairs going up with mirrored walls , I am surprised how no one yet broke their head or fall off the stairs , mirrored walls make you dizzy and delusional .##place##decor##stairs##stairs
+This place has totally weird decor , stairs going up with mirrored walls , I am surprised how no one yet broke their head or fall off the stairs , mirrored walls make you dizzy and delusional .##place##decor##stairs
 This place is not inviting and the food is totally weird .##place##food
 The concept of japanese tapas is newly created and clearly does n't work .##concept_of_japanese_tapas
 The food they serve is not comforting , not appetizing and uncooked .##food
@@ -545,7 +545,7 @@ supercilious scorn is in .
 And how many times can you pick up the same perfectly aligned set of napkins , inspect them vapidly and plonk them down in exactly the same place instead of venturing a glance at people who are there to help you make the rent ?
 A different server enhanced the fun , dumping our entrees in front of us halfway through our appetizer which was delicious .##server
 Overall the food quality was pretty good , though I hear the salmon is much better when it has n't sat cooling in front of the guest .##food##salmon
-The place has a nice fit-out , some attractive furnishings and , from what I could tell , a reasonable wine list I was given the food menu when I asked for the carte des vins##place##carte_des_vins
+The place has a nice fit-out , some attractive furnishings and , from what I could tell , a reasonable wine list I was given the food menu when I asked for the carte des vins##place##food_menu##carte_des_vins
 At $ 120 for two people , however , this in no way represents value , unless you 're looking to pay by the hour for passive-aggressive torture .
 On that scale , it 's a world-beater .
 How is this palce still open ?
@@ -567,31 +567,31 @@ Guess what , I waited for TWENTY minutes before she came over and when she final
 After that she simply took our plates , walked away , came back another TWENTY minutes later with the bill and the chicken on it ! ! ! ! ! ! ! ! ! ! ! !##chicken
 No desert menu , no apology , nothing ! ! ! ! ! !##desert_menu
 I was literally going to explode , but instead , my boyfriend took the bill and went to find the manager .##manager
-This is where it really really gets bad , the manager said , there is absolutely nothing we can do , it 's a matter of taste that she did n't like it , and I can not comp it .##manager
+This is where it really really gets bad , the manager said , there is absolutely nothing we can do , it 's a matter of taste that she did n't like it , and I can not comp it .
 Again , no apology , no is there anything else I can get you , no can I get you a drink to make up for it , nothing ! ! ! !
 We refused to pay for it because at this point it had nothing to do with the food anymore .##food
 The level of rudeness was preposterous .
 The manager came to the table and said we can do what we want , so we paid for what we did enjoy , the drinks and appetizers , and walked out .##drinks##appetizers
 I HAVE NEVER EVER HAD SUCH AN UNPLEASANT EXPERIENCE .
-THIS STAFF SHOULD BE FIRED .##STAFF
+THIS STAFF SHOULD BE FIRED .
 cirspy crust margherita pizza##cirspy_crust_margherita_pizza
-we have been there 3 times since last week we alked it by chance first day the manager offerd us the margherita pizza adn we said yes .##manager##margherita_pizza_adn
+we have been there 3 times since last week we alked it by chance first day the manager offerd us the margherita pizza adn we said yes .##manager##margherita_pizza
 it was really good pizza .##pizza
 the crust was imazingly cooked well and pizza was fully loaded , , ,##crust##pizza
 you know what i mean all the positives things happening there made mw write this review .
-Single Worst Restaurant in Manhattan
+Single Worst Restaurant in Manhattan##Restaurant
 I 'll being with a couple of positives , cool decor , good pita and hummus , and grilled octopus that was actually pretty tasty .##decor##pita##grilled_octopus
 Moving on .
 If I could give 0 stars I would do so for this place .
 Casa La Femme is to middle eastern dining what Chuckie Cheeze is to italian .##Casa_La_Femme
-The reason there are 4 different results on citysearch for the same place is because they keep trying to start a new thread so they can stock it with positive reviews .##place
+The reason there are 4 different results on citysearch for the same place is because they keep trying to start a new thread so they can stock it with positive reviews .
 Wellthey can run but they ca n't hide .
 I live in the West Village and I 've been to a lot of restaurants .
 Sometimes you pay a lot and do n't get much in return , it 's manhattan , things are expensive .##things
 However , most of them are at least prompt and pleasant .
 This place where do i begin .##place
 It is quite a spectacular scene i 'll give them that .##scene
-The decor however seems to be the distraction so you wo n't notice that you just payed 300 bucks for some cold eggplant that took 2 FRICKIN HOURS TO COME ! ! ! !##decor
+The decor however seems to be the distraction so you wo n't notice that you just payed 300 bucks for some cold eggplant that took 2 FRICKIN HOURS TO COME ! ! ! !##decor##eggplant
 How this place survives the competitive west village market in this economy , or any other for that matter , is beyond me .##place
 Great Hot Dogs !##Hot_Dogs
 I 've made the trip out here a few times with a friend who lives nearby I live on UWS .
@@ -605,7 +605,7 @@ We live nearby BFC .
 It 's a little out of our price range for dining there except on special occasions , but we 've eaten there 6 times in the last 2 years .
 Each time we 've been , the front of house staff not the waiters , they 're fantastic , but the people who greet and seat you has been so hideous to us that were it not for the exceptional fish dishes I would never return .##waiters##people##seat##fish_dishes
 As BFC does n't take reservations you almost always have to wait by the bar , and be abused by the front of house staff until you are seated , which can be over an hour later !
-The frizzy retro girl with winged/ Dame Edna glasses will yell at you if you try to order a drink .##frizzy_retro_girl##Dame_Edna
+The frizzy retro girl with winged/ Dame Edna glasses will yell at you if you try to order a drink .
 I was almost amused by the fact that she was turning away customers at 9pm on a Friday night because she had a BBQ to go to that night , WTF ? ?
 I 'd be horrified if my staff were turning away customers so early and so rudely !##staff
 There 's another girl who I ca n't describe , she is about 5'6 with brown hair , who eavesdrops on your conversation and chimes in , except she only hears the last part of what you said , so her uninvited opinions are often out of context and nothing to do with what you 're *really* talking about .
@@ -640,7 +640,7 @@ Poor service and management##service
 Do n't go to this place !##place
 Had an awful experience at Casa la Femme on a Saturday dinner .
 Appetizers took nearly an hour .##Appetizers
-When the main course finally arrived another 45mins half of our order was missing .##main_course
+When the main course finally arrived another 45mins half of our order was missing .
 Never got an explanation as to what was going on .
 The manager was rude and handled the situation extremely poorly .##manager
 When we threatened to leave , we were offered a meager discount even though half the order was missing .
@@ -664,8 +664,8 @@ Her review is above .
 I was one of the people that went for this horrible experience .##people
 My friend is 100 % right in the experience we had .
 The hostess was rude and I got a distinct feeling that they did not want to serve us .##hostess
-The only thing that my friend left out is that when we sat down at the bar the bartender disappeared .##bar##bartender
-I asked for a menu and the same waitress looked at my like I was insane .##same_waitress
+The only thing that my friend left out is that when we sat down at the bar the bartender disappeared .##bar
+I asked for a menu and the same waitress looked at my like I was insane .##waitress
 I was shocked that my friends wanted to stay after the waitress said , can I help you and how many are in your party .##waitress
 What ?
 The three of us standing in front of her should have been an indication of how many of us there were .
@@ -681,5 +681,5 @@ The waiter delivered our food while holding what appeared to be a plastic bag of
 I ca n't believe that it was , but please put the bag down before delivering food !##food
 The waitress came to check in on us every few minutes , and began to clear the plates while half of us were still eating a big pet peeve of mine that happens almost everywhere , so I try to ignore it .##waitress
 I could n't ignore the fact that she reach over the plate of one of my friends , who was in mid bite , to clear the table .
-She then put the check down without asking if we were done , and came to check on the bill every two minutes , even though we were one of three occupied tables .
+She then put the check down without asking if we were done , and came to check on the bill every two minutes , even though we were one of three occupied tables .##tables
 I wish I could like this place more , and I wish someone would retrain the staff .##staff

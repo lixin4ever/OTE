@@ -31,8 +31,8 @@ def crf_extractor(train_set, test_set, embeddings=None, model_name=None, ds_name
     #embeddings = None
     #pred_res = AD.classify(trainset=train_set, testset=test_set)
     # filtered sentence without aspects
-    #new_test_set = [test_set[i] for (i, y) in enumerate(pred_res) if y > 0.5]
     new_test_set = test_set
+    #new_test_set = [sent for sent in test_set if subj_check(sent)]
     if True:
         print "crf with word-level features..."
         #train_X = feature_extractor(data=train_set, _type='map', feat='word', embeddings=embeddings)
