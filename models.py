@@ -738,7 +738,7 @@ class HierachyExtractor(object):
         :param dataset: training set
         :return:
         """
-        from utils import sent2features
+        from utils import *
         # not using embeddings
         train_X = [sent2features(sent, embeddings) for sent in dataset]
         # segment tag sequence, not original aspect tag sequence
@@ -763,7 +763,7 @@ class HierachyExtractor(object):
         :param dataset: testing dataset
         :return:
         """
-        from utils import sent2features
+        from utils import *
         # input of segmentor
         test_X = [sent2features(sent, embeddings) for sent in dataset]
         pred_seqs = self.segmentation(X=test_X)
