@@ -125,7 +125,7 @@ def word2vector(w2v):
         features['dim%s' % (i + 1)] = w2v[i]
     return features
 
-def sent2features(sent, embeddings=None):
+def sent2features(sent, embeddings):
     """
     transform sentence to word-level features
     """
