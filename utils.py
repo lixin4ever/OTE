@@ -378,7 +378,7 @@ def tag2seg(tag_sequence, sent):
             beg, end = -1, -1
     return segments
 
-def aspenct2segment(aspect_sequence):
+def aspect2segment(aspect_sequence):
     """
     aspect tag sequence to segment tag sequence
     :param aspect_sequence:
@@ -386,7 +386,7 @@ def aspenct2segment(aspect_sequence):
     """
     bieos = ot2bieos(tag_sequence=aspect_sequence)
     segment_sequence = []
-    for (i, tag) in bieos:
+    for tag in bieos:
         if tag == 'O' or tag == 'S':
             segment_sequence.append('O')
         else:

@@ -742,7 +742,7 @@ class HierachyExtractor(object):
         # not using embeddings
         train_X = [sent2features(sent, embeddings) for sent in dataset]
         # segment tag sequence, not original aspect tag sequence
-        train_Y = [aspenct2segment(sent2tags(sent)) for sent in dataset]
+        train_Y = [aspect2segment(sent2tags(sent)) for sent in dataset]
         print "train the segmentor..."
         self.segmentor.fit(train_X, train_Y)
         train_X_seg = []
