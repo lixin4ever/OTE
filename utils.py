@@ -7,6 +7,7 @@ from nltk import ngrams
 import os
 #from keras.utils.np_utils import to_categorical
 from data import Token, Sequence, FeatureIndexer
+from models import Segment
 
 def word2features(sent, i, embeddings):
     """
@@ -106,9 +107,10 @@ def word2features(sent, i, embeddings):
         })
 
     # add embedding features
-    word_embeddings = sent2embeddings(sent, embeddings)[i]
-    for i in xrange(len(word_embeddings)):
-        features['word.emb%s' % i] = word_embeddings[i]
+    if embeddings is not None:
+        word_embeddings = sent2embeddings(sent, embeddings)[i]
+        for i in xrange(len(word_embeddings)):
+            features['word.emb%s' % i] = word_embeddings[i]
 
     return features
 
@@ -123,11 +125,39 @@ def word2vector(w2v):
         features['dim%s' % (i + 1)] = w2v[i]
     return features
 
-def sent2features(sent, embeddings):
+def sent2features(sent, embeddings=None):
     """
     transform sentence to word-level features
     """
     return [word2features(sent, i, embeddings) for i in xrange(len(sent['words']))]
+
+def seg2features(seg, sent, embeddings=None):
+    """
+    get segment-level features
+    :param sent: sentence
+    :param embeddings: word embeddings
+    :return:
+    """
+    beg, end = seg.beg, seg.end
+    features = {}
+    for (i, idx) in enumerate(range(beg, end)):
+        # i is the index of word in the current segment and idx is the sentence index of word
+        word_feats = word2features(sent, idx, embeddings)
+        for feat in word_feats:
+            new_feat = 'seg%s|%s' % (i, feat)
+            value = word_feats[feat]
+            features[new_feat] = value
+    return features
+
+
+def sent2seg_features(segments, sent, embeddings=None):
+    """
+    transform sentence to segment-level features
+    :param sent: sentence
+    :param embeddings: pre-trained word embeddings
+    :return:
+    """
+    return [seg2features(seg, sent, embeddings) for seg in segments]
 
 def sent2embeddings(sent, embeddings):
     """
@@ -150,6 +180,9 @@ def sent2embeddings(sent, embeddings):
 
 def sent2tags(sent):
     return [t for t in sent['tags']]
+
+def sent2tags_seg(sent):
+    return [segment.aspect for segment in sent]
 
 def sent2postags(sent):
     return [t for t in sent['postags']]
@@ -317,6 +350,48 @@ def bieos2ot(tag_sequence):
     # ensure that lengths of two sequences are equal
     assert len(new_sequence) == len(tag_sequence)
     return new_sequence
+
+def tag2seg(tag_sequence, sent):
+    """
+    construct segments according to the output of segmentor
+    :param tag_sequence: segment tag sequence
+    :return:
+    """
+    # get bieos style sequence
+    bieos = ot2bieos(tag_sequence)
+    segments = []
+    beg, end = -1, -1
+    for (i, tag) in enumerate(bieos):
+        if tag == 'O' or tag == 'S':
+            beg, end = i, i + 1
+            aspect_tag = sent['tags'][i]
+            segments.append(Segment(beg=beg, end=end, aspect=aspect_tag))
+            beg, end = -1, -1
+        elif tag == 'B':
+            assert beg == -1
+            beg = i
+        elif tag == 'E':
+            end = i + 1
+            assert beg != -1 and beg < end
+            aspect_tag = sent['tags'][i]
+            segments.append(Segment(beg=beg, end=end, aspect=aspect_tag))
+            beg, end = -1, -1
+    return segments
+
+def aspenct2segment(aspect_sequence):
+    """
+    aspect tag sequence to segment tag sequence
+    :param aspect_sequence:
+    :return:
+    """
+    bieos = ot2bieos(tag_sequence=aspect_sequence)
+    segment_sequence = []
+    for (i, tag) in bieos:
+        if tag == 'O' or tag == 'S':
+            segment_sequence.append('O')
+        else:
+            segment_sequence.append('T')
+    return segment_sequence
 
 
 def evaluate(test_Y, pred_Y):

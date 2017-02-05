@@ -9,8 +9,8 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import LSTM, Bidirectional, Embedding, TimeDistributed, Dense, Reshape, Convolution1D
 from keras.callbacks import EarlyStopping
-from models import AveragedPerceptron, AsepectDetector
-from numpy import linalg as LA
+from models import AveragedPerceptron, AsepectDetector, HierachyExtractor
+#from numpy import linalg as LA
 #from layers import MyEmbedding
 
 #embeddings = {}
@@ -385,6 +385,10 @@ def run(ds_name, model_name='crf', feat='word'):
         conv_lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings, win_size=3)
     elif model_name == 'ap':
         ap_extractor(train_set=train_set, test_set=test_set)
+    elif model_name == 'he':
+        extractor = HierachyExtractor(seg_name='crf', labeler_name='crf')
+        extractor.fit(dataset=train_set, embeddings=embeddings)
+        extractor.predict(dataset=test_set, embeddings=embeddings)
 
 
 if __name__ == '__main__':

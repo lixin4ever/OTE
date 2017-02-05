@@ -16,7 +16,9 @@ from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential, Model
 from keras.callbacks import ModelCheckpoint
 from keras.constraints import maxnorm
-from nltk.corpus import stopwords 
+from nltk.corpus import stopwords
+import sklearn_crfsuite
+from sklearn_crfsuite import metrics
 
 
 delset = string.punctuation
@@ -692,6 +694,99 @@ class AsepectDetector(object):
             """
             pred_Y = self.model.predict(test_X)
         return pred_Y
+
+
+class Segment(object):
+    def __init__(self, beg, end, aspect):
+        """
+        :param beg: begin position
+        :param end: end position
+        """
+        self.beg = beg
+        self.end = end
+        self.aspect = aspect
+
+
+class HierachyExtractor(object):
+    """
+    segmentation-based extractor
+    """
+    def __init__(self, seg_name, labeler_name):
+        if seg_name == 'crf':
+            self.segmentor = sklearn_crfsuite.CRF(
+            algorithm='lbfgs',
+            c1=0.1,
+            c2=0.1,
+            max_iterations=100,
+            all_possible_transitions=True)
+        else:
+            self.segmentor = None
+        if labeler_name == 'crf':
+            self.labeler = sklearn_crfsuite.CRF(
+            algorithm='lbfgs',
+            c1=0.1,
+            c2=0.1,
+            max_iterations=100,
+            all_possible_transitions=True)
+        else:
+            self.labeler = None
+
+
+    def fit(self, dataset, embeddings):
+        """
+        train segmentor and labeler
+        :param dataset: training set
+        :return:
+        """
+        # not using embeddings
+        train_X = [sent2features(sent, embeddings) for sent in dataset]
+        # segment tag sequence, not original aspect tag sequence
+        train_Y = [aspenct2segment(sent2tags(sent)) for sent in dataset]
+        print "train the segmentor..."
+        self.segmentor.fit(train_X, train_Y)
+        train_X_seg = []
+        train_Y_seg = []
+        for (i, tag_seq) in enumerate(train_Y):
+            sent = dataset[i]
+            segments = tag2seg(tag_sequence=tag_seq, sent=sent)
+            train_X_seg.append(sent2seg_features(segments=segments, sent=sent, embeddings=embeddings))
+            train_Y_seg.append(sent2tags_seg(sent=segments))
+
+        print "train the labeler..."
+        self.labeler.fit(train_X_seg, train_Y_seg)
+
+
+    def predict(self, dataset, embeddings):
+        """
+        predict segment boundary and label
+        :param dataset: testing dataset
+        :return:
+        """
+        # input of segmentor
+        test_X = [sent2features(sent, embeddings) for sent in dataset]
+        pred_seqs = self.segmentation(X=test_X)
+        # input of labeler
+        test_X_seg = []
+        test_Y_seg = []
+        for i in xrange(len(pred_seqs)):
+            sent = dataset[i]
+            pred_seq = pred_seqs[i]
+            segments = tag2seg(tag_sequence=pred_seq, sent=sent)
+            test_X_seg.append(sent2seg_features(segments=segments, sent=sent, embeddings=embeddings))
+            test_Y_seg.append(sent2tags_seg(sent=segments))
+        # predicted aspect tags
+        pred_Y_seg = self.label(X=test_X_seg)
+
+        labels = list(self.labeler.classes_)
+        labels.remove('O')
+        print(metrics.flat_classification_report(test_Y_seg, pred_Y_seg, labels=labels, digits=3))
+
+    def segmentation(self, X):
+        return self.segmentor.predict(X)
+
+    def label(self, X):
+        return self.labeler.predict(X)
+
 
 
 
