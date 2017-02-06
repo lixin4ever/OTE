@@ -772,29 +772,17 @@ class HierachyExtractor(object):
         pred_seqs = self.segmentation(X=test_X)
         # input of labeler
         test_X_seg = []
-        test_Y_seg = []
         pred_segments = []
         for i in xrange(len(pred_seqs)):
             sent = dataset[i]
             # predicted sentence boundaries
             pred_seq = pred_seqs[i]
-            # gold sentence boundaries
-            gold_seq = aspect2segment(aspect_sequence=test_Y[i])
             # predicted segments
             segments = tag2seg(tag_sequence=pred_seq, sent=sent)
-            # gold segments
-            gold_segments = tag2seg(tag_sequence=gold_seq, sent=sent)
             test_X_seg.append(sent2seg_features(segments=segments, sent=sent, embeddings=embeddings))
-            # segment-level ground-truth, i.e., label sequence for segments in a single sentence
-            test_Y_seg.append(sent2tags_seg(sent=gold_segments))
             pred_segments.append(segments)
         # predicted aspect tags
         pred_Y_seg = self.label(X=test_X_seg)
-        print pred_Y_seg[:2]
-        print test_Y_seg[:2]
-        labels = list(self.labeler.classes_)
-        labels.remove('O')
-        print(metrics.flat_classification_report(test_Y_seg, pred_Y_seg, labels=labels, digits=3))
 
         assert len(pred_Y_seg) == len(pred_segments)
         pred_Y = []
