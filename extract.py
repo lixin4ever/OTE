@@ -388,7 +388,7 @@ def run(ds_name, model_name='crf', feat='word'):
     elif model_name == 'ap':
         ap_extractor(train_set=train_set, test_set=test_set)
     elif model_name == 'he':
-        extractor = HierachyExtractor(seg_name='crf', labeler_name='lstm')
+        extractor = HierachyExtractor(seg_name='crf', labeler_name='crf')
         max_len = -1
         for sent in train_set + test_set:
             words = sent2words(sent)
