@@ -783,7 +783,7 @@ class HierachyExtractor(object):
             # predicted segments
             segments = tag2seg(tag_sequence=pred_seq, sent=sent)
             # gold segments
-            gold_segments = tag2seg(tag_sequence=gold_seq)
+            gold_segments = tag2seg(tag_sequence=gold_seq, sent=sent)
             test_X_seg.append(sent2seg_features(segments=segments, sent=sent, embeddings=embeddings))
             # segment-level ground-truth, i.e., label sequence for segments in a single sentence
             test_Y_seg.append(sent2tags_seg(sent=gold_segments))
