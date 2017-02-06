@@ -738,7 +738,7 @@ class HierachyExtractor(object):
         :param dataset: training set
         :return:
         """
-        from utils import sent2features, aspect2segment, tag2seg, sent2tags_seg, sent2seg_features
+        from utils import sent2features, aspect2segment, tag2seg, sent2tags_seg, sent2seg_features, sent2tags
         # not using embeddings
         train_X = [sent2features(sent, embeddings) for sent in dataset]
         # segment tag sequence, not original aspect tag sequence
