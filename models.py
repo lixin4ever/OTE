@@ -784,7 +784,8 @@ class HierachyExtractor(object):
             pred_segments.append(segments)
         # predicted aspect tags
         pred_Y_seg = self.label(X=test_X_seg)
-
+        print pred_Y_seg[:2]
+        print test_Y_seg[:2]
         labels = list(self.labeler.classes_)
         labels.remove('O')
         print(metrics.flat_classification_report(test_Y_seg, pred_Y_seg, labels=labels, digits=3))
