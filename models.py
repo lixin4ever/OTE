@@ -764,7 +764,7 @@ class HierachyExtractor(object):
         :return:
         """
         from utils import sent2features, tag2seg, sent2seg_features, sent2tags_seg, \
-            sent2tags, segment2aspect, evaluate_chunk
+            sent2tags, segment2aspect, evaluate_chunk, aspect2segment
         # input of segmentor
         test_X = [sent2features(sent, embeddings) for sent in dataset]
         test_Y = [sent2tags(sent) for sent in dataset]
@@ -776,11 +776,17 @@ class HierachyExtractor(object):
         pred_segments = []
         for i in xrange(len(pred_seqs)):
             sent = dataset[i]
+            # predicted sentence boundaries
             pred_seq = pred_seqs[i]
+            # gold sentence boundaries
+            gold_seq = aspect2segment(aspect_sequence=test_Y[i])
+            # predicted segments
             segments = tag2seg(tag_sequence=pred_seq, sent=sent)
+            # gold segments
+            gold_segments = tag2seg(tag_sequence=gold_seq)
             test_X_seg.append(sent2seg_features(segments=segments, sent=sent, embeddings=embeddings))
             # segment-level ground-truth, i.e., label sequence for segments in a single sentence
-            test_Y_seg.append(sent2tags_seg(sent=segments))
+            test_Y_seg.append(sent2tags_seg(sent=gold_segments))
             pred_segments.append(segments)
         # predicted aspect tags
         pred_Y_seg = self.label(X=test_X_seg)
