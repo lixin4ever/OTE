@@ -508,8 +508,8 @@ def evaluate_chunk(test_Y, pred_Y, testset=None, model_name='crf', ds_name='15se
     print "\n\n"
     #for sent in hard_cases:
     #    print sent
-    with open('./error/%s_%s_error.txt' % (model_name, ds_name), 'w+') as fp:
-        fp.writelines(error_cases)
+    #with open('./error/%s_%s_error.txt' % (model_name, ds_name), 'w+') as fp:
+    #    fp.writelines(error_cases)
     return precision, recall, F1
 
 
