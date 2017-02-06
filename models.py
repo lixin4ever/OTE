@@ -697,7 +697,7 @@ class AsepectDetector(object):
 
 
 class Segment(object):
-    def __init__(self, aspect, words, beg=-1, end=-1):
+    def __init__(self, aspect, beg=-1, end=-1, words=None):
         """
         :param beg: begin position
         :param end: end position
