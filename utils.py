@@ -388,8 +388,10 @@ def aspect2segment(aspect_sequence):
     segment_sequence = []
     for tag in bieos:
         if tag == 'O' or tag == 'S':
+            # segment with unit length
             segment_sequence.append('O')
         else:
+            # segment containing multiple words
             segment_sequence.append('T')
     return segment_sequence
 
