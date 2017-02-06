@@ -388,7 +388,7 @@ def run(ds_name, model_name='crf', feat='word'):
     elif model_name == 'he':
         extractor = HierachyExtractor(seg_name='crf', labeler_name='crf')
         extractor.fit(dataset=train_set, embeddings=embeddings)
-        extractor.predict(dataset=test_set, embeddings=embeddings)
+        extractor.predict(dataset=test_set, embeddings=embeddings, ds_name=ds_name)
 
 
 if __name__ == '__main__':

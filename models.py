@@ -738,7 +738,7 @@ class HierachyExtractor(object):
         :param dataset: training set
         :return:
         """
-        from utils import *
+        from utils import sent2features, aspect2segment, tag2seg, sent2tags_seg, sent2seg_features
         # not using embeddings
         train_X = [sent2features(sent, embeddings) for sent in dataset]
         # segment tag sequence, not original aspect tag sequence
@@ -757,31 +757,43 @@ class HierachyExtractor(object):
         self.labeler.fit(train_X_seg, train_Y_seg)
 
 
-    def predict(self, dataset, embeddings):
+    def predict(self, dataset, embeddings, ds_name):
         """
         predict segment boundary and label
         :param dataset: testing dataset
         :return:
         """
-        from utils import *
+        from utils import sent2features, tag2seg, sent2seg_features, sent2tags_seg, \
+            sent2tags, segment2aspect, evaluate_chunk
         # input of segmentor
         test_X = [sent2features(sent, embeddings) for sent in dataset]
+        test_Y = [sent2tags(sent) for sent in dataset]
+        # predict segment boundaries
         pred_seqs = self.segmentation(X=test_X)
         # input of labeler
         test_X_seg = []
         test_Y_seg = []
+        pred_segments = []
         for i in xrange(len(pred_seqs)):
             sent = dataset[i]
             pred_seq = pred_seqs[i]
             segments = tag2seg(tag_sequence=pred_seq, sent=sent)
             test_X_seg.append(sent2seg_features(segments=segments, sent=sent, embeddings=embeddings))
+            # segment-level ground-truth, i.e., label sequence for segments in a single sentence
             test_Y_seg.append(sent2tags_seg(sent=segments))
+            pred_segments.append(segments)
         # predicted aspect tags
         pred_Y_seg = self.label(X=test_X_seg)
 
         labels = list(self.labeler.classes_)
         labels.remove('O')
         print(metrics.flat_classification_report(test_Y_seg, pred_Y_seg, labels=labels, digits=3))
+
+        assert len(pred_Y_seg) == len(pred_segments)
+        pred_Y = []
+        for (i, tag_seq) in enumerate(pred_Y_seg):
+            pred_Y.append(segment2aspect(tags=tag_seq, segments=pred_segments[i]))
+        print evaluate_chunk(test_Y=test_Y, pred_Y=pred_Y, testset=dataset, model_name='hCRF', ds_name=ds_name)
 
     def segmentation(self, X):
         return self.segmentor.predict(X)

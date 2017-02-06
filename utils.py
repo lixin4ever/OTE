@@ -393,6 +393,22 @@ def aspect2segment(aspect_sequence):
             segment_sequence.append('T')
     return segment_sequence
 
+def segment2aspect(tags, segments):
+    """
+    reconstruct aspect tag sequence from segment tag sequence
+    :param tags: segment-level tag
+    :param segments: segments
+    :return:
+    """
+    assert len(tags) == len(segments)
+    aspect_tags = []
+    for i in xrange(len(tags)):
+        tag = tags[i]
+        beg = segments[i].beg
+        end = segments[i].end
+        seg_length = end - beg
+        aspect_tags.extend([tag] * seg_length)
+    return aspect_tags
 
 def evaluate(test_Y, pred_Y):
     """
