@@ -697,7 +697,7 @@ class AsepectDetector(object):
 
 
 class Segment(object):
-    def __init__(self, beg, end, aspect):
+    def __init__(self, aspect, words, beg=-1, end=-1):
         """
         :param beg: begin position
         :param end: end position
@@ -705,12 +705,15 @@ class Segment(object):
         self.beg = beg
         self.end = end
         self.aspect = aspect
+        self.words = words
 
 
 class HierachyExtractor(object):
     """
     segmentation-based extractor
     """
+    # maximum length of segment sequence, we assume the value is maximum length of word sequence
+    max_len = 0
     def __init__(self, seg_name, labeler_name):
         if seg_name == 'crf':
             self.segmentor = sklearn_crfsuite.CRF(
@@ -728,21 +731,24 @@ class HierachyExtractor(object):
             c2=0.1,
             max_iterations=100,
             all_possible_transitions=True)
+        elif labeler_name == 'lstm':
+            pass
         else:
             self.labeler = None
 
 
-    def fit(self, dataset, embeddings):
+    def fit(self, dataset, embeddings, max_len, vocab=None):
         """
         train segmentor and labeler
         :param dataset: training set
         :return:
         """
         from utils import sent2features, aspect2segment, tag2seg, sent2tags_seg, sent2seg_features, sent2tags
-        # not using embeddings
+        self.max_len = max_len
         train_X = [sent2features(sent, embeddings) for sent in dataset]
         # segment tag sequence, not original aspect tag sequence
-        train_Y = [aspect2segment(sent2tags(sent)) for sent in dataset]
+        #train_Y = [aspect2segment(sent2tags(sent)) for sent in dataset]
+        train_Y = [sent2tags(sent) for sent in dataset]
         print "train the segmentor..."
         self.segmentor.fit(train_X, train_Y)
         train_X_seg = []
@@ -757,7 +763,7 @@ class HierachyExtractor(object):
         self.labeler.fit(train_X_seg, train_Y_seg)
 
 
-    def predict(self, dataset, embeddings, ds_name):
+    def predict(self, dataset, embeddings, ds_name, vocab=None):
         """
         predict segment boundary and label
         :param dataset: testing dataset

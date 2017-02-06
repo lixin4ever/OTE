@@ -357,12 +357,14 @@ def run(ds_name, model_name='crf', feat='word'):
     n_oov = 0
     dim_w = len(glove_embeddings['the'])
     vocab = {}
+    idx = 1
     for sent in train_set + test_set:
         tokens = sent2words(sent)
         for w in tokens:
             if w.lower() not in vocab:
                 w_norm = w.lower()
-                vocab[w_norm] = 1
+                vocab[w_norm] = idx
+                idx += 1
                 if w_norm in glove_embeddings:
                     word_emb = [float(ele) for ele in glove_embeddings[w_norm]]
                 else:
@@ -386,9 +388,14 @@ def run(ds_name, model_name='crf', feat='word'):
     elif model_name == 'ap':
         ap_extractor(train_set=train_set, test_set=test_set)
     elif model_name == 'he':
-        extractor = HierachyExtractor(seg_name='crf', labeler_name='crf')
-        extractor.fit(dataset=train_set, embeddings=embeddings)
-        extractor.predict(dataset=test_set, embeddings=embeddings, ds_name=ds_name)
+        extractor = HierachyExtractor(seg_name='crf', labeler_name='lstm')
+        max_len = -1
+        for sent in train_set + test_set:
+            words = sent2words(sent)
+            if max_len < len(words):
+                max_len = len(words)
+        extractor.fit(dataset=train_set, embeddings=embeddings, max_len=max_len, vocab=vocab)
+        extractor.predict(dataset=test_set, embeddings=embeddings, ds_name=ds_name, vocab=vocab)
 
 
 if __name__ == '__main__':

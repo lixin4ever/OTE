@@ -75,9 +75,22 @@ class MyEmbedding(Layer):
         else:
             return K.not_equal(x, 0)
 
-    def call(self, x, mask=None):
-        if K.dtype(x) != 'int32':
-            x = K.cast(x, 'int32')
+    def call(self, segment_seqs, mask=None):
+        """
+
+        :param segments: input segment sequences with same length
+        :param mask:
+        :return:
+        """
+        x = []
+        for segments in segment_seqs:
+            ids = []
+            for seg in segments:
+                if seg.beg == -1 and seg.end == -1:
+                    ids.append([0])
+                else:
+                    ids.append(seg.words)
+            x.append(ids)
         if 0. < self.dropout < 1.:
             retain_p = 1. - self.dropout
             B = K.random_binomial((self.input_dim,), p=retain_p) * (1. / retain_p)
@@ -85,11 +98,6 @@ class MyEmbedding(Layer):
             W = K.in_train_phase(self.W * B, self.W)
         else:
             W = self.W
-        if self.winsize == 1:
-            out = K.gather(W, x)
-        else:
-            # window based representation
-            out = K.gather(W, x)
-            out = out.reshape((out.shape[0] / self.winsize, self.winsize * out.shape[1]))
+        out = K.gather(W, segments)
         return out
 
