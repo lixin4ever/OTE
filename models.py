@@ -777,7 +777,7 @@ class HierachyExtractor(object):
         # predict segment boundaries
         pred_seqs = self.segmentation(X=test_X)
         # gold segment boundaries
-        gold_seqs = [aspect2segment(aspect_sequence=seq) for seq in test_Y]
+        gold_seqs = [seq for seq in test_Y]
         print evaluate_chunk(test_Y=gold_seqs, pred_Y=pred_seqs, testset=dataset, model_name='hCRF', ds_name=ds_name)
         # input of labeler
         test_X_seg = []
