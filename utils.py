@@ -470,7 +470,7 @@ def evaluate_chunk(test_Y, pred_Y, testset=None, model_name='crf', ds_name='15se
         #    words = sent2words(testset[i])
         #    assert len(words) == len(gold)
         #    hard_cases.append(' '.join(words))
-        if error_type != 'GOOD':
+        if error_type != 'GOOD' and testset is not None:
             # model perform error predictions on the sentence
             words = sent2words(testset[i])
             assert len(words) == len(gold)
