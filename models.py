@@ -243,7 +243,7 @@ class AveragedPerceptron(object):
     """
     averaged perceptron extractor
     """
-    def __init__(self, t=0, order=2):
+    def __init__(self, embeddings=None, t=0, order=2):
         """
         construct function
         :param t: time step
@@ -264,6 +264,11 @@ class AveragedPerceptron(object):
         self.time = 0
 
         self.tmp_flag = True
+        self.embeddings = embeddings
+        if self.embeddings is not None:
+            self.dim_emb = len(embeddings['the'])
+        else:
+            self.dim_emb = 0
 
     def fit(self, trainset):
         """
@@ -369,6 +374,13 @@ class AveragedPerceptron(object):
         assert len(words) == len(postags)
         yield 'word.identity=%s' % words[i]
         yield 'word.postag=%s' % postags[i]
+        w_norm = words[i].lower()
+        if w_norm in self.embeddings:
+            emb = self.embeddings[w_norm]
+        else:
+            emb = np.random(-0.25, 0.25, self.dim_emb)
+        for j in xrange(self.dim_emb):
+            yield 'word.emb%s=%s' % (j, emb[j])
         n_words = len(words)
         if i == 0:
             yield 'word.BOS=True'

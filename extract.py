@@ -319,14 +319,14 @@ def conv_lstm_extractor(train_set, test_set, embeddings, win_size):
 
     output(test_set=test_set, pred_Y=pred_tags, model_name='ConvLSTM')
 
-def ap_extractor(train_set, test_set):
+def ap_extractor(train_set, test_set, embeddings):
     """
     averaged perceptron extractor
     :param train_set: training set
     :param test_set: testing set
     :return:
     """
-    ap = AveragedPerceptron()
+    ap = AveragedPerceptron(embeddings=embeddings)
     ap.fit(trainset=train_set)
     Y_pred = ap.infer(testset=test_set)
     Y_gold = [sent2tags(sent) for sent in test_set]
@@ -386,7 +386,7 @@ def run(ds_name, model_name='crf', feat='word'):
     elif model_name == 'conv_lstm':
         conv_lstm_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings, win_size=3)
     elif model_name == 'ap':
-        ap_extractor(train_set=train_set, test_set=test_set)
+        ap_extractor(train_set=train_set, test_set=test_set, embeddings=embeddings)
     elif model_name == 'he':
         extractor = HierachyExtractor(seg_name='crf', labeler_name='crf')
         max_len = -1
