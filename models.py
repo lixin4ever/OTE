@@ -275,6 +275,7 @@ class AveragedPerceptron(object):
         :param trainset: training set
         :return:
         """
+        from utils import sent2tags
         Y = [sent2tags(sent) for sent in trainset]
         print Y[0]
         self.classes = list(set(np.hstack(Y)))
@@ -321,6 +322,7 @@ class AveragedPerceptron(object):
         :param testset: testing dataset
         :return:
         """
+        from utils import sent2words, sent2postags
         Y_pred = []
         for sent in testset:
             words = sent2words(sent)
