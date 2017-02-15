@@ -115,7 +115,7 @@ def build_pkl(ds, mode='sent', schema="OT"):
                 print "process %s sentences" % ctx
             i += 1
     print "write back to the disk..."
-    cPickle.dump(records, open('./pkl/%s.pkl' % ds, 'w+'))
+    cPickle.dump(records, open('./pkl/%s/%s.pkl' % (mode, ds), 'w+'))
 
     if not has_tagged:
         with open(pos_path, 'w+') as fp:
@@ -369,10 +369,10 @@ if __name__ == '__main__':
         '16semeval_rest_train', '16semeval_rest_test']:
             if ds.startswith('14') and mode == 'doc':
                 continue
-            extract_text(dataset_name=ds, mode=mode)
-            #build_pkl(ds=ds)
+            #extract_text(dataset_name=ds, mode=mode)
+            build_pkl(ds=ds, mode=mode)
     else:
-        extract_text(dataset_name=ds, mode='sent')
-        #build_pkl(ds=ds)
+        #extract_text(dataset_name=ds, mode='sent')
+        build_pkl(ds=ds, mode=mode)
 
 
