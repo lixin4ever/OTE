@@ -13,12 +13,12 @@ from utils import ot2bieos
 import os
 
 
-def build_pkl(ds, schema="OT"):
+def build_pkl(ds, mode='sent', schema="OT"):
     """
     schema: tagging schema in the sequence learning, OT refers to Targe and Outside of Target;
     BOIES refers to Begin, Outside, Inside, End, Singleton
     """
-    path = './dataset/%s.txt' % ds
+    path = './dataset/%s/%s.txt' % (mode, ds)
     print "process dataset: %s..." % ds
     ctx = 0
     records = []
@@ -28,14 +28,14 @@ def build_pkl(ds, schema="OT"):
     dep_parser = StanfordDependencyParser(model_path=u'edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz')
     
     chunk_tags = []
-    chunk_path = './dataset/chunktags/%s_chunk.txt' % ds
+    chunk_path = './dataset/%s/chunktags/%s_chunk.txt' % (mode, ds)
     with open(chunk_path) as fp:
         for line in fp:
             tags = line.strip().split()
             chunk_tags.append(tags)
     
     pos_tags = []
-    pos_path = './dataset/postags/%s_pos.txt' % ds
+    pos_path = './dataset/%s/postags/%s_pos.txt' % (mode, ds)
     has_tagged = os.path.exists(pos_path)
     if has_tagged:
         with open(pos_path) as fp:
@@ -43,7 +43,7 @@ def build_pkl(ds, schema="OT"):
             pos_tags.append(tags)
 
     dependencies = []
-    dep_path = './dataset/dependencies/%s_dep.txt' % ds
+    dep_path = './dataset/%s/dependencies/%s_dep.txt' % (mode, ds)
     has_parsed = os.path.exists(dep_path)
     if has_parsed:
         with open(dep_path) as fp:
@@ -332,6 +332,10 @@ def extract_text(dataset_name, mode='sent'):
                 lines.append(format_output(x=x, y=y, text=text))
             else:
                 # mode == 'doc'
+                if review_text != '':
+                    review_text = '%s %s' % (review_text, text)
+                else:
+                    review_text = text
                 if sid == len(sentences) - 1:
                     # write after processing a review
                     lines.append(format_output(x=x, y=y, text=review_text))
@@ -339,7 +343,6 @@ def extract_text(dataset_name, mode='sent'):
                     # add sentence delimiter after the internal sentence
                     x.append('DELIM')
                     y.append('O')
-                    review_text = '%s %s' % (review_text, text)
 
     with open('./dataset/%s/%s.txt' % (mode, dataset_name), 'w+') as fp:
         fp.writelines(lines)
@@ -358,13 +361,15 @@ def extract_text(dataset_name, mode='sent'):
 if __name__ == '__main__':
     #ds = sys.argv[1]
     #ds = '14semeval_laptop_train'
-    ds = 'all'
+    ds, mode = 'all', 'doc'
     if ds == 'all':
         for ds in ['15semeval_rest_test', '15semeval_rest_train',
-        #'14semeval_laptop_train', '14semeval_laptop_test',
-        #'14semeval_rest_train', '14semeval_rest_test',
+        '14semeval_laptop_train', '14semeval_laptop_test',
+        '14semeval_rest_train', '14semeval_rest_test',
         '16semeval_rest_train', '16semeval_rest_test']:
-            extract_text(dataset_name=ds, mode='doc')
+            if ds.startswith('14') and mode == 'doc':
+                continue
+            extract_text(dataset_name=ds, mode=mode)
             #build_pkl(ds=ds)
     else:
         extract_text(dataset_name=ds, mode='sent')
