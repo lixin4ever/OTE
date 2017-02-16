@@ -26,14 +26,14 @@ def build_pkl(ds, mode, schema="OT"):
     pos_tagger = StanfordPOSTagger("english-bidirectional-distsim.tagger")
     # Stanford Dependency Parser
     dep_parser = StanfordDependencyParser(model_path=u'edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz')
-    
+
     chunk_tags = []
     chunk_path = './dataset/%s/chunktags/%s_chunk.txt' % (mode, ds)
     with open(chunk_path) as fp:
         for line in fp:
             tags = line.strip().split()
             chunk_tags.append(tags)
-    
+
     pos_tags = []
     pos_path = './dataset/%s/postags/%s_pos.txt' % (mode, ds)
     has_tagged = os.path.exists(pos_path)
@@ -74,14 +74,7 @@ def build_pkl(ds, mode, schema="OT"):
                 tag_seq.append(t)
             if schema == 'BIEOS':
                 tag_seq = ot2bieos(tag_sequence=tag_seq)
-            # for debug
-            #if i < 400:
-            #    i += 1
-            #    continue
-            r['words'] = word_seq
-            r['tags'] = tag_seq
-            r['text'] = text
-
+            r['words'], r['tags'], r['text'] = word_seq, tag_seq, text
             if has_tagged:
                 pos_res = pos_tags[i]
             else:
@@ -100,9 +93,9 @@ def build_pkl(ds, mode, schema="OT"):
                     for wid in xrange(len(word_seq)):
                         w = word_seq[wid]
                         if w == 'DELIM' or wid == len(word_seq) - 1:
-                            if word_seq == []:
-                               print " ".join(word_seq)
-                               continue
+                            if word_seq is []:
+                                # review contains one sentence
+                                parse_sent = [unicode(w, encoding='utf-8') for w in word_seq]
                             parse_res = list(dep_parser.parse(parse_sent))[0]
                             parse_sent = []
                             parse_triples.extend([(str(head[0]), str(relation), str(tail[0])) for (head, relation, tail)
@@ -168,7 +161,7 @@ def process_text(text):
     cur_text = cur_text.replace(':', ', ')
     if dot_exist:
         cur_text += '.'
-    # correct some typos
+        # correct some typos
     cur_text = cur_text.replace('cant', "can't")
     cur_text = cur_text.replace('wouldnt', "wouldn't")
     cur_text = cur_text.replace('dont', "don't")
@@ -182,6 +175,7 @@ def process_text(text):
     # filter the non-ascii character
     cur_text = ''.join([ch if ord(ch) < 128 else ' ' for ch in cur_text])
     return cur_text
+
 
 def extract_aspect(aspects, text, dataset_name):
     """
@@ -312,7 +306,8 @@ def extract_text(dataset_name, mode='sent'):
                 # sent with no aspect
                 n_sen_with_no_aspect += 1
             else:
-                id2aspect, n_a, n_s, n_m, cur_text = extract_aspect(aspects=aspects, text=cur_text, dataset_name=dataset_name)
+                id2aspect, n_a, n_s, n_m, cur_text = extract_aspect(aspects=aspects, text=cur_text,
+                                                                    dataset_name=dataset_name)
                 n_aspect += n_a
                 n_singleton += n_s
                 n_mult_word += n_m
@@ -376,14 +371,14 @@ if __name__ == '__main__':
     #ds = '14semeval_laptop_train'
     ds, mode = 'all', 'doc'
     if ds == 'all':
-        for ds in [#'15semeval_rest_test', 
-        '15semeval_rest_train',
-        '14semeval_laptop_train', '14semeval_laptop_test',
-        '14semeval_rest_train', '14semeval_rest_test',
-        '16semeval_rest_train', '16semeval_rest_test']:
+        for ds in ['15semeval_rest_test',
+                   '15semeval_rest_train',
+                   '14semeval_laptop_train', '14semeval_laptop_test',
+                   '14semeval_rest_train', '14semeval_rest_test',
+                   '16semeval_rest_train', '16semeval_rest_test']:
             if ds.startswith('14') and mode == 'doc':
                 continue
-            #extract_text(dataset_name=ds, mode=mode)
+                #extract_text(dataset_name=ds, mode=mode)
             build_pkl(ds=ds, mode=mode)
     else:
         #extract_text(dataset_name=ds, mode='sent')
