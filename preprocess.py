@@ -100,6 +100,9 @@ def build_pkl(ds, mode, schema="OT"):
                     for wid in xrange(len(word_seq)):
                         w = word_seq[wid]
                         if w == 'DELIM' or wid == len(word_seq) - 1:
+                            if word_seq == []:
+                               print " ".join(word_seq)
+                               continue
                             parse_res = list(dep_parser.parse(parse_sent))[0]
                             parse_sent = []
                             parse_triples.extend([(str(head[0]), str(relation), str(tail[0])) for (head, relation, tail)
@@ -373,7 +376,8 @@ if __name__ == '__main__':
     #ds = '14semeval_laptop_train'
     ds, mode = 'all', 'doc'
     if ds == 'all':
-        for ds in ['15semeval_rest_test', '15semeval_rest_train',
+        for ds in [#'15semeval_rest_test', 
+        '15semeval_rest_train',
         '14semeval_laptop_train', '14semeval_laptop_test',
         '14semeval_rest_train', '14semeval_rest_test',
         '16semeval_rest_train', '16semeval_rest_test']:
