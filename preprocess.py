@@ -13,7 +13,7 @@ from utils import ot2bieos
 import os
 
 
-def build_pkl(ds, mode='sent', schema="OT"):
+def build_pkl(ds, mode, schema="OT"):
     """
     schema: tagging schema in the sequence learning, OT refers to Targe and Outside of Target;
     BOIES refers to Begin, Outside, Inside, End, Singleton
