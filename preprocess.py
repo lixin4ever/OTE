@@ -91,22 +91,22 @@ def build_pkl(ds, mode, schema="OT"):
             else:
                 if mode == 'sent':
                     parse_res = list(dep_parser.parse([unicode(w, encoding='utf-8') for w in word_seq]))[0]
+                    # head->relation->tail
+                    parse_triples = [(str(head[0]), str(relation), str(tail[0])) for (head, relation, tail)
+                                     in list(parse_res.triples())]
                 else:
                     # parse review sentence by sentence
-                    parse_res, parse_sent = [], []
+                    parse_sent, parse_triples = [], []
                     for wid in xrange(len(word_seq)):
                         w = word_seq[wid]
                         if w == 'DELIM' or wid == len(word_seq) - 1:
-                            parse_res.extend(list(dep_parser.parse(parse_sent))[0])
+                            parse_res = list(dep_parser.parse(parse_sent))[0]
                             parse_sent = []
+                            parse_triples.extend([(str(head[0]), str(relation), str(tail[0])) for (head, relation, tail)
+                                                  in list(parse_res.triples())])
                         else:
                             parse_sent.append(unicode(w, encoding='utf-8'))
-                # head->relation->tail
-                parse_triples = [(str(head[0]), str(relation), str(tail[0])) for (head, relation, tail) in list(parse_res.triples())]
-
             postag_seq = [tag for (w, tag) in pos_res]
-            #print parse_triples
-            #print postag_seq
             r['postags'] = postag_seq
             r['chunktags'] = chunk_tags[i]
             r['dependencies'] = parse_triples
