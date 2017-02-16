@@ -335,7 +335,7 @@ def ap_extractor(train_set, test_set, embeddings, ds_name):
     #output(test_set=test_set, pred_Y=Y_pred, model_name='ap')
 
 
-def run(ds_name, model_name='crf', feat='word'):
+def run(ds_name, model_name='crf', feat='word', mode='sent'):
     """
 
     :param ds_name: dataset name
@@ -343,8 +343,8 @@ def run(ds_name, model_name='crf', feat='word'):
     :param feat: features used in the learning process
     """
     print "load dataset from disk..."
-    train_set = cPickle.load(open('./pkl/%s_train.pkl' % ds_name, 'rb'))
-    test_set = cPickle.load(open('./pkl/%s_test.pkl' % ds_name, 'rb'))
+    train_set = cPickle.load(open('./pkl/%s/%s_train.pkl' % (mode, ds_name), 'rb'))
+    test_set = cPickle.load(open('./pkl/%s/%s_test.pkl' % (mode, ds_name), 'rb'))
 
     glove_embeddings, embeddings = {}, {}
     embedding_path = '../yelp/yelp_vec_200_2.txt'
@@ -399,8 +399,8 @@ def run(ds_name, model_name='crf', feat='word'):
 
 
 if __name__ == '__main__':
-    dataset, model_name, feat_name = sys.argv[1:]
-    run(ds_name=dataset, model_name=model_name, feat=feat_name)
+    dataset, model_name, feat_name, mode = sys.argv[1:]
+    run(ds_name=dataset, model_name=model_name, feat=feat_name, mode=mode)
 
 
 

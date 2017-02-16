@@ -94,12 +94,18 @@ def build_pkl(ds, mode, schema="OT"):
                         w = word_seq[wid]
                         if w == 'DELIM' or wid == len(word_seq) - 1:
                             if word_seq is []:
-                                # review contains one sentence
-                                parse_sent = [unicode(w, encoding='utf-8') for w in word_seq]
-                            parse_res = list(dep_parser.parse(parse_sent))[0]
-                            parse_sent = []
-                            parse_triples.extend([(str(head[0]), str(relation), str(tail[0])) for (head, relation, tail)
+                                # last sentence just contains one word
+                                if wid == len(word_seq) - 1:
+                                    parse_sent = [w]
+                                #parse_sent = [unicode(w, encoding='utf-8') for w in word_seq]
+                            try:
+                                parse_res = list(dep_parser.parse(parse_sent))[0]
+                                parse_sent = []
+                                parse_triples.extend([(str(head[0]), str(relation), str(tail[0])) for (head, relation, tail)
                                                   in list(parse_res.triples())])
+                            except StopIteration:
+                                print "Encounter stop iteration..."
+                                print " ".join(word_seq)
                         else:
                             parse_sent.append(unicode(w, encoding='utf-8'))
             postag_seq = [tag for (w, tag) in pos_res]
@@ -371,7 +377,7 @@ if __name__ == '__main__':
     #ds = '14semeval_laptop_train'
     ds, mode = 'all', 'doc'
     if ds == 'all':
-        for ds in ['15semeval_rest_test',
+        for ds in [#'15semeval_rest_test',
                    '15semeval_rest_train',
                    '14semeval_laptop_train', '14semeval_laptop_test',
                    '14semeval_rest_train', '14semeval_rest_test',
