@@ -89,8 +89,18 @@ def build_pkl(ds, mode, schema="OT"):
             if has_parsed:
                 parse_triples = dependencies[i]
             else:
-                parse_res = list(dep_parser.parse([unicode(w, encoding='utf-8') for w in word_seq]))[0]
-                #print list(parse_res.triples())
+                if mode == 'sent':
+                    parse_res = list(dep_parser.parse([unicode(w, encoding='utf-8') for w in word_seq]))[0]
+                else:
+                    # parse review sentence by sentence
+                    parse_res, parse_sent = [], []
+                    for wid in xrange(len(word_seq)):
+                        w = word_seq[wid]
+                        if w == 'DELIM' or wid == len(word_seq) - 1:
+                            parse_res.extend(list(dep_parser.parse(parse_sent))[0])
+                            parse_sent = []
+                        else:
+                            parse_sent.append(unicode(w, encoding='utf-8'))
                 # head->relation->tail
                 parse_triples = [(str(head[0]), str(relation), str(tail[0])) for (head, relation, tail) in list(parse_res.triples())]
 
