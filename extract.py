@@ -7,7 +7,7 @@ import sys
 from utils import *
 import numpy as np
 from keras.models import Sequential
-from keras.layers import LSTM, Bidirectional, Embedding, TimeDistributed, Dense, Reshape, Convolution1D
+from keras.layers import LSTM, Bidirectional, Embedding, TimeDistributed, Dense, Reshape, Convolution1D, GRU
 from keras.callbacks import EarlyStopping
 from models import AveragedPerceptron, AsepectDetector, HierachyExtractor
 #from numpy import linalg as LA
@@ -198,6 +198,7 @@ def lstm_extractor(train_set, test_set, embeddings, win_size=1):
                                    mask_zero=False, input_length=max_len*win_size))
     LSTM_extractor.add(Reshape((max_len, win_size * dim_symbol)))
     LSTM_extractor.add(Bidirectional(LSTM(100, return_sequences=True), merge_mode='concat'))
+    #LSTM_extractor.add(Bidirectional(GRU(100, return_sequences=True), merge_mode='concat'))
     #LSTM_extractor.add(LSTM(100, return_sequences=True))
     LSTM_extractor.add(TimeDistributed(Dense(output_dim=1, activation='sigmoid')))
     #LSTM_extractor.add(Flatten())
